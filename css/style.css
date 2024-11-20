@@ -1,0 +1,169 @@
+/*
+class (repeated on page) = .
+id (single use per page) = #
+*/
+
+/*imported fonts*/
+@font-face {
+    font-family: "name";
+    src: url(fonts/.ttf);
+    font-weight: normal;
+}
+
+/*reset*/
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+html {
+    width: 100%;
+    scroll-behavior: smooth;
+}
+body {
+    width: 100%;
+    background-color: rgb(213, 213, 213);
+}
+a {
+    /*removes hyperlink underline*/
+    text-decoration: none;
+}
+ul {
+    /*removes dots from list items*/
+    list-style-type: none;
+}
+li {
+    list-style: none;
+}
+img {
+    max-width: 100%;
+}
+
+@media screen and (min-width: 576px) {
+}
+
+@media screen and (min-width: 768px) {
+}
+
+@media screen and (min-width: 992px) {
+    nav {
+        display: block;
+    }
+}
+@media screen and (max-width: 992px) {
+    nav {
+        display: none;
+    }
+}
+
+#back-to-top:hover {
+    cursor: pointer;
+}
+
+header {
+    width: 100%;
+    height: 60px;
+    top: 0;
+    position: sticky;
+    background-color: rgb(17, 0, 0);
+    #main-logo {
+        width: 20%;
+        /* TODO REMOVE WHEN LOGO IN PLACE */
+        img::after {
+            content: "LOGO";
+            color: white;
+        }
+    }
+    nav {
+        width: 100%;
+        height: 20px;
+        /*
+          top = header height OR
+          bottom = 0 to position at bottom of header (needs header to be larger)
+          ???causes clipping at bottom of nav
+        */
+        
+        bottom: 0;
+        position: absolute;
+        background-color: rgb(89, 89, 89);
+        ul {
+            height: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+            a {
+                flex: 1 1 20%;
+                color: black;
+                text-align: center;
+                border-right: 2px solid black;
+                li {
+                    height: 100%;
+                    text-align: center;
+                }
+            }
+            /* TODO fix lines after every category */
+            /*category border*/
+             /* a::after {
+                content: "";
+                width: 1px;
+                height: 15px;
+                top: 0;
+                background-color: black;
+                display: block;
+                position: absolute;
+                /*align border
+                transform: translate(-1px, 2.5px);
+             */
+            }
+            a:hover {
+                background-color: white;
+                color: rgb(128, 0, 0);
+                transition: 0.4s;
+            }
+        }
+    }
+
+.big {
+    background-color: white;
+    width: 70%;
+    height: 500px;
+
+}
+.big2 {
+    background-color: rgb(129, 67, 67);
+    width: 70%;
+    height: 500px;
+}
+
+.content-separate {
+    position: relative;
+    width: auto;
+    height: 20px;
+    padding: 0 3% 0 3%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px;
+    .content-separate-box {
+        height: 10px;
+        width: 20px;
+        align-items: center;
+        border: 2px solid black;
+    }
+}
+.content-separate::before, .content-separate::after {
+    content: "";
+    position: absolute;
+    /* TODO width calculated so distance away from rect is consistent */
+    width: 43%;
+    height: 1.6px;
+    background: black;
+    vertical-align: middle;
+}
+.content-separate::before {
+    left: 3%;
+}
+.content-separate::after {
+    right: 3%;
+}

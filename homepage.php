@@ -41,9 +41,9 @@
 
 
     <div id="container">
-        <div id="section"></div>
+        <div id="section"><img src="image1.jpg" type="image" width="100%" height="100%" alt="code"/></div>
 
-        <div id="section" style="background-color: rgb(238, 238, 238); height: 800px;">
+        <div id="section" style="background-color: #1f85de; height: 800px;">
             <div id="subheadingbox">
                 <div class="triangle"></div>
                 <h3>Trending</h3>

@@ -7,7 +7,7 @@
     }
     
     body{
-        background-color: rgb(244, 244, 244);
+        background-color: rgb(245, 245, 245);
        
     }
     
@@ -137,7 +137,7 @@
 
     
     #section{
-        background-color: rgb(238, 238, 238);
+        background-color: rgb(245, 245, 245);
         height: 600px;
         width: 100%;
         position: relative;
@@ -224,7 +224,7 @@
     } 
 
     #subheadingbox{
-        background-color:rgb(238, 238, 238);
+        background-color:rgb(245, 245, 245);
         width: 600px;
         height: 100px;
         margin: 30px;

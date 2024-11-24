@@ -144,6 +144,21 @@
         float:left;
      }
 
+     #separating-conainers{
+        background-color: rgb(245, 245, 245);
+        height: 200px;
+        width: 100%;
+        position: relative;
+        float:left;
+     }
+     #separating-line{
+        background-color:#323232;
+        height: 30px;
+        width: 300px;
+        position: relative;
+        float:left;
+     }
+
      .trapezoid1 {
         position: absolute;
         top: 20px;
@@ -248,5 +263,6 @@ color: #000000;
     background-color:#1f85de;
     clip-path: polygon(0% 0%, 100% 0%, 0% 100%);
 }
+
 
 

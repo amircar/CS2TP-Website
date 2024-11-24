@@ -69,7 +69,9 @@
             <button class="trapezoid-button" style="text-align: center; clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 5% 100%)">KIDS</button>
             </div>
         </div>
-
+        <div id="separating-conainers">
+            <div id="separating-line"></div>
+        </div>
 
 
 

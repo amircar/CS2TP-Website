@@ -162,7 +162,7 @@ header {
             }
             a:hover {
                 transition: 0.4s;
-                background-color: white;
+                background-color: rgb(206, 45, 158);
                 img {
                     color: rgb(128, 0, 0); /* makes alt text visible */
                 }

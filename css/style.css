@@ -3,6 +3,15 @@ class (repeated on page) = .
 id (single use per page) = #
 */
 
+/* MAIN COLORS:
+white
+off-black = rgb(20,0,0)
+grey (same as body) = rgb(213, 213, 213)
+red = rgb(128, 0, 0)
+
+CONTENT SHOULD HAVE MARGIN OF 3% ON LEFT AND RIGHT
+*/
+
 /***************************** 
     IMPORTED FONTS
 *****************************/

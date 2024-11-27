@@ -12,3 +12,8 @@
         </button>
     </body>
 </html>
+
+<!-- 
+    <body data-menu="closed">
+
+-->

@@ -10,34 +10,35 @@
     <body>
         <?php require_once('header.php');?>
         
-        <div class="about-us-1">
-            <img src="">
-            <span>
-                <h2>TITLE</h2>
-                <p>TEXT</p>
-            </span>
-        </div>
+        <main id="about-us-main">
+            <div class="about-us-1">
+                <img src="" alt="about-us-image">
+                <span>
+                    <h2>TITLE</h2>
+                    <p>TEXT</p>
+                </span>
+            </div>
 
-        <div class="content-separate"><div class="content-separate-box"></div></div>
+            <div class="content-separate"><div class="content-separate-box"></div></div>
 
-        <div class="about-us-2">
-            <span>
-                <h2>TITLE</h2>
-                <p>TEXT</p>
-            </span>
-            <img src="">
-        </div>
+            <div class="about-us-2">
+                <span>
+                    <h2>TITLE</h2>
+                    <p>TEXT</p>
+                </span>
+                <img src="" alt="about-us-image">
+            </div>
 
-        <div class="content-separate"><div class="content-separate-box"></div></div>
+            <div class="content-separate"><div class="content-separate-box"></div></div>
 
-        <div class="about-us-1">
-            <img src="">
-            <span>
-                <h2>TITLE</h2>
-                <p>TEXT</p>
-            </span>
-        </div>
-
+            <div class="about-us-1">
+                <img src="" alt="about-us-image">
+                <span>
+                    <h2>TITLE</h2>
+                    <p>TEXT</p>
+                </span>
+            </div>
+        </main>
         <?php require_once('footer.php');?>
     </body>
 </html>

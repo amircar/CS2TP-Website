@@ -24,7 +24,7 @@
 #menu-button::before, #menu-button::after {
   content: "";
   position: absolute;
-  /*aligns lines together*/
+  /* aligns lines together */
   left: 0;
   width: 100%;
   height: 2px;
@@ -32,11 +32,11 @@
 }
 #menu-button::before {
   top: 0;
-  /*reverse animation*/
+  /* reverse animation */
   transition: top 0.2s 0.3s, transform 0.2s;
 }
 [data-menu = 'open'] #menu-button::before {
-  /*moves down, then rotates*/
+  /* moves down, then rotates */
   transition: top 0.2s, transform 0.2s 0.3s;
   top: 50%;
   transform: rotate(45deg);
@@ -44,11 +44,11 @@
 
 #menu-button::after {
   bottom: 0;
-  /*reverse animation*/
+  /* reverse animation */
   transition: top 0.2s 0.3s, transform 0.2s, opacity 0s;
 }
 
-/*TODO fix moving up action*/
+/* FIXME fix moving up action */
 [data-menu = 'open'] #menu-button::after {
   /*moves up, then rotates and becomes invisible (as if middle red line is on top)*/
   transition: top 0.2s, transform 0.2s 0.3s, opacity 0s 0.3s;
@@ -57,7 +57,7 @@
   opacity: 0;
 }
 
-/*TODO evenly space all lines*/
+/* FIXME evenly space all lines */
 #menu-button-middle {
   position: absolute;
   top: 50%;
@@ -68,7 +68,7 @@
   transition: 0.4s;
 }
 [data-menu = 'open'] #menu-button-middle {
-  /*waits for other lines to move, then rotates*/
+  /* waits for other lines to move, then rotates */
   transition: transform 0.2s 0.3s;
   transform: rotate(-45deg);
 }

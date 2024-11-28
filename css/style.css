@@ -63,19 +63,18 @@ body {
     background-color: rgb(213, 213, 213);
 }
 a {
-    /*removes hyperlink underline*/
-    text-decoration: none;
+    text-decoration: none; /* removes hyperlink underline */
     color: black;
 }
 ul {
-    /*removes dots from list items*/
-    list-style-type: none;
+    list-style-type: none; /* removes dots from list items */
 }
 li {
     list-style: none;
 }
 img {
     max-width: 100%;
+    object-fit: cover; /* keep image aspect ratio and displays center */
 }
 
 /***************************** 
@@ -104,6 +103,8 @@ img {
 h2 {
     font-family: "DMSans", Arial, Helvetica, sans-serif;
     font-size: 35px;
+    margin-bottom: 15px;
+    text-transform: uppercase; /* always uppercase */
 }
 
 /***************************** 
@@ -121,7 +122,7 @@ header {
     /* background-color: rgb(20, 0, 0); */
     background-image: linear-gradient(150deg, rgb(20,0,0) 80%, rgb(65,0,0) 85%, rgb(128,0,0) 90%, rgb(255,255,255) 100%);
 
-    /* TODO remove shadow when at top only */
+    /* FIXME remove shadow when at top only */
     box-shadow: 0 1px 10px black;
 
     #header-wrapper {
@@ -142,7 +143,6 @@ header {
             }
         }
 
-        /* TODO implement login/basket list */
         #header-items {
             display: flex;
             flex-wrap: wrap;
@@ -152,6 +152,7 @@ header {
             a {
                 transition: 0.2s;
                 margin: 0 20px 0 20px;
+                /* FIXME center text (vertical) */
                 img {
                     min-height: 40px;
                     min-width: 40px;
@@ -159,12 +160,24 @@ header {
                     width: 40px;
                     color: white; /* makes alt text visible */
                 }
+                /* FIXME center text (vertical) */
+                p {
+                    height: 40px;
+                    width: 70px;
+                    text-align: center;
+                    font-family: "Barlow Semi Condensed", Arial, Helvetica, sans-serif;
+                    font-size: 22px;
+                    color: white;
+                }
             }
             a:hover {
                 transition: 0.4s;
                 background-color: white;
                 img {
                     color: rgb(128, 0, 0); /* makes alt text visible */
+                }
+                p {
+                    color: rgb(128, 0, 0);
                 }
             }
         }
@@ -237,7 +250,205 @@ header {
 }
 
 /***************************** 
-    The Men, Women, Kids trapezoids on Homepage
+    FOOTER
+*****************************/
+footer {
+    margin-top: 40px;
+    width: 100%;
+
+    /* FIXME make footer be at bottom of page */
+    bottom: 0;
+
+    #social-media {
+        width: 100%;
+        height: 50px;
+        bottom: 0;
+        background-color: rgb(20,0,0);
+
+        #social-media-list {
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+            justify-content: center;
+
+            /* FIXME align in middle (height) */
+            align-items: center;
+
+            li {
+                padding: 0 40px;
+                img {
+                    min-height: 30px;
+                    min-width: 30px;
+                    height: 30px;
+                    width: 30px;
+                    color: white; /* makes alt text is visible */
+                }
+            }
+        }
+    }
+}
+
+/***************************** 
+    BACK TO TOP BUTTON
+*****************************/
+/* FIXME only show button past certain scroll point */
+#back-to-top {
+    height: 45px;
+    width: 50px;
+    position: fixed;
+    bottom: 7%;
+    right: 5%;
+    z-index: 1; /* on top of all other content */
+    font-family: "Barlow Semi Condensed", Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    text-indent: 5px; /* adjusts text to be in center (must be equal to letter-spacing) */
+    letter-spacing: 5px;
+    text-align: center;
+    line-height: 65px; /* text at bottom of button */
+    background-color: rgb(20,0,0);
+    color: white;
+    box-shadow: 0 1px 5px rgb(128, 128, 128);
+}
+#back-to-top:hover {
+    cursor: pointer;
+}
+/* FIXME fix line positions */
+#back-to-top::before, #back-to-top::after {
+    content: "";
+    position: absolute;
+    width: 52%;
+    height: 2px;
+    top: 11px;
+}
+#back-to-top::before {
+    background-color: white;
+    transform: rotate(-35deg);
+    left: 3px;
+}
+#back-to-top::after {
+    background-color: rgb(128, 0, 0);
+    transform: rotate(35deg);
+    right: 3px;
+}
+
+/***************************** 
+    CONTENT SEPARATOR LINE
+*****************************/
+.content-separate {
+    position: relative;
+    width: auto;
+    height: 20px;
+    padding: 3%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px;
+    .content-separate-box {
+        height: 10px;
+        width: 20px;
+        align-items: center;
+        border: 2px solid black;
+    }
+    .content-separate-box::before, .content-separate-box::after {
+        content: "";
+        display: inline-block;
+        position: relative;
+        height: 1px;
+        width: calc(100% + 4px);
+        background-color: black;
+    }
+    .content-separate-box::before {
+        left: -1px;
+        top: -10px;
+        rotate: 27deg;
+    }
+    .content-separate-box::after {
+        left: -2px;
+        top: -32px;
+        rotate: -27deg;
+    }
+}
+.content-separate::before, .content-separate::after {
+    content: "";
+    position: absolute;
+    /* FIXME width calculated so distance away from rect is consistent */
+    width: 43%;
+    height: 1.6px;
+    background: black;
+    vertical-align: middle;
+}
+.content-separate::before {
+    left: 3%;
+}
+.content-separate::after {
+    right: 3%;
+}
+
+/***************************** 
+    MAIN IMAGE ON HOMEPAGE
+*****************************/
+#home-main {
+    margin-top: -20px; /* ignores header margin */
+    margin-bottom: 20px;
+    img {
+        background-color: white;
+        min-height: 600px;
+        min-width: 100%;
+        height: 600px;
+        width: 100%;
+    }
+}
+
+/***************************** 
+    FEATURED PRODUCTS LIST
+*****************************/
+#featured-products-list {
+    margin: 0 3% 0 3%;
+}
+
+/***************************** 
+    PRODUCTS LIST
+*****************************/
+.products-list {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    height: 400px;
+    width: 100%;
+    left: 10%;
+    overflow: hidden;
+    justify-content: center;
+
+    .single-product {
+        height: 100%;
+        width: 300px;
+        margin: 10px;
+        padding: 10px;
+        background-color: white;
+        font-size: 20px;
+        img {
+            background-color: rgb(213, 213, 213);
+            min-height: 50%;
+            min-width: 100%;
+            height: 50%;
+            width: 100%;
+        }
+        .product-title {
+            font-size: 25px;
+        }
+
+        /* FIXME position price and size at bottom*/
+        .product-price {
+            inline-size: 1000px;
+        }
+        .product-size {
+            bottom: 10px;
+        }
+    }
+}
+
+/***************************** 
+    Men, Women, Kids trapezoids on Homepage
 *****************************/
 
 .trapezoid-button {
@@ -322,193 +533,13 @@ header {
     background-color: #1f85de;
     color:#ffffff;
     transition: .2s;
-} 
-
-/***************************** 
-    FOOTER
-*****************************/
-footer {
-    margin-top: 20px;
-    width: 100%;
-
-    /* TODO make footer be at bottom of page */
-    bottom: 0;
-
-    #social-media {
-        width: 100%;
-        height: 50px;
-        bottom: 0;
-        background-color: rgb(20,0,0);
-
-        #social-media-list {
-            display: flex;
-            flex-wrap: wrap;
-            flex-direction: row;
-            justify-content: center;
-
-            /* TODO align in middle (height) */
-            align-items: center;
-
-            li {
-                padding: 0 40px;
-                img {
-                    min-height: 30px;
-                    min-width: 30px;
-                    height: 30px;
-                    width: 30px;
-                    color: white; /* makes alt text is visible */
-                }
-            }
-        }
-    }
 }
 
 /***************************** 
     BACK TO TOP BUTTON
 *****************************/
-/* TODO only show button past certain scroll point */
-#back-to-top {
-    height: 45px;
-    width: 50px;
-    position: fixed;
-    bottom: 7%;
-    right: 5%;
-    z-index: 1; /* on top of all other content */
-    font-family: "Barlow Semi Condensed", Arial, Helvetica, sans-serif;
-    font-size: 18px;
-    text-indent: 5px; /* adjusts text to be in center (must be equal to letter-spacing) */
-    letter-spacing: 5px;
-    text-align: center;
-    line-height: 65px; /* text at bottom of button */
-    background-color: rgb(20,0,0);
-    color: white;
-    box-shadow: 0 1px 5px rgb(128, 128, 128);
-}
-#back-to-top:hover {
-    cursor: pointer;
-}
-/* TODO fix line positions */
-#back-to-top::before, #back-to-top::after {
-    content: "";
-    position: absolute;
-    width: 55%;
-    height: 2px;
-    top: 13px;
-}
-#back-to-top::before {
-    background-color: white;
-    transform: rotate(-35deg);
-    left: 3px;
-}
-#back-to-top::after {
-    background-color: rgb(128, 0, 0);
-    transform: rotate(35deg);
-    right: 3px;
-}
-
-/***************************** 
-    CONTENT SEPARATOR LINE
-*****************************/
-.content-separate {
-    position: relative;
-    width: auto;
-    height: 20px;
-    padding: 3%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: 1px;
-    .content-separate-box {
-        height: 10px;
-        width: 20px;
-        align-items: center;
-        border: 2px solid black;
-    }
-    .content-separate-box::before, .content-separate-box::after {
-        /* TODO put cross in box */
-        content: "";
-    }
-}
-.content-separate::before, .content-separate::after {
-    content: "";
-    position: absolute;
-    /* TODO width calculated so distance away from rect is consistent */
-    width: 43%;
-    height: 1.6px;
-    background: black;
-    vertical-align: middle;
-}
-.content-separate::before {
-    left: 3%;
-}
-.content-separate::after {
-    right: 3%;
-}
-
-/***************************** 
-    MAIN IMAGE ON HOMEPAGE
-*****************************/
-#main-image {
-    margin-top: -20px; /* ignores header margin */
-    margin-bottom: 20px;
-    img {
-        background-color: white;
-        min-height: 600px;
-        min-width: 100%;
-        height: 600px;
-        width: 100%;
-    }
-}
-
-/***************************** 
-    FEATURED PRODUCTS LIST
-*****************************/
-#featured-products-list {
+#mens-main {
     margin: 0 3% 0 3%;
-    h2 {
-        margin-bottom: 15px;
-    }
-}
-
-/***************************** 
-    PRODUCTS LIST
-*****************************/
-.products-list {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    height: 400px;
-    width: 100%;
-    left: 10%;
-    overflow: hidden;
-    justify-content: center;
-
-    .single-product {
-        height: 100%;
-        width: 300px;
-        margin: 10px;
-        padding: 10px;
-        background-color: white;
-        font-size: 20px;
-        img {
-            background-color: rgb(213, 213, 213);
-            min-height: 50%;
-            min-width: 100%;
-            height: 50%;
-            width: 100%;
-        }
-        .product-title {
-            font-size: 25px;
-        }
-
-        /* TODO position price and size at bottom*/
-        .product-price {
-            inline-size: 1000px;
-        }
-        .product-size {
-            bottom: 10px;
-        }
-    }
 }
 
 /***************************** 
@@ -522,7 +553,6 @@ footer {
     flex-wrap: wrap;
     flex-direction: row;
     img {
-        /* TODO make image take same space as background */
         margin: 10px;
         min-height: 90%;
         min-width: 390px;
@@ -531,7 +561,7 @@ footer {
         background-color: white;
     }
 }
-/* TODO position image to right */
+/* FIXME position image to right */
 .about-us-2 {
     img {
         right: 0;

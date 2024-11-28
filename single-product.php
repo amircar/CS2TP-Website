@@ -1,4 +1,4 @@
-<!-- TODO make whole span clickable -->
+<!-- FIXME make whole span clickable -->
 <span class="single-product">
     <!-- TODO image source -->
     <img src="" alt="product-image">

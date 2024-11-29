@@ -31,7 +31,7 @@
         
         <main id="home-main">
             <!-- TODO image for testing -->
-            <img src="" alt="main-image">
+           
         </main>
 
         <div id="featured-products-list">
@@ -48,6 +48,7 @@
 
         <div>
             <!-- FIXME categories section -->
+        <div id="section">
             <div class="trapezoid1"></div>
             <div class="trapezoid1-rectangle">
                 <button class="trapezoid-button" style="text-align: center; clip-path: polygon(0% 0%, 100% 0%, 95% 100%, 0% 100%);">MEN</button>
@@ -61,6 +62,7 @@
             <div class="trapezoid3"></div>
             <div class="trapezoid3-rectangle">
             <button class="trapezoid-button" style="text-align: center; clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 5% 100%)">KIDS</button>
+            </div>
             </div>
         </div>
 

@@ -450,11 +450,18 @@ footer {
 /***************************** 
     Men, Women, Kids trapezoids on Homepage
 *****************************/
+#section{
+    background-color: rgb(213, 213, 213);
+    height: 600px;
+    width: 100%;
+    position: relative;
+    float:left;
+ }
 
 .trapezoid1 {
     position: absolute;
     top: 20px;
-    left: 20px;
+    left: 1.5%;
     width: 450px;
     height: 470px;
     clip-path: polygon(0% 0%, 100% 0%, 75% 100%, 0% 100%);
@@ -465,7 +472,7 @@ footer {
 .trapezoid2 {
     position: absolute;
     top: 70px;
-    left: 355px;
+    left: 28.1%;
     margin: 20px;
     width: 510px;
     height: 472px;
@@ -476,7 +483,7 @@ footer {
 .trapezoid3 {
     position: absolute;
     top: 0px;
-    left: 790px;
+    left: 62.6%;
     margin-top: 20px;
     width: 450px;
     height: 470px;
@@ -487,7 +494,7 @@ footer {
 .trapezoid1-rectangle{
     position: absolute;
     top: 490px;
-    left: 20px;
+    left: 1.5%;
     width: 337px;
     height: 70px;
     clip-path: polygon(0% 0%, 100% 0%, 95% 100%, 0% 100%);
@@ -497,7 +504,7 @@ footer {
 .trapezoid2-rectangle{
     position: absolute;
     top: 20px;
-    left: 477px;
+    left: 37.8%;
     width: 307px;
     height: 70px;
     clip-path: polygon(5% 0%, 95% 0%, 100% 100%, 0% 100%);
@@ -507,7 +514,7 @@ footer {
 .trapezoid3-rectangle{
     position: absolute;
     top: 490px;
-    left: 903px;
+    left: 71.5%;
     width: 337px;
     height: 70px;
     clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 5% 100%);

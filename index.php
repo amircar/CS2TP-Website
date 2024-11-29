@@ -65,6 +65,7 @@
             </div>
             </div>
         </div>
+        <div class="content-separate"><div class="content-separate-box"></div></div>
 
         <?php require_once 'footer.php' ?>
     </body>

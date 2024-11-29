@@ -1,5 +1,9 @@
+<link rel ="stylesheet" href = './css/footer.css'>
+
+
 <footer>
-    <div id="social-media">
+    <div id="footer-style">
+    <!-- <div id="social-media">
         <ul id="social-media-list">
             <li>
                 <a href="https://www.youtube.com"><img src="" alt="youtube"></a>
@@ -14,5 +18,6 @@
                 <a href="https://www.tiktok.com"><img src="" alt="tiktok"></a>
             </li>
         </ul>
+    </div> -->
     </div>
 </footer>

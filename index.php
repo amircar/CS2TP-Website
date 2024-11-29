@@ -29,7 +29,8 @@
     <body>
         <?php require_once('header.php');?>
         
-        <main id="main-image">
+        <main id="home-main">
+            <!-- TODO image for testing -->
             <img src="" alt="main-image">
         </main>
 
@@ -46,7 +47,7 @@
         <div class="content-separate"><div class="content-separate-box"></div></div>
 
         <div>
-            <!-- TODO categories section -->
+            <!-- FIXME categories section -->
             <!-- <div id="section">
                 <div class="trapezoid1"><img src="" alt="category-image"></div>
                 <button class="trapezoid-button">MEN</button>

@@ -451,14 +451,9 @@ footer {
     Men, Women, Kids trapezoids on Homepage
 *****************************/
 
-.trapezoid-button {
-    text-align: center;
-    clip-path: polygon(0% 0%, 100% 0%, 95% 100%, 0% 100%);
-}
-
 .trapezoid1 {
     position: absolute;
-    /* top: 20px; */
+    top: 20px;
     left: 20px;
     width: 450px;
     height: 470px;
@@ -469,7 +464,7 @@ footer {
 
 .trapezoid2 {
     position: absolute;
-    /* top: 70px; */
+    top: 70px;
     left: 355px;
     margin: 20px;
     width: 510px;
@@ -480,7 +475,7 @@ footer {
 }
 .trapezoid3 {
     position: absolute;
-    /* top: 0px; */
+    top: 0px;
     left: 790px;
     margin-top: 20px;
     width: 450px;
@@ -491,7 +486,7 @@ footer {
 }
 .trapezoid1-rectangle{
     position: absolute;
-    /* top: 490px; */
+    top: 490px;
     left: 20px;
     width: 337px;
     height: 70px;
@@ -501,7 +496,7 @@ footer {
 }
 .trapezoid2-rectangle{
     position: absolute;
-    /* top: 20px; */
+    top: 20px;
     left: 477px;
     width: 307px;
     height: 70px;
@@ -511,7 +506,7 @@ footer {
 }
 .trapezoid3-rectangle{
     position: absolute;
-    /* top: 490px; */
+    top: 490px;
     left: 903px;
     width: 337px;
     height: 70px;
@@ -533,8 +528,7 @@ footer {
     background-color: #1f85de;
     color:#ffffff;
     transition: .2s;
-}
-
+} 
 /***************************** 
     BACK TO TOP BUTTON
 *****************************/

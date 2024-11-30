@@ -582,3 +582,161 @@ footer {
 .carousel-button:hover {
     background-color: rgba(0, 0, 0, 0.7);
 }
+
+#singleProduct {
+    margin-top: 100px;
+    display: flex;
+    justify-content:left; 
+    margin-bottom: 100px;
+}
+
+#preview {
+    margin-right: 20px;
+    margin-left: 20px;
+
+}
+
+#mainView {
+    flex: left; 
+    margin-right: 100px; 
+}
+
+
+
+#productInfo {
+    flex: 1 0 200px; 
+    display:flex;
+    flex-direction:column;
+    
+         
+}
+
+.productName{
+
+    font-size: 40px;
+    
+}
+
+
+.price {
+    
+    font-size: 25px;
+    padding-bottom: 25px;
+    border-bottom: 1px solid grey;
+    width: 250px;
+    
+}
+
+.colourTitle{
+    font-size: 10px;
+    margin-top: 10px;
+}
+
+.thumbnail{
+    width: 500px;
+    height: 500px;
+
+
+}
+
+.thumb {
+    border: 2px solid #000000;
+    border-radius: 5px;
+    margin-bottom: 25px;
+    padding: 0px;
+    width: 90px;
+    height: 90px;
+    
+  }
+
+.colours{
+    display: flex;
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+  }
+
+.colour{
+    width: 30px;
+    height: 20px;
+    border: 2px solid black;
+    margin-right: 20px;
+   
+
+}
+
+.red{
+    background-color: red;
+
+}
+
+.yellow{
+    background-color: yellow;
+
+}
+
+.blue{
+    background-color: blue;
+
+}
+
+.white{
+    background-color: white;
+
+}
+
+.black{
+    background-color: black;
+
+}
+
+.sizes{
+    display: flex;
+    margin-top: 10px;
+    margin-bottom: 50px;
+
+  }
+
+.size{
+    width: 30px;
+    height: 20px;
+    border: 1px solid black;
+    margin-right: 20px;
+    text-align: center;
+    background-color: rgb(178, 178, 178);
+    font-size: 12px;
+    line-height: 20px;
+}
+
+.Btn1{
+    font-size: 20px;
+    color: white;
+    font-weight: bold;
+    padding: 10px 10px 10px;
+    background-color: darkred;
+    width: 250px;
+    margin-bottom: 25px;
+    border: 2px solid black;
+    text-align: center;
+}
+
+.Btn1:hover{
+    background-color: rgb(113, 0, 0);
+}
+
+.Btn2{
+    font-size: 20px;
+    color: white;
+    font-weight: bold;
+    padding: 10px 10px 10px;
+    background-color: rgb(42, 218, 200);
+    width: 250px;
+    margin-bottom: 25px;
+    border: 2px solid black;
+    text-align: center;
+}
+
+.Btn2:hover{
+    background-color: rgb(35, 192, 176);
+}
+

@@ -15,3 +15,4 @@ function moveCarousel(direction) {
     const carousel = document.getElementById('carousel');
     carousel.style.transform = `translateX(-${(100 / itemsToShow) * currentIndex}%)`;
 }
+

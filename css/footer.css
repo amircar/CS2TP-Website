@@ -34,7 +34,7 @@
     }
 } */
 
-footer{
+/* footer{
     margin-top: 40px;
     width: 100%;
     background-color: rgb(20,0,0);
@@ -43,7 +43,92 @@ footer{
     background-color: rgb(20, 0, 0);
     color: white;
     width: 100%;
-    height: 80px;
+    height: 200px;
     display: flex;
 }
 
+#line {
+    margin: 150px;
+    width: 100%;
+    height: 2px;
+    background-color: rgb(240, 70, 112);
+    display: flex;
+
+} */
+
+
+
+footer {
+    margin-top: 40px;
+    width: 100%;
+    background-color: rgb(20, 0, 0);
+    color: white;
+}
+
+#footer-style {
+    display: flex;
+    justify-content: space-between;
+    padding: 40px 50px;
+    flex-wrap: wrap;
+}
+
+#footer-space{
+    background-color: rgb(20, 0, 0);
+    width: 10%;
+}
+.footer-section {
+    flex: 1 1 200px; /* Flexibility of footer */
+    margin: 10px;
+}
+
+.footer-section h2, .footer-section h3 {
+    margin-bottom: 10px;
+    font-size: 18px;
+    color: rgb(240, 70, 84); /* Color for main header */
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    margin-bottom: 5px;
+}
+
+ul li a {
+    color: white; /* colour for main text*/
+    text-decoration: none;
+    font-size: 14px;
+}
+
+ul li a:hover {
+    text-decoration: underline;
+}
+
+.footer-button {
+    background-color: rgb(240, 70, 84);
+    color: white;
+    border: none;
+    padding: 10px 40px;
+    margin: 10px 0;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.footer-button:hover {
+    background-color: rgb(255, 255, 255);
+    color: rgb(240, 70, 84);
+}
+
+#line {
+    margin-bottom: 20px;
+    width: 90%;
+    height: 2px;
+    background-color: rgb(240, 70, 84);
+}
+h4{
+    font-size: small;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: white;
+}

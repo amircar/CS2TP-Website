@@ -56,7 +56,7 @@
             
             <div class="trapezoid2"></div>
             <div class="trapezoid2-rectangle">
-                <button class="trapezoid-button" style="text-align: center; width: 315px;">WOMEN</button>
+                <button class="trapezoid-button" style="text-align: center; width: 100%;">WOMEN</button>
             </div>
 
             <div class="trapezoid3"></div>

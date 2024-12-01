@@ -7,7 +7,7 @@ id (single use per page) = #
 white
 off-black = rgb(20,0,0)
 grey (same as body) = rgb(213, 213, 213)
-red = rgb(128, 0, 0)
+red = rgb(240, 70, 84)
 
 CONTENT SHOULD HAVE MARGIN OF 3% ON LEFT AND RIGHT
 */
@@ -174,10 +174,10 @@ header {
                 transition: 0.4s;
                 background-color: rgb(255,255,255);
                 img {
-                    color: rgb(128, 0, 0); /* makes alt text visible */
+                    color: rgb(240, 70, 84); /* makes alt text visible */
                 }
                 p {
-                    color: rgb(128, 0, 0);
+                    color: rgb(240, 70, 84);
                 }
             }
         }
@@ -236,7 +236,7 @@ header {
 
             a:hover {
                 background-color: white;
-                color: rgb(128, 0, 0);
+                color: rgb(240, 70, 84);
                 transition: 0.2s 0.4s;
             }
             /* border fills whole nav bar height */
@@ -292,7 +292,7 @@ header {
     left: 3px;
 }
 #back-to-top::after {
-    background-color: rgb(128, 0, 0);
+    background-color: rgb(240, 70, 84);
     transform: rotate(35deg);
     right: 3px;
 }
@@ -422,13 +422,14 @@ header {
     width: 100%;
     position: relative;
     float:left;
+    display: flex;
  }
 
 .trapezoid1 {
     position: absolute;
     top: 20px;
     left: 1.5%;
-    width: 450px;
+    width: 35.5%;
     height: 470px;
     clip-path: polygon(0% 0%, 100% 0%, 75% 100%, 0% 100%);
     overflow: hidden; 
@@ -440,7 +441,7 @@ header {
     top: 70px;
     left: 28.1%;
     margin: 20px;
-    width: 510px;
+    width: 40.5%;
     height: 472px;
     clip-path: polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%);
     overflow: hidden; 
@@ -451,7 +452,7 @@ header {
     top: 0px;
     left: 62.6%;
     margin-top: 20px;
-    width: 450px;
+    width: 35.5%;
     height: 470px;
     clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 25% 100%);
     overflow: hidden; 
@@ -461,7 +462,7 @@ header {
     position: absolute;
     top: 490px;
     left: 1.5%;
-    width: 337px;
+    width: 26.65%;
     height: 70px;
     clip-path: polygon(0% 0%, 100% 0%, 95% 100%, 0% 100%);
     overflow: hidden; 
@@ -471,7 +472,7 @@ header {
     position: absolute;
     top: 20px;
     left: 37.8%;
-    width: 307px;
+    width: 24.3%;
     height: 70px;
     clip-path: polygon(5% 0%, 95% 0%, 100% 100%, 0% 100%);
     overflow: hidden; 
@@ -481,7 +482,7 @@ header {
     position: absolute;
     top: 490px;
     left: 71.5%;
-    width: 337px;
+    width: 26.65%;
     height: 70px;
     clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 5% 100%);
     overflow: hidden; 
@@ -491,14 +492,14 @@ header {
     background-color: #000000;
     border: 0;
     color: #ffffff;
-    width: 337px;
+    width: 100%;
     height: 70px;
     font-size: 30px;
     cursor: pointer;
   }
 
 .trapezoid-button:hover {
-    background-color: #1f85de;
+    background-color: rgb(240, 70, 84);
     color:#ffffff;
     transition: .2s;
 } 

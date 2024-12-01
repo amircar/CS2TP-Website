@@ -47,7 +47,7 @@
         <div class="content-separate"><div class="content-separate-box"></div></div>
 
         <div>
-            <!-- FIXME categories section -->
+            <!-- FIXME the measurements when the screen goes smaller is off -->
         <div id="section">
             <div class="trapezoid1"></div>
             <div class="trapezoid1-rectangle">

@@ -11,11 +11,17 @@
         <?php require_once('header.php');?>
         
         <main id="about-us-main">
-            <div class="about-us-1">
-                <img src="" alt="about-us-image">
+            <div id="section" style="height:400px; background-color:white;"></div> <!--add image -->
+            <div class="aboutus-box">
+                    <h3>About Us</h3>
+            </div>
+            <div id="section" style="height:300px;">
                 <span>
-                    <h2>TITLE</h2>
-                    <p>TEXT</p>
+                    <h2>text</h2>
+                    <p>text</p>
+                    <p>text</p>
+                    <p>text</p>
+                    <p>text</p>
                 </span>
             </div>
 

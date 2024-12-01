@@ -106,6 +106,13 @@ h2 {
     margin-bottom: 15px;
     text-transform: uppercase; /* always uppercase */
 }
+h3 {
+    font-family: "DMSans", Arial, Helvetica, sans-serif;
+    font-size: 100px;
+    margin-bottom: 15px;
+    text-align: center;
+    text-transform: uppercase; /* always uppercase */
+}
 
 /***************************** 
     HEADER
@@ -513,6 +520,18 @@ header {
 /***************************** 
     ABOUT US
 *****************************/
+
+.aboutus-box{
+    height: 120px;
+    width: 35%;
+    background-color: #c1008a;
+    display: flex;
+    color: white;
+    position: absolute;
+    margin-top: 100px;
+    margin-left: 32%;
+    padding: 10px;
+}
 .about-us-1, .about-us-2 {
     height: 400px;
     width: 94%;

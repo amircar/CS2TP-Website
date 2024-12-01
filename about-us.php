@@ -28,6 +28,8 @@
             <div class="content-separate"><div class="content-separate-box"></div></div>
 
             <div class="about-us-2">
+                <!-- add 3 rollover images so when user hovers the mouse, 
+                text will appear and image will lose opacity a bit but still be visible. -->
                 <span>
                     <h2>TITLE</h2>
                     <p>TEXT</p>

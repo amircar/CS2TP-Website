@@ -244,13 +244,13 @@ header {
             a:hover {
                 background-color: white;
                 color: rgb(240, 70, 84);
-                transition: 0.2s 0.4s;
+                transition: 0.1s 0.2s;
             }
             /* border fills whole nav bar height */
             a:hover::after {
                 height: 25px;
                 transform: translate(-10.5px, 0);
-                transition: 0.2s 0.4s;
+                transition: 0.1s 0.2s;
             }
         }
     }

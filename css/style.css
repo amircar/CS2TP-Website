@@ -534,3 +534,16 @@ header {
         right: 0;
     }
 }
+
+
+
+
+
+/* AMIR CSS */
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Adjust height as needed */
+  }

@@ -9,7 +9,7 @@
         <!----------------------------
             SEO (optional)
         ----------------------------->
-        <title>Team 47 Homepage</title>
+        <title>Team 47 | Login</title>
         <!-- title should be category/product name from database on single/products page -->
         <meta name="description" content=""> <!-- shown under title on search engine, changes based on product (may not always be needed for pages that do not need to be found on search engine (like wishlist)-->
         <!-- description = product desc -->
@@ -24,48 +24,40 @@
         <meta property="og:image" content=""> <!--url to image-->
         <meta property="og:image:width" content="1200"> <!--min 1200 x 630-->
         <meta property="og:image:height" content="630">
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     </head>
 
-    <body>
+    <body id="login">
         <?php require_once('header.php');?>
+
+
+
+        <!-- To do, implement login with backend -->
         
-        <main id="home-main">
-            <!-- TODO image for testing -->
-           
-        </main>
-
-        <div id="featured-products-list">
-            <h2>FEATURED PRODUCTS</h2>
-            <ul class="products-list">
-                <?php include('single-product.php');?>
-                <?php include('single-product.php');?>
-                <?php include('single-product.php');?>
-                <?php include('single-product.php');?>
-            </ul>
-        </div>
-
-        <div class="content-separate"><div class="content-separate-box"></div></div>
-
-        <div>
-            <!-- FIXME categories section -->
-        <div id="section">
-            <div class="trapezoid1"></div>
-            <div class="trapezoid1-rectangle">
-                <button class="trapezoid-button" style="text-align: center; clip-path: polygon(0% 0%, 100% 0%, 95% 100%, 0% 100%);">MEN</button>
-            </div>
+        <div class="wrapper">
+            <form action="">
+                <h1>Login</h1>
+                    <div class="input-field">
+                        <input type="text" placeholder="Enter Username" required>
+                        <i class='bx bx-user' ></i>
+                    </div>
+                      
+                    <div class="input-field">
+                        <input type="text" placeholder="Enter Password" required>
+                        <i class='bx bx-lock-alt' ></i>
+                    </div>
+                    
+                    <div class="remember-checkbox">
+                        <label><input type="checkbox"> Remember login details?</label>
+                        <a href="#">Forgot password?</a> 
+                    </div> 
+                    <div class="register-link">
+                        <p>No account? Join the team by clicking <a href="#"> here.</a></p>
+                    </div>
+            </form>
             
-            <div class="trapezoid2"></div>
-            <div class="trapezoid2-rectangle">
-                <button class="trapezoid-button" style="text-align: center; width: 315px;">WOMEN</button>
-            </div>
-
-            <div class="trapezoid3"></div>
-            <div class="trapezoid3-rectangle">
-            <button class="trapezoid-button" style="text-align: center; clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 5% 100%)">KIDS</button>
-            </div>
-            </div>
+            <button type="submit" class="btn"></button>
         </div>
-        <div class="content-separate"><div class="content-separate-box"></div></div>
 
         <?php require_once 'footer.php' ?>
     </body>

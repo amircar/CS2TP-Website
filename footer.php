@@ -12,7 +12,7 @@
         <div id="footer-space"></div>
         <!-- Customer Service -->
         <div class="footer-section">
-            <h3>Customer Service</h3>
+            <h3 style="text-align: left;">Customer Service</h3>
             <ul>
                 <li><a href="#">Contact Us</a></li>
                 <li><a href="#">FAQs</a></li>
@@ -23,7 +23,7 @@
 
         <!-- Customer Service Section -->
         <div class="footer-section">
-            <h3>Account</h3>
+            <h3 style="text-align: left;">Account</h3>
             <ul>
                 <li><a href="#">My Account</a></li>
                 <li><a href="#">Wishlist</a></li>
@@ -34,7 +34,7 @@
 
         <!-- Follow Us Section -->
         <div class="footer-section">
-            <h3>Follow Us</h3>
+            <h3 style="text-align: left;">Follow Us</h3>
             <ul>
                 <li><a href="#">Facebook</a></li>
                 <li><a href="#">Instagram</a></li>

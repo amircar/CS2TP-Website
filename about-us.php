@@ -34,37 +34,18 @@
             <!-- TODO fix rollover -->
             <div class="content-separate"><div class="content-separate-box"></div></div>
             
-            <div id="section" style="height: 400px;">
-            <div class="imagebox">
-                    <div class="imagerollover">
-                        <img src="" alt="about-us-image">
-                            <div class="text2">
-                                <div class="aboutus-info">
-                                    <h4>About Us</h4>
-                                    <br></br>
-                                    aboutus team47 as a group
-                                </div>
-                            </div>
-                    </div>
-                </div>
+           
+            <div class="about-us-1">
+                <img src="" alt="about-us-image">
+                <img src="" alt="about-us-image">
+                <img src="" alt="about-us-image">
             </div>
-            <!-- <div class="about-us-1">
-                 add 3 rollover images so when user hovers the mouse, 
-                text will appear and image will lose opacity a bit but still be visible. 
- 
-                <img src="" alt="about-us-image">
-                <img src="" alt="about-us-image">
-                <img src="" alt="about-us-image">
-            </div> -->
 
             <div class="content-separate"><div class="content-separate-box"></div></div>
 
             <div class="about-us-1">
-                <img src="" alt="about-us-image">
-                <span>
-                    <h2>TITLE</h2>
-                    <p>TEXT</p>
-                </span>
+        
+
             </div>
         </main>
         <?php require_once('footer.php');?>

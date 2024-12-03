@@ -1,25 +1,6 @@
-/*
-class (repeated on page) = .
-id (single use per page) = #
-*/
-
-/* MAIN COLORS:
-white
-off-black = rgb(20,0,0)
-grey (same as body) = rgb(213, 213, 213)
-red = rgb(128, 0, 0)
-
-CONTENT SHOULD HAVE MARGIN OF 3% ON LEFT AND RIGHT
-*/
-
 /***************************** 
     IMPORTED FONTS
 *****************************/
-/* TODO NOT MVP decide fonts
-    import fonts here
-    dont need all fonts (probably only need 3)
-    let me know if you want a font removed
-*/
 /* variable font */
 @font-face {
     font-family: "AfacadFlux";
@@ -76,34 +57,17 @@ img {
     max-width: 100%;
     object-fit: cover; /* keep image aspect ratio and displays center */
 }
-
-/***************************** 
-    NAV BAR/DROP-DOWN MENU (part of testing)
-*****************************/
-@media screen and (min-width: 576px) {
-}
-
-@media screen and (min-width: 768px) {
-}
-
-/* @media screen and (min-width: 992px) {
-    nav {
-        display: block;
-    }
-} */
-
-/* hides nav bar on smaller screens (for mobile) */
-/* @media screen and (max-width: 992px) {
-    nav {
-        display: none;
-    }    
-} */
-
-
 h2 {
     font-family: "DMSans", Arial, Helvetica, sans-serif;
     font-size: 35px;
     margin-bottom: 15px;
+    text-transform: uppercase; /* always uppercase */
+}
+h3 {
+    font-family: "DMSans", Arial, Helvetica, sans-serif;
+    font-size: 100px;
+    margin-bottom: 15px;
+    text-align: center;
     text-transform: uppercase; /* always uppercase */
 }
 
@@ -117,12 +81,7 @@ header {
     position: sticky;
     margin-bottom: 20px;
     z-index: 1; /* header and nav are over all other content */
-
-    /* TODO NOT MVP choose header bar colour (gradient makes nav bar look weird?) */
-    /* background-color: rgb(20, 0, 0); */
     background-image: linear-gradient(150deg, rgb(20,0,0) 80%, rgb(65,0,0) 85%, rgb(128,0,0) 90%, rgb(255,255,255) 100%);
-
-    /* FIXME NOT MVP remove shadow when at top only */
     box-shadow: 0 1px 10px black;
 
     #header-wrapper {
@@ -174,10 +133,10 @@ header {
                 transition: 0.4s;
                 background-color: white;
                 img {
-                    color: rgb(128, 0, 0); /* makes alt text visible */
+                    color: rgb(240, 70, 84); /* makes alt text visible */
                 }
                 p {
-                    color: rgb(128, 0, 0);
+                    color: rgb(240, 70, 84);
                 }
             }
         }
@@ -227,7 +186,7 @@ header {
                 display: block;
                 position: absolute;
                 transform: translate(-10.5px, 2.5px); /* align border between categories */
-                transition: 0.4s;
+                transition: 0.2s;
             }
             /* removes border line at edge page ( */
             a:first-child::after {
@@ -236,14 +195,14 @@ header {
 
             a:hover {
                 background-color: white;
-                color: rgb(128, 0, 0);
-                transition: 0.2s 0.4s;
+                color: rgb(240, 70, 84);
+                transition: 0.1s 0.2s;
             }
             /* border fills whole nav bar height */
             a:hover::after {
                 height: 25px;
                 transform: translate(-10.5px, 0);
-                transition: 0.2s 0.4s;
+                transition: 0.1s 0.2s;
             }
         }
     }
@@ -252,11 +211,11 @@ header {
 /***************************** 
     FOOTER
 *****************************/
-footer {
+
+/* footer {
     margin-top: 40px;
     width: 100%;
 
-    /* FIXME NOT MVP make footer be at bottom of page */
     bottom: 0;
 
     #social-media {
@@ -269,10 +228,10 @@ footer {
             display: flex;
             flex-wrap: wrap;
             flex-direction: row;
-            justify-content: center;
+            justify-content: center; */
 
             /* FIXME align in middle (height) */
-            align-items: center;
+            /* align-items: center;
 
             li {
                 padding: 0 40px;
@@ -282,16 +241,15 @@ footer {
                     height: 30px;
                     width: 30px;
                     color: white; /* makes alt text is visible */
-                }
+                /* }
             }
         }
     }
-}
+} */
 
 /***************************** 
     BACK TO TOP BUTTON
 *****************************/
-/* FIXME NOT MVP only show button past certain scroll point */
 #back-to-top {
     height: 45px;
     width: 50px;
@@ -326,7 +284,7 @@ footer {
     left: 3px;
 }
 #back-to-top::after {
-    background-color: rgb(128, 0, 0);
+    background-color: rgb(240, 70, 84);
     transform: rotate(35deg);
     right: 3px;
 }
@@ -371,7 +329,6 @@ footer {
 .content-separate::before, .content-separate::after {
     content: "";
     position: absolute;
-    /* FIXME NOT MVP width calculated so distance away from rect is consistent */
     width: 43%;
     height: 1.6px;
     background: black;
@@ -474,7 +431,6 @@ footer {
             
         } */
     }
-    /* FIXME NOT MVP at specific screen widths the increased size causes product to disappear and reappear quickly */
     .single-product:hover {
         height: 390px;
         width: 310px;
@@ -487,7 +443,6 @@ footer {
 /***************************** 
     HOMEPAGE CATEGORIES SECTION
 *****************************/
-
 #home-categories {
     margin: 0 3% 0 3%;
     display: flex;
@@ -570,21 +525,31 @@ footer {
 /***************************** 
     ABOUT US
 *****************************/
-.about-us-1, .about-us-2 {
+
+.aboutus-box{
+    height: 120px;
+    width: 35%;
+    background-color: rgb(213, 213, 213);
+    display: flex;
+    color: white;
+    position: absolute;
+    padding: 10px;
+}
+.about-us-1 {
     height: 400px;
     width: 94%;
     margin: 0 3% 0 3%;
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-    img {
+     img {
         margin: 10px;
         min-height: 90%;
-        min-width: 390px;
+        min-width: 31%;
         height: 90%;
-        width: 390px;
+        width: 31%;
         background-color: white;
-    }
+    } 
 }
 /* FIXME position image to right */
 .about-us-2 {
@@ -592,3 +557,43 @@ footer {
         right: 0;
     }
 }
+/* TODO fix the rollover image  */
+.imagebox{
+    margin: 10px;
+    min-height: 90%;
+    min-width: 31%;
+    height: 90%;
+    width: 31%;
+    background-color: white;
+}
+.image {
+    opacity: 1;
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: 0.5s ease;
+    backface-visibility: hidden;
+  }
+  
+  .text2 {
+    transition: 0.5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 55%;
+    left: 0%;
+  }
+  
+  .imagerollover:hover .image {
+    opacity: 0.35;
+  }
+  
+  .imagerollover:hover .text2 {
+    opacity: 0.9;
+  }
+  .aboutus-info {
+    background-color:  #7e7882;
+    color: rgb(200, 15, 15);
+    font-size: 15px;
+    padding: 16px 32px;
+    right: 60px;
+  }

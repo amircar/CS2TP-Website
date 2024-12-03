@@ -7,8 +7,11 @@
             <!-- TODO check if user is logged in -->
             <!-- IF LOGGED IN -->
             @auth
-                <a class="header-item" href="{{route('logout')}}">
-                    <li><p>Logout</p></li>
+                <a class="header-item">
+                    <li><form action="{{ route('logout') }}" method="POST" style="display: inline;">
+    @csrf
+    <button type="submit" class="btn btn-danger">Logout</button>
+</form></li>
                 </a>
                 <a class="header-item" href="">
                     <li><img src="" alt="profile" title="Profile"></li>

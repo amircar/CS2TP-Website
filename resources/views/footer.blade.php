@@ -1,5 +1,4 @@
-<link rel="stylesheet" href="./css/footer.css">
-
+<link rel="stylesheet" type="text/css" href="{{asset('css/footer.css') }}">
 <footer>
     <div id="footer-style">
         <!-- Sign Up / Login Section -->

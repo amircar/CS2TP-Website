@@ -3,8 +3,8 @@
     <head>
         <meta charset="utf-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-        <link rel="stylesheet" type="text/css" href="css/style.css"/>
-        <script defer src="js/main.js"></script>
+        <link rel="stylesheet" href="{{asset('css/style.css')}}">
+        <script type="text/javascript" src="{{ asset('js/main.js') }}"></script>
 
         <!----------------------------
             SEO (optional)
@@ -27,20 +27,22 @@
     </head>
 
     <body>
-        <?php require_once('header.php');?>
+         @include('header');
         
         <main id="home-main">
             <!-- TODO image for testing -->
            
         </main>
 
+            <!-- section for displaying featured products  -->
         <div id="featured-products-list">
+
             <h2>FEATURED PRODUCTS</h2>
+
             <ul class="products-list">
-                <?php include('single-product.php');?>
-                <?php include('single-product.php');?>
-                <?php include('single-product.php');?>
-                <?php include('single-product.php');?>
+                @foreach ($products as $product)
+                    @include('single-product' , ['product' => $product])
+                @endforeach
             </ul>
         </div>
 
@@ -67,6 +69,6 @@
         </div>
         <div class="content-separate"><div class="content-separate-box"></div></div>
 
-        <?php require_once 'footer.php' ?>
+        @include('footer');
     </body>
 </html>

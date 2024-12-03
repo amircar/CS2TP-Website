@@ -3,12 +3,12 @@
     <head>
         <meta charset="utf-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-        <link rel="stylesheet" type="text/css" href="css/style.css"/>
-        <script defer src="js/main.js"></script>
+        <link rel="stylesheet" type="text/css" href="{{asset('css/style.css') }}">
+        <script type="text/javascript" src="{{ asset('js/main.js') }}"></script>
     </head>
 
     <body>
-        <?php require_once('header.php');?>
+    @include('header');
         
         <main id="about-us-main">
             <div id="section" style="height:400px; background-color:white;"></div> <!--add image -->
@@ -47,6 +47,6 @@
                 </span>
             </div>
         </main>
-        <?php require_once('footer.php');?>
+        @include('footer');
     </body>
 </html>

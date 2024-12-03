@@ -12,7 +12,7 @@ return new class extends Migration
     //TABLE LAYOUT FOR PRODUCT IMAGES
     public function up(): void
     {
-        Schema::create('product__images', function (Blueprint $table) {
+        Schema::create('product_images', function (Blueprint $table) {
             $table->id();
             $table-> foreignId('product_id')->constrained('products');
             $table->string('image_url');

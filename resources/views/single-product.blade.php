@@ -1,9 +1,13 @@
 <!-- FIXME make whole span clickable -->
 <span class="single-product">
     <!-- TODO image source -->
-    <img src="" alt="product-image">
-    <p class="product-title">Product title</p>
-    <p class="product-price">£ Price</p>
+    @foreach($product->product_images as $image)
+        @if($image->is_primary) 
+            <img src="{{asset($image->image_url)}}" alt="{{ $image->alt_text }}">
+        @endif
+     @endforeach 
+    <p class="product-title">{{$product->name}}</p>
+    <p class="product-price">£ {{$product->price}}</p>
     <p class="product-size">Sizes: </p>
 </span>
 

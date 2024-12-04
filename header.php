@@ -22,22 +22,18 @@
         </ul>
     </div>
 
-    <!-- TODO menu drop down (not part of MVP) -->
-    <?php include("test.php"); ?>
-
     <nav>
-        <!-- TODO category links -->
         <ul id="nav-items">
-            <a class="nav-item" href="mens.php">
+            <a class="nav-item" href="men.php">
                 <li>MEN</li>
             </a>
-            <a class="nav-item" href="">
+            <a class="nav-item" href="women.php">
                 <li>WOMEN</li>
             </a>
-            <a class="nav-item" href="">
+            <a class="nav-item" href="kids.php">
                 <li>KIDS</li>
             </a>
-            <a class="nav-item" href="">
+            <a class="nav-item" href="accessories.php">
                 <li>ACCESSORIES</li>
             </a>
             <a class="nav-item" href="about-us.php">

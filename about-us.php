@@ -16,7 +16,7 @@
                 <h3 style="text-align: center; margin-top: 100px;">About Us</h3>
             </div> <!--add image -->
             <div id="section" style="height:230px; justify-content: center; margin-top: 50px;">
-                <div class="aboutus-box" style="width: 70%; height: 200px; ">
+                <div class="aboutus-box" style="width: 70%; height: 200px;">
                     <span>
                         <h2 style="text-align: center; color: black;">Team 47</h2>
                         <p style="text-align: center; color: black;">Team 47 is a passionate group 
@@ -43,11 +43,13 @@
             </div>
 
             <div class="content-separate"><div class="content-separate-box"></div></div>
-
-            <div class="about-us-1">
-        
-
+            <div id="section" style="justify-content: left;">
+                <div class="imagebox"></div>
+                <div class="aboutus-box2" style="margin-left: 55%"></div>
             </div>
+
+
+
         </main>
         <?php require_once('footer.php');?>
     </body>

@@ -81,7 +81,7 @@ header {
     position: sticky;
     margin-bottom: 20px;
     z-index: 1; /* header and nav are over all other content */
-    background-image: linear-gradient(150deg, rgb(20,0,0) 80%, rgb(65,0,0) 85%, rgb(128,0,0) 90%, rgb(255,255,255) 100%);
+    background-color: rgb(20,0,0);
     box-shadow: 0 1px 10px black;
 
     #header-wrapper {
@@ -209,45 +209,6 @@ header {
 }
 
 /***************************** 
-    FOOTER
-*****************************/
-
-/* footer {
-    margin-top: 40px;
-    width: 100%;
-
-    bottom: 0;
-
-    #social-media {
-        width: 100%;
-        height: 50px;
-        bottom: 0;
-        background-color: rgb(20,0,0);
-
-        #social-media-list {
-            display: flex;
-            flex-wrap: wrap;
-            flex-direction: row;
-            justify-content: center; */
-
-            /* FIXME align in middle (height) */
-            /* align-items: center;
-
-            li {
-                padding: 0 40px;
-                img {
-                    min-height: 30px;
-                    min-width: 30px;
-                    height: 30px;
-                    width: 30px;
-                    color: white; /* makes alt text is visible */
-                /* }
-            }
-        }
-    }
-} */
-
-/***************************** 
     BACK TO TOP BUTTON
 *****************************/
 #back-to-top {
@@ -373,7 +334,7 @@ header {
         height: 60px;
         width: 195px;
         background-color: white;
-        color: rgb(128, 0, 0);
+        color: rgb(240, 70, 84);
         transition: 0.4s;
         transform: translate(2.5px, -2.5px);
     }
@@ -497,7 +458,7 @@ header {
     #home-category1:hover, #home-category2:hover, #home-category3:hover {
         .home-category-button {
             background-color: white;
-            color: rgb(128, 0, 0);
+            color: rgb(240, 70, 84);
             transition: 0.4s;
         }
     }
@@ -559,20 +520,21 @@ header {
 }
 
 .imagebox{
-    margin: 10px;;
-    height: 90%;
-    width: 31%;
-    background-color: white;
-    position: relative;
-}
-
-.aboutus-box2{
-    margin: 10px;;
+    margin: 10px;
     height: 90%;
     width: 40%;
     background-color: white;
-    position: relative;
+    position: absolute;
 }
+
+.aboutus-box2{
+    margin: 10px;
+    height: 90%;
+    width: 35%;
+    background-color: white;
+    position: absolute;
+}
+
 
 /***************************** 
     CONTACT US
@@ -626,3 +588,13 @@ form input[type="submit"]:hover {
     border-radius: 8px;
     box-shadow: 0 0 9px rgba(0, 0, 0, 0.3);
 }
+#section{
+    background-color: rgb(213, 213, 213);
+    height: 600px;
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    float:left;
+    justify-content: center;
+ }

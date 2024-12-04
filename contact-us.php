@@ -14,20 +14,22 @@
             <div id="section" style="justify-content: center; height:300px; background-color: white;">
                 <h3 style="text-align: center; margin-top: 100px;">Contact US</h3>
             </div> <!--add image -->
-            <div id="section" style="height: 800px; margin-top: 50px;">
+            <div id="section" style="height: 800px; margin-top: 50px; justify-content: left;">
                 <div class="contactus-box" style="width: 55%; height: 600px; display: flex; flex-wrap: wrap;">
-                <span>
+                    <span>
                         <h2 style="text-align: center; color: black;">Team 47</h2>
                         <p style="text-align: center; color: black;">one outfit at a time!
                         </p>
                         <br><br>
-                    <form id="contactForm">
+                    </span>
+                    <form id="contactForm" style="margin-top: 40px;">
+                    
                         <label for="fname"></label>
                         <input type="text" id="fname" placeholder="First Name" name="fname" required>
 
                         <label for="lname"></label>
                         <input type="text" id="lname" placeholder="Last Name" name="lname" required><br><br>
-        
+            
                         <label for="description"></label><br>
                         <textarea id="description"placeholder="Message" name="description" rows="4" cols="50" required></textarea><br><br>
         
@@ -54,20 +56,20 @@
                         <p style="text-align: center; color: black;">one outfit at a time!
                         </p>
                     </span> -->
-                    </span>
+                   
                 </div>
                 <div class="contactus-box" style="width: 30%; height: 200px; margin-left: 65%">
                     <span>
                         <h2 style="text-align: center; color: black;">Team 47</h2>
-                        <p style="text-align: center; color: black;">one outfit at a time!
-                        </p>
+                        <p style="text-align: center; color: black;">one outfit at a time!</p>
                     </span>
                 </div>
             </div>
-            <!-- TODO fix rollover -->
+            
             <div class="content-separate"><div class="content-separate-box"></div></div>
             
         </main>
         <?php require_once('footer.php');?>
+
     </body>
 </html>

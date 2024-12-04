@@ -22,9 +22,9 @@
             <h2>FEATURED PRODUCTS</h2>
             <ul class="products-list">
                 @include('test');
-                <?php include('single-product');?>
-                <?php include('single-product');?>
-                <?php include('single-product');?>
+                @include('single-product')
+                @include('single-product')
+                @include('single-product')
             </ul>
         </div>
 

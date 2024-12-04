@@ -6,9 +6,15 @@
             <img src="{{asset($image->image_url)}}" alt="{{ $image->alt_text }}">
         @endif
      @endforeach 
+     {{$productSizes = ""}}
+     @foreach($product->sizes as $size)
+        @php
+            $productSizes .= $size->size . " ";
+        @endphp
+     @endforeach 
     <p class="product-title">{{$product->name}}</p>
     <p class="product-price">£ {{$product->price}}</p>
-    <p class="product-size">Sizes: </p>
+    <p class="product-size">Sizes: {{$productSizes}}</p>
 </span>
 
 <!-- Name: Team 47 T Shirt

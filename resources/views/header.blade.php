@@ -1,6 +1,6 @@
 <header>
     <div id="header-wrapper">
-        <a id="main-logo" href="index.php" title="Home"><img src="" alt="Logo"></a>
+        <a id="main-logo" href="index.php" title="Home"><img src={{asset("images/logo.png")}} alt="Logo"></a>
 
         <!-- TODO header links -->
         <ul id="header-items">
@@ -49,7 +49,7 @@
             <a class="nav-item" href="">
                 <li>ACCESSORIES</li>
             </a>
-            <a class="nav-item" href="about-us.php">
+            <a class="nav-item" href="about-us">
                 <li>ABOUT US</li>
             </a>
         </ul>

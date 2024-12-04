@@ -1,29 +1,6 @@
-/*
-class (repeated on page) = .
-id (single use per page) = #
-*/
-
-/* MAIN COLORS:
-white
-off-black = rgb(20,0,0)
-grey (same as body) = rgb(213, 213, 213)
-red = rgb(240, 70, 84)
-
-CONTENT SHOULD HAVE MARGIN OF 3% ON LEFT AND RIGHT
-*/
-
 /***************************** 
     IMPORTED FONTS
 *****************************/
-/* TODO decide fonts
-    import fonts here
-    dont need all fonts (probably only need 3)
-    let me know if you want a font removed
-*/
-
-
-/*mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm
-
 /* variable font */
 @font-face {
     font-family: "AfacadFlux";
@@ -48,7 +25,6 @@ CONTENT SHOULD HAVE MARGIN OF 3% ON LEFT AND RIGHT
     src: url(../fonts/BarlowSemiCondensed-Regular.ttf);
     font-weight: normal;
 }
-/*mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm
 
 /***************************** 
     RESET
@@ -81,30 +57,6 @@ img {
     max-width: 100%;
     object-fit: cover; /* keep image aspect ratio and displays center */
 }
-
-/***************************** 
-    NAV BAR/DROP-DOWN MENU (part of testing)
-*****************************/
-@media screen and (min-width: 576px) {
-}
-
-@media screen and (min-width: 768px) {
-}
-
-/* @media screen and (min-width: 992px) {
-    nav {
-        display: block;
-    }
-} */
-
-/* hides nav bar on smaller screens (for mobile) */
-/* @media screen and (max-width: 992px) {
-    nav {
-        display: none;
-    }    
-} */
-
-
 h2 {
     font-family: "DMSans", Arial, Helvetica, sans-serif;
     font-size: 35px;
@@ -113,10 +65,11 @@ h2 {
 }
 h3 {
     font-family: "DMSans", Arial, Helvetica, sans-serif;
-    font-size: 100px;
-    margin-bottom: 15px;
-    text-align: center;
     text-transform: uppercase; /* always uppercase */
+}
+h4 {
+    font-size: 15px;
+    font-family: "DMSans", Arial, Helvetica, sans-serif;
 }
 
 /***************************** 
@@ -129,12 +82,7 @@ header {
     position: sticky;
     margin-bottom: 20px;
     z-index: 1; /* header and nav are over all other content */
-
-    /* TODO choose header bar colour (gradient makes nav bar look weird?) */
-    background-color: rgb(20, 0, 0);
-    /* background-image: linear-gradient(150deg, rgb(20,0,0) 80%, rgb(65,0,0) 85%, rgb(128,0,0) 90%, rgb(255,255,255) 100%); */
-
-    /* FIXME remove shadow when at top only */
+    background-image: linear-gradient(150deg, rgb(20,0,0) 80%, rgb(65,0,0) 85%, rgb(128,0,0) 90%, rgb(255,255,255) 100%);
     box-shadow: 0 1px 10px black;
 
     #header-wrapper {
@@ -147,7 +95,7 @@ header {
             width: 20%;
             color: white; /* makes alt text is visible */
             img {
-                margin: 7.5px 0 0 20px;
+                margin: 7.5px 0 0 40px;
                 min-height: 60px;
                 min-width: 180px;
                 height: 60px;
@@ -184,12 +132,12 @@ header {
             }
             a:hover {
                 transition: 0.4s;
-                background-color: rgb(255,255,255);
+                background-color: white;
                 img {
-                    color: rgb(240, 70, 84); /* makes alt text visible */
+                    color: rgb(128,0,0); /* makes alt text visible */
                 }
                 p {
-                    color: rgb(240, 70, 84);
+                    color: rgb(128,0,0);
                 }
             }
         }
@@ -218,14 +166,14 @@ header {
                 padding: 0 10px 0 10px;
                 flex: 1 1;
                 color: black;
-                text-align: center;
-                transition: 0.2s;
+                transition: 0.4s;
 
                 li {
                     height: 100%;
                     text-align: center;
                     font-family: "Barlow Semi Condensed", Arial, Helvetica, sans-serif;
                     font-size: 18px;
+                    text-transform: uppercase; /* always uppercase */
                 }
             }
 
@@ -239,7 +187,7 @@ header {
                 display: block;
                 position: absolute;
                 transform: translate(-10.5px, 2.5px); /* align border between categories */
-                transition: 0.2s;
+                transition: 0.4s;
             }
             /* removes border line at edge page ( */
             a:first-child::after {
@@ -248,14 +196,14 @@ header {
 
             a:hover {
                 background-color: white;
-                color: rgb(240, 70, 84);
-                transition: 0.1s 0.2s;
+                color: rgb(128,0,0);
+                transition: 0.2s 0.4s;
             }
             /* border fills whole nav bar height */
             a:hover::after {
                 height: 25px;
                 transform: translate(-10.5px, 0);
-                transition: 0.1s 0.2s;
+                transition: 0.2s 0.4s;
             }
         }
     }
@@ -266,10 +214,85 @@ header {
 *****************************/
 
 
+/* TODO check footer css */
+footer {
+    margin-top: 40px;
+    width: 100%;
+    background-color: rgb(20, 0, 0);
+    color: white;
+}
+
+#footer-style {
+    display: flex;
+    justify-content: space-between;
+    padding: 40px 50px;
+    flex-wrap: wrap;
+
+    h4 {
+        color: white;
+    }
+}
+
+#footer-space{
+    background-color: rgb(20, 0, 0);
+    width: 10%;
+}
+.footer-section {
+    flex: 1 1 200px; /* Flexibility of footer */
+    margin: 10px;
+
+    h3 {
+        margin-bottom: 10px;
+        font-size: 18px;
+        text-align: center;
+        color: rgb(240, 70, 84);
+    }
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 5px;
+}
+
+.footer-section ul li a {
+    color: white; /* colour for main text*/
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.footer-section ul li a:hover {
+    text-decoration: underline;
+}
+
+.footer-button {
+    background-color: rgb(240, 70, 84);
+    color: white;
+    border: none;
+    padding: 10px 40px;
+    margin: 10px 0;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.footer-button:hover {
+    background-color: white;
+    color: rgb(240, 70, 84);
+}
+
+#line {
+    margin-bottom: 20px;
+    width: 90%;
+    height: 2px;
+    background-color: rgb(240, 70, 84);
+}
+
 /***************************** 
     BACK TO TOP BUTTON
 *****************************/
-/* FIXME only show button past certain scroll point */
 #back-to-top {
     height: 45px;
     width: 50px;
@@ -285,7 +308,7 @@ header {
     line-height: 65px; /* text at bottom of button */
     background-color: rgb(20,0,0);
     color: white;
-    box-shadow: 0 1px 5px rgb(128, 128, 128);
+    box-shadow: 0 0 6px rgb(128, 128, 128);
 }
 #back-to-top:hover {
     cursor: pointer;
@@ -304,7 +327,7 @@ header {
     left: 3px;
 }
 #back-to-top::after {
-    background-color: rgb(240, 70, 84);
+    background-color: rgb(128,0,0);
     transform: rotate(35deg);
     right: 3px;
 }
@@ -349,7 +372,6 @@ header {
 .content-separate::before, .content-separate::after {
     content: "";
     position: absolute;
-    /* FIXME width calculated so distance away from rect is consistent */
     width: 43%;
     height: 1.6px;
     background: black;
@@ -375,6 +397,31 @@ header {
         height: 600px;
         width: 100%;
     }
+    #home-main-button {
+        height: 55px;
+        width: 190px;
+        right: 6%;
+        top: 600px;
+        position: absolute;
+        background-color: rgb(20,0,0);
+        color: white;
+        font-family: "Barlow Semi Condensed", Arial, Helvetica, sans-serif;
+        font-size: 18px;
+        letter-spacing: 5px;
+        cursor: pointer;
+        transition: 0.4s;
+        box-shadow: 0 0 6px rgb(128, 128, 128);
+    }
+
+    /* TODO scale button */
+    #home-main-button:hover {
+        height: 60px;
+        width: 195px;
+        background-color: white;
+        color: rgb(128, 0, 0);
+        transition: 0.4s;
+        transform: translate(2.5px, -2.5px);
+    }
 }
 
 /***************************** 
@@ -391,142 +438,131 @@ header {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-    height: 400px;
+    height: 420px;
     width: 100%;
     left: 10%;
     overflow: hidden;
     justify-content: center;
 
     .single-product {
-        height: 100%;
+        height: 380px;
         width: 300px;
         margin: 10px;
         padding: 10px;
         background-color: white;
         font-size: 20px;
+        transition: 0.2s;
+
         img {
             background-color: rgb(213, 213, 213);
-            min-height: 50%;
+            min-height: 60%;
             min-width: 100%;
-            height: 50%;
+            height: 60%;
             width: 100%;
         }
-        .product-title {
-            font-size: 25px;
-        }
 
-        /* FIXME position price and size at bottom*/
-        .product-price {
-            inline-size: 1000px;
+        .product-title {
+            max-height: 81px; /* 3 lines */
+            font-size: 25px;
+            line-height: 27px;
+            overflow: hidden;
         }
-        .product-size {
-            bottom: 10px;
-        }
+    }
+    .single-product:hover {
+        height: 390px;
+        width: 310px;
+        box-shadow: 0 0 6px rgb(128, 128, 128);
+        transform: translate(0, -5px);
+        transition: 0.2s;
     }
 }
 
 /***************************** 
-    Men, Women, Kids trapezoids on Homepage
+    HOMEPAGE CATEGORIES SECTION
 *****************************/
-#section{
-    background-color: rgb(213, 213, 213);
-    height: 600px;
-    width: 100%;
-    position: relative;
-    float:left;
-    display: flex;
- }
-
-.trapezoid1 {
-    position: absolute;
-    top: 20px;
-    left: 1.5%;
-    width: 35.5%;
-    height: 470px;
-    clip-path: polygon(0% 0%, 100% 0%, 75% 100%, 0% 100%);
-    overflow: hidden; 
-    background-color:#d10000;
-}
-
-.trapezoid2 {
-    position: absolute;
-    top: 70px;
-    left: 28.1%;
-    margin: 20px;
-    width: 40.5%;
-    height: 472px;
-    clip-path: polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%);
-    overflow: hidden; 
-    background-color:#ff9be1 ;
-}
-.trapezoid3 {
-    position: absolute;
-    top: 0px;
-    left: 62.6%;
-    margin-top: 20px;
-    width: 35.5%;
-    height: 470px;
-    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 25% 100%);
-    overflow: hidden; 
-    background-color:#7d0075 ;
-}
-.trapezoid1-rectangle{
-    position: absolute;
-    top: 490px;
-    left: 1.5%;
-    width: 26.65%;
-    height: 70px;
-    clip-path: polygon(0% 0%, 100% 0%, 95% 100%, 0% 100%);
-    overflow: hidden; 
-    background-color:#a79218;
-}
-.trapezoid2-rectangle{
-    position: absolute;
-    top: 20px;
-    left: 37.8%;
-    width: 24.3%;
-    height: 70px;
-    clip-path: polygon(5% 0%, 95% 0%, 100% 100%, 0% 100%);
-    overflow: hidden; 
-    background-color:#c885f5;
-}
-.trapezoid3-rectangle{
-    position: absolute;
-    top: 490px;
-    left: 71.5%;
-    width: 26.65%;
-    height: 70px;
-    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 5% 100%);
-    overflow: hidden; 
-    background-color:#c1008a;
-}
-.trapezoid-button {
-    background-color: #000000;
-    border: 0;
-    color: #ffffff;
-    width: 100%;
-    height: 70px;
-    font-size: 30px;
-    cursor: pointer;
-  }
-
-.trapezoid-button:hover {
-    background-color: rgb(240, 70, 84);
-    color:#ffffff;
-    transition: .2s;
-} 
-/***************************** 
-    BACK TO TOP BUTTON
-*****************************/
-#mens-main {
+#home-categories {
     margin: 0 3% 0 3%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    #home-category1, #home-category2, #home-category3 {
+        text-align: center; /* alt text in middle */
+        height: 500px;
+        transition: 0.4s;
+
+        img {
+            background-color: white;
+            min-height: 430px;
+            min-width: 100%;
+            height: 430px;
+            width: 100%;
+        }
+        .home-category-button {
+            height: 71px; /* +1px to cover whole div */
+            width: 100%;
+            font-size: 27px;
+            letter-spacing: 5px;
+            background-color: rgb(20,0,0);
+            color: white;
+            cursor: pointer;
+            transition: 0.4s;
+        }
+    }
+    #home-category1, #home-category3 {
+        width: calc((100% / 3) - 20px);
+    }
+    #home-category1 {
+        clip-path: polygon(0 0, 100% 0, 82% 100%, 0 100%);
+        transform: translate(10%, 0);
+        .home-category-button {
+            transform: translate(-10%, -6px); /* align button text to center */
+        }
+    }
+    #home-category2 {
+        margin-top: 20px;
+        width: calc((100% / 3) + 40px);
+        clip-path: polygon(18% 0, 82% 0, 100% 100%, 0 100%);
+    }
+    #home-category3 {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 18% 100%);
+        transform: translate(-10%, 0);
+        .home-category-button {
+            transform: translate(10%, -6px); /* align button text to center */
+        }
+    }
+
+    #home-category1:hover, #home-category2:hover, #home-category3:hover {
+        .home-category-button {
+            background-color: white;
+            color: rgb(128, 0, 0);
+            transition: 0.4s;
+        }
+    }
+    #home-category1:hover {
+        transform: translate(10%, 10px);
+    }
+    #home-category2:hover {
+        transform: translate(0, -10px);
+    }
+    #home-category3:hover {
+        transform: translate(-10%, 10px);
+    }
+}
+
+/***************************** 
+    CATEGORY PAGES
+*****************************/
+#men-main, #women-main, #kids-main, #accessories-main {
+    margin: 0 3% 0 3%;
+    p {
+        font-size: 22px;
+    }
 }
 
 /***************************** 
     ABOUT US
 *****************************/
-
-.aboutus-box{
+.about-us-box{
     height: 120px;
     width: 35%;
     background-color: #c1008a;
@@ -553,6 +589,7 @@ header {
         background-color: white;
     }
 }
+
 /* FIXME position image to right */
 .about-us-2 {
     img {

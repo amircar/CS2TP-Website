@@ -1,0 +1,742 @@
+/*
+class (repeated on page) = .
+id (single use per page) = #
+*/
+
+/***************************** 
+    IMPORTED FONTS
+*****************************/
+/* TODO decide fonts
+    import fonts here
+    dont need all fonts (probably only need 3)
+    let me know if you want a font removed
+*/
+/* variable font */
+@font-face {
+    font-family: "AfacadFlux";
+    src: url(../fonts/AfacadFlux-VariableFont_slnt\,wght.ttf);
+    font-weight: normal;
+}
+/* variable font */
+@font-face {
+    font-family: "DMSans";
+    src: url(../fonts/DMSans-VariableFont_opsz\,wght.ttf);
+    font-weight: normal;
+}
+/* variable font */
+@font-face {
+    font-family: "SUSE";
+    src: url(../fonts/SUSE-VariableFont_wght.ttf);
+    font-weight: normal;
+}
+/* static font */
+@font-face {
+    font-family: "Barlow Semi Condensed";
+    src: url(../fonts/BarlowSemiCondensed-Regular.ttf);
+    font-weight: normal;
+}
+
+/***************************** 
+    RESET
+*****************************/
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-family: "AfacadFlux", Arial, Helvetica, sans-serif;
+}
+html {
+    width: 100%;
+    scroll-behavior: smooth;
+}
+body {
+    width: 100%;
+    background-color: rgb(213, 213, 213);
+}
+a {
+    /*removes hyperlink underline*/
+    text-decoration: none;
+    color: black;
+}
+ul {
+    /*removes dots from list items*/
+    list-style-type: none;
+}
+li {
+    list-style: none;
+}
+img {
+    max-width: 100%;
+}
+
+/***************************** 
+    NAV BAR/DROP-DOWN MENU (part of testing)
+*****************************/
+@media screen and (min-width: 576px) {
+}
+
+@media screen and (min-width: 768px) {
+}
+
+/* @media screen and (min-width: 992px) {
+    nav {
+        display: block;
+    }
+} */
+
+/* hides nav bar on smaller screens (for mobile) */
+/* @media screen and (max-width: 992px) {
+    nav {
+        display: none;
+    }    
+} */
+
+
+h2 {
+    font-family: "DMSans", Arial, Helvetica, sans-serif;
+    font-size: 35px;
+}
+
+/***************************** 
+    HEADER
+*****************************/
+header {
+    width: 100%;
+    height: 100px;
+    top: 0;
+    position: sticky;
+    margin-bottom: 20px;
+    z-index: 1; /* header and nav are over all other content */
+
+    /* TODO choose header bar colour (gradient makes nav bar look weird?) */
+    /* background-color: rgb(20, 0, 0); */
+    background-image: linear-gradient(150deg, rgb(20,0,0) 80%, rgb(65,0,0) 85%, rgb(128,0,0) 90%, rgb(255,255,255) 100%);
+
+    /* TODO remove shadow when at top only */
+    box-shadow: 0 1px 10px black;
+
+    #header-wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: space-between;
+
+        #main-logo {
+            width: 20%;
+            color: white; /* makes alt text is visible */
+            img {
+                margin: 7.5px 0 0 20px;
+                min-height: 60px;
+                min-width: 180px;
+                height: 60px;
+                width: 180px;
+            }
+        }
+
+        /* TODO implement login/basket list */
+        #header-items {
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+            align-items: center;
+            margin: 0 4% 0 4%;
+            a {
+                transition: 0.2s;
+                margin: 0 20px 0 20px;
+                img {
+                    min-height: 40px;
+                    min-width: 40px;
+                    height: 40px;
+                    width: 40px;
+                    color: white; /* makes alt text visible */
+                }
+            }
+            a:hover {
+                transition: 0.4s;
+                background-color: white;
+                img {
+                    color: rgb(128, 0, 0); /* makes alt text visible */
+                }
+            }
+        }
+    }
+
+/***************************** 
+    NAV BAR
+*****************************/
+    nav {
+        width: 100%;
+        height: 25px;
+        letter-spacing: 5px;
+        bottom: 0;
+        position: absolute;
+        background-color: rgb(128, 128, 128);
+
+        ul {
+            height: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+            justify-content: space-between;
+            overflow: hidden; /*text cuts off if it cannot fit*/
+            
+            a {
+                padding: 0 10px 0 10px;
+                flex: 1 1;
+                color: black;
+                text-align: center;
+                transition: 0.4s;
+
+                li {
+                    height: 100%;
+                    text-align: center;
+                    font-family: "Barlow Semi Condensed", Arial, Helvetica, sans-serif;
+                    font-size: 18px;
+                }
+            }
+
+            /* category border */
+            a::after {
+                content: "";
+                width: 1px;
+                height: 20px;
+                top: 0;
+                background-color: black;
+                display: block;
+                position: absolute;
+                transform: translate(-10.5px, 2.5px); /* align border between categories */
+                transition: 0.4s;
+            }
+            /* removes border line at edge page ( */
+            a:first-child::after {
+                content: none;
+            }
+
+            a:hover {
+                background-color: white;
+                color: rgb(128, 0, 0);
+                transition: 0.2s 0.4s;
+            }
+            /* border fills whole nav bar height */
+            a:hover::after {
+                height: 25px;
+                transform: translate(-10.5px, 0);
+                transition: 0.2s 0.4s;
+            }
+        }
+    }
+}
+
+/***************************** 
+    The Men, Women, Kids trapezoids on Homepage
+*****************************/
+
+.trapezoid-button {
+    text-align: center;
+    clip-path: polygon(0% 0%, 100% 0%, 95% 100%, 0% 100%);
+}
+
+.trapezoid1 {
+    position: absolute;
+    /* top: 20px; */
+    left: 20px;
+    width: 450px;
+    height: 470px;
+    clip-path: polygon(0% 0%, 100% 0%, 75% 100%, 0% 100%);
+    overflow: hidden; 
+    background-color:#d10000;
+}
+
+.trapezoid2 {
+    position: absolute;
+    /* top: 70px; */
+    left: 355px;
+    margin: 20px;
+    width: 510px;
+    height: 472px;
+    clip-path: polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%);
+    overflow: hidden; 
+    background-color:#ff9be1 ;
+}
+.trapezoid3 {
+    position: absolute;
+    /* top: 0px; */
+    left: 790px;
+    margin-top: 20px;
+    width: 450px;
+    height: 470px;
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 25% 100%);
+    overflow: hidden; 
+    background-color:#7d0075 ;
+}
+.trapezoid1-rectangle{
+    position: absolute;
+    /* top: 490px; */
+    left: 20px;
+    width: 337px;
+    height: 70px;
+    clip-path: polygon(0% 0%, 100% 0%, 95% 100%, 0% 100%);
+    overflow: hidden; 
+    background-color:#a79218;
+}
+.trapezoid2-rectangle{
+    position: absolute;
+    /* top: 20px; */
+    left: 477px;
+    width: 307px;
+    height: 70px;
+    clip-path: polygon(5% 0%, 95% 0%, 100% 100%, 0% 100%);
+    overflow: hidden; 
+    background-color:#c885f5;
+}
+.trapezoid3-rectangle{
+    position: absolute;
+    /* top: 490px; */
+    left: 903px;
+    width: 337px;
+    height: 70px;
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 5% 100%);
+    overflow: hidden; 
+    background-color:#c1008a;
+}
+.trapezoid-button {
+    background-color: #000000;
+    border: 0;
+    color: #ffffff;
+    width: 337px;
+    height: 70px;
+    font-size: 30px;
+    cursor: pointer;
+  }
+
+.trapezoid-button:hover {
+    background-color: #1f85de;
+    color:#ffffff;
+    transition: .2s;
+} 
+
+/***************************** 
+    FOOTER
+*****************************/
+footer {
+    margin-top: 20px;
+    width: 100%;
+
+    /* TODO make footer be at bottom of page */
+    bottom: 0;
+
+    #social-media {
+        width: 100%;
+        height: 50px;
+        bottom: 0;
+        background-color: rgb(20,0,0);
+
+        #social-media-list {
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+            justify-content: center;
+
+            /* TODO align in middle (height) */
+            align-items: center;
+
+            li {
+                padding: 0 40px;
+                img {
+                    min-height: 30px;
+                    min-width: 30px;
+                    height: 30px;
+                    width: 30px;
+                    color: white; /* makes alt text is visible */
+                }
+            }
+        }
+    }
+}
+
+/***************************** 
+    BACK TO TOP BUTTON
+*****************************/
+/* TODO only show button past certain scroll point */
+#back-to-top {
+    height: 45px;
+    width: 50px;
+    position: fixed;
+    bottom: 7%;
+    right: 5%;
+    z-index: 1; /* on top of all other content */
+    font-family: "Barlow Semi Condensed", Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    text-indent: 5px; /* adjusts text to be in center (must be equal to letter-spacing) */
+    letter-spacing: 5px;
+    text-align: center;
+    line-height: 65px; /* text at bottom of button */
+    background-color: rgb(20,0,0);
+    color: white;
+    box-shadow: 0 1px 5px rgb(128, 128, 128);
+}
+#back-to-top:hover {
+    cursor: pointer;
+}
+/* TODO fix line positions */
+#back-to-top::before, #back-to-top::after {
+    content: "";
+    position: absolute;
+    width: 55%;
+    height: 2px;
+    top: 13px;
+}
+#back-to-top::before {
+    background-color: white;
+    transform: rotate(-35deg);
+    left: 3px;
+}
+#back-to-top::after {
+    background-color: rgb(128, 0, 0);
+    transform: rotate(35deg);
+    right: 3px;
+}
+
+/***************************** 
+    CONTENT SEPARATOR LINE
+*****************************/
+.content-separate {
+    position: relative;
+    width: auto;
+    height: 20px;
+    padding: 3%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px;
+    .content-separate-box {
+        height: 10px;
+        width: 20px;
+        align-items: center;
+        border: 2px solid black;
+    }
+    .content-separate-box::before, .content-separate-box::after {
+        /* TODO put cross in box */
+        content: "";
+    }
+}
+.content-separate::before, .content-separate::after {
+    content: "";
+    position: absolute;
+    /* TODO width calculated so distance away from rect is consistent */
+    width: 43%;
+    height: 1.6px;
+    background: black;
+    vertical-align: middle;
+}
+.content-separate::before {
+    left: 3%;
+}
+.content-separate::after {
+    right: 3%;
+}
+
+/***************************** 
+    MAIN IMAGE ON HOMEPAGE
+*****************************/
+#main-image {
+    margin-top: -20px; /* ignores header margin */
+    margin-bottom: 20px;
+    img {
+        background-color: white;
+        min-height: 600px;
+        min-width: 100%;
+        height: 600px;
+        width: 100%;
+    }
+}
+
+/***************************** 
+    FEATURED PRODUCTS LIST
+*****************************/
+#featured-products-list {
+    margin: 0 3% 0 3%;
+    h2 {
+        margin-bottom: 15px;
+    }
+}
+
+/***************************** 
+    PRODUCTS LIST
+*****************************/
+.products-list {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    height: 400px;
+    width: 100%;
+    left: 10%;
+    overflow: hidden;
+    justify-content: center;
+
+    .single-product {
+        height: 100%;
+        width: 300px;
+        margin: 10px;
+        padding: 10px;
+        background-color: white;
+        font-size: 20px;
+        img {
+            background-color: rgb(213, 213, 213);
+            min-height: 50%;
+            min-width: 100%;
+            height: 50%;
+            width: 100%;
+        }
+        .product-title {
+            font-size: 25px;
+        }
+
+        /* TODO position price and size at bottom*/
+        .product-price {
+            inline-size: 1000px;
+        }
+        .product-size {
+            bottom: 10px;
+        }
+    }
+}
+
+/***************************** 
+    ABOUT US
+*****************************/
+.about-us-1, .about-us-2 {
+    height: 400px;
+    width: 94%;
+    margin: 0 3% 0 3%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    img {
+        /* TODO make image take same space as background */
+        margin: 10px;
+        min-height: 90%;
+        min-width: 390px;
+        height: 90%;
+        width: 390px;
+        background-color: white;
+    }
+}
+/* TODO position image to right */
+.about-us-2 {
+    img {
+        right: 0;
+    }
+}
+
+
+
+/* Item carousel */
+
+#carouselContainer {
+    position: relative;
+    width: 100%;
+    max-width: 960px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+#carousel {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-item {
+    flex: 0 0 33.3333%;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px; /* Rounds the corners of images */
+}
+
+.carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    font-size: 24px;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.carousel-button.prev {
+    left: 0;
+}
+
+.carousel-button.next {
+    right: 0;
+}
+
+.carousel-button:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+#singleProduct {
+    margin-top: 100px;
+    display: flex;
+    justify-content:left; 
+    margin-bottom: 100px;
+}
+
+#preview {
+    margin-right: 20px;
+    margin-left: 20px;
+
+}
+
+#mainView {
+    flex: left; 
+    margin-right: 100px; 
+}
+
+
+
+#productInfo {
+    flex: 1 0 200px; 
+    display:flex;
+    flex-direction:column;
+    
+         
+}
+
+.productName{
+
+    font-size: 40px;
+    
+}
+
+
+.price {
+    
+    font-size: 25px;
+    padding-bottom: 25px;
+    border-bottom: 1px solid grey;
+    width: 250px;
+    
+}
+
+.colourTitle{
+    font-size: 10px;
+    margin-top: 10px;
+}
+
+.thumbnail{
+    width: 500px;
+    height: 500px;
+
+
+}
+
+.thumb {
+    border: 2px solid #000000;
+    border-radius: 5px;
+    margin-bottom: 25px;
+    padding: 0px;
+    width: 90px;
+    height: 90px;
+    
+  }
+
+.colours{
+    display: flex;
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+  }
+
+.colour{
+    width: 30px;
+    height: 20px;
+    border: 2px solid black;
+    margin-right: 20px;
+   
+
+}
+
+.red{
+    background-color: red;
+
+}
+
+.yellow{
+    background-color: yellow;
+
+}
+
+.blue{
+    background-color: blue;
+
+}
+
+.white{
+    background-color: white;
+
+}
+
+.black{
+    background-color: black;
+
+}
+
+.sizes{
+    display: flex;
+    margin-top: 10px;
+    margin-bottom: 50px;
+
+  }
+
+.size{
+    width: 30px;
+    height: 20px;
+    border: 1px solid black;
+    margin-right: 20px;
+    text-align: center;
+    background-color: rgb(178, 178, 178);
+    font-size: 12px;
+    line-height: 20px;
+}
+
+.Btn1{
+    font-size: 20px;
+    color: white;
+    font-weight: bold;
+    padding: 10px 10px 10px;
+    background-color: darkred;
+    width: 250px;
+    margin-bottom: 25px;
+    border: 2px solid black;
+    text-align: center;
+}
+
+.Btn1:hover{
+    background-color: rgb(113, 0, 0);
+}
+
+.Btn2{
+    font-size: 20px;
+    color: white;
+    font-weight: bold;
+    padding: 10px 10px 10px;
+    background-color: rgb(42, 218, 200);
+    width: 250px;
+    margin-bottom: 25px;
+    border: 2px solid black;
+    text-align: center;
+}
+
+.Btn2:hover{
+    background-color: rgb(35, 192, 176);
+}
+

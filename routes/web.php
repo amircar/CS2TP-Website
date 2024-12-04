@@ -33,3 +33,8 @@ Route::get('/about-us', function(){
 Route::get('/basket', function(){
     return view('basket');
 });
+
+Route::get('/product', function(){
+    return view('product');
+});
+

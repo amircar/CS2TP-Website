@@ -29,3 +29,7 @@ Route::post('logout', [LoginController::class, 'logout'])->name('logout');
 Route::get('/about-us', function(){
     return view('about-us');
 });
+
+Route::get('/basket',function(){
+    return view('basket');
+});

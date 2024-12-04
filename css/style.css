@@ -519,7 +519,13 @@ header {
     }
 }
 
-
+.imagebox {
+    margin-left: 5%;
+    height: 200px;
+    width: 40%;
+    background-color: white;
+    position: absolute;
+}
 
 
 

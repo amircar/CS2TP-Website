@@ -11,11 +11,11 @@
         <?php require_once('header.php');?>
         
         <main id="about-us-main">
-            <div id="section" style="justify-content: center; height:400px; background-color: white;">
-                <h3 style="text-align: center; margin-top: 150px;">About Us</h3>
+            <div id="section" style="justify-content: center; height:300px; background-color: white;">
+                <h3 style="text-align: center; margin-top: 100px;">About Us</h3>
             </div> <!--add image -->
             <div id="section" style="height:230px; justify-content: center; margin-top: 50px;">
-                <div class="aboutus-box" style="width: 70%; height: 200px;">
+                <div class="aboutus-box" style="width: 70%; height: 200px; ">
                     <span>
                         <h2 style="text-align: center; color: black;">Team 47</h2>
                         <p style="text-align: center; color: black;">Team 47 is a passionate group 

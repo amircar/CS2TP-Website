@@ -44,7 +44,7 @@
 
             <div class="content-separate"><div class="content-separate-box"></div></div>
             <div id="section" style="justify-content: left;">
-                <div class="imagebox"></div>
+                <div class="imagebox" style="margin-left: 5%"></div>
                 <div class="aboutus-box2" style="margin-left: 55%"></div>
             </div>
 

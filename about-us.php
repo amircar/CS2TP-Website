@@ -43,8 +43,13 @@
             </div>
 
             <div class="content-separate"><div class="content-separate-box"></div></div>
-            <div id="section" style="justify-content: left;">
-               <div class="imagebox"></div>
+            <div id="section" style="justify-content: left; height: 450px;">
+               <div class="aboutus-text" style="width: 55%;"></div>
+               <div class="imagebox" style="width: 35%;"></div> 
+            </div>
+            <div id="section" style="justify-content: left; height: 450px;">
+            <div class="imagebox" style="width: 35%; margin-left: 5%;"></div> 
+               <div class="aboutus-text" style="width: 55%; margin-left: 40%;"></div>
             </div>
 
 

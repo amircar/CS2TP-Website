@@ -519,11 +519,19 @@ header {
     }
 }
 
-.imagebox {
+.aboutus-text {
     margin-left: 5%;
-    height: 200px;
-    width: 40%;
+    height: 350px;
+    width: 55%;
     background-color: white;
+    position: absolute;
+}
+
+.imagebox {
+    margin-left: 60%;
+    height: 350px;
+    width: 35%;
+    background-color: black;
     position: absolute;
 }
 

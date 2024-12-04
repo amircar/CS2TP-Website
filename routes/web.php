@@ -30,6 +30,6 @@ Route::get('/about-us', function(){
     return view('about-us');
 });
 
-Route::get('/basket',function(){
+Route::get('/basket', function(){
     return view('basket');
 });

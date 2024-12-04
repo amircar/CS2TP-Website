@@ -14,8 +14,15 @@
     @if ($found == false)
         <img src="" alt="product-image">
     @endif
-    <p class="product-title">{{$product->name}}</p>
-    <p class="product-price">£ {{$product->price}}</p>
-    <!-- TODO product size -->
-    <p class="product-size">Sizes: </p>
+
+    {{$productSizes = ""}}
+    @foreach($product->sizes as $size)
+       @php
+           $productSizes .= $size->size . " ";
+       @endphp
+    @endforeach 
+   <p class="product-title">{{$product->name}}</p>
+   <p class="product-price">£ {{$product->price}}</p>
+   <p class="product-size">Sizes: {{$productSizes}}</p>
+</span>
 </span>

@@ -4,29 +4,43 @@
 
         <!-- TODO header links -->
         <ul id="header-items">
-            <!-- TODO check if user is logged in -->
+
+            <!-- SEARCH BAR -->
+             <form action = "{{route('search')}}"
+            <a class="search-bar">
+                <input name = "search" type="text" class="search" placeholder="Search...">
+                <button class="search-button">Search</button>
+            </a>
+            </form>
+
             <!-- IF LOGGED IN -->
             @auth
-                <a class="header-item">
-                    <li><form action="{{ route('logout') }}" method="POST" style="display: inline;">
-    @csrf
-    <button type="submit" class="btn btn-danger">Logout</button>
-</form></li>
-                </a>
-                <a class="header-item" href="">
-                    <li><img src="" alt="profile" title="Profile"></li>
-                </a>
-                <a class="header-item" href="basket">
-                    <li><img src="" alt="basket" title="Basket"></li>
-                </a>
+            <a class="header-item">
+                <li>
+                    <form action="{{ route('logout') }}" method="POST" style="display: inline;">
+                        @csrf
+                        <button type="submit" class="btn btn-danger">Logout</button>
+                    </form>
+                </li>
+            </a>
+            <a class="header-item" href="">
+                <li><img src="" alt="profile" title="Profile"></li>
+            </a>
+            <a class="header-item" href="basket">
+                <li><img src="" alt="basket" title="Basket"></li>
+            </a>
             @else
             <!-- ELSE -->
-                <a class="header-item" href="{{ route('register')}}">
-                    <li><p>Sign Up</p></li>
-                </a>
-                <a class="header-item" href="{{ route('login')}}">
-                    <li><p>Log In</p></li>
-                </a>
+            <a class="header-item" href="{{ route('register')}}">
+                <li>
+                    <p>Sign Up</p>
+                </li>
+            </a>
+            <a class="header-item" href="{{ route('login')}}">
+                <li>
+                    <p>Log In</p>
+                </li>
+            </a>
             @endauth
         </ul>
     </div>
@@ -37,7 +51,7 @@
     <nav>
         <!-- TODO category links -->
         <ul id="nav-items">
-            <a class="nav-item" href="mens">
+            <a class="nav-item" href="{{ route ('mens') }}">
                 <li>MEN</li>
             </a>
             <a class="nav-item" href="">

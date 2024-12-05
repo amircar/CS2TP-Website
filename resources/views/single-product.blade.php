@@ -1,6 +1,5 @@
 <!-- FIXME make whole span clickable -->
 <span class="single-product">
-    <!-- TODO image source -->
     @foreach($product->product_images as $image)
         @if($image->is_primary) 
             <img src="{{asset($image->image_url)}}" alt="{{ $image->alt_text }}">

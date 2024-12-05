@@ -13,10 +13,10 @@ Route::get('/', function () {
 Auth::routes();
 
 
-Route::get('/home', action: [ProductController::class, 'productsHome']);
+Route::get('/home', action: [ProductController::class, 'products4'])->name('home');
 
 
-Route::get('/', action: [ProductController::class, 'productsHome']);
+Route::get('/', action: [ProductController::class, 'products4']);
 
 Route::get('/mens', function(){
     return view('mens');
@@ -34,5 +34,7 @@ Route::get('/basket', function(){
     return view('basket');
 });
 
-Route::get('/product/{id}', action: [ProductController::class, 'productSingle']);
+Route::get('/product', function(){
+    return view('product');
+});
 

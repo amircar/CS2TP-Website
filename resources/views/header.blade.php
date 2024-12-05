@@ -1,8 +1,6 @@
 <header>
     <div id="header-wrapper">
-
-        <a id="main-logo" href="/CS2TP-Website/public" title="Home"><img src={{asset("images/logo.png")}} alt="Logo"></a>
-
+        <a id="main-logo" href="home" title="Home"><img src={{ asset("images/logo.png") }} alt="Logo"></a>
 
         <ul id="header-items">
             @auth
@@ -34,7 +32,7 @@
     <nav>
         <!-- TODO category links -->
         <ul id="nav-items">
-            <a class="nav-item" href="/CS2TP-Website/public/mens">
+            <a class="nav-item" href="mens">
                 <li>MEN</li>
             </a>
             <a class="nav-item" href="">
@@ -46,7 +44,7 @@
             <a class="nav-item" href="">
                 <li>ACCESSORIES</li>
             </a>
-            <a class="nav-item" href="/CS2TP-Website/public/about-us">
+            <a class="nav-item" href="about-us">
                 <li>ABOUT US</li>
             </a>
         </ul>

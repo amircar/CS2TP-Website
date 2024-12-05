@@ -30,7 +30,7 @@ class ProductController extends Controller
 // search function
     public function productSearch(){
         if(request()->has('search')){
-            $products = Product::with('product_images', 'sizes')->where('name', 'like', '%' . request()->get('search') . '%');
+            $products = Product::with('product_images', 'sizes')->where('name', 'like', '%' . request()->get('search') . '%')->get();
             return view('search-results', compact('products'));
         }
     }

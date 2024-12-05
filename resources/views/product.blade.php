@@ -83,12 +83,13 @@
                     @foreach ($product->product_images as $image)
                         <div class="carousel-item">
                             @if ($image->is_primary)
-                            <img src={{asset($image->image_url)}} alt="Suggested Product">    
+                                <img src={{asset($image->image_url)}} alt="Suggested Product">    
                             @endif
                         </div>
                     @endforeach
                 @endforeach
             </div>
+            <button class="carousel-button next" onclick="moveCarousel(1)">&#10095;</button>
         </section>
         @include('footer')
     </body>

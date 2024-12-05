@@ -47,7 +47,7 @@ class ProductController extends Controller
 
     public function productSingle($id)
     {
-        $products = Product::with('product_images','sizes')->inRandomOrder()->get();
+        $products = Product::with('product_images','sizes')->where('id','!=',$id)->inRandomOrder()->get();
         $product = Product::with('product_images','sizes')->find($id);
         return view('product', compact('product','products'));
     }

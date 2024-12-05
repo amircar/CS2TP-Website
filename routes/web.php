@@ -22,7 +22,11 @@ Route::get('/mens', function(){
     return view('mens');
 });
 
-Route::get('/mens', action: [ProductController::class, 'products3']);
+Route::get('/mens', action: [ProductController::class, 'productsMens']);
+
+Route::get('/women', action: [ProductController::class, 'productsWomen']);
+
+Route::get('/kids', action: [ProductController::class, 'productsKids']);
 
 Route::post('logout', [LoginController::class, 'logout'])->name('logout');
 

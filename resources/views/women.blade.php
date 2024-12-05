@@ -22,11 +22,9 @@
         <section id="featured-products-list">
             <h2>FEATURED IN WOMEN'S</h2>
             <ul class="products-list">
-                <!-- TODO product list -->
-                <?php include('single-product.php');?>
-                <?php include('single-product.php');?>
-                <?php include('single-product.php');?>
-                <?php include('single-product.php');?>
+                @foreach ($products4 as $product)
+                    @include('single-product' , ['product' => $product])
+                @endforeach
             </ul>
         </section>
 

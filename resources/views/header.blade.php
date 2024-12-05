@@ -37,10 +37,10 @@
             <a class="nav-item" href="/CS2TP-Website/public/mens">
                 <li>MEN</li>
             </a>
-            <a class="nav-item" href="">
+            <a class="nav-item" href="/CS2TP-Website/public/women">
                 <li>WOMEN</li>
             </a>
-            <a class="nav-item" href="">
+            <a class="nav-item" href="/CS2TP-Website/public/kids">
                 <li>KIDS</li>
             </a>
             <a class="nav-item" href="">

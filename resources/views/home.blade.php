@@ -36,7 +36,7 @@
         <!-- TODO href links for category pages -->
         <section id="home-categories">
             <div id="home-category1">
-                <a href="men.php">
+                <a href="mens">
                     <img src="" alt="men-category-image">
                     <button class="home-category-button">MEN</button>
                 </a>

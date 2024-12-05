@@ -30,24 +30,16 @@
                         <label for="lname"></label>
                         <input type="text" id="lname" placeholder="Last Name" name="lname" required><br><br>
             
+                        <label for="email"></label>
+                        <input type="email" id="email" placeholder="Email" name="email" required><br><br>
+
+                        <label for="phone"></label>
+                        <input type="tel" id="phone" placeholder="Phone Number" name="phone" required><br><br>
+
                         <label for="description"></label><br>
                         <textarea id="description"placeholder="Message" name="description" rows="4" cols="50" required></textarea><br><br>
         
-                        <label for="email"></label>
-                        <input type="email" id="email" placeholder="Email" name="email" required><br><br>
         
-                        <label for="confirm_email"></label>
-                        <input type="email" id="confirm_email" placeholder="Confirm Email" name="confirm_email" required><br><br>
-        
-                        <label for="phone"></label>
-                        <input type="tel" id="phone" placeholder="Phone Number" name="phone" required><br><br>
-        
-                        <label for="contact_method">Preferred Contact Method:</label><br>
-                        <select id="contact_method" name="contact_method">
-                             <option value="email">Email</option>
-                             <option value="phone">SMS</option>
-                             <option value="both">Both</option>
-                         </select><br><br>
         
                         <input type="submit" value="Submit">
                     </form>

@@ -550,7 +550,7 @@ header {
     position: absolute;
     padding: 10px;
     margin-left: 3%;
-    border: 3px solid rgb(240, 70, 84);
+    border: 3px solid rgb(20, 0, 0);
 }
 form label {
     display:inline-block;
@@ -568,6 +568,7 @@ form textarea {
     border-radius: 4px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     box-sizing: border-box; 
+    border-radius: 12px;
 }
 
 form input[type="submit"] {

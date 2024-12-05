@@ -1,16 +1,6 @@
-/*
-class (repeated on page) = .
-id (single use per page) = #
-*/
-
 /***************************** 
     IMPORTED FONTS
 *****************************/
-/* TODO decide fonts
-    import fonts here
-    dont need all fonts (probably only need 3)
-    let me know if you want a font removed
-*/
 /* variable font */
 @font-face {
     font-family: "AfacadFlux";
@@ -530,6 +520,23 @@ footer {
 }
 
 
+/* FIXME remove above (duplicate) */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* FIXME organise sections */
+/* TODO check style is consistent */
 
 /* Item carousel */
 

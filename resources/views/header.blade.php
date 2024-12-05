@@ -1,38 +1,33 @@
 <header>
     <div id="header-wrapper">
-        <a id="main-logo" href="home" title="Home"><img src={{asset("images/logo.png")}} alt="Logo"></a>
+        <a id="main-logo" href="home" title="Home"><img src={{ asset("images/logo.png") }} alt="Logo"></a>
 
-        <!-- TODO header links -->
         <ul id="header-items">
-            <!-- TODO check if user is logged in -->
-            <!-- IF LOGGED IN -->
             @auth
                 <a class="header-item">
                     <li><form action="{{ route('logout') }}" method="POST" style="display: inline;">
-    @csrf
-    <button type="submit" class="btn btn-danger">Logout</button>
-</form></li>
+                    @csrf
+                    <button type="submit" class="btn btn-danger">Logout</button>
+                    </form></li>
                 </a>
+                <!-- TODO ?replace profile with logout? -->
                 <a class="header-item" href="">
                     <li><img src="" alt="profile" title="Profile"></li>
                 </a>
+                <!-- TODO basket link in header -->
                 <a class="header-item" href="basket">
                     <li><img src="" alt="basket" title="Basket"></li>
                 </a>
             @else
-            <!-- ELSE -->
-                <a class="header-item" href="{{ route('register')}}">
+                <a class="header-item" href="{{ route('register') }}">
                     <li><p>Sign Up</p></li>
                 </a>
-                <a class="header-item" href="{{ route('login')}}">
+                <a class="header-item" href="{{ route('login') }}">
                     <li><p>Log In</p></li>
                 </a>
             @endauth
         </ul>
     </div>
-
-    <!-- TODO menu drop down (not part of MVP) -->
-    @include('test');
 
     <nav>
         <!-- TODO category links -->

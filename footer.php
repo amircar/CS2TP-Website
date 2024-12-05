@@ -35,9 +35,9 @@
         <div class="footer-section">
             <h3 style="text-align: left;">Customer Service</h3>
             <ul>
-                <li><a href="#">Contact Us</a></li>
+                <li><a href="contact-us.php">Contact Us</a></li>
                 <li><a href="#">FAQs</a></li>
-                <li><a href="#">About Us</a></li>
+                <li><a href="about-us.php">About Us</a></li>
                 <li><a href="#">Terms and Conditions</a></li>
             </ul>
         </div>

@@ -15,17 +15,19 @@
                 <h3 style="text-align: center; margin-top: 100px;">Contact US</h3>
             </div> <!--add image -->
             <div id="section" style="height: 800px; margin-top: 50px; justify-content: left;">
-                <div class="contactus-box" style="width: 55%; height: 600px; display: flex; flex-wrap: wrap;">
+                <div class="contactus-box" style="width: 55%; height: 650px;">
+                    <div class="titlebox">
                     <span>
                         <h2 style="text-align: center; color: black;">Team 47</h2>
                         <p style="text-align: center; color: black;">one outfit at a time!
                         </p>
                         <br><br>
                     </span>
-                    <form id="contactForm" style="margin-top: 40px;">
+                    </div>
+                    <form id="contactForm">
                     
                         <label for="fname"></label>
-                        <input type="text" id="fname" placeholder="First Name" name="fname" required>
+                        <input type="text" id="fname" placeholder="First Name" name="fname" style="margin-bottom: 25px;" required>
 
                         <label for="lname"></label>
                         <input type="text" id="lname" placeholder="Last Name" name="lname" required><br><br>
@@ -37,23 +39,33 @@
                         <input type="tel" id="phone" placeholder="Phone Number" name="phone" required><br><br>
 
                         <label for="description"></label><br>
-                        <textarea id="description"placeholder="Message" name="description" rows="4" cols="50" required></textarea><br><br>
+                        <textarea id="description" placeholder="Message" name="description" rows="4" cols="50" style="height: 90px;" required></textarea><br><br>
         
         
         
                         <input type="submit" value="Submit">
                     </form>
-                    <!-- <span>
-                        <h2 style="text-align: center; color: black;">Team 47</h2>
-                        <p style="text-align: center; color: black;">one outfit at a time!
-                        </p>
-                    </span> -->
                    
                 </div>
-                <div class="contactus-box" style="width: 30%; height: 200px; margin-left: 65%">
+                <div class="contactus-box" style="width: 30%; height: 280px; margin-left: 65%; background-color: rgb(20, 0, 0); border: 3px solid white; padding-top: 20px;">
                     <span>
-                        <h2 style="text-align: center; color: black;">Team 47</h2>
-                        <p style="text-align: center; color: black;">one outfit at a time!</p>
+                        <h2 style="text-align: center; color: white;">Get in Touch</h2>
+                        <p style="text-align: center; color: white; margin-top: 40px;">Call Us At: +1 234 567 890</p><br><br>
+                        <p style="text-align: center; color: white;">Email Us At: t47@teamfortyseven.com</p><br><br>
+                        <p style="text-align: center; color: white;">Find Us At: 123 example street, B47 0NY</p><br><br>
+                    </span>
+                </div>
+                <div class="contactus-box" style="width: 30%; height: 290px; margin-left: 65%; margin-top: 350px; padding-top: 20px;">
+                    <span>
+                        <h2 style="text-align: center;">FAQ's</h2>
+                        <p style="text-align: center; font-size: 20px;">Need some help? Check out some of our FAQ's</p><br><br>
+                        <ul>
+                            <li><a href="#" style="text-align: center;">Orders & Shipping</a></li>
+                            <li><a href="#" style="text-align: center;">Returns & Exchanges</a></li>
+                            <li><a href="#" style="text-align: center;">Products & Sizing</a></li>
+                            <li><a href="#" style="text-align: center;">Promotions</a></li>
+                            <li><a href="#" style="text-align: center;">Other</a></li>
+                        </ul>
                     </span>
                 </div>
             </div>

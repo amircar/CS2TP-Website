@@ -1,4 +1,4 @@
-<!-- FIXME make whole span clickable -->
+
 <span class="single-product">
     {{$found = false}}
     @foreach($product->product_images as $image)
@@ -26,3 +26,4 @@
     <p class="product-price">£ {{$product->price}}</p>
     <p class="product-size">Sizes: {{$productSizes}}</p>
 </span>
+

@@ -76,6 +76,25 @@ h3 {
 /***************************** 
     HEADER
 *****************************/
+[data-text-size='large'] h2 {
+    font-size: 40px;
+}
+
+/* FIXME not changing font size */
+[data-text-size='large'] header #header-items p {
+    font-size: 26px;
+}
+[data-text-size='large'] nav ul a li {
+    font-size: 26px;
+    translate: 0 -5px; /* puts nav text in center */
+}
+
+/* FIXME not changing font size */
+[data-text-size='large'] #back-to-top {
+    font: 22px;
+}
+/* TODO font size change for main page button, products, category section, footer, */
+
 header {
     width: 100%;
     height: 100px;
@@ -110,7 +129,7 @@ header {
             flex-direction: row;
             align-items: center;
             margin: 0 4% 0 4%;
-            a {
+            .header-item {
                 transition: 0.2s;
                 margin: 0 20px 0 20px;
                 /* FIXME center text (vertical) */
@@ -130,8 +149,11 @@ header {
                     font-size: 22px;
                     color: white;
                 }
+                form {
+                    display: inline;
+                }
             }
-            a:hover {
+            .header-item:hover {
                 transition: 0.4s;
                 background-color: white;
                 img {
@@ -141,6 +163,64 @@ header {
                     color: rgb(128, 0, 0);
                 }
             }
+        }
+    }
+
+/***************************** 
+    TEXT SIZE TOGGLE
+*****************************/
+    #toggle-text-size {
+        height: 15px;
+        margin-bottom: 20px;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: space-between;
+        color: white;
+        align-items: center;
+
+        #toggle-text-size + p { /* first letter */
+            font-size: 18px;
+        }
+        .toggle-switch + p { /* last letter */
+            font-size: 26px;
+        }
+
+        .toggle-switch {
+            height: 15px;
+            width: 35px;
+            margin: 0 10px;
+            border-radius: 30px;
+            outline: 1px solid white;
+            outline-offset: 3px;
+            cursor: pointer;
+            transition: 0.4s;
+
+            input { /* hides default checkbox */
+                opacity: 0;
+                height: 0;
+                width: 0;
+            }
+        }
+        .toggle-switch:has(input:checked)  {
+            background-color: rgb(128, 0, 0);
+            transition: 0.4s;
+        }
+
+        /* circle inside toggle switch */
+        .toggle-switch::before {
+            content: "";
+            display: block;
+            position: relative;
+            height: 15px;
+            width: 15px;
+            background-color: white;
+            border-radius: 50%;
+            transition: 0.4s;
+        }
+        .toggle-switch:has(> input:checked)::before {
+            transform: translateX(20px);
+            transition: 0.4s;
         }
     }
 
@@ -247,7 +327,7 @@ header {
 #back-to-top::before, #back-to-top::after {
     content: "";
     position: absolute;
-    width: 52%;
+    width: 50%;
     height: 2px;
     top: 11px;
 }
@@ -527,8 +607,9 @@ header {
 
 
 
-/* Login CSS */
-
+/***************************** 
+    LOG IN
+*****************************/
 .container {
     display: flex;
     justify-content: center;

@@ -12,7 +12,7 @@
         <title>Team 47 Homepage</title>
     </head>
 
-    <body>
+    <body data-text-size="normal">
         @include('header')
         
         <main id="home-main">
@@ -35,24 +35,23 @@
 
         <div class="content-separate"><div class="content-separate-box"></div></div>
 
-        <!-- TODO href links for category pages -->
+        <!-- TODO image sources -->
         <section id="home-categories">
             <div id="home-category1">
 
-                <a href="{{route('mens')}}">
+                <a href="{{ route('mens') }}">
                     <img src="images/home/mens.png" alt="men-category-image">
                     <button class="home-category-button">MEN</button>
                 </a>
             </div>
             <div id="home-category2">
-
-                <a href="{{route('women')}}">
+                <a href="{{ route('women') }}">
                     <button class="home-category-button">WOMEN</button>
                     <img src="images/home/womens.png" alt="women-category-image">
                 </a>
             </div>
             <div id="home-category3">
-                <a href="{{route('accessories')}}">
+                <a href="{{ route('accessories') }}">
                     <img src="images/home/accessories.png" alt="accessories-category-image">
                     <button class="home-category-button">ACCESSORIES</button>
                 </a>

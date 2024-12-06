@@ -6,18 +6,20 @@
 <footer>
     <div id="footer-style">
 
-        <!-- TODO remove when logged in -->
         <!-- Sign Up / Login Section -->
-        <div class="footer-section">
-            <h3>TEAM 47</h3>
-            <p>Sign up or log in so that you can make purchases and keep up to date with the latest offers.</p>
-            <button class="footer-button">Log in</button>
-            <button class="footer-button">Sign Up</button>
-        </div>
-
-
-        <!-- FIXME remove and use css to add space -->
-        <div id="footer-space"></div>
+        @guest <!-- only shows when not logged in -->
+            <div class="footer-section">
+                <h3>TEAM 47</h3>
+                <p>Sign up or log in so that you can make purchases and keep up to date with the latest offers.</p>
+                
+                <!-- TODO link to log in and sign up page -->
+                <button class="footer-button">Log in</button>
+                <button class="footer-button">Sign Up</button>
+            
+                <!-- FIXME remove and use css to add space -->
+                <div id="footer-space"></div>
+            </div>
+        @endguest
 
         <div class="footer-section">
             <h3>CUSTOMER SERVICE</h3>

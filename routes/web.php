@@ -15,6 +15,7 @@ Auth::routes();
 
 Route::get('/', action: [ProductController::class, 'productsHome'])->name('home');
 
+// FIXME rename to men
 Route::get('/mens', action: [ProductController::class, 'productsMens'])->name('mens');
 
 Route::get('/women', action: [ProductController::class, 'productsWomen'])->name('women');

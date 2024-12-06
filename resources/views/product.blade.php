@@ -9,10 +9,9 @@
         <!-- TODO move singleproduct js and css to main -->
         <link rel="stylesheet" href={{ asset('css/Single-Product-Style.css') }}>
         <script defer src={{ asset('js/Single-Product-Javascript.js') }}></script>
-        <link rel="icon" href="{{ asset('favicon.ico') }}">
         
-        <!-- TODO make product page title dynamic (can be "product name | category | Team 47" - category can be optional) -->
-        <title>Product Page</title>
+        <link rel="icon" href="{{ asset('favicon.ico') }}">
+        <title>{{$product->name . " | Team 47"}}</title>
     </head>
 
     <body>
@@ -20,11 +19,12 @@
 
         <!-- TODO ?clicking on a product adds it to mainview? -->
 
-        <!-- FIXME section into main (id="product-main") -->
-        <section id="singleProduct">
+        <!-- FIXME id="product-main" -->
+        <main id="singleProduct">
 
             <!-- FIXME can be a list instead of div -->
             <div id="preview">
+                <!-- FIXME does not need div for each image -->
                 <div class="thumb">
                     <img src="images/black T shirt 2.jpg">
                 </div>
@@ -42,6 +42,7 @@
 
             <!-- FIXME change id/classes to remove camelCase -->
             <div id="mainView">
+                <!-- FIXME does not need div for each image -->
                 <div class="thumbnail">
                     <img src="images/black T shirt.jpg">
                 </div>
@@ -94,7 +95,7 @@
                 </div>
 
             </div>
-        </section>
+        </main>
 
         <!-- Suggested Items / Item carousel -->
         <section id="suggestedChoices">

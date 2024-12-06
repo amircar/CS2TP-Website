@@ -12,6 +12,7 @@
         <link rel="icon" href="{{ asset('favicon.ico') }}">
         <title>Basket | Team 47</title>
     </head>
+
     <body>
         @include('header')
 
@@ -23,6 +24,8 @@
                 <!-- TODO link to database -->
                 <!-- FIXME move css to main -->
                 <!-- FIXME rename classes -->
+                <!-- TODO should be/submit a form -->
+                
 
                 <!-- Basket Item 1 -->
                  @php
@@ -57,7 +60,7 @@
 
                 <!-- Checkout Button -->
                 <div class="text-center mt-4">
-                    <a href="#" class="btn btn-primary">Checkout</a>
+                    <a href="" class="btn btn-primary">Checkout</a>
                 </div>
             </div>
         </main>

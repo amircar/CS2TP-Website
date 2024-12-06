@@ -19,42 +19,30 @@ footer {
     background-color: rgb(20, 0, 0);
     width: 10%;
 }
+
 .footer-section {
     flex: 1 1 200px; /* Flexibility of footer */
     margin: 10px;
-}
-
-.footer-section h2, .footer-section h3 {
-    margin-bottom: 10px;
-    font-size: 18px;
-    color: rgb(128, 0,0);
-}
-
-/* FIXME not needed */
-.footer-section ul {
-    list-style: none;
-    padding: 0;
+    h2, h3 {
+        margin-bottom: 10px;
+        font-size: 18px;
+        color: rgb(143, 42, 42);
+    }
 }
 
 .footer-section ul li {
     margin-bottom: 5px;
-}
-
-.footer-section ul li a {
-    color: white;
-
-    /* FIXME not needed */
-    text-decoration: none;
-
-    font-size: 14px;
-}
-
-.footer-section ul li a:hover {
-    text-decoration: underline;
+    a {
+        color: white;
+        font-size: 14px;
+    }
+    a:hover {
+        text-decoration: underline;
+    }
 }
 
 .footer-button {
-    background-color: rgb(128,0,0);
+    background-color: rgb(128, 0, 0);
     color: white;
     border: none;
     padding: 10px 40px;
@@ -64,15 +52,15 @@ footer {
 }
 
 .footer-button:hover {
-    background-color: rgb(255, 255, 255);
-    color: rgb(240, 70, 84);
+    background-color: white;
+    color: rgb(128, 0, 0);
 }
 
 #line {
     margin-bottom: 20px;
     width: 90%;
     height: 2px;
-    background-color: rgb(240, 70, 84);
+    background-color: rgb(128, 0, 0);
 }
 .footer-section h4{
     /* FIXME font size in px */

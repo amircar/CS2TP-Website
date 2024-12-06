@@ -3,10 +3,19 @@
 
         <a id="main-logo" href="{{route('home')}}" title="Home"><img src={{asset("images/logo.png")}} alt="Logo"></a>
 
+        <!-- TODO images sources -->
         <ul id="header-items">
+            <!-- TODO only show on homepage -->
+            <li id="toggle-text-size">
+                <p>A</p>
+                <label class="toggle-switch"><input type="checkbox"></label>
+                <p>A</p>
+            </li>
+            
             @auth
                 <a class="header-item">
-                    <li><form action="{{ route('logout') }}" method="POST" style="display: inline;">
+                    {{-- style="display: inline; --}}
+                    <li><form action="{{ route('logout') }}" method="POST">
                     @csrf
                     <button type="submit" class="btn btn-danger">Logout</button>
                     </form></li>
@@ -30,20 +39,20 @@
 
     <nav>
         <ul id="nav-items">
-
-            <a class="nav-item" href="{{route('mens')}}">
+            <!-- FIXME rename to men -->
+            <a class="nav-item" href="{{ route('mens') }}">
                 <li>MEN</li>
             </a>
-            <a class="nav-item" href="{{route('women')}}">
+            <a class="nav-item" href="{{ route('women') }}">
                 <li>WOMEN</li>
             </a>
-            <a class="nav-item" href="{{route('kids')}}">
+            <a class="nav-item" href="{{ route('kids') }}">
                 <li>KIDS</li>
             </a>
-            <a class="nav-item" href="{{route('accessories')}}">
+            <a class="nav-item" href="{{ route('accessories') }}">
                 <li>ACCESSORIES</li>
             </a>
-            <a class="nav-item" href="{{route('about-us')}}">
+            <a class="nav-item" href="{{ route('about-us') }}">
                 <li>ABOUT US</li>
             </a>
         </ul>

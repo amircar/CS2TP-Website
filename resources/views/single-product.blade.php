@@ -1,4 +1,4 @@
-<span class="single-product">
+<li class="single-product">
     <a href="product/{{$product->id}}">
 
         {{$found = false}}
@@ -27,4 +27,4 @@
         <p class="product-price">£ {{$product->price}}</p>
         <p class="product-size">Sizes: {{$productSizes}}</p>
     </a>
-</span>
+</li>

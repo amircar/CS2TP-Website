@@ -38,20 +38,22 @@
         <!-- TODO href links for category pages -->
         <section id="home-categories">
             <div id="home-category1">
-                <a href="/CS2TP-Website/public/men">
+
+                <a href="{{route('mens')}}">
                     <img src="" alt="men-category-image">
                     <button class="home-category-button">MEN</button>
                 </a>
             </div>
             <div id="home-category2">
-                <a href="/CS2TP-Website/public/women">
+
+                <a href="{{route('women')}}">
                     <button class="home-category-button">WOMEN</button>
                     <img src="images/wanwan.jpg" alt="women-category-image">
                 </a>
             </div>
             <div id="home-category3">
-                <a href="/CS2TP-Website/public/accessories">
-                    <img src="images/image.jpg" alt="accessories-category-image">
+                <a href="{{route('accessories')}}">
+                    <img src="" alt="accessories-category-image">
                     <button class="home-category-button">ACCESSORIES</button>
                 </a>
             </div>

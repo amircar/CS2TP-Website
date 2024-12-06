@@ -1,8 +1,7 @@
 <header>
     <div id="header-wrapper">
 
-        <!-- TODO link does not work outside live server -->
-        <a id="main-logo" href="/CS2TP-Website/public" title="Home"><img src={{ asset("images/logo.png") }} alt="logo"></a>
+        <a id="main-logo" href="{{route('home')}}" title="Home"><img src={{asset("images/logo.png")}} alt="Logo"></a>
 
         <ul id="header-items">
             @auth
@@ -12,12 +11,10 @@
                     <button type="submit" class="btn btn-danger">Logout</button>
                     </form></li>
                 </a>
-                <!-- TODO ?replace profile with logout? -->
                 <a class="header-item" href="">
                     <li><img src="" alt="profile" title="Profile"></li>
                 </a>
-                <!-- TODO basket link in header -->
-                <a class="header-item" href="basket">
+                <a class="header-item" href="{{route('basket')}}">
                     <li><img src="" alt="basket" title="Basket"></li>
                 </a>
             @else
@@ -32,21 +29,21 @@
     </div>
 
     <nav>
-        <!-- TODO href links do not work outside live server -->
         <ul id="nav-items">
-            <a class="nav-item" href="/CS2TP-Website/public/men">
+
+            <a class="nav-item" href="{{route('mens')}}">
                 <li>MEN</li>
             </a>
-            <a class="nav-item" href="/CS2TP-Website/public/women">
+            <a class="nav-item" href="{{route('women')}}">
                 <li>WOMEN</li>
             </a>
-            <a class="nav-item" href="/CS2TP-Website/public/kids">
+            <a class="nav-item" href="{{route('kids')}}">
                 <li>KIDS</li>
             </a>
-            <a class="nav-item" href="/CS2TP-Website/public/accessories">
+            <a class="nav-item" href="{{route('accessories')}}">
                 <li>ACCESSORIES</li>
             </a>
-            <a class="nav-item" href="/CS2TP-Website/public/about-us">
+            <a class="nav-item" href="{{route('about-us')}}">
                 <li>ABOUT US</li>
             </a>
         </ul>

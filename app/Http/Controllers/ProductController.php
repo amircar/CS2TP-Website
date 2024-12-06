@@ -45,6 +45,12 @@ class ProductController extends Controller
         return view('kids', compact('products4'));
     }
 
+    public function productsAccessories()
+    {
+        $products4 = Product::with('product_images', 'sizes')->inRandomOrder()->take(4)->get();
+        return view('accessories', compact('products4'));
+    }
+
     public function productSingle($id)
     {
         $products = Product::with('product_images','sizes')->where('id','!=',$id)->inRandomOrder()->get();

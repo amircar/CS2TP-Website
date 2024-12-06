@@ -39,11 +39,24 @@
                 </div>
             </div>
 
+
             <!-- FIXME change id/classes to remove camelCase -->
             <div id="mainView">
                 <div class="thumbnail">
                     <img src="images/black T shirt.jpg">
                 </div>
+
+            @auth
+                <a href="" class="Btn1">ADD TO BASKET</a>
+                <a href="" class="Btn2">ADD TO WISHLIST</a>
+            @else
+                <a href="{{route('login')}}" class="Btn1">ADD TO BASKET</a>
+                <a href="{{route('login')}}" class="Btn2">ADD TO WISHLIST</a>
+            @endauth
+
+            <div id="basketBtn">
+
+
             </div>
 
 

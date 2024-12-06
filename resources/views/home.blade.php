@@ -19,7 +19,7 @@
             <!-- TODO image source -->
             <!-- TODO href (can link to category page) -->
             <a href="">
-                <img src="images/wanwan.jpg" alt="main-image">
+                <img src="images/home/largeImage.png" alt="main-image">
                 <button id="home-main-button">FIND OUT MORE</button>
             </a>
         </main>
@@ -40,7 +40,7 @@
             <div id="home-category1">
 
                 <a href="{{route('mens')}}">
-                    <img src="" alt="men-category-image">
+                    <img src="images/home/mens.png" alt="men-category-image">
                     <button class="home-category-button">MEN</button>
                 </a>
             </div>
@@ -48,12 +48,12 @@
 
                 <a href="{{route('women')}}">
                     <button class="home-category-button">WOMEN</button>
-                    <img src="images/wanwan.jpg" alt="women-category-image">
+                    <img src="images/home/womens.png" alt="women-category-image">
                 </a>
             </div>
             <div id="home-category3">
                 <a href="{{route('accessories')}}">
-                    <img src="" alt="accessories-category-image">
+                    <img src="images/home/accessories.png" alt="accessories-category-image">
                     <button class="home-category-button">ACCESSORIES</button>
                 </a>
             </div>

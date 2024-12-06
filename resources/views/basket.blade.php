@@ -25,40 +25,34 @@
                 <!-- FIXME rename classes -->
 
                 <!-- Basket Item 1 -->
-                <div class="basket-item d-flex justify-content-between align-items-center">
-                    <div class="d-flex align-items-center">
-                        <img src="{{ asset('images/tshirt.jpg') }}" alt="Team 47 T Shirt" class="item-image">
-                        <div class="ms-3">
-                            <strong>Team 47 T Shirt</strong>
-                            <p class="mb-0">Size: M</p>
-                            <p class="mb-0">Quantity: 1</p>
-                        </div>
-                    </div>
-                    <div>
-                        <p class="mb-0">£29.99</p>
-                        <button type="button" class="btn btn-link btn-remove">Remove</button>
-                    </div>
-                </div>
+                 @php
+                    $total = 0
+                 @endphp
+                
 
-                <!-- Basket Item 2 -->
-                <div class="basket-item d-flex justify-content-between align-items-center">
-                    <div class="d-flex align-items-center">
-                        <img src="{{ asset('images/joggers.jpg') }}" alt="Team 47 Joggers" class="item-image">
-                        <div class="ms-3">
-                            <strong>Team 47 Joggers</strong>
-                            <p class="mb-0">Size: L</p>
-                            <p class="mb-0">Quantity: 1</p>
+                @foreach ($basket->stocks as $item)           
+                    <div class="basket-item d-flex justify-content-between align-items-center">
+                        <div class="d-flex align-items-center">
+                            <img src="{{ asset('images/tshirt.jpg') }}" alt="Team 47 T Shirt" class="item-image">
+                            <div class="ms-3">
+                                <strong>{{$item->product->name}}</strong>
+                                <p class="mb-0">Size: {{$item->size->size}}</p>
+                                <p class="mb-0">Quantity: {{$item->pivot->quantity}}</p>
+                            </div>
+                        </div>
+                        <div>
+                            @php
+                                $total += $item->product->price
+                            @endphp
+                            <p class="mb-0">£{{$item->product->price}}</p>
+                            <button type="button" class="btn btn-link btn-remove">Remove</button>
                         </div>
                     </div>
-                    <div>
-                        <p class="mb-0">£44.99</p>
-                        <button type="button" class="btn btn-link btn-remove">Remove</button>
-                    </div>
-                </div>
+                @endforeach
 
                 <!-- TODO calculate total -->
                 <div class="total-container">
-                    <strong>Total: £74.98</strong>
+                    <strong>Total: £{{$total}}</strong>
                 </div>
 
                 <!-- Checkout Button -->

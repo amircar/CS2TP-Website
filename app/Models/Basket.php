@@ -6,7 +6,9 @@ use Illuminate\Database\Eloquent\Model;
 
 class Basket extends Model
 {
-    public function stock(){
-        return $this->belongsToMany(Stock::class)->withPivot('quantity');
+    protected $table = 'baskets';
+    
+    public function stocks(){
+        return $this->belongsToMany(Stock::class, 'basket_stock')->withPivot('quantity');
     }
 }

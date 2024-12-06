@@ -6,12 +6,17 @@ use Illuminate\Database\Eloquent\Model;
 
 class Size extends Model
 {
+    protected $table = 'sizes';
     public function stocks(){
-        return $this->belongsToMany(Stock::class);
+        return $this->hasMany(Stock::class);
     }
 
-    public function sizes()
+    public function products()
     {
         return $this->belongsToMany(Product::class, 'stocks');
+    }
+
+    public function baskets(){
+        return $this->belongsToMany(Basket::class,'basket_stock')->withPivot('quantity');
     }
 }

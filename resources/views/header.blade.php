@@ -1,8 +1,8 @@
 <header>
     <div id="header-wrapper">
 
-        <a id="main-logo" href="/CS2TP-Website/public" title="Home"><img src={{asset("images/logo.png")}} alt="Logo"></a>
-
+        <!-- TODO link does not work outside live server -->
+        <a id="main-logo" href="/CS2TP-Website/public" title="Home"><img src={{ asset("images/logo.png") }} alt="logo"></a>
 
         <ul id="header-items">
             @auth
@@ -32,9 +32,9 @@
     </div>
 
     <nav>
-        <!-- TODO category links -->
+        <!-- TODO href links do not work outside live server -->
         <ul id="nav-items">
-            <a class="nav-item" href="/CS2TP-Website/public/mens">
+            <a class="nav-item" href="/CS2TP-Website/public/men">
                 <li>MEN</li>
             </a>
             <a class="nav-item" href="/CS2TP-Website/public/women">
@@ -43,7 +43,7 @@
             <a class="nav-item" href="/CS2TP-Website/public/kids">
                 <li>KIDS</li>
             </a>
-            <a class="nav-item" href="">
+            <a class="nav-item" href="/CS2TP-Website/public/accessories">
                 <li>ACCESSORIES</li>
             </a>
             <a class="nav-item" href="/CS2TP-Website/public/about-us">

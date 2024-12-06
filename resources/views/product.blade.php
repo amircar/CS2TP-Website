@@ -1,96 +1,115 @@
 <!DOCTYPE html>
+<html lang="en-GB">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+        <script defer type="text/javascript" src="{{ asset('js/main.js') }}"></script>
 
-<html lang="en">
-<meta charset="UTF-8">
-<title>Product Page</title>
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<link rel="stylesheet" href={{asset('css/Single-Product-Style.css')}}>
-<script src={{asset('js/Single-Product-Javascript.js')}}></script>
-<link rel="icon" href="{{ asset('favicon.ico') }}">
-
+        <!-- TODO move singleproduct js and css to main -->
+        <link rel="stylesheet" href={{ asset('css/Single-Product-Style.css') }}>
+        <script defer src={{ asset('js/Single-Product-Javascript.js') }}></script>
+        <link rel="icon" href="{{ asset('favicon.ico') }}">
+        
+        <!-- TODO make product page title dynamic (can be "product name | category | Team 47" - category can be optional) -->
+        <title>Product Page</title>
+    </head>
 
     <body>
         @include('header')
 
+        <!-- TODO ?clicking on a product adds it to mainview? -->
 
-<button id="back-to-top" type="button">TOP</button>
+        <!-- FIXME section into main (id="product-main") -->
+        <section id="singleProduct">
 
-<body>
-    <section id="singleProduct">
-        <div id="preview">
-            <div class="thumb">
-                <img src="images/black T shirt 2.jpg">
-            </div>
-            <div class="thumb">
-                <img src="images/black T shirt 3.jpg">
-            </div>
-            <div class="thumb">
-                <img src="images/black T shirt 4.jpg">
-            </div>
-            <div class="thumb">
-                <img src="images/black T shirt 5.jpg">
-            </div>
-        </div>
-
-        <div id="mainView">
-            <div class="thumbnail">
-                <img src="images/black T shirt.jpg">
-            </div>
-        </div>
-
-        <div id="productInfo">
-            <h1 class=productName>{{$product->name}}</h1>
-            <h4 class="price">£{{$product->price}}</h4>
-            <h4 class="colourTitle">COLOUR</h4>
-            <div class="colours">
-                <span class="colour red"></span>
-                <span class="colour yellow"></span>
-                <span class="colour blue"></span>
-                <span class="colour white"></span>
-                <span class="colour black"></span>
-            </div>
-            <h4 class="title">SIZE</h4>
-            <div class="sizes">
-            @foreach($product->sizes as $size)
-                <span class="size">{{$size->size}}</span>
-            @endforeach
+            <!-- FIXME can be a list instead of div -->
+            <div id="preview">
+                <div class="thumb">
+                    <img src="images/black T shirt 2.jpg">
+                </div>
+                <div class="thumb">
+                    <img src="images/black T shirt 3.jpg">
+                </div>
+                <div class="thumb">
+                    <img src="images/black T shirt 4.jpg">
+                </div>
+                <div class="thumb">
+                    <img src="images/black T shirt 5.jpg">
+                </div>
             </div>
 
-            <a href="" class="Btn1">ADD TO BASKET</a>
-            <a href="" class="Btn2">ADD TO WISHLIST</a>
-
-            <div id="basketBtn">
-
+            <!-- FIXME change id/classes to remove camelCase -->
+            <div id="mainView">
+                <div class="thumbnail">
+                    <img src="images/black T shirt.jpg">
+                </div>
             </div>
 
-            <div id="wishlistBtn">
 
-            </div>
+            <!-- TODO should be a form submitted to basket -->
 
-        </div>
-    </section>
-
-    <!-- Suggested Items /  Item carousel -->
-    <section id="suggestedChoices">
-        <div style="padding-left: 5%; font-size: 250%;">
-            You might also like...
-        </div>
-        <div style="height: 1px; background-color: black; margin-left: 5%; margin-right: 50%;"></div>
-        <div id="carouselContainer" style="max-width: 90%;">
-            <button class="carousel-button prev" onclick="moveCarousel(-1)">&#10094;</button>
-            <div id="carousel">
-                @foreach ($products as $product)
-                    @foreach ($product->product_images as $image)
-                        <div class="carousel-item">
-                            @if ($image->is_primary)
-                                <img src={{asset($image->image_url)}} alt="Suggested Product">    
-                            @endif
-                        </div>
+            <div id="productInfo">
+                <h1 class=productName>{{$product->name}}</h1>
+                <h4 class="price">£{{$product->price}}</h4>
+                <h4 class="colourTitle">COLOUR</h4>
+                <div class="colours">
+                    <span class="colour red"></span>
+                    <span class="colour yellow"></span>
+                    <span class="colour blue"></span>
+                    <span class="colour white"></span>
+                    <span class="colour black"></span>
+                </div>
+                <h4 class="title">SIZE</h4>
+                <div class="sizes">
+                    @foreach($product->sizes as $size)
+                        <span class="size">{{$size->size}}</span>
                     @endforeach
-                @endforeach
+                </div>
+
+
+                <!-- FIXME ?move a inside div? -->
+                <a href="" class="Btn1">ADD TO BASKET</a>
+                <a href="" class="Btn2">ADD TO WISHLIST</a>
+
+                <div id="basketBtn">
+
+                </div>
+
+                <div id="wishlistBtn">
+
+                </div>
+
             </div>
-            <button class="carousel-button next" onclick="moveCarousel(1)">&#10095;</button>
         </section>
+
+        <!-- Suggested Items / Item carousel -->
+        <section id="suggestedChoices">
+            <div style="padding-left: 5%; font-size: 250%;">
+                You might also like...
+            </div>
+
+            <!-- FIXME move to css -->
+            <div style="height: 1px; background-color: black; margin-left: 5%; margin-right: 50%;"></div>
+            <div id="carouselContainer" style="max-width: 90%;">
+                <!-- FIXME move to js -->
+                <button class="carousel-button prev" onclick="moveCarousel(-1)">&#10094;</button>
+                <div id="carousel">
+                    @foreach ($products as $product)
+                        @foreach ($product->product_images as $image)
+                            <div class="carousel-item">
+                                @if ($image->is_primary)
+                                    <img src={{asset($image->image_url)}} alt="suggested-product">    
+                                @endif
+                            </div>
+                        @endforeach
+                    @endforeach
+                </div>
+                <!-- FIXME move to js -->
+                <button class="carousel-button next" onclick="moveCarousel(1)">&#10095;</button>
+            </div>
+        </section>
+
         @include('footer')
     </body>
 </html>

@@ -4,15 +4,12 @@
        <meta charset="utf-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         <link rel="stylesheet" href="{{ asset('css/style.css') }}">
-        <script type="text/javascript" src="{{ asset('js/main.js') }}"></script>
-        <link rel="icon" href="{{ asset('favicon.ico') }}">
-
-
+        
         <!-- TODO move to main css -->
         <link rel="stylesheet" href="{{ asset('css/basket.css') }}">
 
         <script defer type="text/javascript" src="{{ asset('js/main.js') }}"></script>
-        
+        <link rel="icon" href="{{ asset('favicon.ico') }}">
         <title>Basket | Team 47</title>
     </head>
     <body>

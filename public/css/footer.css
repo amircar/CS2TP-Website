@@ -27,7 +27,7 @@ footer {
 .footer-section h2, .footer-section h3 {
     margin-bottom: 10px;
     font-size: 18px;
-    color: rgb(240, 70, 84);
+    color: rgb(128, 0,0);
 }
 
 /* FIXME not needed */
@@ -54,7 +54,7 @@ footer {
 }
 
 .footer-button {
-    background-color: rgb(240, 70, 84);
+    background-color: rgb(128,0,0);
     color: white;
     border: none;
     padding: 10px 40px;

@@ -5,6 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         <link rel="stylesheet" href="{{ asset('css/style.css') }}">
         <script defer type="text/javascript" src="{{ asset('js/main.js') }}"></script>
+        <link rel="icon" href="{{ asset('favicon.ico') }}">
         <title>Shop for Accessories | Team 47</title>
     </head>
 
@@ -22,11 +23,9 @@
         <section id="featured-products-list">
             <h2>FEATURED IN ACCESSORIES</h2>
             <ul class="products-list">
-                <!-- TODO product list -->
-                <?php include('single-product.php');?>
-                <?php include('single-product.php');?>
-                <?php include('single-product.php');?>
-                <?php include('single-product.php');?>
+                @foreach ($products4 as $product)
+                    @include('single-product' , ['product' => $product])
+                @endforeach
             </ul>
         </section>
 

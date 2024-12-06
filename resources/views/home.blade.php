@@ -3,10 +3,12 @@
     <head>
         <meta charset="utf-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-        <link rel="stylesheet" href="{{asset('css/style.css')}}">
-        <script type="text/javascript" src="{{ asset('js/main.js') }}"></script>
-        <link rel="icon" href="{{ asset('favicon.ico') }}">
+        <link rel="stylesheet" href="{{ asset('css/style.css') }}">
 
+        <!-- FIXME laravel cannot find js (live server) -->
+        <script defer type="text/javascript" src="{{ asset('js/main.js') }}"></script>
+
+        <link rel="icon" href="{{ asset('favicon.ico') }}">
         <title>Team 47 Homepage</title>
     </head>
 
@@ -17,7 +19,7 @@
             <!-- TODO image source -->
             <!-- TODO href (can link to category page) -->
             <a href="">
-                <img src="" alt="main-image">
+                <img src="images/wanwan.jpg" alt="main-image">
                 <button id="home-main-button">FIND OUT MORE</button>
             </a>
         </main>
@@ -36,20 +38,20 @@
         <!-- TODO href links for category pages -->
         <section id="home-categories">
             <div id="home-category1">
-                <a href="mens">
+                <a href="/CS2TP-Website/public/men">
                     <img src="" alt="men-category-image">
                     <button class="home-category-button">MEN</button>
                 </a>
             </div>
             <div id="home-category2">
-                <a href="women.php">
+                <a href="/CS2TP-Website/public/women">
                     <button class="home-category-button">WOMEN</button>
-                    <img src="" alt="women-category-image">
+                    <img src="images/wanwan.jpg" alt="women-category-image">
                 </a>
             </div>
             <div id="home-category3">
-                <a href="accessories.php">
-                    <img src="" alt="accessories-category-image">
+                <a href="/CS2TP-Website/public/accessories">
+                    <img src="images/image.jpg" alt="accessories-category-image">
                     <button class="home-category-button">ACCESSORIES</button>
                 </a>
             </div>

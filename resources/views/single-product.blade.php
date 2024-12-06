@@ -1,5 +1,6 @@
 <span class="single-product">
     <a href="product/{{$product->id}}">
+
         {{$found = false}}
         @foreach($product->product_images as $image)
             @if($image->is_primary) 
@@ -7,11 +8,11 @@
                 @php
                     $found = true;
                 @endphp
-                @break
+                @break {{-- ends loop early to reduce time complexity --}}
             @endif
         @endforeach
 
-        {{-- if not primary image is found, add empty image to reserve space --}}
+        {{-- if primary image is not found, add empty image to reserve space --}}
         @if($found == false)
             <img src="" alt="product-image">
         @endif

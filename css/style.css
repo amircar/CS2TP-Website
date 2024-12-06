@@ -486,8 +486,8 @@ header {
 /***************************** 
     ABOUT US
 *****************************/
-
-.aboutus-box{
+/* this is the box to store the intro text about team 47 */
+.aboutus-box{ 
     height: 120px;
     width: 35%;
     background-color: rgb(213, 213, 213);
@@ -496,6 +496,7 @@ header {
     position: absolute;
     padding: 10px;
 }
+/* this is container box, holds the three images. */
 .about-us-1 {
     height: 400px;
     width: 94%;
@@ -503,7 +504,7 @@ header {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-     img {
+      img {  /*the three images that are side by side */
         margin: 10px;
         min-height: 90%;
         min-width: 31%;
@@ -512,13 +513,8 @@ header {
         background-color: white;
     } 
 }
-/* FIXME position image to right */
-.about-us-2 {
-    img {
-        right: 0;
-    }
-}
 
+/* this will hold some text about team 47 goal and story */
 .aboutus-text {
     margin-left: 5%;
     height: 290px;
@@ -526,8 +522,9 @@ header {
     background-color: white;
     position: absolute;
     padding: 30px;
+    box-shadow: 0 0 9px rgba(0, 0, 0, 0.3);
 }
-
+/* these hold the images for our goal and story */
 .imagebox {
     margin-left: 59.5%;
     height: 350px;
@@ -541,7 +538,7 @@ header {
 /***************************** 
     CONTACT US
 *****************************/
-
+/* the boxes on the contact us page */
 .contactus-box{
     height: 120px;
     width: 35%;
@@ -552,8 +549,12 @@ header {
     padding: 10px;
     margin-left: 3%;
     border: 3px solid rgb(20, 0, 0);
-    box-shadow: 0 0 9px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 0 9px rgba(0, 0, 0, 0.3); /* adds a slight shadow round the box */
 }
+.contactus-box:hover{
+    transform: scale(1.01); /*  the boxes slightly go bigger when mouse is hovered*/
+}
+/* styles for the contact form */
 form label {
     display:inline-block;
     margin-bottom: 5px;
@@ -571,10 +572,10 @@ form textarea {
     border-radius: 12px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     box-sizing: border-box; 
-    background-color: rgb(225, 225, 225);
+    background-color: rgb(225, 225, 225); /* colour for the form boxes */
     
 }
-
+/* submit button */
 form input[type="submit"] {
     background-color: black;
     color: white;
@@ -590,7 +591,8 @@ form input[type="submit"]:hover {
     transform: scale(1.1);
 }
 
-
+/* This is just a section container used within the pages. 
+used to either store boxes and images or create a bit of space. */
 #section{
     background-color: rgb(213, 213, 213);
     height: 600px;
@@ -601,7 +603,7 @@ form input[type="submit"]:hover {
     float:left;
     justify-content: center;
  }
-
+/* this is to store the text above the contact form.  */
  .titlebox{
     width: 97%;
     height: 90px;
@@ -609,7 +611,7 @@ form input[type="submit"]:hover {
     padding: 10px;
     justify-content: center;
  }
-
+/* this allows for the FAQ box to have links and will underline the title when mouse is hovered. */
  .contactus-box ul {
     list-style: none;
     padding: 0;
@@ -627,5 +629,5 @@ form input[type="submit"]:hover {
 }
 
 .contactus-box ul li a:hover {
-    text-decoration: underline;
+    text-decoration: underline rgb(240, 70, 84);
 }

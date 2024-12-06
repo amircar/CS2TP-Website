@@ -1,7 +1,7 @@
 footer {
     margin-top: 40px;
     width: 100%;
-    background-color: rgb(20, 0, 0);
+    background-color: rgb(20, 0, 0); /* colour of the footer */
     color: white;
 }
 
@@ -24,9 +24,9 @@ footer {
 .footer-section h2, .footer-section h3 {
     margin-bottom: 10px;
     font-size: 18px;
-    color: rgb(240, 70, 84); /* Color for main header */
+    color: rgb(240, 70, 84); /* Color for main headers */
 }
-
+/* the main text and links to other pages. */
 .footer-section ul {
     list-style: none;
     padding: 0;
@@ -43,10 +43,10 @@ footer {
 }
 
 .footer-section ul li a:hover {
-    text-decoration: underline;
+    text-decoration: underline; /* underline once hovered */
 }
 
-.footer-button {
+.footer-button { /* the button for log in and sign up */
     background-color: rgb(240, 70, 84);
     color: white;
     border: none;
@@ -56,18 +56,18 @@ footer {
     font-size: 14px;
 }
 
-.footer-button:hover {
+.footer-button:hover { /* will change colour when mouse is hovered */
     background-color: rgb(255, 255, 255);
     color: rgb(240, 70, 84);
 }
 
-#line {
+#line { /* just the red line for aesthetic */
     margin-bottom: 20px;
     width: 90%;
     height: 2px;
     background-color: rgb(240, 70, 84);
 }
-.footer-section h4{
+.footer-section h4{ /* small text at the bottom */
     font-size: small;
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     color: white;

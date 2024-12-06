@@ -1,26 +1,6 @@
 <link rel="stylesheet" href="./css/footer.css">
 
 
-<!-- <footer>
-    <div id="social-media"> -->
-        <!-- TODO images sources -->
-        <!-- <ul id="social-media-list">
-            <li>
-                <a href="https://www.youtube.com"><img src="" alt="youtube" title="Youtube channel"></a>
-            </li>
-            <li>
-                <a href="https://www.twitter.com"><img src="" alt="twitter" title="Twitter account"></a>
-            </li>
-            <li>
-                <a href="https://www.instagram.com"><img src="" alt="instagram" title="Instagram account"></a>
-            </li>
-            <li>
-                <a href="https://www.tiktok.com"><img src="" alt="tiktok" title="Tiktok account"></a>
-            </li>
-        </ul>
-    </div>
-</footer> -->
-
 <footer>
     <div id="footer-style">
         <!-- Sign Up / Login Section -->
@@ -28,7 +8,7 @@
             <h2>TEAM 47</h2>
             <p>Sign up or log in so that you can make purchses and keep up to date with the latest offers</p>
             <button class="footer-button">Login</button>
-            <button class="footer-button">Sign Up</button>
+            <button class="footer-button">Sign Up</button> 
         </div>
         <div id="footer-space"></div>
         <!-- Customer Service -->
@@ -42,7 +22,7 @@
             </ul>
         </div>
 
-        <!-- Customer Service Section -->
+        <!-- Account Section -->
         <div class="footer-section">
             <h3 style="text-align: left;">Account</h3>
             <ul>
@@ -57,7 +37,7 @@
         <div class="footer-section">
             <h3 style="text-align: left;">Follow Us</h3>
             <ul>
-                <li><a href="#">Facebook</a></li>
+                <li><a href="#">TikTok</a></li>
                 <li><a href="#">Instagram</a></li>
                 <li><a href="#">Twitter</a></li>
                 <li><a href="#">YouTube</a></li>

@@ -23,7 +23,7 @@
             <h3>CUSTOMER SERVICE</h3>
             <ul>
                 <!-- TODO contact us link in footer -->
-                <li><a href="">Contact Us</a></li>
+                <li><a href="{{route('contact-us')}}">Contact Us</a></li>
                 <li><a href="">FAQs</a></li>
                 <!-- TODO about us link in footer -->
                 <li><a href="">About Us</a></li>

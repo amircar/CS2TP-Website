@@ -32,3 +32,8 @@ Route::get('/about-us', function(){
 Route::get('/basket', [BasketController::class, 'basket'])->name('basket');
 
 Route::get('/product/{id}', action: [ProductController::class, 'productSingle'])->name('product');
+
+//route for contact us page to display
+Route::get('/contact-us', function () {
+    return view('contact-us');
+})->name('contact-us');

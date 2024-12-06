@@ -32,4 +32,3 @@ Route::get('/about-us', function(){
 Route::get('/basket', [BasketController::class, 'basket'])->name('basket');
 
 Route::get('/product/{id}', action: [ProductController::class, 'productSingle'])->name('product');
-

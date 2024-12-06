@@ -17,7 +17,7 @@
             <img src="assets/contact-us-banner.jpg" alt="Contact Us Banner" class="image" width="100%" height="100%"> 
                 <h3 style="text-align: center; margin-top: 100px; position: absolute; color: black;">Contact US</h3>
             </div> 
-            <div id="section" style="height: 800px; margin-top: 50px; justify-content: left;">
+            <div id="section" style="height: 700px; margin-top: 50px; justify-content: left;">
                 <!-- the contact us form -->
                 <div class="contactus-box" style="width: 55%; height: 650px;">
                     <div class="titlebox"> <!-- this is the text above the form -->

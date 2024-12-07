@@ -7,19 +7,21 @@
     <div id="footer-style">
 
         <!-- Sign Up / Login Section -->
-        @guest <!-- only displayed when not logged in -->
-            <div class="footer-section">
+        <div class="footer-section">      
+            @auth
+                <img src="{{asset("images/logo.png")}}", width="80%", height="80%">
+            @else
                 <h3>TEAM 47</h3>
                 <p>Sign up or log in so that you can make purchases and keep up to date with the latest offers.</p>
-                
-                <!-- TODO link to log in and sign up page -->
                 <button class="footer-button">Log in</button>
                 <button class="footer-button">Sign Up</button>
-            
-                <!-- FIXME ?remove and use css to add space? -->
-                <div id="footer-space"></div>
-            </div>
-        @endguest
+            @endauth
+        </div>
+
+
+        <!-- FIXME remove and use css to add space -->
+        <div id="footer-space"></div>
+
 
         <div class="footer-section">
             <h3>CUSTOMER SERVICE</h3>

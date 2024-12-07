@@ -40,7 +40,7 @@
     <nav>
         <ul id="nav-items">
             <!-- FIXME rename to men -->
-            <a class="nav-item" href="{{ route('mens') }}">
+            <a class="nav-item" href="{{ route('men') }}">
                 <li>MEN</li>
             </a>
             <a class="nav-item" href="{{ route('women') }}">

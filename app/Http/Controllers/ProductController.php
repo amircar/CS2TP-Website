@@ -27,10 +27,10 @@ class ProductController extends Controller
         return view('home', compact('products'));
     }
 
-    public function productsMens()
+    public function productsMen()
     {
         $products4 = Product::with('product_images', 'sizes')->inRandomOrder()->take(4)->get();
-        return view('mens', compact('products4'));
+        return view('men', compact('products4'));
     }
 
     public function productsWomen()

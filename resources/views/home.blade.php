@@ -39,7 +39,7 @@
         <section id="home-categories">
             <div id="home-category1">
 
-                <a href="{{ route('mens') }}">
+                <a href="{{ route('men') }}">
                     <img src="images/home/mens.png" alt="men-category-image">
                     <button class="home-category-button">MEN</button>
                 </a>

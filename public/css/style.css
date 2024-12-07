@@ -630,53 +630,160 @@ header {
 /***************************** 
     LOG IN
 *****************************/
+
+
+/* Container styling */
 .container {
     display: flex;
     justify-content: center;
-    align-items: center;
-    height: 100vh;
+    align-items: center; 
+    height: 100vh; 
     box-sizing: border-box;
 }
-  
-.card {
-    border: 1px solid;
+
+/* Topf section styling */
+.left-section {
+    background-color: #fff;
+    padding: 40px;
+    max-width: 500px;
+    margin: 0 auto; /* Center the form horizontally */
     border-radius: 10px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-    width: 500px;
-    max-width: 80%; 
-    margin: 0 auto; 
-    display: flex;
-    flex-direction: column; 
-    align-items: center;
-    border: 5px solid black;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%; 
 }
 
-.card-header {
-    width: 100%; 
+/* Header inside the top section */
+.left-section h1 {
+    margin-bottom: 20px;
+    font-size: 1.8em;
+    font-weight: bold;
     text-align: center;
 }
 
-.card-body {
+/* General form group styling */
+.form-group {
+    margin-bottom: 15px;
+}
+
+/* Labels styling */
+.left-section label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    text-align: left;
+}
+
+/* Input field styling */
+.left-section input {
     width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
 }
 
-.row {
+/* Remember Me container */
+.remember-me-container {
+    display: flex; 
+    align-items: center; 
+    gap: 5px; 
+}
+
+/* Style the checkbox */
+.form-check-input {
+    width: auto; 
+    height: auto; 
+    margin: 0; 
+    display: inline-block; 
+}
+
+/*Sign in button */
+.left-section button {
+    width: 104%;
+    padding: 10px;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.left-section button:hover {
+    background-color: #333;
+}
+
+/* Forgot Password link */
+.forgot-link {
+    text-align: center;
+    margin-top: 10px;
+    display: block;
+}
+
+.forgot-link:hover {
+    text-decoration: underline;
+}
+
+
+/* Bottom section styling */
+.bottom-section {
+    background-color: #f9f9f9; /* Different background color */
+    padding: 40px;
+    max-width: 500px;
+    margin: 20px auto; 
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
     width: 100%; 
-    display: flex; 
-    justify-content: center;
 }
 
-.col-md-4, .col-md-6, .col-md-8 {
-    display: flex; 
-    justify-content: center; 
+/* Header inside the bottom section */
+.bottom-section h2 {
+    margin-bottom: 20px;
+    font-size: 1.5em;
+    font-weight: bold;
+    text-align: center;
 }
 
-.form-check {
-    justify-content: center;
+/* List styling in the bottom section */
+.bottom-section ul {
+    list-style-type: disc;
+    padding-left: 20px; /* Indent the list */
 }
 
-input.form-control {
-    border: 1px solid;
-    margin-bottom: 5px; 
-    padding: 5px; 
+/* Button styling in the bottom section */
+.bottom-section button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff; /* Different button color */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-top: 20px; 
+}
+
+.bottom-section button:hover {
+    background-color: #0056b3; 
+}
+
+/* Have to forcefully override with CSS, apologies */
+
+input[type="checkbox"] {
+    appearance: none; /* Remove default styling */
+    width: 20px; 
+    height: 20px; 
+    border:3px solid #ccc; 
+    border-radius: 3px;
+    outline: none; 
+    cursor: pointer; 
+}
+
+input[type="checkbox"]:checked {
+    background-color: black; 
+    border: 3px solid rgb(128, 0, 0); 
 }

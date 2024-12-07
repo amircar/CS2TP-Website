@@ -48,7 +48,7 @@
                                 $total += $item->product->price
                             @endphp
                             <p class="mb-0">£{{$item->product->price}}</p>
-                            <button type="button" class="btn btn-link btn-remove">Remove</button>
+                            <button href="" type="button" class="btn btn-link btn-remove">Remove</button>
                         </div>
                     </div>
                 @endforeach

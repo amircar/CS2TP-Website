@@ -82,9 +82,13 @@
                 </div>
 
 
-                <!-- FIXME ?move a inside div? -->
-                <a href="" class="Btn1">ADD TO BASKET</a>
-                <a href="" class="Btn2">ADD TO WISHLIST</a>
+                @auth
+                    <a href="" class="Btn1">ADD TO BASKET</a>
+                    <a href="" class="Btn2">ADD TO WISHLIST</a>
+                @else
+                    <a href="{{route('login')}}" class="Btn1">ADD TO BASKET</a>
+                    <a href="{{route('login')}}" class="Btn2">ADD TO WISHLIST</a>
+                @endauth
 
                 <div id="basketBtn">
 

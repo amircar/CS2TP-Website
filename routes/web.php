@@ -39,3 +39,5 @@ Route::get('/product/{id}', action: [ProductController::class, 'productSingle'])
 
 //route for the page that displays searched items
 Route::get('/search', action: [ProductController::class, 'productSearch'])->name('search');
+
+Route::post('/add',[BasketController::class, 'add'])->name('add');

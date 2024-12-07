@@ -57,4 +57,12 @@ class ProductController extends Controller
         $product = Product::with('product_images','sizes')->find($id);
         return view('product', compact('product','products'));
     }
+
+    // search function
+    public function productSearch(){
+        if(request()->has('search')){
+            $products = Product::with('product_images', 'sizes')->where('name', 'like', '%' . request()->get('search') . '%')->get();
+            return view('search-results', compact('products'));
+        }
+    }
 }

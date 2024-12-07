@@ -23,6 +23,7 @@
         <section id="featured-products-list">
             <h2>FEATURED IN ACCESSORIES</h2>
             <ul class="products-list">
+                <!-- TODO get only accessory -->
                 @foreach ($products4 as $product)
                     @include('single-product' , ['product' => $product])
                 @endforeach

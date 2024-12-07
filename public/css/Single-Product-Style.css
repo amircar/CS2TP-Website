@@ -20,12 +20,12 @@
     flex: 0 0 33.3333%;
     padding: 10px;
     box-sizing: border-box;
-}
 
-.carousel-item img {
-    width: 100%;
-    height: auto;
-    border-radius: 8px; /* Rounds the corners of images */
+    img {
+        width: 100%;
+        height: auto;
+        border-radius: 8px; /* Rounds the corners of images */
+    }
 }
 
 .carousel-button {

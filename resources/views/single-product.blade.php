@@ -8,11 +8,11 @@
                 @php
                     $found = true;
                 @endphp
-                @break {{-- ends loop early to reduce time complexity --}}
+                @break <!-- ends loop early to reduce time complexity -->
             @endif
         @endforeach
 
-        {{-- if primary image is not found, add empty image to reserve space --}}
+        <!-- if primary image is not found, add empty image to reserve space -->
         @if($found == false)
             <img src="" alt="product-image">
         @endif

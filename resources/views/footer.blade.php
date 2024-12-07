@@ -7,7 +7,7 @@
     <div id="footer-style">
 
         <!-- Sign Up / Login Section -->
-        @guest <!-- only shows when not logged in -->
+        @guest <!-- only displayed when not logged in -->
             <div class="footer-section">
                 <h3>TEAM 47</h3>
                 <p>Sign up or log in so that you can make purchases and keep up to date with the latest offers.</p>
@@ -16,7 +16,7 @@
                 <button class="footer-button">Log in</button>
                 <button class="footer-button">Sign Up</button>
             
-                <!-- FIXME remove and use css to add space -->
+                <!-- FIXME ?remove and use css to add space? -->
                 <div id="footer-space"></div>
             </div>
         @endguest
@@ -26,9 +26,12 @@
             <ul>
                 <!-- TODO contact us link in footer -->
                 <li><a href="">Contact Us</a></li>
+
                 <li><a href="">FAQs</a></li>
+
                 <!-- TODO about us link in footer -->
                 <li><a href="">About Us</a></li>
+                
                 <li><a href="">Terms and Conditions</a></li>
             </ul>
         </div>
@@ -54,8 +57,6 @@
         </div>
 
         <div id="line"></div> <!-- line for decoration -->
-        <!-- FIXME use css to put h4 at bottom instead of div -->
-        <div style="height: 0px; width: 100%;"></div>
         <!-- FIXME css for h4 -->
         <h4>2024 Team 47</h4>
     </div>

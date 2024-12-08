@@ -41,3 +41,5 @@ Route::get('/product/{id}', action: [ProductController::class, 'productSingle'])
 Route::get('/search', action: [ProductController::class, 'productSearch'])->name('search');
 
 Route::post('/add',[BasketController::class, 'add'])->name('add');
+
+Route::post('/remove',[BasketController::class, 'remove'])->name('remove');

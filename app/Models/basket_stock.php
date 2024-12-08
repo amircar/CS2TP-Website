@@ -6,5 +6,6 @@ use Illuminate\Database\Eloquent\Model;
 
 class basket_stock extends Model
 {
-    //
+    protected $table = 'basket_stock';
+    public $timestamps = false;
 }

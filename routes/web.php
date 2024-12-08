@@ -40,6 +40,11 @@ Route::get('/product/{id}', action: [ProductController::class, 'productSingle'])
 //route for the page that displays searched items
 Route::get('/search', action: [ProductController::class, 'productSearch'])->name('search');
 
+
+Route::post('/add',[BasketController::class, 'add'])->name('add');
+
+Route::post('/remove',[BasketController::class, 'remove'])->name('remove');
+
 //route for contact us page to display
 Route::get('/contact-us', function () {
     return view('contact-us');

@@ -60,16 +60,22 @@
                 <span class="colour white" title="White"></span>
                 <span class="colour black" title="Black"></span>
             </div>
+            <form action="{{route('add')}}" method="POST">
             <h4 class="title">SIZE</h4>
             <div class="sizes">
                 @foreach($product->sizes as $size)
-                <span class="size">{{$size->size}}</span>
+                    <input type="radio" name ="size_id" class="size" value="{{$size->id}}" required>{{$size->size}}
                 @endforeach
             </div>
 
+            
+
 
             @auth
-                <a href="" class="Btn1">ADD TO BASKET</a>
+                    @csrf
+                    <input type="hidden" name="product_id" value="{{$product->id}}">
+                    <button type="submit" class="Btn1">ADD TO BASKET</button>
+                </form>
                 <a href="" class="Btn2">ADD TO WISHLIST</a>
             @else
                 <a href="{{route('login')}}" class="Btn1">ADD TO BASKET</a>

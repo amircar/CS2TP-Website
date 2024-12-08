@@ -15,17 +15,18 @@ class PaymentController extends Controller
 {
 
     
-    public function checkout(Request $request){
+    public function checkout(Request $request)
+    {
 
         $basket = Basket::with('stocks.product')->where('user_id', $request->user_id)->first(); //Create variable with linked tables basket, product and size
 
         foreach($basket->stocks as $stock){
-            if($stock->pivot->quantity > $stock->quantity){
+            if($stock->pivot->quantity > $stock->quantity){ //If there is not enough of the item in stock redirect back to basket page with message saying item does not have enough in stock
                 return redirect()->back()->with('message', $stock->product->name.' only has '.$stock->pivot->quantity.' in stock');
             }
         }
 
-        Stripe::setApiKey(env('STRIPE_SECRET'));
+        Stripe::setApiKey(env('STRIPE_SECRET')); //Set API key
 
         $payment = Checkout\Session::create([
             'line_items' => [
@@ -45,21 +46,21 @@ class PaymentController extends Controller
             'cancel_url' => route('basket'),
             ]);
 
-            return redirect()->away($payment->url);
+            return redirect()->away($payment->url); //Redirect to page depending on failure or success
     }
 
-    public function success(Request $request){
+    public function success(Request $request)
+    {
         
         $basket = Basket::with('stocks')->where('user_id', $request->user_id)->first(); //Create variable with linked tables basket, product and size
 
         foreach($basket->stocks as $stockChange){
-            $stock = Stock::find($stockChange->id);
-            $stock->quantity -= $stockChange->pivot->quantity;
+            $stock = Stock::find($stockChange->id); //Find correct stock
+            $stock->quantity -= $stockChange->pivot->quantity; //Decrease the current number of items stock
             $stock->save();
         }
         
-        basket_stock::where('basket_id',$basket->id)->delete();
-        session()->forget($request->key);
+        basket_stock::where('basket_id',$basket->id)->delete(); //Delete the items from the users basket
         return redirect()->back();
     }
 }

@@ -18,8 +18,8 @@ class User extends Authenticatable
      * @var array<int, string>
      */
 
-    use Billable;
-    protected $fillable = [
+    use Billable; //Allows users to be billed with stripe
+    protected $fillable = [//Declares which fields can be stated when a new user is made
         'username',
         'first_name',
         'last_name',

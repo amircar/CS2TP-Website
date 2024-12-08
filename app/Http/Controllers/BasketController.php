@@ -10,7 +10,8 @@ use Illuminate\Http\Request;
 
 class BasketController extends Controller
 {
-    public function basket(){
+    public function basket()
+    {
         if(!Auth::check()){ //Check User is logged in
             return redirect()->route('login'); //Redirect to login if not
         }
@@ -21,7 +22,8 @@ class BasketController extends Controller
         }
     }
 
-    public function add(Request $request){
+    public function add(Request $request)
+    {
         if(!Auth::check()){ //Check User is logged in
             return redirect()->route('login'); //Redirect to login if not
         }
@@ -29,7 +31,7 @@ class BasketController extends Controller
             $id = Auth::id();
             $basket = Basket::firstOrCreate(['user_id' => $id]); //Finds Basket of Current User or Creates one If not made
             $stock = Stock::where('product_id',$request->product_id)->where('size_id',$request->size_id)->first(); //Find Stock with requested product and size
-            $user_basket = basket_stock::where('basket_id',$basket->id)->where('stock_id',$stock->id)->first();
+            $user_basket = basket_stock::where('basket_id',$basket->id)->where('stock_id',$stock->id)->first(); //Find a Specific Item in the 
             
             if($user_basket){
                 $user_basket->quantity += 1;
@@ -42,7 +44,8 @@ class BasketController extends Controller
         
     }
 
-    public function remove(Request $request){
+    public function remove(Request $request)
+    {
         if(!Auth::check()){ //Check User is logged in
             return redirect('/login'); //Redirect to login if not
         }
@@ -50,12 +53,12 @@ class BasketController extends Controller
             $id = Auth::id();
             $basket = Basket::where('user_id', $id)->first(); //Finds Basket of Current User
             $stock = Stock::where('product_id',$request->product_id)->where('size_id', $request->size_id)->first(); //Find Stock with specified product and size
-            $user_basket = basket_stock::where('basket_id',$basket->id)->where('stock_id',$stock->id)->first(); //Find the correct basket_stock
+            $user_basket = basket_stock::where('basket_id',$basket->id)->where('stock_id',$stock->id)->first(); //Find the correct basket_stock with specified basket_id and stock_id
 
             if($user_basket){ //Check basket_stock exists
                 if($user_basket->quantity > 1){ //Check if quantity is greater than 1
                     $user_basket->quantity -= 1; //Decrement quantity
-                    $user_basket->save(); 
+                    $user_basket->save(); //Save Basket
                 }else{
                     $user_basket->delete(); //Delete if quantity would go 0 or below
                 }

@@ -49,9 +49,16 @@
                         </div>
                         <div>
                             @php
-                                $total += $item->product->price
+                                $total += $item->product->price * $item->pivot->quantity
                             @endphp
                             <p class="mb-0">£{{$item->product->price}}</p>
+
+                            <form action="{{route('add')}}" method="POST">
+                                @csrf
+                                <input type="hidden" name="product_id" value="{{$item->product_id}}">
+                                <input type="hidden" name="size_id" value="{{$item->size_id}}">
+                                <button type="submit" class="btn btn-link btn-remove">Add</button>
+                            </form>
 
                             <form action="{{route('remove')}}" method="POST">
                                 @csrf

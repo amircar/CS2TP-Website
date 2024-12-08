@@ -27,17 +27,17 @@ class BasketController extends Controller
         }
         else{
             $id = Auth::id();
-            $basket = Basket::firstOrCreate(['user_id', $id]); //Finds Basket of Current User or Creates one If not made
+            $basket = Basket::firstOrCreate(['user_id' => $id]); //Finds Basket of Current User or Creates one If not made
             $stock = Stock::where('product_id',$request->product_id)->where('size_id',$request->size_id)->first(); //Find Stock with requested product and size
             $user_basket = basket_stock::where('basket_id',$basket->id)->where('stock_id',$stock->id)->first();
-
+            
             if($user_basket){
                 $user_basket->quantity += 1;
                 $user_basket->save();
             }else{
-                basket_stock::create(['basket_id' => $basket->id,'stock_id' => $stock->id,'quantity' => 0]);
+                basket_stock::create(['basket_id' => $basket->id,'stock_id' => $stock->id,'quantity' => 1]);
             }
-            return view('basket');
+            return redirect()->route('basket');
         }
         
     }

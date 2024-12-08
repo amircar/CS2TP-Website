@@ -28,15 +28,15 @@
                     <li>
                         <form action="{{ route('logout') }}" method="POST">
                             @csrf
-                            <button type="submit" class="btn btn-danger">Logout</button>
+                            <button type="submit">Logout</button>
                         </form>
                     </li>
                 </a>
                 <a class="header-item" href="">
-                    <li><img src="" alt="profile" title="Profile"></li>
+                    <li><img src="{{asset("images/account_icon.png")}}" alt="Profile" title="Profile"></li>
                 </a>
                 <a class="header-item" href="{{ route('basket') }}">
-                    <li><img src="images/b.svg" alt="basket" title="Basket"></li>
+                    <li><img src="{{asset("images/basket.png")}}" alt="Basket" title="Basket"></li>
                 </a>
             @else
                 <a class="header-item" href="{{ route('register') }}">

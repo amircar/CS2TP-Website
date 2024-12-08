@@ -1,6 +1,4 @@
 /* TODO move to style.css */
-/* FIXME organise sections */
-/* FIXME adjust to be consistent with homepage */
 
 /*****************************
     BASKET PAGE
@@ -9,7 +7,7 @@
     margin: 0 3% 0 3%;
     background-color: white;
     padding: 20px;
-    box-shadow: 0 1px 5px rgb(128, 128, 128);
+    box-shadow: 0 0px 6px rgb(128, 128, 128);
 }
 
 .basket-title {

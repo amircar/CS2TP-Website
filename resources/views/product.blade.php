@@ -32,40 +32,33 @@
             @endforeach
         </div>
 
-
-        <!-- FIXME change id/classes to remove camelCase -->
         <div id="mainView">
-            <!-- FIXME does not need div for each image -->
             <div class="thumbnail">
                 @foreach($product->product_images as $image)
-                @if($image->is_primary)
-                <img src="{{asset($image->image_url)}}" alt="{{ $image->alt_text }}">
-                @php
-                $found = true;
-                @endphp
-                @break
-                @endif
+                    @if($image->is_primary)
+                        <img src="{{asset($image->image_url)}}" alt="{{ $image->alt_text }}">
+                        @php
+                            $found = true;
+                        @endphp
+                        @break
+                    @endif
                 @endforeach
             </div>
-
-
-
-
         </div>
 
 
         <!-- TODO should be a form submitted to basket -->
 
         <div id="productInfo">
-            <h1 class=productName>{{$product->name}}</h1>
+            <h2 class=productName>{{$product->name}}</h1>
             <h4 class="price">£{{$product->price}}</h4>
             <h4 class="colourTitle">COLOUR</h4>
             <div class="colours">
-                <span class="colour red"></span>
-                <span class="colour yellow"></span>
-                <span class="colour blue"></span>
-                <span class="colour white"></span>
-                <span class="colour black"></span>
+                <span class="colour red" title="Red"></span>
+                <span class="colour yellow" title="Yellow"></span>
+                <span class="colour blue" title="Blue"></span>
+                <span class="colour white" title="White"></span>
+                <span class="colour black" title="Black"></span>
             </div>
             <h4 class="title">SIZE</h4>
             <div class="sizes">
@@ -76,17 +69,18 @@
 
 
             @auth
-            <a href="" class="Btn1">ADD TO BASKET</a>
-            <a href="" class="Btn2">ADD TO WISHLIST</a>
+                <a href="" class="Btn1">ADD TO BASKET</a>
+                <a href="" class="Btn2">ADD TO WISHLIST</a>
             @else
-            <a href="{{route('login')}}" class="Btn1">ADD TO BASKET</a>
-            <a href="{{route('login')}}" class="Btn2">ADD TO WISHLIST</a>
+                <a href="{{route('login')}}" class="Btn1">ADD TO BASKET</a>
+                <a href="{{route('login')}}" class="Btn2">ADD TO WISHLIST</a>
             @endauth
 
     </main>
 
     <!-- Suggested Items / Item carousel -->
     <section id="suggestedChoices">
+        <!-- FIXME move to css -->
         <div style="padding-left: 5%; font-size: 250%;">
             You might also like...
         </div>

@@ -6,34 +6,28 @@
 <footer>
     <div id="footer-style">
 
-        <!-- Sign Up / Login Section -->
-        <div class="footer-section">      
-            @auth
-                <img src="{{asset("images/logo.png")}}", width="80%", height="80%">
-            @else
+        <!-- Sign Up / Login Section -->    
+        @guest
+            {{-- <img src="{{ asset("images/logo.png") }}", width="80%", height="80%"> --}}
+            <div class="footer-section">  
                 <h3>TEAM 47</h3>
                 <p>Sign up or log in so that you can make purchases and keep up to date with the latest offers.</p>
                 <button class="footer-button">Log in</button>
                 <button class="footer-button">Sign Up</button>
-            @endauth
-        </div>
-
-
-        <!-- FIXME remove and use css to add space -->
-        <div id="footer-space"></div>
+            </div>
+            <div id="footer-space"></div>
+        @endguest
 
 
         <div class="footer-section">
             <h3>CUSTOMER SERVICE</h3>
             <ul>
+                <li><a href="{{ route('about-us') }}">About Us</a></li>
+
                 <!-- TODO contact us link in footer -->
-                <li><a href="">Contact Us</a></li>
+                <li><a href="{{-- route('contact-us') --}}">Contact Us</a></li>
 
                 <li><a href="">FAQs</a></li>
-
-                <!-- TODO about us link in footer -->
-                <li><a href="">About Us</a></li>
-                
                 <li><a href="">Terms and Conditions</a></li>
             </ul>
         </div>
@@ -59,8 +53,7 @@
         </div>
 
         <div id="line"></div> <!-- line for decoration -->
-        <!-- FIXME css for h4 -->
-        <h4>2024 Team 47</h4>
+        <h4><a href="{{ route('home') }}" title="Home">2024 Team 47</a></h4>
     </div>
     
 </footer>

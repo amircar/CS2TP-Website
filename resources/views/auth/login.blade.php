@@ -36,13 +36,12 @@
                 </div>
 
                 
+
                 <div class="form-group remember-me">
-    <div class="form-group remember-me">
     <div class="remember-me-container">
-        <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
-        <label class="form-check-label" for="remember">{{ __('Remember Me') }}</label>
+        <input class="form-check-input custom-checkbox" type="checkbox" name="remember" id="remember-checkbox" {{ old('remember') ? 'checked' : '' }}>
+        <label class="form-check-label" for="remember-checkbox">{{ __('Remember Me') }}</label>
     </div>
-</div>
 </div>
 
 

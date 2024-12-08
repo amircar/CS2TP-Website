@@ -771,19 +771,25 @@ header {
     background-color: #0056b3; 
 }
 
-/* Have to forcefully override with CSS, apologies */
-
-input[type="checkbox"] {
-    appearance: none; /* Remove default styling */
+/* Specific styles for the Remember Me checkbox */
+#remember-checkbox {
+    appearance: none; /* Allows custom style (black and red) */
     width: 20px; 
     height: 20px; 
-    border:3px solid #ccc; 
+    border: 3px solid #ccc; 
     border-radius: 3px;
     outline: none; 
     cursor: pointer; 
 }
 
-input[type="checkbox"]:checked {
+#remember-checkbox:checked {
     background-color: black; 
     border: 3px solid rgb(128, 0, 0); 
+}
+
+/* Remember Me container */
+.remember-me-container {
+    display: flex; 
+    align-items: center; 
+    gap: 10px; 
 }

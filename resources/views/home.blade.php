@@ -11,6 +11,12 @@
 
     <body data-text-size="normal">
         @include('header')
+
+        @if(session('message'))
+            <div class="alert alert-danger">
+                {{ session('message') }}
+            </div>
+        @endif
         
         <main id="home-main">
             <!-- TODO href (can link to category page) -->

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en-GB">
+    
     <head>
        <meta charset="utf-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -16,10 +17,15 @@
     <body>
         @include('header')
 
+            @if(session('message'))
+                    <div class="alert alert-danger">
+                        {{ session('message') }}
+                    </div>
+            @endif
+
         <main id="basket-main">
             <div class="basket-container">
                 <h2 class="basket-header">Your Basket</h2>
-
 
                 <!-- TODO link to database -->
                 <!-- FIXME move css to main -->
@@ -78,7 +84,14 @@
 
                 <!-- Checkout Button -->
                 <div class="text-center mt-4">
-                    <a href="" class="btn btn-primary">Checkout</a>
+                    @if ($basket->stock)
+                        <form action="checkout"method="POST">
+                            @csrf
+                            <input type="hidden" name="user_id" value="{{$basket->user_id}}">
+                            <input type="hidden" name="price" value="{{$total*100}}">
+                            <button type="submit" class="btn btn-primary">Checkout</button>
+                        </form>
+                    @endif
                 </div>
             </div>
         </main>

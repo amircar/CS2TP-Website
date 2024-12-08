@@ -3,6 +3,7 @@
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\BasketController;
+use App\Http\Controllers\PaymentController;
 use Illuminate\Support\Facades\Route;
 
 
@@ -41,11 +42,26 @@ Route::get('/product/{id}', action: [ProductController::class, 'productSingle'])
 Route::get('/search', action: [ProductController::class, 'productSearch'])->name('search');
 
 
-Route::post('/add',[BasketController::class, 'add'])->name('add');
+Route::post('/add',[BasketController::class, 'add'])->middleware('auth')->name('add');
+
+Route::get('/add', function(){
+    return redirect('/');
+});
 
 Route::post('/remove',[BasketController::class, 'remove'])->name('remove');
 
+Route::get('/remove', function(){
+    return redirect('/');
+});
 //route for contact us page to display
 Route::get('/contact-us', function () {
     return view('contact-us');
 })->name('contact-us');
+
+Route::post('/checkout', [PaymentController::class, 'checkout'])->name('checkout');
+
+Route::get('/checkout', function(){
+    return redirect('/');
+});
+
+Route::get('/success',[PaymentController::class, 'success'])->name('success');

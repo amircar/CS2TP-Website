@@ -1,18 +1,17 @@
-/* TODO move to style.css */
-
-/*****************************
-    BASKET PAGE
-*****************************/
+/* Main Container */
 #basket-main {
     margin: 0 3% 0 3%;
     background-color: white;
     padding: 20px;
-    box-shadow: 0 0px 6px rgb(128, 128, 128);
+    box-shadow: 0 0px 6px rgba(128, 128, 128, 0.3);
+    border-radius: 8px;
 }
 
-.basket-title {
+/* Basket Header */
+.basket-header {
     font-family: "DMSans", Arial, Helvetica, sans-serif;
-    font-size: 35px;
+    font-size: 32px;
+    font-weight: bold;
     margin-bottom: 20px;
     text-transform: uppercase;
     text-align: center;
@@ -20,40 +19,40 @@
 }
 
 /* Basket Items Container */
-.basket-items {
+.basket-container {
     display: flex;
     flex-direction: column;
     gap: 20px;
 }
 
+/* Basket Item */
 .basket-item {
     display: flex;
-    flex-direction: row;
+    justify-content: space-between;
     align-items: center;
-    padding: 10px;
-    background-color: rgb(213, 213, 213);
-    border: 1px solid rgb(200, 200, 200);
-    border-radius: 5px;
-    transition: box-shadow 0.2s;
-
-    img {
-        min-height: 100px;
-        min-width: 100px;
-        height: 100px;
-        width: 100px;
-        object-fit: cover;
-        background-color: white;
-        border-radius: 5px;
-        margin-right: 15px;
-    }
+    padding: 15px;
+    background-color: #f8f9fa;
+    border: 1px solid #e9ecef;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .basket-item:hover {
-    /* TODO adjust box-shadow */
-    box-shadow: 0 2px 10px rgb(200, 200, 200);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    transition: box-shadow 0.3s ease;
 }
 
-/* Product Details */
+/* Item Image */
+.basket-item img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-right: 15px;
+    background-color: white;
+}
+
+/* Item Details */
 .basket-item-details {
     flex: 1;
     display: flex;
@@ -70,111 +69,99 @@
 .basket-item-price {
     font-family: "Barlow Semi Condensed", Arial, Helvetica, sans-serif;
     font-size: 18px;
-    color: rgb(128, 0, 0);
+    color: #7b2d26;
     margin-top: 5px;
 }
 
-/* Quantity Controls */
-.basket-item-quantity {
-    display: flex;
-    align-items: center;
-    margin-top: 10px;
-}
-
-.basket-item-quantity label {
-    font-family: "DMSans", Arial, Helvetica, sans-serif;
-    font-size: 16px;
+/* Buttons */
+.basket-item form {
+    display: inline-block;
     margin-right: 10px;
-    color: rgb(20, 0, 0);
 }
 
-.basket-item-quantity input {
-    width: 40px;
-    height: 30px;
-    text-align: center;
-    font-size: 16px;
-    border: 1px solid rgb(128, 128, 128);
-    border-radius: 5px;
-}
-
-.basket-item-remove {
-    cursor: pointer;
-    background-color: rgb(128, 0, 0);
-    color: white;
-    border: none;
-    padding: 5px 15px;
-    font-family: "Barlow Semi Condensed", Arial, Helvetica, sans-serif;
-    font-size: 16px;
-    border-radius: 5px;
-    margin-left: 20px;
-    transition: background-color 0.2s;
-}
-
-.basket-item-remove:hover {
-    background-color: rgb(128, 0, 0);
-}
-
-/* Basket Summary */
-.basket-summary {
-    margin-top: 30px;
-    padding: 20px;
-    background-color: rgb(213, 213, 213);
-    border: 1px solid rgb(200, 200, 200);
-    border-radius: 5px;
-}
-
-.basket-summary h3 {
-    font-family: "DMSans", Arial, Helvetica, sans-serif;
-    font-size: 25px;
-    margin-bottom: 15px;
-    text-transform: uppercase;
-    text-align: center;
-    color: rgb(20, 0, 0);
-}
-
-.basket-summary-details {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-.basket-summary-item {
-    display: flex;
-    justify-content: space-between;
-    font-family: "Barlow Semi Condensed", Arial, Helvetica, sans-serif;
-    font-size: 18px;
-    color: rgb(20, 0, 0);
-}
-
-.basket-summary-total {
-    display: flex;
-    justify-content: space-between;
-    font-family: "DMSans", Arial, Helvetica, sans-serif;
-    font-size: 22px;
+/* General Button Styles */
+.btn {
+    display: inline-block;
+    padding: 8px 16px;
+    font-size: 14px;
     font-weight: bold;
-    color: rgb(128, 0, 0);
-    margin-top: 15px;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: center;
+    text-decoration: none;
+}
+
+/* Add Button */
+.btn-add {
+    background-color: #28a745; /* Green */
+    color: white;
+    margin-right: 10px;
+}
+
+.btn-add:hover {
+    background-color: #218838; /* Darker green */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Remove Button */
+.btn-remove {
+    background-color: #dc3545; /* Red */
+    color: white;
+    margin-right: 10px;
+}
+
+.btn-remove:hover {
+    background-color: #c82333; /* Darker red */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Total Container */
+.total-container {
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: right;
+    color: #333;
 }
 
 /* Checkout Button */
-.basket-checkout {
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
-}
-
-.basket-checkout button {
-    background-color: rgb(20, 0, 0);
+.btn-primary {
+    background-color: #007bff; /* Blue */
     color: white;
-    font-family: "Barlow Semi Condensed", Arial, Helvetica, sans-serif;
-    font-size: 20px;
     padding: 10px 20px;
-    border: none;
+    font-size: 16px;
     border-radius: 5px;
+    font-weight: bold;
+    border: none;
     cursor: pointer;
-    transition: background-color 0.2s;
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-.basket-checkout button:hover {
-    background-color: rgb(128, 0, 0);
+.btn-primary:hover {
+    background-color: #0056b3; /* Darker blue */
+    transform: translateY(-2px);
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .basket-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .basket-item img {
+        margin-bottom: 10px;
+    }
+
+    .btn {
+        width: 100%;
+    }
+
+    .total-container {
+        text-align: left;
+    }
 }

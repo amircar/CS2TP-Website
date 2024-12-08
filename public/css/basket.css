@@ -165,3 +165,34 @@
         text-align: left;
     }
 }
+
+.basket-checkout {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.basket-checkout button {
+    background-color: #007bff; /* Blue */
+    color: white;
+    font-family: "Barlow Semi Condensed", Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: bold;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.basket-checkout button:hover {
+    background-color: #0056b3; /* Darker blue */
+    transform: translateY(-2px);
+}
+
+.basket-checkout button:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(38, 143, 255, 0.5); /* Highlight the button on focus */
+}

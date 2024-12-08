@@ -808,3 +808,56 @@ header {
         background-color: rgb(100, 0, 0); 
     }
 }
+
+/***************************** 
+    ABOUT US
+*****************************/
+/* this is the box to store the intro text about team 47 */
+.aboutus-box{ 
+    height: 120px;
+    width: 35%;
+    background-color: rgb(213, 213, 213);
+    display: flex;
+    color: white;
+    position: absolute;
+    padding: 10px;
+}
+/* this is container box, holds the three images. */
+.about-us-1 {
+    height: 400px;
+    width: 94%;
+    margin: 0 3% 0 3%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+      img {  /*the three images that are side by side */
+        margin: 10px;
+        min-height: 90%;
+        min-width: 31%;
+        height: 90%;
+        width: 31%;
+        background-color: white;
+    } 
+}
+
+/* this will hold some text about team 47 goal and story */
+.aboutus-text {
+    margin-left: 5%;
+    height: 290px;
+    width: 50%;
+    background-color: white;
+    position: absolute;
+    padding: 30px;
+    box-shadow: 0 0 9px rgba(0, 0, 0, 0.3);
+}
+/* these hold the images for our goal and story */
+.imagebox {
+    margin-left: 59.5%;
+    height: 350px;
+    width: 35%;
+    background-color: black;
+    position: absolute;
+}
+
+
+

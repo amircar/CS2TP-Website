@@ -84,14 +84,14 @@
 
                 <!-- Checkout Button -->
                 <div class="text-center mt-4">
-                    @if ($basket->stock)
+                    
                         <form action="checkout"method="POST">
                             @csrf
                             <input type="hidden" name="user_id" value="{{$basket->user_id}}">
                             <input type="hidden" name="price" value="{{$total*100}}">
                             <button type="submit" class="btn btn-primary">Checkout</button>
                         </form>
-                    @endif
+                    
                 </div>
             </div>
         </main>

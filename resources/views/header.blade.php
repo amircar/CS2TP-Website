@@ -25,7 +25,6 @@
 
             @auth
                 <a class="header-item">
-                    {{-- style="display: inline; --}}
                     <li>
                         <form action="{{ route('logout') }}" method="POST">
                             @csrf

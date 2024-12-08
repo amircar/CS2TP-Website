@@ -50,9 +50,12 @@ a {
 ul {
     list-style-type: none; /* removes dots from list items */
 }
+li {
+    list-style: none;
+}
 img {
     max-width: 100%;
-    object-fit: contain; /* keep image aspect ratio and displays center */
+    object-fit: cover; /* keep image aspect ratio and displays center */
 }
 h2 {
     font-family: "DMSans", Arial, Helvetica, sans-serif;
@@ -62,55 +65,11 @@ h2 {
 }
 h3 {
     font-family: "DMSans", Arial, Helvetica, sans-serif;
+    font-size: 100px;
     margin-bottom: 15px;
     text-align: center;
     text-transform: uppercase; /* always uppercase */
 }
-
-/***************************** 
-    LARGER FONT SIZES
-*****************************/
-[data-text-size='large'] {
-    h2 {
-        font-size: 40px;
-    }
-
-    header .header-item li {
-        p, button {
-            font-size: 23px !important;
-        }
-    }
-
-    nav ul a li {
-        font-size: 26px;
-        translate: 0 -5px; /* puts nav text in center */
-        letter-spacing: 2px; /* reduces space between letters */
-    }
-
-    #back-to-top {
-        font-size: 22px;
-        letter-spacing: 2px; /* reduces space between letters */
-        text-indent: 2px;
-    }
-
-    #home-main #home-main-button {
-        font-size: 26px;
-        letter-spacing: 2px; /* reduces space between letters */
-    }
-
-    .products-list .single-product {
-        font-size: 25px;
-        .product-title {
-            font-size: 30px;
-        }
-    }
-
-    #home-categories .home-category-button {
-        font-size: 32px !important;
-        letter-spacing: 2px !important; /* reduces space between letters */
-    }
-}
-
 
 /***************************** 
     HEADER
@@ -122,7 +81,7 @@ header {
     position: sticky;
     margin-bottom: 20px;
     z-index: 1; /* header and nav are over all other content */
-    background-image: linear-gradient(150deg, rgb(20, 0, 0) 80%, rgb(65, 0, 0) 85%, rgb(128, 0, 0) 90%, white 100%);
+    background-color: rgb(20,0,0);
     box-shadow: 0 1px 10px black;
 
     #header-wrapper {
@@ -132,16 +91,14 @@ header {
         justify-content: space-between;
 
         #main-logo {
-            width: 180px;
-            margin-left: 30px;
+            width: 20%;
             color: white; /* makes alt text is visible */
             img {
-                margin-top: 7.5px;
+                margin: 7.5px 0 0 20px;
                 min-height: 60px;
-                min-width: 100%;
+                min-width: 180px;
                 height: 60px;
-                width: 100%;
-                object-fit: cover;
+                width: 180px;
             }
         }
 
@@ -150,129 +107,38 @@ header {
             flex-wrap: wrap;
             flex-direction: row;
             align-items: center;
-            margin: 0 3%;
-            .header-item {
+            margin: 0 4% 0 4%;
+            a {
                 transition: 0.2s;
                 margin: 0 20px 0 20px;
-
-                li:has(img) { /* icons have different dimensions to text */
+                /* FIXME center text (vertical) */
+                img {
+                    min-height: 50px;
+                    min-width: 50px;
                     height: 50px;
                     width: 50px;
-                    img {
-                        min-height: 100%;
-                        min-width: 100%;
-                        height: 100%;
-                        width: 100%;
-                        color: white; /* makes alt text visible */
-                    }
+                    color: white; /* makes alt text visible */
                 }
-                li {
+                /* FIXME center text (vertical) */
+                p {
                     height: 40px;
                     width: 70px;
                     text-align: center;
-                    p, button {
-                        font-family: "Barlow Semi Condensed", Arial, Helvetica, sans-serif;
-                        font-size: 20px;
-                        color: white;
-                    }
-                    p {
-                        translate: 0 5px; /* centers text vertically */
-                    }
-                    /* logout button */
-                    form {
-                        height: 100%;
-                        width: 100%;
-                        button {
-                            height: 100%;
-                            width: 100%;
-                            background-color: transparent;
-                            cursor: pointer;
-                        }
-                    }
+                    font-family: "Barlow Semi Condensed", Arial, Helvetica, sans-serif;
+                    font-size: 18px;
+                    color: white;
                 }
             }
-            .header-item:hover {
+            a:hover {
                 transition: 0.4s;
                 background-color: white;
                 img {
-                    color: rgb(128, 0, 0); /* makes alt text visible */
+                    color: rgb(240, 70, 84); /* makes alt text visible */
                 }
-                p, button {
-                    color: rgb(128, 0, 0);
+                p {
+                    color: rgb(240, 70, 84);
                 }
             }
-        }
-    }
-
-/***************************** 
-    TEXT SIZE TOGGLE
-*****************************/
-    #toggle-text-size {
-        height: 15px;
-        margin: 0 20px 20px 20px;
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: row;
-        justify-content: space-between;
-        color: white;
-        align-items: center;
-
-        #toggle-text-size + p { /* first letter */
-            font-size: 18px;
-        }
-        .toggle-switch + p { /* last letter */
-            font-size: 26px;
-        }
-
-        .toggle-switch {
-            height: 15px;
-            width: 35px;
-            margin: 0 10px;
-            border-radius: 30px;
-            outline: 1px solid white;
-            outline-offset: 3px;
-            cursor: pointer;
-            transition: 0.4s;
-
-            input { /* hides default checkbox */
-                opacity: 0;
-                height: 0;
-                width: 0;
-            }
-        }
-
-        /* background behind circle inside toggle switch */
-        .toggle-switch::before {
-            content: "";
-            display: block;
-            position: relative;
-            height: 15px;
-            width: 15px;
-            background-color: rgb(128, 0, 0);
-            border-radius: 50%;
-            transition: 0.2s;
-        }
-        .toggle-switch:has(> input:checked)::before {
-            width: 100%;
-            border-radius: 30px;
-            transition: 0.2s;
-        }
-
-        /* circle inside toggle switch */
-        .toggle-switch::after {
-            content: "";
-            display: inline-block;
-            position: relative;
-            height: 15px;
-            width: 15px;
-            translate: 0 -16px;
-            background-color: white;
-            border-radius: 50%;
-            transition: 0.2s;
-        }
-        .toggle-switch:has(> input:checked)::after {
-            transform: translateX(20px);
-            transition: 0.2s;
         }
     }
 
@@ -299,7 +165,7 @@ header {
                 padding: 0 10px 0 10px;
                 flex: 1 1;
                 color: black;
-                transition: 0.4s;
+                transition: 0.2s;
 
                 li {
                     height: 100%;
@@ -320,41 +186,31 @@ header {
                 display: block;
                 position: absolute;
                 transform: translate(-10.5px, 2.5px); /* align border between categories */
-                transition: 0.4s;
+                transition: 0.2s;
             }
-            /* removes border line at the edge of the page (to the left of first category) */
+            /* removes border line at edge page ( */
             a:first-child::after {
                 content: none;
             }
 
-            /* transitions occur after slight delay (allows mouse to move away before transistion) */
             a:hover {
                 background-color: white;
-                color: rgb(128, 0, 0);
-                transition: 0.2s 0.4s;
+                color: rgb(240, 70, 84);
+                transition: 0.1s 0.2s;
             }
-            /* border fills whole height of nav bar */
+            /* border fills whole nav bar height */
             a:hover::after {
                 height: 25px;
                 transform: translate(-10.5px, 0);
-                transition: 0.2s 0.4s;
+                transition: 0.1s 0.2s;
             }
         }
     }
 }
 
 /***************************** 
-    FOOTER
-*****************************/
-
-
-/* TODO move footer to here */
-
-
-/***************************** 
     BACK TO TOP BUTTON
 *****************************/
-/* FIXME only show button past certain scroll point */
 #back-to-top {
     height: 45px;
     width: 50px;
@@ -368,7 +224,7 @@ header {
     letter-spacing: 5px;
     text-align: center;
     line-height: 65px; /* text at bottom of button */
-    background-color: rgb(20, 0, 0);
+    background-color: rgb(20,0,0);
     color: white;
     box-shadow: 0 0 6px rgb(128, 128, 128);
 }
@@ -379,7 +235,7 @@ header {
 #back-to-top::before, #back-to-top::after {
     content: "";
     position: absolute;
-    width: 50%;
+    width: 52%;
     height: 2px;
     top: 11px;
 }
@@ -389,7 +245,7 @@ header {
     left: 3px;
 }
 #back-to-top::after {
-    background-color: rgb(128, 0, 0);
+    background-color: rgb(240, 70, 84);
     transform: rotate(35deg);
     right: 3px;
 }
@@ -421,7 +277,7 @@ header {
         background-color: black;
     }
     .content-separate-box::before {
-        left: -1px;
+        left: -2px;
         top: -10px;
         rotate: 27deg;
     }
@@ -458,7 +314,6 @@ header {
         min-width: 100%;
         height: 600px;
         width: 100%;
-        object-fit: cover;
     }
     #home-main-button {
         height: 55px;
@@ -466,7 +321,7 @@ header {
         right: 6%;
         top: 600px;
         position: absolute;
-        background-color: rgb(20, 0, 0);
+        background-color: rgb(20,0,0);
         color: white;
         font-family: "Barlow Semi Condensed", Arial, Helvetica, sans-serif;
         font-size: 18px;
@@ -476,10 +331,12 @@ header {
         box-shadow: 0 0 6px rgb(128, 128, 128);
     }
     #home-main-button:hover {
+        height: 60px;
+        width: 195px;
         background-color: white;
-        color: rgb(128, 0, 0);
-        scale: calc(195/190) calc(60/55); /* expands height and width by 5px */
+        color: rgb(240, 70, 84);
         transition: 0.4s;
+        transform: translate(2.5px, -2.5px);
     }
 }
 
@@ -511,7 +368,6 @@ header {
         background-color: white;
         font-size: 20px;
         transition: 0.2s;
-
         img {
             background-color: rgb(213, 213, 213);
             min-height: 60%;
@@ -527,10 +383,20 @@ header {
             /* FIXME text replaced by ellipsis when overflowing */
             text-overflow: ellipsis;
         }
+
+        /* FIXME position price and size at bottom*/
+        /* .product-price {
+            
+        }
+        .product-size {
+            
+        } */
     }
     .single-product:hover {
+        height: 390px;
+        width: 310px;
         box-shadow: 0 0 6px rgb(128, 128, 128);
-        scale: calc(310/300) calc(390/380); /* expands height and width by 10px */
+        transform: translate(0, -5px);
         transition: 0.2s;
     }
 }
@@ -554,14 +420,13 @@ header {
             min-width: 100%;
             height: 430px;
             width: 100%;
-            object-fit: cover;
         }
         .home-category-button {
             height: 71px; /* +1px to cover whole div */
             width: 100%;
             font-size: 27px;
             letter-spacing: 5px;
-            background-color: rgb(20, 0, 0);
+            background-color: rgb(20,0,0);
             color: white;
             cursor: pointer;
             transition: 0.4s;
@@ -593,7 +458,7 @@ header {
     #home-category1:hover, #home-category2:hover, #home-category3:hover {
         .home-category-button {
             background-color: white;
-            color: rgb(128, 0, 0);
+            color: rgb(240, 70, 84);
             transition: 0.4s;
         }
     }
@@ -621,190 +486,150 @@ header {
 /***************************** 
     ABOUT US
 *****************************/
-.about-us-box{
+/* this is the box to store the intro text about team 47 */
+.aboutus-box{ 
     height: 120px;
     width: 35%;
-    background-color: #c1008a;
+    background-color: rgb(213, 213, 213);
     display: flex;
     color: white;
     position: absolute;
-    margin-top: 100px;
-    margin-left: 32%;
     padding: 10px;
 }
-.about-us-1, .about-us-2 {
+/* this is container box, holds the three images. */
+.about-us-1 {
     height: 400px;
     width: 94%;
     margin: 0 3% 0 3%;
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-    img {
+      img {  /*the three images that are side by side */
         margin: 10px;
         min-height: 90%;
-        min-width: 390px;
+        min-width: 31%;
         height: 90%;
-        width: 390px;
+        width: 31%;
         background-color: white;
-    }
+    } 
 }
+
+/* this will hold some text about team 47 goal and story */
+.aboutus-text {
+    margin-left: 5%;
+    height: 290px;
+    width: 50%;
+    background-color: white;
+    position: absolute;
+    padding: 30px;
+    box-shadow: 0 0 9px rgba(0, 0, 0, 0.3);
+}
+/* these hold the images for our goal and story */
+.imagebox {
+    margin-left: 59.5%;
+    height: 350px;
+    width: 35%;
+    background-color: black;
+    position: absolute;
+}
+
+
 
 /***************************** 
-    LOG IN/REGISTRATION
+    CONTACT US
 *****************************/
-#registration-wrapper {
+/* the boxes on the contact us page */
+.contactus-box{
+    height: 120px;
+    width: 35%;
+    background-color: rgb(255, 255, 255);
+    display: grid;
+    color: black;
+    position: absolute;
+    padding: 10px;
+    margin-left: 3%;
+    border: 3px solid rgb(20, 0, 0);
+    box-shadow: 0 0 9px rgba(0, 0, 0, 0.3); /* adds a slight shadow round the box */
+}
+.contactus-box:hover{
+    transform: scale(1.01); /*  the boxes slightly go bigger when mouse is hovered*/
+}
+/* styles for the contact form */
+form label {
+    display:inline-block;
+    margin-bottom: 5px;
+}
+form input[type="text"],
+form input[type="tel"],
+form input[type="email"],
+form select,
+form textarea {
+    width: 100%;
+    height: 40px;
+    padding: 8px;
+    margin-bottom: 5px;
+    border: 1.5px solid black;
+    border-radius: 12px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    box-sizing: border-box; 
+    background-color: rgb(225, 225, 225); /* colour for the form boxes */
+    
+}
+/* submit button */
+form input[type="submit"] {
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+form input[type="submit"]:hover {
+    color: white;
+    background-color: rgb(240, 70, 84);
+    transform: scale(1.1);
+}
+
+/* This is just a section container used within the pages. 
+used to either store boxes and images or create a bit of space. */
+#section{
+    background-color: rgb(213, 213, 213);
+    height: 600px;
+    width: 100%;
+    position: relative;
     display: flex;
+    flex-wrap: wrap;
+    float:left;
     justify-content: center;
-    align-items: center; 
-    height: 100vh; 
-    box-sizing: border-box;
+ }
+/* this is to store the text above the contact form.  */
+ .titlebox{
+    width: 97%;
+    height: 90px;
+    background-color: white;
+    padding: 10px;
+    justify-content: center;
+ }
+/* this allows for the FAQ box to have links and will underline the title when mouse is hovered. */
+ .contactus-box ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
 }
 
-#login-form, #registration-form {
-    background-color: #fff;
-    padding: 40px;
-    max-width: 500px;
-    margin: 0 auto; /* Center the form horizontally */
-    border-radius: 10px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    width: 100%;
-    
-    h2 {
-        margin-bottom: 20px;
-        font-size: 2em;
-        font-weight: bold;
-        text-align: center;
-    }
-
-    .form-group {
-        margin-bottom: 15px;
-    }
-
-    /* puts red star next to label for required fields */
-    label:has(+ input:required)::after {
-        content: " *";
-        color: rgb(128, 0, 0);
-    }
-
-    label {
-        display: block;
-        margin-bottom: 5px;
-        font-weight: bold;
-        text-align: left;
-    }
-    input {
-        width: 100%;
-        padding: 10px;
-        border: 1px solid #ccc;
-        border-radius: 5px;
-        font-size: 1em;
-    }
-
-    .remember-me-container {
-        display: flex; 
-        align-items: center; 
-        gap: 5px; 
-    }
-
-    /* Specific styles for the Remember Me checkbox */
-    #remember-checkbox {
-        appearance: none; /* Allows custom style (black and red) */
-        width: 20px; 
-        height: 20px; 
-        border: 3px solid #ccc;
-        border-radius: 3px;
-        outline: none; 
-        cursor: pointer; 
-    }
-
-    #remember-checkbox:checked {
-        background-color: rgb(20, 0, 0); 
-        border: 3px solid rgb(128, 0, 0); 
-    }
-
-    /* Remember Me container */
-    .remember-me-container {
-        display: flex; 
-        align-items: center; 
-        gap: 10px; 
-    }
-    
-    /* Style the checkbox */
-    .form-check-input {
-        width: auto; 
-        height: auto; 
-        margin: 0; 
-        display: inline-block; 
-    }
-
-    button {
-        width: 104%;
-        padding: 10px;
-        background-color: rgb(20, 0, 0);
-        color: #fff;
-        border: none;
-        border-radius: 5px;
-        font-size: 1rem;
-        cursor: pointer;
-        text-transform: uppercase;
-        font-weight: bold;
-        letter-spacing: 2px;
-    }
-
-    button:hover {
-        background-color: rgb(42, 0, 0);
-    }
-
-    /* Forgot Password link */
-    .forgot-link {
-        text-align: center;
-        margin-top: 10px;
-        display: block;
-    }
-    .forgot-link:hover {
-        text-decoration: underline;
-    }
+.contactus-box ul li {
+    margin-bottom: 5px;
 }
 
-#login-prompt, #registration-prompt {
-    background-color: rgb(249, 249, 249); /* Different background color */
-    padding: 40px;
-    max-width: 500px;
-    margin: 20px auto; 
-    border-radius: 10px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    width: 100%;
+.contactus-box ul li a {
+    color: black;
+    text-decoration: none;
+    font-size: 20px;
+    text-decoration: underline;
+}
 
-    h3 {
-        margin-bottom: 20px;
-        font-size: 1.5em;
-        font-weight: bold;
-        text-align: center;
-    }
-
-    /* List of bullet points */
-    ul {
-        list-style-type: disc;
-        list-style-position: inside;
-        margin-left: 20px; /* Indent the list */
-    }
-
-    button {
-        width: 100%;
-        padding: 10px;
-        background-color: rgb(128, 0, 0); /* Different button color */
-        color: white;
-        border: none;
-        border-radius: 5px;
-        font-size: 1rem;
-        cursor: pointer;
-        text-transform: uppercase;
-        font-weight: bold;
-        margin-top: 20px;
-        letter-spacing: 2px;
-    }
-
-    button:hover {
-        background-color: rgb(100, 0, 0); 
-    }
+.contactus-box ul li a:hover {
+    color: rgb(240, 70, 84);
+    text-decoration: underline;
 }

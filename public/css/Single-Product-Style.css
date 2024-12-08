@@ -1,8 +1,4 @@
-/* FIXME organise sections */
-/* TODO check style is consistent */
-
 /* Item carousel */
-
 #carouselContainer {
     position: relative;
     width: 100%;
@@ -17,14 +13,19 @@
 }
 
 .carousel-item {
-    flex: 0 0 33.3333%;
+    flex: 0 0 calc(100% / 3); 
     padding: 10px;
     box-sizing: border-box;
+    aspect-ratio: 3 / 2;
+    width: 100%;
+    overflow: hidden;
 
     img {
         width: 100%;
-        height: auto;
-        border-radius: 8px; /* Rounds the corners of images */
+        height: 100%;
+        object-fit: contain;
+        border-radius: 8px;
+        display: block; 
     }
 }
 
@@ -53,10 +54,6 @@
     background-color: rgba(0, 0, 0, 0.7);
 }
 
-
-
-
-
 /***************************** 
     PRODUCT VIEW
 *****************************/
@@ -70,7 +67,6 @@
 #preview {
     margin-right: 20px;
     margin-left: 20px;
-
 }
 
 #mainView {
@@ -78,103 +74,98 @@
     margin-right: 100px; 
 }
 
-
-
 #productInfo {
     flex: 1 0 200px; 
     display:flex;
-    flex-direction:column;
-    
-         
+    flex-direction:column;   
 }
 
-.productName{
-
+.productName {
     font-size: 40px;
-    
 }
-
 
 .price {
-    
     font-size: 25px;
     padding-bottom: 25px;
     border-bottom: 1px solid grey;
     width: 250px;
-    
 }
 
-.colourTitle{
+.colourTitle {
     font-size: 10px;
     margin-top: 10px;
 }
 
-.thumbnail{
+.thumbnail {
     width: 500px;
     height: 500px;
+}
 
-
+.thumbnail img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
 }
 
 .thumb {
-    border: 2px solid #000000;
+    border: 2px solid black;
     border-radius: 5px;
     margin-bottom: 25px;
     padding: 0px;
     width: 90px;
     height: 90px;
-    
-  }
+    overflow: hidden;
 
-.colours{
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover ;
+        display: block;
+    }
+}
+
+.colours {
     display: flex;
     margin-top: 10px;
     margin-bottom: 10px;
 
-  }
+}
 
-.colour{
+.colour {
     width: 30px;
     height: 20px;
     border: 2px solid black;
     margin-right: 20px;
-   
-
 }
 
-.red{
-    background-color: red;
-
+.red {
+    background-color: rgb(214, 24, 24);
 }
 
-.yellow{
-    background-color: yellow;
-
+.yellow {
+    background-color: rgb(223, 223, 45);
 }
 
-.blue{
-    background-color: blue;
-
+.blue {
+    background-color: rgb(58, 58, 208);
 }
 
-.white{
+.white {
     background-color: white;
-
 }
 
-.black{
+.black {
     background-color: black;
-
 }
 
-.sizes{
+.sizes {
     display: flex;
     margin-top: 10px;
     margin-bottom: 50px;
+}
 
-  }
-
-.size{
+.size {
     width: 30px;
     height: 20px;
     border: 1px solid black;
@@ -185,7 +176,7 @@
     line-height: 20px;
 }
 
-.Btn1{
+.Btn1 {
     font-size: 20px;
     color: white;
     font-weight: bold;
@@ -197,11 +188,11 @@
     text-align: center;
 }
 
-.Btn1:hover{
+.Btn1:hover {
     background-color: rgb(113, 0, 0);
 }
 
-.Btn2{
+.Btn2 {
     font-size: 20px;
     color: white;
     font-weight: bold;
@@ -213,7 +204,6 @@
     text-align: center;
 }
 
-.Btn2:hover{
+.Btn2:hover {
     background-color: rgb(35, 192, 176);
 }
-

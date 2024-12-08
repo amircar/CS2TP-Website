@@ -166,33 +166,47 @@
     }
 }
 
-.basket-checkout {
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
+.text-center {
+    text-align: center;
+    margin-top: 30px; /* Add some space above the button */
 }
 
-.basket-checkout button {
-    background-color: #007bff; /* Blue */
+.mt-4 {
+    margin-top: 40px;
+}
+
+/* Styling for the button */
+.text-center button {
+    background-color: #28a745; /* Green background for a 'confirm' feel */
     color: white;
-    font-family: "Barlow Semi Condensed", Arial, Helvetica, sans-serif;
+    font-family: Arial, sans-serif;
     font-size: 18px;
-    padding: 12px 30px;
+    padding: 15px 40px; /* Increase padding to make it more clickable */
     border: none;
-    border-radius: 8px;
+    border-radius: 5px; /* Rounded corners */
     cursor: pointer;
     text-transform: uppercase;
     font-weight: bold;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: background-color 0.3s, transform 0.2s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Slight shadow for depth */
+    transition: background-color 0.3s, transform 0.2s; /* Smooth transitions for hover and click effects */
+    display: inline-block; /* Ensure the button is inline with surrounding elements */
 }
 
-.basket-checkout button:hover {
-    background-color: #0056b3; /* Darker blue */
-    transform: translateY(-2px);
+/* Hover effect */
+.text-center button:hover {
+    background-color: #218838; /* Darker green on hover */
+    transform: translateY(-2px); /* Slight movement to give a 'pressing' effect */
 }
 
-.basket-checkout button:focus {
+/* Focus effect (for accessibility) */
+.text-center button:focus {
     outline: none;
-    box-shadow: 0 0 0 3px rgba(38, 143, 255, 0.5); /* Highlight the button on focus */
+    box-shadow: 0 0 0 3px rgba(72, 184, 72, 0.5); /* Highlight the button with a green border on focus */
+}
+
+/* Button disabled state (if needed in the future) */
+.text-center button:disabled {
+    background-color: #d6d8db; /* Light gray color */
+    color: #6c757d; /* Darker gray text */
+    cursor: not-allowed;
 }

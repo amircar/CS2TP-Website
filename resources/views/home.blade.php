@@ -15,7 +15,7 @@
         <main id="home-main">
             <!-- TODO href (can link to category page) -->
             <a href="">
-                <img src="images/wanwan.jpg" alt="main-image">
+                <img src="images/home/largeImage.png" alt="main-image">
                 <button id="home-main-button">FIND OUT MORE</button>
             </a>
         </main>

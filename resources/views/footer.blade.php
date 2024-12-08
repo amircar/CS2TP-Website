@@ -24,8 +24,8 @@
             <ul>
                 <li><a href="{{ route('about-us') }}">About Us</a></li>
 
-                <!-- TODO contact us link in footer -->
-                <li><a href="{{-- route('contact-us') --}}">Contact Us</a></li>
+                
+                <li><a href="{{route('contact-us')}}">Contact Us</a></li>
 
                 <li><a href="">FAQs</a></li>
                 <li><a href="">Terms and Conditions</a></li>

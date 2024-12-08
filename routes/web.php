@@ -39,3 +39,8 @@ Route::get('/product/{id}', action: [ProductController::class, 'productSingle'])
 
 //route for the page that displays searched items
 Route::get('/search', action: [ProductController::class, 'productSearch'])->name('search');
+
+//route for contact us page to display
+Route::get('/contact-us', function () {
+    return view('contact-us');
+})->name('contact-us');

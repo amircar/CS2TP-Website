@@ -1,0 +1,635 @@
+/***************************** 
+    IMPORTED FONTS
+*****************************/
+/* variable font */
+@font-face {
+    font-family: "AfacadFlux";
+    src: url(../fonts/AfacadFlux-VariableFont_slnt\,wght.ttf);
+    font-weight: normal;
+}
+/* variable font */
+@font-face {
+    font-family: "DMSans";
+    src: url(../fonts/DMSans-VariableFont_opsz\,wght.ttf);
+    font-weight: normal;
+}
+/* variable font */
+@font-face {
+    font-family: "SUSE";
+    src: url(../fonts/SUSE-VariableFont_wght.ttf);
+    font-weight: normal;
+}
+/* static font */
+@font-face {
+    font-family: "Barlow Semi Condensed";
+    src: url(../fonts/BarlowSemiCondensed-Regular.ttf);
+    font-weight: normal;
+}
+
+/***************************** 
+    RESET
+*****************************/
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-family: "AfacadFlux", Arial, Helvetica, sans-serif;
+}
+html {
+    width: 100%;
+    scroll-behavior: smooth;
+}
+body {
+    width: 100%;
+    background-color: rgb(213, 213, 213);
+}
+a {
+    text-decoration: none; /* removes hyperlink underline */
+    color: black;
+}
+ul {
+    list-style-type: none; /* removes dots from list items */
+}
+li {
+    list-style: none;
+}
+img {
+    max-width: 100%;
+    object-fit: cover; /* keep image aspect ratio and displays center */
+}
+h2 {
+    font-family: "DMSans", Arial, Helvetica, sans-serif;
+    font-size: 35px;
+    margin-bottom: 15px;
+    text-transform: uppercase; /* always uppercase */
+}
+h3 {
+    font-family: "DMSans", Arial, Helvetica, sans-serif;
+    font-size: 100px;
+    margin-bottom: 15px;
+    text-align: center;
+    text-transform: uppercase; /* always uppercase */
+}
+
+/***************************** 
+    HEADER
+*****************************/
+header {
+    width: 100%;
+    height: 100px;
+    top: 0;
+    position: sticky;
+    margin-bottom: 20px;
+    z-index: 1; /* header and nav are over all other content */
+    background-color: rgb(20,0,0);
+    box-shadow: 0 1px 10px black;
+
+    #header-wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: space-between;
+
+        #main-logo {
+            width: 20%;
+            color: white; /* makes alt text is visible */
+            img {
+                margin: 7.5px 0 0 20px;
+                min-height: 60px;
+                min-width: 180px;
+                height: 60px;
+                width: 180px;
+            }
+        }
+
+        #header-items {
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+            align-items: center;
+            margin: 0 4% 0 4%;
+            a {
+                transition: 0.2s;
+                margin: 0 20px 0 20px;
+                /* FIXME center text (vertical) */
+                img {
+                    min-height: 50px;
+                    min-width: 50px;
+                    height: 50px;
+                    width: 50px;
+                    color: white; /* makes alt text visible */
+                }
+                /* FIXME center text (vertical) */
+                p {
+                    height: 40px;
+                    width: 70px;
+                    text-align: center;
+                    font-family: "Barlow Semi Condensed", Arial, Helvetica, sans-serif;
+                    font-size: 18px;
+                    color: white;
+                }
+            }
+            a:hover {
+                transition: 0.4s;
+                background-color: white;
+                img {
+                    color: rgb(240, 70, 84); /* makes alt text visible */
+                }
+                p {
+                    color: rgb(240, 70, 84);
+                }
+            }
+        }
+    }
+
+/***************************** 
+    NAV BAR
+*****************************/
+    nav {
+        width: 100%;
+        height: 25px;
+        letter-spacing: 5px;
+        bottom: 0;
+        position: absolute;
+        background-color: rgb(128, 128, 128);
+
+        ul {
+            height: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+            justify-content: space-between;
+            overflow: hidden; /*text cuts off if it cannot fit*/
+            
+            a {
+                padding: 0 10px 0 10px;
+                flex: 1 1;
+                color: black;
+                transition: 0.2s;
+
+                li {
+                    height: 100%;
+                    text-align: center;
+                    font-family: "Barlow Semi Condensed", Arial, Helvetica, sans-serif;
+                    font-size: 18px;
+                    text-transform: uppercase; /* always uppercase */
+                }
+            }
+
+            /* category border */
+            a::after {
+                content: "";
+                width: 1px;
+                height: 20px;
+                top: 0;
+                background-color: black;
+                display: block;
+                position: absolute;
+                transform: translate(-10.5px, 2.5px); /* align border between categories */
+                transition: 0.2s;
+            }
+            /* removes border line at edge page ( */
+            a:first-child::after {
+                content: none;
+            }
+
+            a:hover {
+                background-color: white;
+                color: rgb(240, 70, 84);
+                transition: 0.1s 0.2s;
+            }
+            /* border fills whole nav bar height */
+            a:hover::after {
+                height: 25px;
+                transform: translate(-10.5px, 0);
+                transition: 0.1s 0.2s;
+            }
+        }
+    }
+}
+
+/***************************** 
+    BACK TO TOP BUTTON
+*****************************/
+#back-to-top {
+    height: 45px;
+    width: 50px;
+    position: fixed;
+    bottom: 7%;
+    right: 5%;
+    z-index: 1; /* on top of all other content */
+    font-family: "Barlow Semi Condensed", Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    text-indent: 5px; /* adjusts text to be in center (must be equal to letter-spacing) */
+    letter-spacing: 5px;
+    text-align: center;
+    line-height: 65px; /* text at bottom of button */
+    background-color: rgb(20,0,0);
+    color: white;
+    box-shadow: 0 0 6px rgb(128, 128, 128);
+}
+#back-to-top:hover {
+    cursor: pointer;
+}
+/* FIXME fix line positions */
+#back-to-top::before, #back-to-top::after {
+    content: "";
+    position: absolute;
+    width: 52%;
+    height: 2px;
+    top: 11px;
+}
+#back-to-top::before {
+    background-color: white;
+    transform: rotate(-35deg);
+    left: 3px;
+}
+#back-to-top::after {
+    background-color: rgb(240, 70, 84);
+    transform: rotate(35deg);
+    right: 3px;
+}
+
+/***************************** 
+    CONTENT SEPARATOR LINE
+*****************************/
+.content-separate {
+    position: relative;
+    width: auto;
+    height: 20px;
+    padding: 3%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px;
+    .content-separate-box {
+        height: 10px;
+        width: 20px;
+        align-items: center;
+        border: 2px solid black;
+    }
+    .content-separate-box::before, .content-separate-box::after {
+        content: "";
+        display: inline-block;
+        position: relative;
+        height: 1px;
+        width: calc(100% + 4px);
+        background-color: black;
+    }
+    .content-separate-box::before {
+        left: -2px;
+        top: -10px;
+        rotate: 27deg;
+    }
+    .content-separate-box::after {
+        left: -2px;
+        top: -32px;
+        rotate: -27deg;
+    }
+}
+.content-separate::before, .content-separate::after {
+    content: "";
+    position: absolute;
+    width: 43%;
+    height: 1.6px;
+    background: black;
+    vertical-align: middle;
+}
+.content-separate::before {
+    left: 3%;
+}
+.content-separate::after {
+    right: 3%;
+}
+
+/***************************** 
+    MAIN IMAGE ON HOMEPAGE
+*****************************/
+#home-main {
+    margin-top: -20px; /* ignores header margin */
+    margin-bottom: 20px;
+    img {
+        background-color: white;
+        min-height: 600px;
+        min-width: 100%;
+        height: 600px;
+        width: 100%;
+    }
+    #home-main-button {
+        height: 55px;
+        width: 190px;
+        right: 6%;
+        top: 600px;
+        position: absolute;
+        background-color: rgb(20,0,0);
+        color: white;
+        font-family: "Barlow Semi Condensed", Arial, Helvetica, sans-serif;
+        font-size: 18px;
+        letter-spacing: 5px;
+        cursor: pointer;
+        transition: 0.4s;
+        box-shadow: 0 0 6px rgb(128, 128, 128);
+    }
+    #home-main-button:hover {
+        height: 60px;
+        width: 195px;
+        background-color: white;
+        color: rgb(240, 70, 84);
+        transition: 0.4s;
+        transform: translate(2.5px, -2.5px);
+    }
+}
+
+/***************************** 
+    FEATURED PRODUCTS LIST
+*****************************/
+#featured-products-list {
+    margin: 0 3% 0 3%;
+}
+
+/***************************** 
+    PRODUCTS LIST
+*****************************/
+.products-list {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    height: 420px;
+    width: 100%;
+    left: 10%;
+    overflow: hidden;
+    justify-content: center;
+
+    .single-product {
+        height: 380px;
+        width: 300px;
+        margin: 10px;
+        padding: 10px;
+        background-color: white;
+        font-size: 20px;
+        transition: 0.2s;
+        img {
+            background-color: rgb(213, 213, 213);
+            min-height: 60%;
+            min-width: 100%;
+            height: 60%;
+            width: 100%;
+        }
+        .product-title {
+            max-height: 81px; /* 3 lines */
+            font-size: 25px;
+            line-height: 27px;
+            overflow: hidden;
+            /* FIXME text replaced by ellipsis when overflowing */
+            text-overflow: ellipsis;
+        }
+
+        /* FIXME position price and size at bottom*/
+        /* .product-price {
+            
+        }
+        .product-size {
+            
+        } */
+    }
+    .single-product:hover {
+        height: 390px;
+        width: 310px;
+        box-shadow: 0 0 6px rgb(128, 128, 128);
+        transform: translate(0, -5px);
+        transition: 0.2s;
+    }
+}
+
+/***************************** 
+    HOMEPAGE CATEGORIES SECTION
+*****************************/
+#home-categories {
+    margin: 0 3% 0 3%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    #home-category1, #home-category2, #home-category3 {
+        text-align: center; /* alt text in middle */
+        height: 500px;
+        transition: 0.4s;
+
+        img {
+            background-color: white;
+            min-height: 430px;
+            min-width: 100%;
+            height: 430px;
+            width: 100%;
+        }
+        .home-category-button {
+            height: 71px; /* +1px to cover whole div */
+            width: 100%;
+            font-size: 27px;
+            letter-spacing: 5px;
+            background-color: rgb(20,0,0);
+            color: white;
+            cursor: pointer;
+            transition: 0.4s;
+        }
+    }
+    #home-category1, #home-category3 {
+        width: calc((100% / 3) - 20px);
+    }
+    #home-category1 {
+        clip-path: polygon(0 0, 100% 0, 82% 100%, 0 100%);
+        transform: translate(10%, 0);
+        .home-category-button {
+            transform: translate(-10%, -6px); /* align button text to center */
+        }
+    }
+    #home-category2 {
+        margin-top: 20px;
+        width: calc((100% / 3) + 40px);
+        clip-path: polygon(18% 0, 82% 0, 100% 100%, 0 100%);
+    }
+    #home-category3 {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 18% 100%);
+        transform: translate(-10%, 0);
+        .home-category-button {
+            transform: translate(10%, -6px); /* align button text to center */
+        }
+    }
+
+    #home-category1:hover, #home-category2:hover, #home-category3:hover {
+        .home-category-button {
+            background-color: white;
+            color: rgb(240, 70, 84);
+            transition: 0.4s;
+        }
+    }
+    #home-category1:hover {
+        transform: translate(10%, 10px);
+    }
+    #home-category2:hover {
+        transform: translate(0, -10px);
+    }
+    #home-category3:hover {
+        transform: translate(-10%, 10px);
+    }
+}
+
+/***************************** 
+    CATEGORY PAGES
+*****************************/
+#men-main, #women-main, #kids-main, #accessories-main {
+    margin: 0 3% 0 3%;
+    p {
+        font-size: 22px;
+    }
+}
+
+/***************************** 
+    ABOUT US
+*****************************/
+/* this is the box to store the intro text about team 47 */
+.aboutus-box{ 
+    height: 120px;
+    width: 35%;
+    background-color: rgb(213, 213, 213);
+    display: flex;
+    color: white;
+    position: absolute;
+    padding: 10px;
+}
+/* this is container box, holds the three images. */
+.about-us-1 {
+    height: 400px;
+    width: 94%;
+    margin: 0 3% 0 3%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+      img {  /*the three images that are side by side */
+        margin: 10px;
+        min-height: 90%;
+        min-width: 31%;
+        height: 90%;
+        width: 31%;
+        background-color: white;
+    } 
+}
+
+/* this will hold some text about team 47 goal and story */
+.aboutus-text {
+    margin-left: 5%;
+    height: 290px;
+    width: 50%;
+    background-color: white;
+    position: absolute;
+    padding: 30px;
+    box-shadow: 0 0 9px rgba(0, 0, 0, 0.3);
+}
+/* these hold the images for our goal and story */
+.imagebox {
+    margin-left: 59.5%;
+    height: 350px;
+    width: 35%;
+    background-color: black;
+    position: absolute;
+}
+
+
+
+/***************************** 
+    CONTACT US
+*****************************/
+/* the boxes on the contact us page */
+.contactus-box{
+    height: 120px;
+    width: 35%;
+    background-color: rgb(255, 255, 255);
+    display: grid;
+    color: black;
+    position: absolute;
+    padding: 10px;
+    margin-left: 3%;
+    border: 3px solid rgb(20, 0, 0);
+    box-shadow: 0 0 9px rgba(0, 0, 0, 0.3); /* adds a slight shadow round the box */
+}
+.contactus-box:hover{
+    transform: scale(1.01); /*  the boxes slightly go bigger when mouse is hovered*/
+}
+/* styles for the contact form */
+form label {
+    display:inline-block;
+    margin-bottom: 5px;
+}
+form input[type="text"],
+form input[type="tel"],
+form input[type="email"],
+form select,
+form textarea {
+    width: 100%;
+    height: 40px;
+    padding: 8px;
+    margin-bottom: 5px;
+    border: 1.5px solid black;
+    border-radius: 12px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    box-sizing: border-box; 
+    background-color: rgb(225, 225, 225); /* colour for the form boxes */
+    
+}
+/* submit button */
+form input[type="submit"] {
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+form input[type="submit"]:hover {
+    color: white;
+    background-color: rgb(240, 70, 84);
+    transform: scale(1.1);
+}
+
+/* This is just a section container used within the pages. 
+used to either store boxes and images or create a bit of space. */
+#section{
+    background-color: rgb(213, 213, 213);
+    height: 600px;
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    float:left;
+    justify-content: center;
+ }
+/* this is to store the text above the contact form.  */
+ .titlebox{
+    width: 97%;
+    height: 90px;
+    background-color: white;
+    padding: 10px;
+    justify-content: center;
+ }
+/* this allows for the FAQ box to have links and will underline the title when mouse is hovered. */
+ .contactus-box ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+}
+
+.contactus-box ul li {
+    margin-bottom: 5px;
+}
+
+.contactus-box ul li a {
+    color: black;
+    text-decoration: none;
+    font-size: 20px;
+    text-decoration: underline;
+}
+
+.contactus-box ul li a:hover {
+    color: rgb(240, 70, 84);
+    text-decoration: underline;
+}

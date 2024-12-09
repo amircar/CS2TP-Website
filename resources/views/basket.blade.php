@@ -83,7 +83,7 @@
                 </div>
 
                 <!-- Checkout Button -->
-                <div class="text-center mt-4">
+                <div class="checkout-container text-center mt-4">
                     @if ($basket->stock)
                         <form action="checkout"method="POST">
                             @csrf

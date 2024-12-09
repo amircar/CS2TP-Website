@@ -2,9 +2,7 @@
     <div id="header-wrapper">
         <a id="main-logo" href="{{ route('home') }}" title="Home"><img src={{ asset("images/logo.png") }} alt="team47-logo"></a>
 
-        <!-- TODO images sources (icons) -->
         <ul id="header-items">
-
             <!-- SEARCH BAR -->
             <li>
                 <form action="{{ route('search') }}">
@@ -15,7 +13,6 @@
                 </form>
             </li>
 
-            <!-- TODO ?only show on homepage? -->
             <!-- button to toggle between normal/large text size on page -->
             <li id="toggle-text-size">
                 <p>A</p>
@@ -33,10 +30,10 @@
                     </li>
                 </a>
                 <a class="header-item" href="">
-                    <li><img src="{{asset("images/account_icon.png")}}" alt="Profile" title="Profile"></li>
+                    <li><img src="{{asset("images/account_icon.png")}}" alt="profile" title="Profile"></li>
                 </a>
                 <a class="header-item" href="{{ route('basket') }}">
-                    <li><img src="{{asset("images/basket.png")}}" alt="Basket" title="Basket"></li>
+                    <li><img src="{{asset("images/basket.png")}}" alt="basket" title="Basket"></li>
                 </a>
             @else
                 <a class="header-item" href="{{ route('register') }}">

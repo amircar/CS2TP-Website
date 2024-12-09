@@ -1,14 +1,10 @@
-
-<!-- TODO move to main css -->
 <link rel="stylesheet" type="text/css" href="{{ asset('css/footer.css') }}">
-
 
 <footer>
     <div id="footer-style">
 
         <!-- Sign Up / Login Section -->    
         @guest
-            {{-- <img src="{{ asset("images/logo.png") }}", width="80%", height="80%"> --}}
             <div class="footer-section">  
                 <h3>TEAM 47</h3>
                 <p>Sign up or log in so that you can make purchases and keep up to date with the latest offers.</p>

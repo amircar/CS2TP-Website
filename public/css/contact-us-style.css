@@ -50,12 +50,9 @@ a {
 ul {
     list-style-type: none; /* removes dots from list items */
 }
-li {
-    list-style: none;
-}
 img {
     max-width: 100%;
-    object-fit: cover; /* keep image aspect ratio and displays center */
+    object-fit: contain; /* keep image aspect ratio and displays center */
 }
 h2 {
     font-family: "DMSans", Arial, Helvetica, sans-serif;
@@ -65,11 +62,55 @@ h2 {
 }
 h3 {
     font-family: "DMSans", Arial, Helvetica, sans-serif;
-    font-size: 100px;
     margin-bottom: 15px;
     text-align: center;
     text-transform: uppercase; /* always uppercase */
 }
+
+/***************************** 
+    LARGER FONT SIZES
+*****************************/
+[data-text-size='large'] {
+    h2 {
+        font-size: 40px;
+    }
+
+    header .header-item li {
+        p, button {
+            font-size: 23px !important;
+        }
+    }
+
+    nav ul a li {
+        font-size: 26px;
+        translate: 0 -5px; /* puts nav text in center */
+        letter-spacing: 2px; /* reduces space between letters */
+    }
+
+    #back-to-top {
+        font-size: 22px;
+        letter-spacing: 2px; /* reduces space between letters */
+        text-indent: 2px;
+    }
+
+    #home-main #home-main-button {
+        font-size: 26px;
+        letter-spacing: 2px; /* reduces space between letters */
+    }
+
+    .products-list .single-product {
+        font-size: 25px;
+        .product-title {
+            font-size: 30px;
+        }
+    }
+
+    #home-categories .home-category-button {
+        font-size: 32px !important;
+        letter-spacing: 2px !important; /* reduces space between letters */
+    }
+}
+
 
 /***************************** 
     HEADER
@@ -81,7 +122,7 @@ header {
     position: sticky;
     margin-bottom: 20px;
     z-index: 1; /* header and nav are over all other content */
-    background-color: rgb(20,0,0);
+    background-image: linear-gradient(150deg, rgb(20, 0, 0) 80%, rgb(65, 0, 0) 85%, rgb(128, 0, 0) 90%, white 100%);
     box-shadow: 0 1px 10px black;
 
     #header-wrapper {
@@ -91,14 +132,16 @@ header {
         justify-content: space-between;
 
         #main-logo {
-            width: 20%;
+            width: 180px;
+            margin-left: 30px;
             color: white; /* makes alt text is visible */
             img {
-                margin: 7.5px 0 0 20px;
+                margin-top: 7.5px;
                 min-height: 60px;
-                min-width: 180px;
+                min-width: 100%;
                 height: 60px;
-                width: 180px;
+                width: 100%;
+                object-fit: cover;
             }
         }
 
@@ -107,38 +150,130 @@ header {
             flex-wrap: wrap;
             flex-direction: row;
             align-items: center;
-            margin: 0 4% 0 4%;
-            a {
+            margin: 0 3%;
+            .header-item {
                 transition: 0.2s;
                 margin: 0 20px 0 20px;
-                /* FIXME center text (vertical) */
-                img {
-                    min-height: 50px;
-                    min-width: 50px;
+
+                li:has(img) { /* icons have different dimensions to text */
                     height: 50px;
                     width: 50px;
-                    color: white; /* makes alt text visible */
+                    img {
+                        min-height: 100%;
+                        min-width: 100%;
+                        height: 100%;
+                        width: 100%;
+                        color: white; /* makes alt text visible */
+                    }
                 }
-                /* FIXME center text (vertical) */
-                p {
+                li {
                     height: 40px;
                     width: 70px;
                     text-align: center;
-                    font-family: "Barlow Semi Condensed", Arial, Helvetica, sans-serif;
-                    font-size: 18px;
-                    color: white;
+                    p, button {
+                        font-family: "Barlow Semi Condensed", Arial, Helvetica, sans-serif;
+                        font-size: 20px;
+                        color: white;
+                    }
+                    p {
+                        translate: 0 5px; /* centers text vertically */
+                    }
+                    /* logout button */
+                    form {
+                        height: 100%;
+                        width: 100%;
+                        button {
+                            height: 100%;
+                            width: 100%;
+                            background-color: transparent;
+                            cursor: pointer;
+                        }
+                    }
                 }
             }
-            a:hover {
-                transition: 0.4s;
+            .header-item:hover {
                 background-color: white;
+                transition: 0.4s;
                 img {
-                    color: rgb(240, 70, 84); /* makes alt text visible */
+                    color: rgb(128, 0, 0); /* makes alt text visible */
                 }
-                p {
-                    color: rgb(240, 70, 84);
+                p, button {
+                    
+                    color: rgb(128, 0, 0);
                 }
             }
+        }
+    }
+
+/***************************** 
+    TEXT SIZE TOGGLE
+*****************************/
+    #toggle-text-size {
+        height: 15px;
+        margin: 0 20px 20px 20px;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: space-between;
+        color: white;
+        align-items: center;
+
+        #toggle-text-size + p { /* first letter */
+            font-size: 18px;
+        }
+        .toggle-switch + p { /* last letter */
+            font-size: 26px;
+        }
+
+        .toggle-switch {
+            height: 15px;
+            width: 35px;
+            margin: 0 10px;
+            border-radius: 30px;
+            outline: 1px solid white;
+            outline-offset: 3px;
+            cursor: pointer;
+            transition: 0.4s;
+
+            input { /* hides default checkbox */
+                opacity: 0;
+                height: 0;
+                width: 0;
+            }
+        }
+
+        /* background behind circle inside toggle switch */
+        .toggle-switch::before {
+            content: "";
+            display: block;
+            position: relative;
+            height: 15px;
+            width: 15px;
+            background-color: rgb(128, 0, 0);
+            border-radius: 50%;
+            transition: 0.2s;
+        }
+        .toggle-switch:has(> input:checked)::before {
+            width: 100%;
+            border-radius: 30px;
+            transition: 0.2s;
+        }
+
+        /* circle inside toggle switch */
+        .toggle-switch::after {
+            content: "";
+            display: inline-block;
+            position: relative;
+            height: 15px;
+            width: 15px;
+            translate: 0 -16px;
+            background-color: white;
+            border-radius: 50%;
+            transition: 0.2s;
+        }
+        .toggle-switch:has(> input:checked)::after {
+            transform: translateX(20px);
+            transition: 0.2s;
         }
     }
 
@@ -165,7 +300,7 @@ header {
                 padding: 0 10px 0 10px;
                 flex: 1 1;
                 color: black;
-                transition: 0.2s;
+                transition: 0.4s;
 
                 li {
                     height: 100%;
@@ -186,23 +321,24 @@ header {
                 display: block;
                 position: absolute;
                 transform: translate(-10.5px, 2.5px); /* align border between categories */
-                transition: 0.2s;
+                transition: 0.4s;
             }
-            /* removes border line at edge page ( */
+            /* removes border line at the edge of the page (to the left of first category) */
             a:first-child::after {
                 content: none;
             }
 
+            /* transitions occur after slight delay (allows mouse to move away before transistion) */
             a:hover {
                 background-color: white;
-                color: rgb(240, 70, 84);
-                transition: 0.1s 0.2s;
+                color: rgb(128, 0, 0);
+                transition: 0.2s 0.4s;
             }
-            /* border fills whole nav bar height */
+            /* border fills whole height of nav bar */
             a:hover::after {
                 height: 25px;
                 transform: translate(-10.5px, 0);
-                transition: 0.1s 0.2s;
+                transition: 0.2s 0.4s;
             }
         }
     }
@@ -224,18 +360,19 @@ header {
     letter-spacing: 5px;
     text-align: center;
     line-height: 65px; /* text at bottom of button */
-    background-color: rgb(20,0,0);
+    background-color: rgb(20, 0, 0);
     color: white;
     box-shadow: 0 0 6px rgb(128, 128, 128);
 }
 #back-to-top:hover {
     cursor: pointer;
 }
-/* FIXME fix line positions */
+
+/* arrow inside box */
 #back-to-top::before, #back-to-top::after {
     content: "";
     position: absolute;
-    width: 52%;
+    width: 50%;
     height: 2px;
     top: 11px;
 }
@@ -245,7 +382,7 @@ header {
     left: 3px;
 }
 #back-to-top::after {
-    background-color: rgb(240, 70, 84);
+    background-color: rgb(128, 0, 0);
     transform: rotate(35deg);
     right: 3px;
 }
@@ -277,7 +414,7 @@ header {
         background-color: black;
     }
     .content-separate-box::before {
-        left: -2px;
+        left: -1px;
         top: -10px;
         rotate: 27deg;
     }
@@ -303,190 +440,9 @@ header {
 }
 
 /***************************** 
-    MAIN IMAGE ON HOMEPAGE
-*****************************/
-#home-main {
-    margin-top: -20px; /* ignores header margin */
-    margin-bottom: 20px;
-    img {
-        background-color: white;
-        min-height: 600px;
-        min-width: 100%;
-        height: 600px;
-        width: 100%;
-    }
-    #home-main-button {
-        height: 55px;
-        width: 190px;
-        right: 6%;
-        top: 600px;
-        position: absolute;
-        background-color: rgb(20,0,0);
-        color: white;
-        font-family: "Barlow Semi Condensed", Arial, Helvetica, sans-serif;
-        font-size: 18px;
-        letter-spacing: 5px;
-        cursor: pointer;
-        transition: 0.4s;
-        box-shadow: 0 0 6px rgb(128, 128, 128);
-    }
-    #home-main-button:hover {
-        height: 60px;
-        width: 195px;
-        background-color: white;
-        color: rgb(240, 70, 84);
-        transition: 0.4s;
-        transform: translate(2.5px, -2.5px);
-    }
-}
-
-/***************************** 
-    FEATURED PRODUCTS LIST
-*****************************/
-#featured-products-list {
-    margin: 0 3% 0 3%;
-}
-
-/***************************** 
-    PRODUCTS LIST
-*****************************/
-.products-list {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    height: 420px;
-    width: 100%;
-    left: 10%;
-    overflow: hidden;
-    justify-content: center;
-
-    .single-product {
-        height: 380px;
-        width: 300px;
-        margin: 10px;
-        padding: 10px;
-        background-color: white;
-        font-size: 20px;
-        transition: 0.2s;
-        img {
-            background-color: rgb(213, 213, 213);
-            min-height: 60%;
-            min-width: 100%;
-            height: 60%;
-            width: 100%;
-        }
-        .product-title {
-            max-height: 81px; /* 3 lines */
-            font-size: 25px;
-            line-height: 27px;
-            overflow: hidden;
-            /* FIXME text replaced by ellipsis when overflowing */
-            text-overflow: ellipsis;
-        }
-
-        /* FIXME position price and size at bottom*/
-        /* .product-price {
-            
-        }
-        .product-size {
-            
-        } */
-    }
-    .single-product:hover {
-        height: 390px;
-        width: 310px;
-        box-shadow: 0 0 6px rgb(128, 128, 128);
-        transform: translate(0, -5px);
-        transition: 0.2s;
-    }
-}
-
-/***************************** 
-    HOMEPAGE CATEGORIES SECTION
-*****************************/
-#home-categories {
-    margin: 0 3% 0 3%;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    #home-category1, #home-category2, #home-category3 {
-        text-align: center; /* alt text in middle */
-        height: 500px;
-        transition: 0.4s;
-
-        img {
-            background-color: white;
-            min-height: 430px;
-            min-width: 100%;
-            height: 430px;
-            width: 100%;
-        }
-        .home-category-button {
-            height: 71px; /* +1px to cover whole div */
-            width: 100%;
-            font-size: 27px;
-            letter-spacing: 5px;
-            background-color: rgb(20,0,0);
-            color: white;
-            cursor: pointer;
-            transition: 0.4s;
-        }
-    }
-    #home-category1, #home-category3 {
-        width: calc((100% / 3) - 20px);
-    }
-    #home-category1 {
-        clip-path: polygon(0 0, 100% 0, 82% 100%, 0 100%);
-        transform: translate(10%, 0);
-        .home-category-button {
-            transform: translate(-10%, -6px); /* align button text to center */
-        }
-    }
-    #home-category2 {
-        margin-top: 20px;
-        width: calc((100% / 3) + 40px);
-        clip-path: polygon(18% 0, 82% 0, 100% 100%, 0 100%);
-    }
-    #home-category3 {
-        clip-path: polygon(0 0, 100% 0, 100% 100%, 18% 100%);
-        transform: translate(-10%, 0);
-        .home-category-button {
-            transform: translate(10%, -6px); /* align button text to center */
-        }
-    }
-
-    #home-category1:hover, #home-category2:hover, #home-category3:hover {
-        .home-category-button {
-            background-color: white;
-            color: rgb(240, 70, 84);
-            transition: 0.4s;
-        }
-    }
-    #home-category1:hover {
-        transform: translate(10%, 10px);
-    }
-    #home-category2:hover {
-        transform: translate(0, -10px);
-    }
-    #home-category3:hover {
-        transform: translate(-10%, 10px);
-    }
-}
-
-/***************************** 
-    CATEGORY PAGES
-*****************************/
-#men-main, #women-main, #kids-main, #accessories-main {
-    margin: 0 3% 0 3%;
-    p {
-        font-size: 22px;
-    }
-}
-
-/***************************** 
     ABOUT US
 *****************************/
-/* this is the box to store the intro text about team 47 */
+/* box to store the intro text about team 47 */
 .aboutus-box{ 
     height: 120px;
     width: 35%;
@@ -511,6 +467,7 @@ header {
         height: 90%;
         width: 31%;
         background-color: white;
+        object-fit: cover;
     } 
 }
 
@@ -533,8 +490,6 @@ header {
     position: absolute;
 }
 
-
-
 /***************************** 
     CONTACT US
 *****************************/
@@ -542,7 +497,7 @@ header {
 .contactus-box{
     height: 120px;
     width: 35%;
-    background-color: rgb(255, 255, 255);
+    background-color: white;
     display: grid;
     color: black;
     position: absolute;
@@ -551,30 +506,25 @@ header {
     border: 3px solid rgb(20, 0, 0);
     box-shadow: 0 0 9px rgba(0, 0, 0, 0.3); /* adds a slight shadow round the box */
 }
-.contactus-box:hover{
-    transform: scale(1.01); /*  the boxes slightly go bigger when mouse is hovered*/
-}
+
 /* styles for the contact form */
 form label {
     display:inline-block;
     margin-bottom: 5px;
 }
-form input[type="text"],
-form input[type="tel"],
-form input[type="email"],
-form select,
-form textarea {
+
+form input[type="text"], form input[type="tel"], form input[type="email"], form select, form textarea {
     width: 100%;
     height: 40px;
     padding: 8px;
     margin-bottom: 5px;
     border: 1.5px solid black;
     border-radius: 12px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     box-sizing: border-box; 
     background-color: rgb(225, 225, 225); /* colour for the form boxes */
     
 }
+
 /* submit button */
 form input[type="submit"] {
     background-color: black;
@@ -587,13 +537,12 @@ form input[type="submit"] {
 
 form input[type="submit"]:hover {
     color: white;
-    background-color: rgb(240, 70, 84);
-    transform: scale(1.1);
+    background-color: rgb(128, 0, 0);
 }
 
-/* This is just a section container used within the pages. 
+/* section container used within the pages. 
 used to either store boxes and images or create a bit of space. */
-#section{
+#section {
     background-color: rgb(213, 213, 213);
     height: 600px;
     width: 100%;
@@ -602,7 +551,12 @@ used to either store boxes and images or create a bit of space. */
     flex-wrap: wrap;
     float:left;
     justify-content: center;
+
+    img {
+        object-fit: cover;
+    }
  }
+
 /* this is to store the text above the contact form.  */
  .titlebox{
     width: 97%;
@@ -611,6 +565,7 @@ used to either store boxes and images or create a bit of space. */
     padding: 10px;
     justify-content: center;
  }
+
 /* this allows for the FAQ box to have links and will underline the title when mouse is hovered. */
  .contactus-box ul {
     list-style: none;
@@ -630,6 +585,12 @@ used to either store boxes and images or create a bit of space. */
 }
 
 .contactus-box ul li a:hover {
-    color: rgb(240, 70, 84);
+    color: rgb(128, 0, 0);
     text-decoration: underline;
+}
+
+/* puts red star next to label for required fields */
+label:has(+ input:required)::after {
+    content: " *";
+    color: rgb(128, 0, 0);
 }

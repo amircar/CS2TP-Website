@@ -345,17 +345,8 @@ header {
 }
 
 /***************************** 
-    FOOTER
-*****************************/
-
-
-/* TODO move footer to here */
-
-
-/***************************** 
     BACK TO TOP BUTTON
 *****************************/
-/* FIXME only show button past certain scroll point */
 #back-to-top {
     height: 45px;
     width: 50px;
@@ -376,7 +367,8 @@ header {
 #back-to-top:hover {
     cursor: pointer;
 }
-/* FIXME fix line positions */
+
+/* arrow inside box */
 #back-to-top::before, #back-to-top::after {
     content: "";
     position: absolute;
@@ -525,7 +517,6 @@ header {
             font-size: 25px;
             line-height: 27px;
             overflow: hidden;
-            /* FIXME text replaced by ellipsis when overflowing */
             text-overflow: ellipsis;
         }
     }

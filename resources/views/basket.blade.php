@@ -5,10 +5,7 @@
        <meta charset="utf-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         <link rel="stylesheet" href="{{ asset('css/style.css') }}">
-        
-        <!-- TODO move to main css -->
         <link rel="stylesheet" href="{{ asset('css/basket.css') }}">
-
         <script defer type="text/javascript" src="{{ asset('js/main.js') }}"></script>
         <link rel="icon" href="{{ asset('favicon.ico') }}">
         <title>Basket | Team 47</title>
@@ -27,17 +24,9 @@
             <div class="basket-container">
                 <h2 class="basket-header">Your Basket</h2>
 
-                <!-- TODO link to database -->
-                <!-- FIXME move css to main -->
-                <!-- FIXME rename classes -->
-                <!-- TODO should be/submit a form -->
-                
-
-                <!-- Basket Item 1 -->
-                 @php
+                @php //total cost
                     $total = 0
-                 @endphp
-                
+                @endphp
 
                 @foreach ($basket->stocks as $item)           
                     <div class="basket-item d-flex justify-content-between align-items-center">
@@ -47,16 +36,19 @@
                                     <img src="{{ asset($image->image_url) }}" alt="Team 47 T Shirt" class="item-image">
                                 @endif
                             @endforeach
+
                             <div class="ms-3">
                                 <strong>{{$item->product->name}}</strong>
                                 <p class="mb-0">Size: {{$item->size->size}}</p>
                                 <p class="mb-0">Quantity: {{$item->pivot->quantity}}</p>
                             </div>
                         </div>
+
                         <div>
-                            @php
+                            @php // cost of item multiplied by quantity added to total cost
                                 $total += $item->product->price * $item->pivot->quantity
                             @endphp
+
                             <p class="mb-0">£{{$item->product->price}}</p>
 
                             <form action="{{route('add')}}" method="POST">
@@ -77,21 +69,18 @@
                     </div>
                 @endforeach
 
-                <!-- TODO calculate total -->
                 <div class="total-container">
                     <strong>Total: £{{$total}}</strong>
                 </div>
 
                 <!-- Checkout Button -->
                 <div class="text-center mt-4">
-                    
-                        <form action="checkout"method="POST">
-                            @csrf
-                            <input type="hidden" name="user_id" value="{{$basket->user_id}}">
-                            <input type="hidden" name="price" value="{{$total*100}}">
-                            <button type="submit" class="btn btn-primary">Checkout</button>
-                        </form>
-                    
+                    <form action="checkout"method="POST">
+                        @csrf
+                        <input type="hidden" name="user_id" value="{{$basket->user_id}}">
+                        <input type="hidden" name="price" value="{{$total*100}}">
+                        <button type="submit" class="btn btn-primary">Checkout</button>
+                    </form>
                 </div>
             </div>
         </main>

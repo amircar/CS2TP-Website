@@ -120,93 +120,45 @@
 
 /* Total Container */
 .total-container {
-    margin-top: 20px;
-    font-size: 18px;
-    font-weight: bold;
     text-align: right;
-    color: #333;
-}
-
-/* Checkout Button */
-.btn-primary {
-    background-color: #007bff; /* Blue */
-    color: white;
-    padding: 10px 20px;
-    font-size: 16px;
-    border-radius: 5px;
+    font-size: 22px; /* Slightly larger font size for visibility */
     font-weight: bold;
-    border: none;
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-top: 30px;
+    padding: 15px 30px; /* Added padding for spacing */
+    background-color: #f8f9fa; /* Light background color to differentiate */
+    border-radius: 8px; /* Rounded corners for consistency */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    color: #333; 
+    border: 1px solid #ddd; 
 }
 
-.btn-primary:hover {
-    background-color: #0056b3; /* Darker blue */
-    transform: translateY(-2px);
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
-}
+.total-container strong {
+    color: #28a745; 
+    font-size: 24px; 
 
-/* Mobile Responsiveness */
-@media (max-width: 768px) {
-    .basket-item {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .basket-item img {
-        margin-bottom: 10px;
-    }
-
-    .btn {
-        width: 100%;
-    }
-
-    .total-container {
-        text-align: left;
-    }
-}
-
-.text-center {
-    text-align: center;
-    margin-top: 30px; /* Add some space above the button */
-}
-
-.mt-4 {
-    margin-top: 40px;
-}
-
-/* Styling for the button */
 .text-center button {
-    background-color: #28a745; /* Green background for a 'confirm' feel */
+    background-color: #28a745; /* Green background */
     color: white;
-    font-family: Arial, sans-serif;
     font-size: 18px;
-    padding: 15px 40px; /* Increase padding to make it more clickable */
+    padding: 15px 40px; /* Bigger padding */
     border: none;
-    border-radius: 5px; /* Rounded corners */
+    border-radius: 5px;
     cursor: pointer;
     text-transform: uppercase;
     font-weight: bold;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Slight shadow for depth */
-    transition: background-color 0.3s, transform 0.2s; /* Smooth transitions for hover and click effects */
-    display: inline-block; /* Ensure the button is inline with surrounding elements */
+    transition: background-color 0.3s, transform 0.2s; /* Smooth transitions */
+    display: inline-block;
+    margin-top: 40px;
 }
 
-/* Hover effect */
 .text-center button:hover {
     background-color: #218838; /* Darker green on hover */
-    transform: translateY(-2px); /* Slight movement to give a 'pressing' effect */
+    transform: translateY(-2px); /* Slight movement for pressing effect */
 }
 
-/* Focus effect (for accessibility) */
 .text-center button:focus {
     outline: none;
-    box-shadow: 0 0 0 3px rgba(72, 184, 72, 0.5); /* Highlight the button with a green border on focus */
+    box-shadow: 0 0 0 3px rgba(72, 184, 72, 0.5); /* Focus ring effect */
 }
-
-/* Button disabled state (if needed in the future) */
-.text-center button:disabled {
-    background-color: #d6d8db; /* Light gray color */
-    color: #6c757d; /* Darker gray text */
-    cursor: not-allowed;
 }

@@ -169,7 +169,8 @@
     width: 30px;
     height: 20px;
     border: 1px solid black;
-    margin-right: 20px;
+    
+    margin-left: 10px;
     text-align: center;
     background-color: rgb(178, 178, 178);
     font-size: 12px;

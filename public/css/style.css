@@ -611,37 +611,6 @@ header {
 }
 
 /***************************** 
-    ABOUT US
-*****************************/
-.about-us-box{
-    height: 120px;
-    width: 35%;
-    background-color: #c1008a;
-    display: flex;
-    color: white;
-    position: absolute;
-    margin-top: 100px;
-    margin-left: 32%;
-    padding: 10px;
-}
-.about-us-1, .about-us-2 {
-    height: 400px;
-    width: 94%;
-    margin: 0 3% 0 3%;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    img {
-        margin: 10px;
-        min-height: 90%;
-        min-width: 390px;
-        height: 90%;
-        width: 390px;
-        background-color: white;
-    }
-}
-
-/***************************** 
     LOG IN/REGISTRATION
 *****************************/
 #registration-wrapper {
@@ -850,6 +819,3 @@ header {
     background-color: black;
     position: absolute;
 }
-
-
-

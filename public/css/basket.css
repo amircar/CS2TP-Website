@@ -162,9 +162,6 @@
     margin-bottom: 40px; /* Add space below the total */
 }
 
-* {
-    outline: 1px solid red; /* Adds a red border around all elements */
-}
 
 .btn-primary {
     display: block;

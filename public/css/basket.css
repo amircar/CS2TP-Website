@@ -133,32 +133,42 @@
 }
 
 .total-container strong {
-    color: #28a745; 
+    color: #c82333; 
     font-size: 24px; 
-
-.text-center button {
-    background-color: #28a745; /* Green background */
-    color: white;
-    font-size: 18px;
-    padding: 15px 40px; /* Bigger padding */
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    text-transform: uppercase;
-    font-weight: bold;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Slight shadow for depth */
-    transition: background-color 0.3s, transform 0.2s; /* Smooth transitions */
-    display: inline-block;
-    margin-top: 40px;
 }
 
-.text-center button:hover {
-    background-color: #218838; /* Darker green on hover */
-    transform: translateY(-2px); /* Slight movement for pressing effect */
+#basket-main, .basket-container {
+    overflow: visible;
 }
 
-.text-center button:focus {
-    outline: none;
-    box-shadow: 0 0 0 3px rgba(72, 184, 72, 0.5); /* Focus ring effect */
+.text-center {
+    margin: 20px auto;
+    position: relative;
 }
+
+.btn-primary {
+    position: relative;
+    z-index: 1000;
 }
+
+.text-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.total-container {
+    margin-bottom: 40px; /* Add space below the total */
+}
+
+* {
+    outline: 1px solid red; /* Adds a red border around all elements */
+}
+
+.btn-primary {
+    display: block;
+    visibility: visible;
+    z-index: 9999;
+}
+

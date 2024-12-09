@@ -192,12 +192,13 @@ header {
                 }
             }
             .header-item:hover {
+                background-color: white;
                 transition: 0.4s;
                 img {
                     color: rgb(128, 0, 0); /* makes alt text visible */
                 }
                 p, button {
-                    background-color: white;
+                    
                     color: rgb(128, 0, 0);
                 }
             }

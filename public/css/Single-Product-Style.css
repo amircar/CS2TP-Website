@@ -96,6 +96,10 @@
     margin-top: 10px;
 }
 
+.title {
+    padding-top: 10px;
+}
+
 .thumbnail {
     width: 500px;
     height: 500px;
@@ -207,4 +211,19 @@
 
 .Btn2:hover {
     background-color: rgb(35, 192, 176);
+}
+
+.description-box {
+    max-width: 600px;
+    margin-left: 0; 
+    margin-right: auto; 
+    padding-top: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 5px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd; 
+    border-radius: 5px; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+    text-align: left;
 }

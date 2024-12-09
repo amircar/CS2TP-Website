@@ -48,6 +48,10 @@
                     <span class="colour white" title="White"></span>
                     <span class="colour black" title="Black"></span>
                 </div>
+                <h3 style="text-align: left; margin: 0; padding: 10px;">Description</h3>
+                <div class="description-box">
+    <h3>{{$product->description}}</h3>
+</div>
                 <form action="{{route('add')}}" method="POST">
                     <h4 class="title">SIZE</h4>
                     <div class="sizes">

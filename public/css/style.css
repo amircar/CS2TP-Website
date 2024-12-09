@@ -819,3 +819,90 @@ header {
     background-color: black;
     position: absolute;
 }
+
+.basket-container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.basket-header {
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.basket-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.item-details {
+    display: flex;
+    align-items: center;
+}
+
+.item-image {
+    width: 80px; 
+    height: auto;
+    margin-right: 15px;
+}
+
+.item-info {
+    margin-left: 10px;
+}
+
+.item-price {
+    font-weight: bold;
+}
+
+.item-actions {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end; 
+}
+
+.button-group {
+    display: flex;
+    gap: 10px;
+}
+
+.btn {
+    text-decoration: none;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn-link {
+    background-color: red;
+    color: white; 
+    transition: background-color 0.3s ease;
+}
+
+.btn-link:hover {
+    background-color: darkred;
+}
+
+.total-container {
+    margin-top: 20px;
+    font-size: 18px;
+    text-align: right; 
+}
+
+/* checkout button */
+.btn-primary {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}

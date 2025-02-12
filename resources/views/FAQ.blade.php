@@ -48,30 +48,7 @@
                 
             </div>
         </main>
-        <script>
-        document.getElementById("contactForm").addEventListener("submit", function(event) {
-            event.preventDefault(); 
-            sendEmail();
-            alert('Message sent!');
-            contactForm.reset();
-        });
-        
-        function sendEmail() {
-            var firstName = document.getElementById("fname").value;
-            var email = document.getElementById("email").value;
-            var phone = document.getElementById("phone").value;
-            var description = document.getElementById("description").value;
 
-            var body = "First Name: " + fname +
-               "\nEmail: " + email +
-               "\nPhone Number: " + phone +
-               "\nProject Description: " + description;
-
-
-    window.location.href = "mailto:230087860@aston.ac.uk?subject=Contact Form Submission&body=" + encodeURIComponent(body);
-            }
-
-    </script>
 
         @include('footer')
 

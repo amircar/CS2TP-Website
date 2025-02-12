@@ -30,26 +30,7 @@
                         </span>
                     </div>
 
-                    <form id="contactForm"> <!-- the form boxes where user can type -->
-                        <p>(All fields marked with a star<span style="color: rgb(128, 0, 0)">*</span> are required.)</p>
-
-                        <label for="fname">First Name</label>
-                        <input type="text" id="fname" placeholder="First Name" name="fname" style="margin-bottom: 25px;" required>
-
-                        <label for="lname">Last Name</label>
-                        <input type="text" id="lname" placeholder="Last Name" name="lname" required><br><br>
-            
-                        <label for="email">Email Address</label>
-                        <input type="email" id="email" placeholder="Email" name="email" required><br><br>
-
-                        <label for="phone">Phone Number</label>
-                        <input type="tel" id="phone" placeholder="Phone Number" name="phone" required><br><br>
-
-                        <label for="description">Description</label><br>
-                        <textarea id="description" placeholder="Message" name="description" rows="4" cols="50" style="height: 90px;" required></textarea><br><br>
-        
-                        <input type="submit" value="Submit">
-                    </form>
+                    
                    
                 </div>
 
@@ -64,19 +45,7 @@
                 </div>
                 
                 <!-- the FAQ box with links to sepertae FAQ pages on the different categories -->
-                <div class="contactus-box" style="width: 30%; height: 290px; margin-left: 65%; margin-top: 350px; padding-top: 20px;">
-                    <span>
-                        <h2 style="text-align: center;">FAQs</h2>
-                        <p style="text-align: center; font-size: 20px;">Need some help? Check out some of our FAQ's</p><br><br>
-                        <ul>
-                            <li><a href="" style="text-align: center;">Orders & Shipping</a></li>
-                            <li><a href="" style="text-align: center;">Returns & Exchanges</a></li>
-                            <li><a href="" style="text-align: center;">Products & Sizing</a></li>
-                            <li><a href="" style="text-align: center;">Promotions</a></li>
-                            <li><a href="" style="text-align: center;">Other</a></li>
-                        </ul>
-                    </span>
-                </div>
+                
             </div>
         </main>
         <script>

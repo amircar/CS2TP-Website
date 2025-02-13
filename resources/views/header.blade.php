@@ -2,17 +2,14 @@
     <div id="header-wrapper">
         <a id="main-logo" href="{{ route('home') }}" title="Home"><img src={{ asset("images/logo.png") }} alt="team47-logo"></a>
 
-        <ul id="header-items">
-            <!-- SEARCH BAR -->
-            <li>
-                <form action="{{ route('search') }}">
-                    <a class="search-bar">
-                        <input class="search" name="search" type="text" placeholder="Search...">
-                        <button class="search-button">Search</button>
-                    </a>
-                </form>
-            </li>
+        <form action="{{ route('search') }}">
+            <a id="search-bar-container">
+                <button id="search-button">Search</button>
+                <input id="search-bar" name="search" type="text" placeholder="Search...">
+            </a>
+        </form>
 
+        <ul id="header-items">
             <!-- button to toggle between normal/large text size on page -->
             <li id="toggle-text-size">
                 <p>A</p>
@@ -29,6 +26,8 @@
                         </form>
                     </li>
                 </a>
+
+                <!-- TODO account page link in header -->
                 <a class="header-item" href="">
                     <li><img src="{{asset("images/account_icon.png")}}" alt="profile" title="Profile"></li>
                 </a>

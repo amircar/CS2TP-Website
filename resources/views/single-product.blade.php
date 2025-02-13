@@ -1,3 +1,5 @@
+<!-- FIXME make whole product clickable -->
+
 <li class="single-product">
     <a href="product/{{$product->id}}">
 

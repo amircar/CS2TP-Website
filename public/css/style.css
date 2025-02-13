@@ -717,14 +717,15 @@ header {
     }
 
     /* Forgot Password link */
-    .forgot-link {
+    .login-small-link {
         text-align: center;
         margin-top: 10px;
         display: block;
     }
-    .forgot-link:hover {
+    .login-small-link:hover {
         text-decoration: underline;
     }
+
 }
 
 #login-prompt, #registration-prompt {

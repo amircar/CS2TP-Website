@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<!-- blade file for admin registration -->
 <html lang="en-GB">
     <head>
         <meta charset="utf-8" />
@@ -15,7 +16,7 @@
         <div id="registration-wrapper">
             <main id="registration-form">
                 {{-- {{ __('Register') }} --}}
-                <h2>CREATE AN ACCOUNT</h2>
+                <h2>CREATE AN ADMIN ACCOUNT</h2>
                 <p>(All fields marked with a star<span style="color: rgb(128, 0, 0)">*</span> are required.)</p>
                 
                 <form method="POST" action="{{ route('register') }}">
@@ -87,22 +88,7 @@
                         </button>
                     </div>
                 </form>
-                <!-- prompt to take you to admin login -->
-                <a class="login-small-link" href = "{{route ('admin-register-access')}}">{{ __('Are You an Admin?') }}</a>
             </main>
-
-            <section id="login-prompt">
-                <h3>ALREADY HAVE AN ACCOUNT?</h3>
-                <ul>
-                    <li>Sign in and take your basket on any device.</li>
-                    <li>Enjoy your own, exclusive offers and discounts only available to <b>TEAM</b> members.</li>
-                    <li>Take advantage of our free shipping on all products.</li>
-                    <li>Browse our signature collections and checkout with our products.</li>
-                </ul>
-                <a href="{{ route('login') }}">
-                    <button type="button" class="btn btn-primary"">{{ __('Go to login') }}</button>
-                </a>
-            </section>
         </div>
 
         @include('footer')

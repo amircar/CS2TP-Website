@@ -12,4 +12,10 @@ class Order extends Model
     'user_id', 
     'status'
 ];
+
+    public function items()
+    {   
+        return $this->hasMany(Order_Item::class, 'order_id');
+    }
+
 }

@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Auth\LoginController;
+use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\BasketController;
 use App\Http\Controllers\PaymentController;
@@ -70,6 +71,6 @@ Route::get('/admin-register-access', function () {
 })->name('admin-register-access');
 
 // New route for validating admin password
-Route::post('/admin-register', [LoginController::class, 'validateAdminPassword'])->name('admin-register');
+Route::post('/admin-register', [RegisterController::class, 'validateAdminPassword'])->name('admin-register');
 
 ?>

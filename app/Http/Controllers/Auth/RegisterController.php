@@ -72,29 +72,30 @@ class RegisterController extends Controller
             'last_name' => $data['last_name'],
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
+            'isAdmin' => 1,
         ]);
     }
 
     //allows access to admin register if the admin register access password is correct
     
-    // public function validateAdminPassword(Request $request)
-    // {
-    //     $request->validate([
-    //         'password' => 'required|string',
-    //     ]);
+    public function validateAdminPassword(Request $request)
+    {
+        $request->validate([
+            'password' => 'required|string',
+        ]);
 
-    //     // checks if admin password is correct to register for an admin account
-    //     if ($request->password === 'admin123') {
-    //         return view('auth.admin-register'); // route to admin login
-    //     }
+        // checks if admin password is correct to register for an admin account
+        if ($request->password === 'admin123') {
+            return view('auth.admin-register'); // route to admin login
+        }
 
-    //     return back()->withErrors(['password' => 'The provided password is incorrect.']);
-    // }
+        return back()->withErrors(['password' => 'The provided password is incorrect.']);
+    }
 
-    // public function showRegistrationForm()
-    // {
-    //     return view('auth.register');
-    // }
+    public function showRegistrationForm()
+    {
+        return view('auth.register');
+    }
 
 
 }

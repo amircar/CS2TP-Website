@@ -8,6 +8,10 @@
     box-shadow: 0 0px 6px rgb(128, 128, 128);
 }
 
+#basket-main:first-of-type {
+    margin-bottom: 20px;
+}
+
 .basket-title {
     font-family: "DMSans", Arial, Helvetica, sans-serif;
     font-size: 35px;
@@ -174,4 +178,14 @@
 
 .basket-checkout button:hover {
     background-color: rgb(128, 0, 0);
+}
+
+.basket-empty {
+    text-align: center;
+    margin-top: 10px;
+    display: block;
+}
+
+.basket-empty:hover {
+    text-decoration: underline;
 }

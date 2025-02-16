@@ -16,4 +16,9 @@ class Order_Item extends Model
         {   
             return $this->belongsTo(Order::class);
         }
+
+    public function stock()
+    {
+        return $this->belongsTo(Stock::class);
+    }
 }

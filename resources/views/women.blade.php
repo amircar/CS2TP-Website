@@ -24,7 +24,7 @@
             <h2>FEATURED IN WOMEN'S</h2>
             <ul class="products-list">
                 @foreach ($products4 as $product)
-                    @include('single-product' , ['product' => $product])
+                    @include('product-card' , ['product' => $product])
                 @endforeach
             </ul>
         </section>

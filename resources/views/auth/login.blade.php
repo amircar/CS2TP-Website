@@ -4,6 +4,8 @@
         <meta charset="utf-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+        
+        <!-- FIXME js not working on login page -->
         <script type="text/javascript" src="{{ asset('js/main.js') }}"></script>
         <link rel="icon" href="{{ asset('favicon.ico') }}">
         <title>Team 47 Login</title>

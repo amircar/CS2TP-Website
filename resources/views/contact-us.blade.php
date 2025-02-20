@@ -28,29 +28,28 @@
                         </span>
                     </div>
 
+                    <p>(All fields marked with a star<span style="color: rgb(128, 0, 0)">*</span> are required.)</p>
                     <form id="contact-form">
-                        <p>(All fields marked with a star<span style="color: rgb(128, 0, 0)">*</span> are required.)</p>
-
-                        <span>
+                        <div>
                             <label for="fname">First Name</label>
                             <input type="text" id="fname" placeholder="First Name" name="fname" required>
-                        </span>
-                        <span>
+                        </div>
+                        <div>
                             <label for="lname">Last Name</label>
                             <input type="text" id="lname" placeholder="Last Name" name="lname" required>
-                        </span>
-                        <span>
+                        </div>
+                        <div>
                             <label for="email">Email Address</label>
                             <input type="email" id="email" placeholder="Email" name="email" required>
-                        </span>
-                        <span>
+                        </div>
+                        <div>
                             <label for="phone">Phone Number</label>
                             <input type="tel" id="phone" placeholder="Phone Number" name="phone" required>
-                        </span>
-                        <span>
+                        </div>
+                        <div>
                             <label for="description">Description</label>
                             <textarea id="description" placeholder="Message" name="description" rows="4" cols="50" required></textarea>
-                        </span>
+                        </div>
 
                         <input type="submit" value="Submit">
                     </form>
@@ -84,11 +83,10 @@
 
 
 
-
-
         <!-- TODO move to js file -->
+
         <script>
-        document.getElementById("contactForm").addEventListener("submit", function(event) {
+        document.getElementById("contact-form").addEventListener("submit", function(event) {
             event.preventDefault(); 
             sendEmail();
             alert('Message sent!');

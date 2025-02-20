@@ -5,29 +5,31 @@
 
         <!-- Sign Up / Login Section -->    
         @guest
+            <!-- FIXME footer-account-prompt -->
             <div class="footer-section">  
                 <h3>TEAM 47</h3>
                 <p>Sign up or log in so that you can make purchases and keep up to date with the latest offers.</p>
-                <button class="footer-button">Log in</button>
-                <button class="footer-button">Sign Up</button>
+                <button class="footer-button">LOG IN</button>
+                <button class="footer-button">SIGN UP</button>
             </div>
             <div id="footer-space"></div>
         @endguest
 
 
+        <!-- FIXME footer-category -->
         <div class="footer-section">
             <h3>CUSTOMER SERVICE</h3>
             <ul>
                 <li><a href="{{ route('about-us') }}">About Us</a></li>
-
-                
                 <li><a href="{{route('contact-us')}}">Contact Us</a></li>
 
+                <!-- TODO footer links -->
                 <li><a href="">FAQs</a></li>
                 <li><a href="">Terms and Conditions</a></li>
             </ul>
         </div>
 
+        <!-- TODO footer links -->
         <div class="footer-section">
             <h3>ACCOUNT</h3>
             <ul>

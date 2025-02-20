@@ -65,7 +65,7 @@ ul {
 }
 img {
     max-width: 100%;
-    object-fit: contain; /* keep image aspect ratio and displays center */
+    object-fit: contain; /* keep image aspect ratio & displays center */
 }
 h2 {
     font-family: var(--header-font);
@@ -78,6 +78,20 @@ h3 {
     margin-bottom: 15px;
     text-align: center;
     text-transform: uppercase; /* always uppercase */
+}
+
+input::placeholder {
+    user-select: none;
+}
+
+/* puts red star next to label for required fields on all forms */
+label:has(+ input:required)::after {
+    content: " *"; /* space added between word & star */
+    color: var(--theme-color);
+}
+
+.unselectable {
+    user-select: none;
 }
 
 /***************************** 
@@ -111,7 +125,7 @@ h3 {
         letter-spacing: 2px; /* reduces space between letters */
     }
 
-    .products-list .single-product {
+    .products-list .product-card {
         font-size: 25px;
         .product-title {
             font-size: 30px;
@@ -130,7 +144,7 @@ h3 {
 *****************************/
 header {
     width: 100%;
-    height: 100px; /* height = 85px (without nav) */
+    height: 105px; /* height = 90px (without nav) */
     top: 0;
     position: sticky;
     margin-bottom: 40px; /* space between header & content for all pages */
@@ -148,10 +162,11 @@ header {
 
         #main-logo {
             width: 180px;
+            margin-top: 15px;
             margin-left: 30px;
             color: white; /* makes alt text is visible */
+
             img {
-                margin-top: 7.5px;
                 min-width: 100%;
                 min-height: 60px;
                 width: 100%;
@@ -160,76 +175,98 @@ header {
             }
         }
 
+        /* TODO button to clear text when pressing button */
+        /* FIXME align text to bottom of search bar */
+        /* FIXME move search bar to right a bit */
         #search-bar-container {
-            margin-top: 20px;
-            width: 50%;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            margin-top: 15px;
+            width: 45%;
             height: 50px;
-            /* background-color: blue; */
 
             #search-button {
                 width: 50px;
                 height: 50px;
-                background-color: aqua;
+                margin-right: 5px;
+                background-color: transparent;
+                cursor: pointer;
             }
 
-
-            /************** EXPERIMENT *************/
+            /* magnifying glass icon */
             #search-button::before, #search-button::after {
                 content: "";
-                display: block;
+                display: inline-block;
+                position: relative;
                 height: 4px;
                 transition: 0.4s;
             }
+
+            /* circle of magnifying glass icon */
             #search-button::before {
                 width: 20px;
                 height: 20px;
+                left: 5px;
+                top: -3px;
                 border-radius: 50%;
                 outline: 4px solid white;
-                transform: rotate(45deg);
+                z-index: 1; /* on top of handle */
             }
+
+            /* handle of magnifying glass icon */
             #search-button::after {
-                width: 80%;
+                left: 0px;
+                top: 7px;
+                width: 25px;
                 background-color: var(--theme-color);
                 transform: rotate(45deg);
             }
 
             #search-bar {
-                /* width: ; */
-                /* height: 100%; */
-                background-color: transparent;
-                border-bottom: 2px solid white;
+                width: calc(100% - 55px);
+                height: 100%;
                 color: white;
+                background-color: transparent;                
                 font-family: var(--accent-font);
+                font-size: 20px;
+                border-bottom: 2px solid white;
+                box-sizing: border-box; /* moves border inside */
             }
-        }
-        #search-bar-container:hover {
-            #search-button::before {
-                /* width: 90%; */
-                transform: rotate(45deg) /*translate(0, 100%)*/;
-                transition: 0.4s;
+            #search-bar::placeholder {
+                font-family: var(--accent-font);
+                font-size: 22px;
+                letter-spacing: 5px;
             }
-            #search-button::after {
-                /* transform: rotate(-45deg); */
-                width: 90%;
-                transition: 0.4s;
+            /* removes outline of search bar when clicked on */
+            #search-bar:focus {
+                outline: none;
             }
-        }
 
+            /* TODO add 2 dots to end of search bar */
+            #search-bar::after {
+                content: "";
+                width: 20px;
+                height: 20px;
+                background-color: var(--theme-color);
+            }
+        }
 
         #header-items {
             display: flex;
             flex-wrap: wrap;
             flex-direction: row;
             align-items: center;
-            margin: 0 3%;
+            margin: 0 2%;
 
             .header-item {
                 transition: 0.2s;
                 margin: 0 20px 0 20px;
 
-                li:has(img) { /* icons have different dimensions to text */
-                    width: 50px;
-                    height: 50px;
+                /* icons have different dimensions to text */
+                li:has(img) {
+                    width: 40px;
+                    height: 40px;
 
                     img {
                         min-width: 100%;
@@ -249,6 +286,7 @@ header {
                         font-family: var(--accent-font);
                         font-size: 20px;
                         color: white;
+                        text-transform: uppercase; /* always uppercase */
                     }
                     p {
                         translate: 0 5px; /* centers text vertically */
@@ -267,6 +305,7 @@ header {
                     }
                 }
             }
+
             .header-item:hover {
                 background-color: white;
                 transition: 0.4s;
@@ -421,7 +460,7 @@ header {
 
 
 /* FIXME make footer be at bottom of page */
-
+/* TODO move footer here */
 
 
 
@@ -440,20 +479,34 @@ header {
     z-index: 1; /* on top of all other content */
     font-family: var(--accent-font);
     font-size: 18px;
-    text-indent: 5px; /* adjusts text to be in center (must be equal to letter-spacing) */
+    /* adjusts text to be in center (must be equal to letter-spacing) */
+    text-indent: 5px;
+
     letter-spacing: 5px;
     text-align: center;
     line-height: 65px; /* text at bottom of button */
     background-color: var(--main-black-color);
     color: white;
     box-shadow: 0 0 6px var(--main-grey-color);
+
+    /* removes underline from being longer at end */
+    span {
+        font-family: var(--accent-font);
+        font-size: 18px;
+        letter-spacing: normal;
+        /* removes gap between letters in and letters out of span */
+        margin-left: -4px;
+        /* centers text (must be same as letter-spacing out of span) */
+        margin-right: 5px;
+    }
 }
+
 #back-to-top:hover {
     cursor: pointer;
-    /* TODO TEST UNDERLINE */
     text-decoration: underline;
 }
 
+/* FIXME red line does not overlap over white fully */
 /* arrow inside box */
 #back-to-top::before, #back-to-top::after {
     content: "";
@@ -569,16 +622,69 @@ header {
     }
 }
 
+
+
+/* EXPERIMENT - Featured product collection rework */
+.featured-collection-list {
+    margin: 0 3%;
+
+    h2 {
+        margin-bottom: 25px;
+    }
+
+    .cont {
+        padding: 0 3%;
+        height: 350px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+
+        img {
+            min-width: 500px;
+            min-height: 100%;
+            width: 300px;
+            height: 100%;
+            background-color: white;
+            object-fit: cover;
+            transform: perspective(1000px) rotateY(10deg);
+            box-shadow: -7px 7px 6px var(--main-grey-color), -1px 1px 6px var(--main-grey-color);
+        }
+
+        img:hover {
+            width: 400px;
+        }
+
+        img::after {
+            /* display: none; */
+            position: relative;
+            width: 300px;
+            height: 100%;
+            background-color: rgb(0, 0, 0, 0.2);
+        }
+
+        p {
+            margin: 20px 10px;
+            padding: 10px;
+            height: 290px;
+            width: calc(100% - 540px);
+            /* background-color: aquamarine; */
+            font-family: var(--main-font);
+            font-size: 25px;
+        }
+    }
+}
+
+
+
 /***************************** 
     FEATURED PRODUCTS LIST
 *****************************/
 #featured-products-list {
-    margin: 0 3% 0 3%;
+    margin: 0 3%;
 
 
 
     /****** EXPERIMENT - chromatic abberation ******/
-    /* shadow text */
     h2::after {
         position: relative;
         content: "FEATURED PRODUCTS";
@@ -614,7 +720,7 @@ header {
     overflow: hidden;
     justify-content: center;
 
-    .single-product {
+    .product-card {
         width: 300px;
         height: 380px;
         margin: 10px;
@@ -630,8 +736,8 @@ header {
             width: 100%;
             height: 60%;
         }
-        .product-title {
 
+        .product-title {
 
             /* FIXME text replaced by ellipsis when overflowing */
             /* FIXME position price and size at bottom*/
@@ -642,12 +748,113 @@ header {
             text-overflow: ellipsis;
         }
     }
-    .single-product:hover {
+
+    .product-card:hover {
         box-shadow: 0 0 6px var(--main-grey-color);
         scale: calc(310/300) calc(390/380); /* expands height and width by 10px */
         transition: 0.2s;
     }
 }
+
+
+
+
+#product-search-introduction {
+    margin: 0 3%;
+}
+
+#product-search-main {
+    margin-right: 1%;
+    display: flex;
+    flex-direction: row;
+    /* flex-wrap: wrap; */
+    /* background-color: blue; */
+}
+
+#product-search-filters {
+    /* background-color: blueviolet; */
+    width: 20%;
+    margin-left: 1%;
+    margin-right: 20px;
+
+    .product-search-filter {
+        font-family: var(--accent-font);
+        font-size: 20px;
+    }
+}
+
+/* 4 IN A ROW */
+#product-collection {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    width: 100%;
+    /* background-color: aquamarine; */
+
+    .product-card {
+        width: 250px;
+        height: 350px;
+        margin: 10px;
+        padding: 10px;
+        background-color: white;
+        font-size: 20px;
+        transition: 0.2s;
+
+        img {
+            background-color: var(--main-bg-color);
+            min-width: 100%;
+            min-height: 55%;
+            width: 100%;
+            height: 55%;
+        }
+
+        .product-title {
+            margin-top: 5px;
+
+            /* FIXME text replaced by ellipsis when overflowing */
+            height: 70px;
+            font-size: 23px;
+            line-height: 23px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .product-price {
+            margin-bottom: 10px;
+            font-size: 20px;
+        }
+
+        .product-size, .product-colour {
+            font-size: 18px;
+        }
+
+        .small-wishlist-button {
+            position: relative;
+            left: 205px;
+            top: -205px;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: white;
+            cursor: pointer;
+
+            /* TODO heart in button */
+            /* heart inside wishlist button */
+            div {
+                background-color: var(--theme-color);
+            }
+        }
+    }
+    .product-card:hover {
+        box-shadow: 0 0 6px var(--main-grey-color);
+        transition: 0.2s;
+    }
+}
+
+
+
+
+
 
 /***************************** 
     HOMEPAGE CATEGORIES SECTION
@@ -746,16 +953,6 @@ header {
     }
 }
 
-
-/***************************** 
-    ALL FORMS
-*****************************/
-/* puts red star next to label for required fields */
-label:has(+ input:required)::after {
-    content: " *"; /* space added between word & star */
-    color: var(--theme-color);
-}
-
 /***************************** 
     LOG IN/REGISTRATION
 *****************************/
@@ -767,6 +964,7 @@ label:has(+ input:required)::after {
     box-sizing: border-box;
 }
 
+/* FIXME center form contents */
 #login-form, #registration-form {
     background-color: white;
     padding: 40px;
@@ -807,7 +1005,7 @@ label:has(+ input:required)::after {
         gap: 5px; 
     }
 
-    /* specific styles for "Remember Me" checkbox */
+    /* "Remember Me" checkbox */
     #remember-checkbox {
         appearance: none; /* hides default checkbox style */
         width: 20px; 
@@ -897,7 +1095,7 @@ label:has(+ input:required)::after {
     button {
         width: 100%;
         padding: 10px;
-        background-color: var(--theme-color); /* Different button color */
+        background-color: var(--theme-color);
         color: white;
         border: none;
         border-radius: 5px;

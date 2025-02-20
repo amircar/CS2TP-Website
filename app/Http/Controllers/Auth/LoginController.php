@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
+use Illuminate\Http\Request;
 
 class LoginController extends Controller
 {
@@ -36,5 +37,19 @@ class LoginController extends Controller
     {
         $this->middleware('guest')->except('logout');
         $this->middleware('auth')->only('logout');
+    }
+
+    public function validateAdminPassword(Request $request)
+    {
+        $request->validate([
+            'password' => 'required|string',
+        ]);
+
+        // checks if admin password is correct to register for an admin account
+        if ($request->password === 'admin123') {
+            return view('auth.admin-register'); // route to admin login
+        }
+
+        return back()->withErrors(['password' => 'The provided password is incorrect.']);
     }
 }

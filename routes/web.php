@@ -1,12 +1,11 @@
 <?php
 
 use App\Http\Controllers\Auth\LoginController;
+use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\BasketController;
 use App\Http\Controllers\PaymentController;
 use Illuminate\Support\Facades\Route;
-
-
 
 Route::get('/', function () {
     return view('home');
@@ -41,7 +40,6 @@ Route::get('/product/{id}', action: [ProductController::class, 'productSingle'])
 //route for the page that displays searched items
 Route::get('/search', action: [ProductController::class, 'productSearch'])->name('search');
 
-
 Route::post('/add',[BasketController::class, 'add'])->middleware('auth')->name('add');
 
 Route::get('/add', function(){
@@ -53,6 +51,7 @@ Route::post('/remove',[BasketController::class, 'remove'])->name('remove');
 Route::get('/remove', function(){
     return redirect('/');
 });
+
 //route for contact us page to display
 Route::get('/contact-us', function () {
     return view('contact-us');
@@ -65,3 +64,13 @@ Route::get('/checkout', function(){
 });
 
 Route::get('/success',[PaymentController::class, 'success'])->name('success');
+
+// route for admin login access
+Route::get('/admin-register-access', function () {
+    return view('admin-register-access');
+})->name('admin-register-access');
+
+// New route for validating admin password
+Route::post('/admin-register', [RegisterController::class, 'validateAdminPassword'])->name('admin-register');
+
+?>

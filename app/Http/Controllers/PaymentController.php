@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Models\basket_stock;
 use App\Models\Stock;
 use App\Models\Basket;
+use App\Models\Order;
+use App\Models\Order_Item;
 use Illuminate\Http\Request;
 use Stripe\Stripe;
 use Stripe\Checkout;
@@ -60,7 +62,13 @@ class PaymentController extends Controller
             $stock->save();
         }
         
+        $order = Order::create(['order_date'=>date('Y-m-d'),'user_id'=>$basket->user_id, 'status'=>'Outgoing']);
+        foreach($basket->stocks as $item){
+            Order_Item::create(['order_id'=>$order->id, 'stock_id'=>$item->id, 'quantity'=>$item->pivot->quantity]);
+        }
+        
         basket_stock::where('basket_id',$basket->id)->delete(); //Delete the items from the users basket
         return redirect()->back();
     }
 }
+

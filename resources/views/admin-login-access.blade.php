@@ -13,10 +13,10 @@
         @include('header')
 
         <div id="login-form">
-            <h2>ACCESS ADMIN ACCOUNT REGISTERING</h2>
-            <p>(Enter the Admin Password in order to Create an Admin Account)</p>
+            <h2>ACCESS ADMIN ACCOUNT LOGIN</h2>
+            <p>(Enter the Admin Password in order to Login to an Admin Account)</p>
 
-            <form method="POST" action="{{ route('admin-register') }}">
+            <form method="POST" action="{{ route('admin-login') }}">
                 @csrf
                 <div class="form-group">
                     <label for="password">{{ __('Admin Password') }}</label>

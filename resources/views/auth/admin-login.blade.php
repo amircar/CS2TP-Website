@@ -6,20 +6,32 @@
         <link rel="stylesheet" href="{{ asset('css/style.css') }}">
         <script type="text/javascript" src="{{ asset('js/main.js') }}"></script>
         <link rel="icon" href="{{ asset('favicon.ico') }}">
-        <title>Admin Login Access</title>
+        <title>Team 47 Login</title>
     </head>
 
     <body>
         @include('header')
 
         <div id="login-form">
-            <h2>ACCESS ADMIN ACCOUNT REGISTERING</h2>
-            <p>(Enter the Admin Password in order to Create an Admin Account)</p>
+            <h2>LOG IN TO YOUR ADMIN ACCOUNT</h2>
+            <p>(All fields marked with a star<span style="color: rgb(128, 0, 0)">*</span> are required.)</p>
 
-            <form method="POST" action="{{ route('admin-register') }}">
+            <form method="POST" action="{{ route('admin-login') }}">
                 @csrf
+
                 <div class="form-group">
-                    <label for="password">{{ __('Admin Password') }}</label>
+                    <label for="email">{{ __('Email Address') }}</label>
+                    <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
+                    
+                    @error('email')
+                        <span class="invalid-feedback" role="alert">
+                            <strong>{{ $message }}</strong>
+                        </span>
+                    @enderror
+                </div>
+
+                <div class="form-group">
+                    <label for="password">{{ __('Password') }}</label>
                     <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
 
                     @error('password')
@@ -38,8 +50,14 @@
                     </div>
                 </div>
 
-                <button type="submit" class="btn btn-primary">{{ __('Access') }}</button>
+                <button type="submit" class="btn btn-primary">{{ __('Sign In') }}</button>
+                @if (Route::has('password.request'))
+                    <a class="login-small-link" href="{{ route('password.request') }}">{{ __('Forgot Your Password?') }}</a>
+                @endif
             </form>
         </div>
+
+        @include('footer')
+        @include('footer')
     </body>
 </html>

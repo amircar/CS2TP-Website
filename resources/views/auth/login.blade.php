@@ -54,6 +54,8 @@
                 @if (Route::has('password.request'))
                     <a class="login-small-link" href="{{ route('password.request') }}">{{ __('Forgot Your Password?') }}</a>
                 @endif
+                <!-- link to take you to admin login -->
+                <a class="login-small-link" href = "{{route ('admin-login-access')}}">{{ __('Are You an Admin?') }}</a>
             </form>
         </div>
 

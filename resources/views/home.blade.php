@@ -20,41 +20,19 @@
         
         <main id="home-main">
             <a href="{{ route('men') }}">
-                <img src="images/wanwan.jpg" alt="main-image">
+                <img src="images/home/largeImage.png" alt="main-image">
                 <button id="home-main-button">FIND OUT MORE</button>
             </a>
         </main>
 
-        <!-- TODO renovate featured products list view -->
-        <!-- TODO add sliding view -->
         <section id="featured-products-list">
             <h2>FEATURED PRODUCTS</h2>
             <ul class="products-list">
                 @foreach ($products as $product)
-                    @include('product-card' , ['product' => $product])
+                    @include('single-product' , ['product' => $product])
                 @endforeach
             </ul>
         </section>
-
-
-
-
-
-        <!-- EXPERIMENT -->
-        <div class="content-separate"><div class="content-separate-box"></div></div>
-
-        <section class="featured-collection-list">
-            <h2>FEATURED COLLECTION 1</h2>
-            <!-- FIXME temp name -->
-            <div class="cont">
-                <img src="images/wanwan.jpg" alt="collection-1-image">
-                <p>Description paragraph...</p>
-            </div>
-        </section>
-
-
-
-
 
         <div class="content-separate"><div class="content-separate-box"></div></div>
 

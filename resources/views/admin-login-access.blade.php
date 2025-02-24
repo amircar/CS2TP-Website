@@ -16,7 +16,7 @@
             <h2>ACCESS ADMIN ACCOUNT LOGIN</h2>
             <p>(Enter the Admin Password in order to Login to an Admin Account)</p>
 
-            <form method="POST" action="{{ route('admin-login') }}">
+            <form method="POST" action="{{ route('admin-login-access') }}">
                 @csrf
                 <div class="form-group">
                     <label for="password">{{ __('Admin Password') }}</label>

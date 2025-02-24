@@ -18,7 +18,7 @@ class LoginController extends Controller
         $this->middleware('auth')->only('logout');
     }
 
-    //validates the admin login access password and displays login page
+    //validates the admin login access password and displays admin login page
     public function validateAdminPassword(Request $request)
     {
         $request->validate([
@@ -47,10 +47,10 @@ class LoginController extends Controller
             if ($user->isAdmin != 1) {
                 auth()->logout();
                 return back()->withErrors([
-                    'email' => 'Only admin users can access this login.',
+                    'email' => 'Only admin users can login here.',
                 ]);
             }
-            return redirect()->intended($this->redirectTo);
+            return redirect('/');
         }
 
         return back()->withErrors([

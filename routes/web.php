@@ -79,8 +79,8 @@ Route::get('/admin-login-access', function () {
 })->name('admin-login-access');
 
 // New route for validating admin login password
-Route::post('/admin-login', [LoginController::class, 'validateAdminPassword'])->name('admin-login');
+Route::post('/admin-login-access', [LoginController::class, 'validateAdminPassword'])->name('admin-login-access');
 
 //route for authenticating admin logins, checking if the user is an admin to log in
-Route::post('/admin.login', [LoginController::class, 'adminLogin'])->name('admin.login');
+Route::post('/admin-login', [LoginController::class, 'adminLogin'])->name('admin-login');
 ?>

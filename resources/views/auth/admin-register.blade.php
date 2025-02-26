@@ -82,6 +82,8 @@
                         <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
                     </div>
 
+                    <input type="hidden" id="admin" name="admin" value="1">
+
                     <div class="form-group">
                         <button type="submit" class="btn btn-primary">
                             {{ __('Register') }}

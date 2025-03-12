@@ -32,29 +32,4 @@ class LoginController extends Controller
         return back()->withErrors(['password' => 'The provided password is incorrect.']);
     }
 
-   // logins for admin
-    public function adminLogin(Request $request)
-    {
-        $this->validate($request, [
-            'email' => 'required|string|email',
-            'password' => 'required|string',
-        ]);
-
-        $credentials = $request->only('email', 'password');
-
-        if (auth()->attempt($credentials)) {
-            $user = auth()->user();
-            if ($user->isAdmin != 1) {
-                auth()->logout();
-                return back()->withErrors([
-                    'email' => 'Only admin users can login here.',
-                ]);
-            }
-            return redirect('/');
-        }
-
-        return back()->withErrors([
-            'email' => 'The provided credentials do not match our records.',
-        ]);
-    }
 }

@@ -73,14 +73,4 @@ Route::get('/admin-register-access', function () {
 // New route for validating admin password
 Route::post('/admin-register', [RegisterController::class, 'validateAdminPassword'])->name('admin-register');
 
-//route for admin login access
-Route::get('/admin-login-access', function () {
-    return view('admin-login-access');
-})->name('admin-login-access');
-
-// New route for validating admin login password
-Route::post('/admin-login-access', [LoginController::class, 'validateAdminPassword'])->name('admin-login-access');
-
-//route for authenticating admin logins, checking if the user is an admin to log in
-Route::post('/admin-login', [LoginController::class, 'adminLogin'])->name('admin-login');
 ?>

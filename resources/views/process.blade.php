@@ -4,10 +4,10 @@
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/basket.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/processing.css') }}">
     <script defer type="text/javascript" src="{{ asset('js/main.js') }}"></script>
     <link rel="icon" href="{{ asset('favicon.ico') }}">
-    <title>Basket | Team 47</title>
+    <title>Processing | Team 47</title>
 </head>
 
 <body>
@@ -19,16 +19,16 @@
         </div>
     @endif
 <!-- Section for Placed orders -->
-    <main id="basket-main">
-        <h2 class="basket-header">Placed Orders</h2>
+    <main id="processing-main">
+        <h2 class="processing-header">Placed Orders</h2>
         @foreach ($placed as $order)
             @php //total cost
                 $total = 0
             @endphp
-            <div class="basket-container">
+            <div class="processing-container">
                 <p class="order_date">Order From: {{ $order->user->email }}</p>
                 @foreach ($order->items as $order_item)
-                    <div class="basket-item">
+                    <div class="processing-item">
                         <div class="item-details">
                             @foreach ($order_item->stock->product->product_images as $image)
                                 @if ($image->is_primary)
@@ -76,16 +76,16 @@
     </main>
 
     <!-- Section for Outgoing Orders -->
-    <main id="basket-main">
-        <h2 class="basket-header">Outgoing Orders</h2>
+    <main id="processing-main">
+        <h2 class="processing-header">Outgoing Orders</h2>
         @foreach ($outgoing as $order)
             @php //total cost
                 $total = 0
             @endphp
-            <div class="basket-container">
+            <div class="processing-container">
                 <p class="order_date">Order From: {{ $order->user->email }}</p>
                 @foreach ($order->items as $order_item)
-                    <div class="basket-item">
+                    <div class="processing-item">
                         <div class="item-details">
                             @foreach ($order_item->stock->product->product_images as $image)
                                 @if ($image->is_primary)
@@ -130,16 +130,16 @@
         @endforeach
     </main>
 
-    <main id="basket-main">
-        <h2 class="basket-header">Delivered Orders</h2>
+    <main id="processing-main">
+        <h2 class="processing-header">Delivered Orders</h2>
         @foreach ($delivered as $order)
             @php //total cost
                 $total = 0
             @endphp
-            <div class="basket-container">
+            <div class="processing-container">
                 <p class="order_date">Order From: {{ $order->user->email }}</p>
                 @foreach ($order->items as $order_item)
-                    <div class="basket-item">
+                    <div class="processing-item">
                         <div class="item-details">
                             @foreach ($order_item->stock->product->product_images as $image)
                                 @if ($image->is_primary)

@@ -62,7 +62,7 @@ class PaymentController extends Controller
             $stock->save();
         }
         
-        $order = Order::create(['order_date'=>date('Y-m-d'),'user_id'=>$basket->user_id, 'status'=>'Outgoing']);
+        $order = Order::create(['order_date'=>date('Y-m-d'),'user_id'=>$basket->user_id, 'status'=>'Order Placed']);
         foreach($basket->stocks as $item){
             Order_Item::create(['order_id'=>$order->id, 'stock_id'=>$item->id, 'quantity'=>$item->pivot->quantity]);
         }

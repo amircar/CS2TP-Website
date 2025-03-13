@@ -5,6 +5,7 @@ use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\BasketController;
 use App\Http\Controllers\PaymentController;
+use App\Http\Controllers\ProcessController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -73,4 +74,14 @@ Route::get('/admin-register-access', function () {
 // New route for validating admin password
 Route::post('/admin-register', [RegisterController::class, 'validateAdminPassword'])->name('admin-register');
 
+//route for order processing for admins
+Route::get('/process', [ProcessController::class, 'process'])->name('process');
+
+// route to change the order status from placed to outgoing
+Route::post('/processing', [ProcessController::class, 'processing'])->name('processing');
+
+
+Route::get('/processing', function(){
+    return redirect('/');
+});
 ?>

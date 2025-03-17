@@ -4,6 +4,8 @@
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+                
+        <!-- FIXME js not working on register page -->
         <script type="text/javascript" src="{{ asset('js/main.js') }}"></script>
         <link rel="icon" href="{{ asset('favicon.ico') }}">
         <title>Team 47 Registration</title>
@@ -14,9 +16,8 @@
 
         <div id="registration-wrapper">
             <main id="registration-form">
-                {{-- {{ __('Register') }} --}}
                 <h2>CREATE AN ACCOUNT</h2>
-                <p>(All fields marked with a star<span style="color: rgb(128, 0, 0)">*</span> are required.)</p>
+                <p>(All fields marked with an asterisk (<span style="color: rgb(128, 0, 0)">*</span>) are required.)</p>
                 
                 <form method="POST" action="{{ route('register') }}">
                     @csrf
@@ -87,6 +88,9 @@
                         </button>
                     </div>
                 </form>
+                
+                <!-- prompt to take you to admin login -->
+                <a class="login-small-link" href = "{{route ('admin-register-access')}}">{{ __('Are You an Admin?') }}</a>
             </main>
 
             <section id="login-prompt">

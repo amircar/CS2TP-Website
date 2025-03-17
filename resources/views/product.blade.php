@@ -1,19 +1,17 @@
-<!--  
-Abandon all hope, ye who enter here
--->
 <!DOCTYPE html>
 <html lang="en-GB">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+        <script defer type="text/javascript" src="{{ asset('js/main.js') }}"></script>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
-    <script defer type="text/javascript" src="{{ asset('js/main.js') }}"></script>
-    <link rel="stylesheet" href={{ asset('css/Single-Product-Style.css') }}>
-    <script defer src={{ asset('js/Single-Product-Javascript.js') }}></script>
-    <link rel="icon" href="{{ asset('favicon.ico') }}">
-    <title>{{$product->name . " | Team 47"}}</title>
-</head>
+        <link rel="stylesheet" href={{ asset('css/Single-Product-Style.css') }}>
+        <script defer src={{ asset('js/Single-Product-Javascript.js') }}></script>
+
+        <link rel="icon" href="{{ asset('favicon.ico') }}">
+        <title>{{$product->name . " | Team 47"}}</title>
+    </head>
 
 <body>
     @include('header')
@@ -30,13 +28,13 @@ Abandon all hope, ye who enter here
         <div id="mainView">
             <div class="thumbnail">
                 @foreach($product->product_images as $image)
-                @if($image->is_primary)
-                <img src="{{asset($image->image_url)}}" alt="{{ $image->alt_text }}">
-                @php
-                $found = true;
-                @endphp
-                @break
-                @endif
+                    @if($image->is_primary)
+                        <img src="{{asset($image->image_url)}}" alt="{{ $image->alt_text }}">
+                        @php
+                            $found = true;
+                        @endphp
+                        @break
+                    @endif
                 @endforeach
             </div>
         </div>

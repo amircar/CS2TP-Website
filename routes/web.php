@@ -6,6 +6,7 @@ use App\Http\Controllers\ProductController;
 use App\Http\Controllers\BasketController;
 use App\Http\Controllers\PaymentController;
 use App\Http\Controllers\ProcessController;
+use App\Http\Controllers\StockController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -84,4 +85,6 @@ Route::post('/processing', [ProcessController::class, 'processing'])->name('proc
 Route::get('/processing', function(){
     return redirect('/');
 });
+
+Route::get('/stocks', [StockController::class, 'update'])->name('stocks');
 ?>

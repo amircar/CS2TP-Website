@@ -42,6 +42,9 @@ html {
 body {
     width: 100%;
     background-color: rgb(213, 213, 213);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 a {
     text-decoration: none; /* removes hyperlink underline */
@@ -486,14 +489,13 @@ header {
 /***************************** 
     PRODUCTS LIST
 *****************************/
-.products-list {
+.products-list, .stock-list {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
     height: 420px;
     width: 100%;
     left: 10%;
-    overflow: hidden;
     justify-content: center;
 
     .single-product {
@@ -525,6 +527,10 @@ header {
         scale: calc(310/300) calc(390/380); /* expands height and width by 10px */
         transition: 0.2s;
     }
+}
+
+.products-list{
+    overflow: hidden;
 }
 
 /***************************** 

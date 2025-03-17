@@ -3,7 +3,7 @@
 *****************************/
 /* footer uses brighter version of main red for better visibility*/
 footer {
-    margin-top: 40px;
+    margin-top: auto;
     width: 100%;
     background-color: rgb(20, 0, 0);
     color: white;
@@ -68,3 +68,4 @@ footer {
     height: 2px;
     background-color: rgb(150, 0, 0);
 }
+

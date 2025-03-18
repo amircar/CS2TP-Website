@@ -1,4 +1,6 @@
-<li class="single-product">
+<!-- FIXME make whole product clickable (does not work for padding) -->
+
+<li class="product-card">
     <a href="product/{{$product->id}}">
 
         {{$found = false}}
@@ -26,5 +28,7 @@
         <p class="product-title">{{$product->name}}</p>
         <p class="product-price">£ {{$product->price}}</p>
         <p class="product-size">Sizes: {{$productSizes}}</p>
+        <!-- TODO add colours to product card -->
+        <p class="product-colour">Colours: </p>
     </a>
 </li>

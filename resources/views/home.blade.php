@@ -25,14 +25,42 @@
             </a>
         </main>
 
+
+        <!-- TODO renovate featured products list view -->
+        <!-- TODO add sliding view -->
         <section id="featured-products-list">
             <h2>FEATURED PRODUCTS</h2>
             <ul class="products-list">
                 @foreach ($products as $product)
-                    @include('single-product' , ['product' => $product])
+                    @include('product-card' , ['product' => $product])
                 @endforeach
             </ul>
         </section>
+
+
+        
+
+
+        <!-- EXPERIMENT -->
+        <div class="content-separate"><div class="content-separate-box"></div></div>
+
+        <section class="featured-collection-list">
+            <h2>FEATURED COLLECTION 1</h2>
+            <!-- FIXME temp name -->
+            <div class="cont">
+                <div class="collection-image-container">
+                    {{-- <p>SHOW COLLECTION</p> --}}
+                    <img src="images/wanwan.jpg" alt="collection-1-image">
+                </div>
+                <p>Description paragraph... TEXT textTEXT textTEXT textTEXT textTEXT textTEXT textTEXT textTEXT textTEXT textTEXT textTEXT textTEXT textTEXT textTEXT textTEXT textTEXT textTEXT textTEXT textTEXT textTEXT textTEXT textTEXT textTEXT textTEXT textTEXT textTEXT textTEXT textTEXT textTEXT textTEXT textTEXT textTEXT textTEXT textTEXT textTEXT textTEXT textTEXT textTEXT textTEXT textTEXT textTEXT textTEXT textTEXT textTEXT textTEXT textTEXT textTEXT textTEXT textTEXT textTEXT textTEXT text</p>
+            </div>
+        </section>
+
+
+
+
+
+
 
         <div class="content-separate"><div class="content-separate-box"></div></div>
 

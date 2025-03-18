@@ -1,24 +1,22 @@
 <header>
     <div id="header-wrapper">
-        <a id="main-logo" href="{{ route('home') }}" title="Home"><img src={{ asset("images/logo.png") }} alt="team47-logo"></a>
+        <a id="main-logo" class="unselectable" href="{{ route('home') }}" title="Home"><img src={{ asset("images/logo.png") }} alt="team47-logo"></a>
 
-        <ul id="header-items">
-            <!-- SEARCH BAR -->
-            <li>
-                <form action="{{ route('search') }}">
-                    <a class="search-bar">
-                        <input class="search" name="search" type="text" placeholder="Search...">
-                        <button class="search-button">Search</button>
-                    </a>
-                </form>
-            </li>
-
+        <form id="search-bar-container" action="{{ route('search') }}">
+            <button id="search-button"></button>
+            <input id="search-bar" name="search" type="text" placeholder="SEARCH...">
+        </form>
+        
+        <ul id="header-items" class="unselectable">
             <!-- button to toggle between normal/large text size on page -->
-            <li id="toggle-text-size">
+            <li id="toggle-text-size" class="unselectable">
                 <p>A</p>
                 <label class="toggle-switch"><input type="checkbox"></label>
                 <p>A</p>
             </li>
+
+            
+            <!-- TODO remove when logout implemented in account page -->
 
             @auth
                 <a class="header-item">
@@ -29,6 +27,10 @@
                         </form>
                     </li>
                 </a>
+
+
+                <!-- TODO drop-down for options in account -->
+                <!-- TODO account page link in header -->
                 <a class="header-item" href="">
                     <li><img src="{{asset("images/account_icon.png")}}" alt="profile" title="Profile"></li>
                 </a>
@@ -38,21 +40,21 @@
             @else
                 <a class="header-item" href="{{ route('register') }}">
                     <li>
-                        <p>Sign Up</p>
+                        <p>SIGN UP</p>
                     </li>
                 </a>
                 <a class="header-item" href="{{ route('login') }}">
                     <li>
-                        <p>Log In</p>
+                        <p>LOG IN</p>
                     </li>
                 </a>
             @endauth
         </ul>
     </div>
 
+    <!-- TODO add drop-down menu -->
     <nav>
         <ul id="nav-items">
-
             <a class="nav-item" href="{{ route('men') }}">
                 <li>MEN</li>
             </a>
@@ -72,4 +74,4 @@
     </nav>
 </header>
 
-<button id="back-to-top" type="button">TOP</button>
+<button id="back-to-top" class="unselectable" type="button">TO<span> P</span></button>

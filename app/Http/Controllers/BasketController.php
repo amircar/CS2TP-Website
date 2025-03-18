@@ -4,8 +4,6 @@ namespace App\Http\Controllers;
 
 use App\Models\Basket;
 use App\Models\Stock;
-use App\Models\Order;
-use App\Models\Order_Item;
 use App\Models\basket_stock;
 use Auth;
 use Illuminate\Http\Request;
@@ -20,8 +18,7 @@ class BasketController extends Controller
         else{
             $id = Auth::id(); //Retrieve user's id
             $basket = Basket::with('stocks.product.product_images', 'stocks.size')->where('user_id', $id)->first(); //Create variable with linked tables basket, product and size
-            $previous = Order::with('items.stock.product.product_images', 'items.stock.size')->where('user_id', $id)->get();
-            return view('basket',compact('basket','previous'));
+            return view('basket',compact('basket'));
         }
     }
 

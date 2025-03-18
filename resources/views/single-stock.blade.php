@@ -24,6 +24,12 @@
         <p class="product-title">{{$product->name}}</p>
         <p class="product-price">£ {{$product->price}}</p>
         <p class="product-size">Sizes: {{$stock->size->size}}</p>
-        <p class="product-quantity">Quantity: {{$stock->quantity}}</p>
+        <p class="product-quantity">Current Quantity: {{$stock->quantity}}</p>
 
+        <form action="quantity" method="POST">
+            @csrf
+            <input type="number" name ="quantity" min="0" value="{{ $stock->quantity }}" required>
+            <input type="hidden" name="stock_id" value="{{$stock->id}}">
+            <button type="submit" class="btn btn-primary">Update Quantity</button>
+        </form>
 </li>

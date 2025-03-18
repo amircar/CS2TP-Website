@@ -493,7 +493,6 @@ header {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-    height: 420px;
     width: 100%;
     left: 10%;
     justify-content: center;
@@ -531,6 +530,7 @@ header {
 
 .products-list{
     overflow: hidden;
+    height: 420px;
 }
 
 /***************************** 

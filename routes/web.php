@@ -87,4 +87,7 @@ Route::get('/processing', function(){
 });
 
 Route::get('/stocks', [StockController::class, 'update'])->name('stocks');
+
+Route::post('/quantity', [StockController::class, 'quantity'])->name('quantity');
+
 ?>

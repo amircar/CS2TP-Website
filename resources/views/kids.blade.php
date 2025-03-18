@@ -24,7 +24,7 @@
             <h2>FEATURED IN KID'S</h2>
             <ul class="products-list">
                 @foreach ($products4 as $product)
-                    @include('product-card' , ['product' => $product])
+                    @include('single-product' , ['product' => $product])
                 @endforeach
             </ul>
         </section>

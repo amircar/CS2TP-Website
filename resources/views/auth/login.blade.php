@@ -4,12 +4,9 @@
         <meta charset="utf-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         <link rel="stylesheet" href="{{ asset('css/style.css') }}">
-
-                
-        <!-- FIXME js not working on login page -->
         <script type="text/javascript" src="{{ asset('js/main.js') }}"></script>
         <link rel="icon" href="{{ asset('favicon.ico') }}">
-        <title>Log in to your account | Team 47</title>
+        <title>Team 47 Login</title>
     </head>
 
     <body>
@@ -17,7 +14,7 @@
 
         <div id="login-form">
             <h2>LOG IN TO YOUR ACCOUNT</h2>
-            <p>(All fields marked with an asterisk (<span style="color: rgb(128, 0, 0)">*</span>) are required.)</p>
+            <p>(All fields marked with a star<span style="color: rgb(128, 0, 0)">*</span> are required.)</p>
 
             <form method="POST" action="{{ route('login') }}">
                 @csrf
@@ -55,10 +52,8 @@
 
                 <button type="submit" class="btn btn-primary">{{ __('Sign In') }}</button>
                 @if (Route::has('password.request'))
-                    <!-- TODO rename forgot-password-link -->
-                    <a class="forgot-link" href="{{ route('password.request') }}">{{ __('Forgot Your Password?') }}</a>
+                    <a class="login-small-link" href="{{ route('password.request') }}">{{ __('Forgot Your Password?') }}</a>
                 @endif
-            </form>
         </div>
 
         <div id="registration-prompt">

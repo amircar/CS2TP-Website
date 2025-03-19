@@ -13,7 +13,7 @@
         @include('header')
 
         <div id="login-form">
-            <h2>ACCESS THE ADMIN ACCOUNT LOGIN</h2>
+            <h2>ACCESS ADMIN ACCOUNT REGISTERING</h2>
             <p>(Enter the Admin Password in order to Create an Admin Account)</p>
 
             <form method="POST" action="{{ route('admin-register') }}">

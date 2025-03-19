@@ -42,9 +42,6 @@ html {
 body {
     width: 100%;
     background-color: rgb(213, 213, 213);
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
 }
 a {
     text-decoration: none; /* removes hyperlink underline */
@@ -443,344 +440,9 @@ header {
 }
 
 /***************************** 
-    MAIN IMAGE ON HOMEPAGE
-*****************************/
-#home-main {
-    margin-top: -20px; /* ignores header margin */
-    margin-bottom: 20px;
-    img {
-        background-color: white;
-        min-height: 600px;
-        min-width: 100%;
-        height: 600px;
-        width: 100%;
-        object-fit: cover;
-    }
-    #home-main-button {
-        height: 55px;
-        width: 190px;
-        right: 6%;
-        top: 600px;
-        position: absolute;
-        background-color: rgb(20, 0, 0);
-        color: white;
-        font-family: "Barlow Semi Condensed", Arial, Helvetica, sans-serif;
-        font-size: 18px;
-        letter-spacing: 5px;
-        cursor: pointer;
-        transition: 0.4s;
-        box-shadow: 0 0 6px rgb(128, 128, 128);
-    }
-    #home-main-button:hover {
-        background-color: white;
-        color: rgb(128, 0, 0);
-        scale: calc(195/190) calc(60/55); /* expands height and width by 5px */
-        transition: 0.4s;
-    }
-}
-
-/***************************** 
-    FEATURED PRODUCTS LIST
-*****************************/
-#featured-products-list {
-    margin: 0 3% 0 3%;
-}
-
-/***************************** 
-    PRODUCTS LIST
-*****************************/
-.products-list, .stock-list {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    width: 100%;
-    left: 10%;
-    justify-content: center;
-
-    .single-product {
-        height: 380px;
-        width: 300px;
-        margin: 10px;
-        padding: 10px;
-        background-color: white;
-        font-size: 20px;
-        transition: 0.2s;
-
-        img {
-            background-color: rgb(213, 213, 213);
-            min-height: 60%;
-            min-width: 100%;
-            height: 60%;
-            width: 100%;
-        }
-        .product-title {
-            max-height: 81px; /* 3 lines */
-            font-size: 25px;
-            line-height: 27px;
-            overflow: hidden;
-            text-overflow: ellipsis;
-        }
-    }
-    .single-product:hover {
-        box-shadow: 0 0 6px rgb(128, 128, 128);
-        scale: calc(310/300) calc(390/380); /* expands height and width by 10px */
-        transition: 0.2s;
-    }
-}
-
-.products-list{
-    overflow: hidden;
-    height: 420px;
-}
-
-/***************************** 
-    HOMEPAGE CATEGORIES SECTION
-*****************************/
-#home-categories {
-    margin: 0 3% 0 3%;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    #home-category1, #home-category2, #home-category3 {
-        text-align: center; /* alt text in middle */
-        height: 500px;
-        transition: 0.4s;
-
-        img {
-            background-color: white;
-            min-height: 430px;
-            min-width: 100%;
-            height: 430px;
-            width: 100%;
-            object-fit: cover;
-        }
-        .home-category-button {
-            height: 71px; /* +1px to cover whole div */
-            width: 100%;
-            font-size: 27px;
-            letter-spacing: 5px;
-            background-color: rgb(20, 0, 0);
-            color: white;
-            cursor: pointer;
-            transition: 0.4s;
-        }
-    }
-    #home-category1, #home-category3 {
-        width: calc((100% / 3) - 20px);
-    }
-    #home-category1 {
-        clip-path: polygon(0 0, 100% 0, 82% 100%, 0 100%);
-        transform: translate(10%, 0);
-        .home-category-button {
-            transform: translate(-10%, -6px); /* align button text to center */
-        }
-    }
-    #home-category2 {
-        margin-top: 20px;
-        width: calc((100% / 3) + 40px);
-        clip-path: polygon(18% 0, 82% 0, 100% 100%, 0 100%);
-    }
-    #home-category3 {
-        clip-path: polygon(0 0, 100% 0, 100% 100%, 18% 100%);
-        transform: translate(-10%, 0);
-        .home-category-button {
-            transform: translate(10%, -6px); /* align button text to center */
-        }
-    }
-
-    #home-category1:hover, #home-category2:hover, #home-category3:hover {
-        .home-category-button {
-            background-color: white;
-            color: rgb(128, 0, 0);
-            transition: 0.4s;
-        }
-    }
-    #home-category1:hover {
-        transform: translate(10%, 10px);
-    }
-    #home-category2:hover {
-        transform: translate(0, -10px);
-    }
-    #home-category3:hover {
-        transform: translate(-10%, 10px);
-    }
-}
-
-/***************************** 
-    CATEGORY PAGES
-*****************************/
-#men-main, #women-main, #kids-main, #accessories-main {
-    margin: 0 3% 0 3%;
-    p {
-        font-size: 22px;
-    }
-}
-
-/***************************** 
-    LOG IN/REGISTRATION
-*****************************/
-#registration-wrapper {
-    display: flex;
-    justify-content: center;
-    align-items: center; 
-    height: 100vh; 
-    box-sizing: border-box;
-}
-
-#login-form, #registration-form {
-    background-color: #fff;
-    padding: 40px;
-    max-width: 500px;
-    margin: 0 auto; /* Center the form horizontally */
-    border-radius: 10px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    width: 100%;
-    
-    h2 {
-        margin-bottom: 20px;
-        font-size: 2em;
-        font-weight: bold;
-        text-align: center;
-    }
-
-    .form-group {
-        margin-bottom: 15px;
-    }
-
-    /* puts red star next to label for required fields */
-    label:has(+ input:required)::after {
-        content: " *";
-        color: rgb(128, 0, 0);
-    }
-
-    label {
-        display: block;
-        margin-bottom: 5px;
-        font-weight: bold;
-        text-align: left;
-    }
-    input {
-        width: 100%;
-        padding: 10px;
-        border: 1px solid #ccc;
-        border-radius: 5px;
-        font-size: 1em;
-    }
-
-    .remember-me-container {
-        display: flex; 
-        align-items: center; 
-        gap: 5px; 
-    }
-
-    /* Specific styles for the Remember Me checkbox */
-    #remember-checkbox {
-        appearance: none; /* Allows custom style (black and red) */
-        width: 20px; 
-        height: 20px; 
-        border: 3px solid #ccc;
-        border-radius: 3px;
-        outline: none; 
-        cursor: pointer; 
-    }
-
-    #remember-checkbox:checked {
-        background-color: rgb(20, 0, 0); 
-        border: 3px solid rgb(128, 0, 0); 
-    }
-
-    /* Remember Me container */
-    .remember-me-container {
-        display: flex; 
-        align-items: center; 
-        gap: 10px; 
-    }
-    
-    /* Style the checkbox */
-    .form-check-input {
-        width: auto; 
-        height: auto; 
-        margin: 0; 
-        display: inline-block; 
-    }
-
-    button {
-        width: 104%;
-        padding: 10px;
-        background-color: rgb(20, 0, 0);
-        color: #fff;
-        border: none;
-        border-radius: 5px;
-        font-size: 1rem;
-        cursor: pointer;
-        text-transform: uppercase;
-        font-weight: bold;
-        letter-spacing: 2px;
-    }
-
-    button:hover {
-        background-color: rgb(42, 0, 0);
-    }
-
-    /* Forgot Password link */
-    .login-small-link {
-        text-align: center;
-        margin-top: 10px;
-        display: block;
-    }
-    .login-small-link:hover {
-        text-decoration: underline;
-    }
-
-}
-
-#login-prompt, #registration-prompt {
-    background-color: rgb(249, 249, 249); /* Different background color */
-    padding: 40px;
-    max-width: 500px;
-    margin: 20px auto; 
-    border-radius: 10px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    width: 100%;
-
-    h3 {
-        margin-bottom: 20px;
-        font-size: 1.5em;
-        font-weight: bold;
-        text-align: center;
-    }
-
-    /* List of bullet points */
-    ul {
-        list-style-type: disc;
-        list-style-position: inside;
-        margin-left: 20px; /* Indent the list */
-    }
-
-    button {
-        width: 100%;
-        padding: 10px;
-        background-color: rgb(128, 0, 0); /* Different button color */
-        color: white;
-        border: none;
-        border-radius: 5px;
-        font-size: 1rem;
-        cursor: pointer;
-        text-transform: uppercase;
-        font-weight: bold;
-        margin-top: 20px;
-        letter-spacing: 2px;
-    }
-
-    button:hover {
-        background-color: rgb(100, 0, 0); 
-    }
-}
-
-/***************************** 
     ABOUT US
 *****************************/
-/* this is the box to store the intro text about team 47 */
+/* box to store the intro text about team 47 */
 .aboutus-box{ 
     height: 120px;
     width: 35%;
@@ -805,6 +467,7 @@ header {
         height: 90%;
         width: 31%;
         background-color: white;
+        object-fit: cover;
     } 
 }
 
@@ -827,112 +490,107 @@ header {
     position: absolute;
 }
 
-.basket-container {
-    max-width: 800px;
-    margin: 20px auto;
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+/***************************** 
+    CONTACT US
+*****************************/
+/* the boxes on the contact us page */
+.contactus-box{
+    height: 120px;
+    width: 35%;
+    background-color: white;
+    display: grid;
+    color: black;
+    position: absolute;
+    padding: 10px;
+    margin-left: 3%;
+    border: 3px solid rgb(20, 0, 0);
+    box-shadow: 0 0 9px rgba(0, 0, 0, 0.3); /* adds a slight shadow round the box */
 }
 
-.basket-header {
-    font-size: 24px;
-    margin-bottom: 20px;
-    text-align: center;
+/* styles for the contact form */
+form label {
+    display:inline-block;
+    margin-bottom: 5px;
 }
 
-.basket-item {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px;
-    border-bottom: 1px solid #e0e0e0;
+form input[type="text"], form input[type="tel"], form input[type="email"], form select, form textarea {
+    width: 100%;
+    height: 40px;
+    padding: 8px;
+    margin-bottom: 5px;
+    border: 1.5px solid black;
+    border-radius: 12px;
+    box-sizing: border-box; 
+    background-color: rgb(225, 225, 225); /* colour for the form boxes */
+    
 }
 
-.item-details {
-    display: flex;
-    align-items: center;
-}
-
-.item-image {
-    width: 80px; 
-    height: auto;
-    margin-right: 15px;
-}
-
-.item-info {
-    margin-left: 10px;
-}
-
-.item-price {
-    font-weight: bold;
-}
-
-.item-actions {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end; 
-}
-
-.button-group {
-    display: flex;
-    gap: 10px;
-}
-
-.btn {
-    text-decoration: none;
-    padding: 10px 15px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.btn-link {
-    background-color: red;
-    color: white; 
-    transition: background-color 0.3s ease;
-}
-
-.btn-link:hover {
-    background-color: darkred;
-}
-
-.total-container {
-    margin-top: 20px;
-    font-size: 18px;
-    text-align: right; 
-}
-
-/* checkout button */
-.btn-primary {
-    background-color: #007bff;
+/* submit button */
+form input[type="submit"] {
+    background-color: black;
     color: white;
-    padding: 10px 20px;
     border: none;
-    border-radius: 5px;
+    padding: 10px 20px;
+    border-radius: 4px;
     cursor: pointer;
 }
 
-.processing-container {
-    max-width: 800px;
-    margin: 20px auto;
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+form input[type="submit"]:hover {
+    color: white;
+    background-color: rgb(128, 0, 0);
 }
 
-.processing-header {
-    font-size: 24px;
-    margin-bottom: 20px;
+/* section container used within the pages. 
+used to either store boxes and images or create a bit of space. */
+#section {
+    background-color: rgb(213, 213, 213);
+    height: 600px;
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    float:left;
+    justify-content: center;
+
+    img {
+        object-fit: cover;
+    }
+ }
+
+/* this is to store the text above the contact form.  */
+ .titlebox{
+    width: 97%;
+    height: 90px;
+    background-color: white;
+    padding: 10px;
+    justify-content: center;
+ }
+
+/* this allows for the FAQ box to have links and will underline the title when mouse is hovered. */
+ .contactus-box ul {
+    list-style: none;
+    padding: 0;
     text-align: center;
 }
 
-.processing-item {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px;
-    border-bottom: 1px solid #e0e0e0;
+.contactus-box ul li {
+    margin-bottom: 5px;
+}
+
+.contactus-box ul li a {
+    color: black;
+    text-decoration: none;
+    font-size: 20px;
+    text-decoration: underline;
+}
+
+.contactus-box ul li a:hover {
+    color: rgb(128, 0, 0);
+    text-decoration: underline;
+}
+
+/* puts red star next to label for required fields */
+label:has(+ input:required)::after {
+    content: " *";
+    color: rgb(128, 0, 0);
 }

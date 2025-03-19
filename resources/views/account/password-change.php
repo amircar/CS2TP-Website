@@ -909,12 +909,82 @@ header {
 
 /* checkout button */
 .btn-primary {
-    background-color: #007bff;
+    background-color:rgb(0, 117, 241);
     color: white;
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+}
+/***************************** 
+    FOOTER
+*****************************/
+/* footer uses brighter version of main red for better visibility*/
+footer {
+    margin-top: 40px;
+    width: 100%;
+    background-color: rgb(20, 0, 0);
+    color: white;
+}
+
+#footer-style {
+    display: flex;
+    justify-content: space-between;
+    padding: 40px 50px;
+    flex-wrap: wrap;
+
+    a {
+        color: white;
+        font-size: 14px;
+    }
+    a:hover {
+        text-decoration: underline;
+    }
+    
+    h4{
+        font-size: 1.1em;
+    }
+}
+
+#footer-space{
+    background-color: rgb(20, 0, 0);
+    width: 10%;
+}
+
+.footer-section {
+    flex: 1 1 200px; /* Flexibility of footer */
+    margin: 10px;
+    h2, h3 {
+        margin-bottom: 10px;
+        font-size: 18px;
+        color: rgb(150, 0, 0);
+    }
+}
+
+.footer-section ul li {
+    margin-bottom: 5px;
+}
+
+.footer-button {
+    background-color: rgb(150, 0, 0);
+    color: white;
+    border: none;
+    padding: 10px 40px;
+    margin: 10px 0;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.footer-button:hover {
+    background-color: white;
+    color: rgb(150, 0, 0);
+}
+
+#line {
+    margin-bottom: 20px;
+    width: 100%;
+    height: 2px;
+    background-color: rgb(150, 0, 0);
 }
 
 
@@ -930,7 +1000,164 @@ header {
 
 
 
+.accountbox{
+    background-color: white;
+    height: 700px;
+    width: 82%;
+    margin: 10%;
+    position: relative;
+    box-shadow: 0 0 9px rgba(0, 0, 0, 0.3);
+}
+.accounttitle{
+    background-color: rgb(255, 255, 255);
+    height: 12%;
+    width: 90%;
+    margin: 5%;
+    position: absolute;
+    border-bottom: 4px solid black;
+}
+.logout-btn{
+    height: 60%;
+    width: 20%;
+    position: absolute;
+    top: 10%;
+    left: 80%;
+    border: 2px solid black;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(135deg, #8B0000, #a10000); 
+    border: none;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 40px;
+    cursor: pointer;
+    box-shadow: 0px 4px 6px rgba(0.2, 0.2, 0.2, 0.2);
+    transition: 0.3s;
+}
+.logout-btn:hover {
+            background: linear-gradient(135deg,rgb(225, 60, 60),rgb(219, 1, 1));
+            color:rgb(148, 0, 0) ;
+        }
 
+        .logout-btn:hover .icon-container {
+            background:rgb(183, 1, 1) ; 
+        }
+
+.icon-container {
+    width: 25%;
+    height: 90%;
+    background-color: #600000; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    margin-right: 12px;
+        }
+
+.icon {
+    font-size: 20px;
+    color: white;
+ }
+
+.seperating-box{
+    width: 100%;
+    height: 80%;
+    background-color:rgb(255, 255, 255);
+    margin-top: 20%;
+    position: absolute;
+    
+ }
+
+ .sidebar {
+            width: 25%;
+            height: 100%;
+        }
+
+        .sidebar button {
+            width: 100%;
+            padding: 25px;
+            text-align: left;
+            background-color: #ccc;
+            border: 1px solid white;
+            font-size: 20px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            font-weight: bold;
+        }
+        .sidebar button:hover {
+            background-color: rgb(147, 147, 147);
+            color:rgb(148, 0, 0) ;
+            font-weight: bold;
+        }
+        
+         .sidebar .active {
+            background-color: rgb(130, 0, 0);
+            color: white;
+            font-weight: bold;
+            position: relative;
+            pointer-events: none;
+        }
+
+        .sidebar .active::after {
+            content: "";
+            position: absolute;
+            right: 0;
+            top: 50%;
+        }
+
+
+.sidebar-triangle{
+    position:absolute;
+    top:0; 
+    left:24.9%;
+    border-top: 37.5px solid transparent;
+    border-bottom:37px solid transparent;
+    border-left: 40px solid rgb(130, 0, 0); /* Adjust the color and size as needed */
+}
+.account-info-box{
+    padding: 1.5%;
+    width: 27%;
+    height: 17%;
+    background-color:rgb(185, 185, 185);
+    position:absolute;
+    padding-top:15px;
+    border: 1.5px solid rgb(130, 0, 0);
+}
+.info-box-title{
+    width: 100%;
+    height: 40%;
+    background-color: rgb(185, 185, 185);
+    padding-top:10px;
+    
+}
+.info-box-input{
+    width: 100%;
+    height: 40%;
+    background-color: rgb(234, 234, 234);
+    border: 2px solid rgb(130, 0, 0);
+    border-radius: 15px;
+    color: black;
+}
+.save-btn{
+    width: 20%;
+    height: 10%;
+    background-color: rgb(0, 0, 0);
+    border: 3px solid rgb(130, 0, 0);
+    border-radius: 15px;
+    color: rgb(255, 255, 255);
+    position:absolute;
+    font-size: 20px; 
+    text-align: center;
+    font-weight: bold;
+}
+.save-btn:hover{
+    background-color: rgb(130, 0, 0);
+    color: rgb(255, 255, 255);
+    border: 2px solid rgb(0, 0, 0);
+    
+}
 
 </style>
 <header>
@@ -1011,12 +1238,110 @@ header {
 
 
 <main id="aboutus-box">
-<div id="section" style="justify-content: center; height:300px; width: 300px; background-color: white; box-shadow: 0 0 9px rgba(0, 0, 0, 0.3); margin-top: -20px;"> 
+<div class="accountbox">
+    <div class="accounttitle">
+        <h2 style="font-size: 400%; justify-content: center;">Account Details</h2>
+        <button class="logout-btn" href="{{ route('index') }} ">
+            <div class="icon-container">
+            &#x21B6; <!-- Logout symbol (↶) -->
+            </div>
+            LOGOUT
+        </button>
+    </div>
+    <div class="seperating-box">
+        <div class="sidebar">
+            <button href="{{ route('account-details') }}">Personal Details</button>
+            <button class="active" href="{{ route('password-change') }}">Password Change</button>
+            <button href="{{ route('order-history') }}">Order History</button>
+            <button href="{{ route('shipping-info') }}">Shipping Information</button>
+            <button href="{{ route('payment-info') }}">Payment Information</button>
+            <button href="{{ route('payment-info') }}">Settings</button>
+        </div>
+        <div class="sidebar-triangle" style="top:13.4%;"></div>
+        <div class="account-info-box" style="top:0; left:45%; height: 20%; width: 35%;">
+            <div class="info-box-title"><h2 style="font-size: 17px;">Current Password</h2></div>
+            <div class="info-box-input"></div></div>
+
+        <div class="account-info-box" style="top:30%; left:45%; height: 20%; width: 35%;">
+            <div class="info-box-title"><h2 style="font-size: 17px;">New Password</h2></div>
+            <div class="info-box-input"></div></div>
+
+            <div class="account-info-box" style="top:60%; left:45%; height: 20%; width: 35%;">
+            <div class="info-box-title"><h2 style="font-size: 17px;">Confirm Password</h2></div>
+            <div class="info-box-input"></div></div>
+
+        <button class="save-btn" style="top:85%; left:23%;">SAVE</button>
+
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+    
 </div>
-<div class="content-separate"><div class="content-separate-box"></div></div>
+
 </main>
 
+<footer>
+    <div id="footer-style">
 
+        <!-- Sign Up / Login Section -->    
+        @guest
+            <div class="footer-section">  
+                <h3>TEAM 47</h3>
+                <p>Sign up or log in so that you can make purchases and keep up to date with the latest offers.</p>
+                <button class="footer-button">Log in</button>
+                <button class="footer-button">Sign Up</button>
+            </div>
+            <div id="footer-space"></div>
+        @endguest
+
+
+        <div class="footer-section">
+            <h3>CUSTOMER SERVICE</h3>
+            <ul>
+                <li><a href="{{ route('about-us') }}">About Us</a></li>
+
+                
+                <li><a href="{{route('contact-us')}}">Contact Us</a></li>
+
+                <li><a href="{{ route('FAQ') }}">FAQs</a></li>
+                <li><a href="">Terms and Conditions</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-section">
+            <h3>ACCOUNT</h3>
+            <ul>
+                <li><a href="">My Account</a></li>
+                <li><a href="">Wishlist</a></li>
+                <li><a href="">Delivery</a></li>
+                <li><a href="">Shipping Information</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-section">
+            <h3>FOLLOW US</h3>
+            <ul>
+                <li><a href="https://www.facebook.com">Facebook</a></li>
+                <li><a href="https://www.instagram.com">Instagram</a></li>
+                <li><a href="https://www.twitter.com">Twitter</a></li>
+                <li><a href="https://www.youtube.com">YouTube</a></li>
+            </ul>
+        </div>
+
+        <div id="line"></div> <!-- line for decoration -->
+        <h4><a href="{{ route('home') }}" title="Home">2024 Team 47</a></h4>
+    </div>
+    
+</footer>
 
 </body>
 </html>

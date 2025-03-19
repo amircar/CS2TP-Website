@@ -72,11 +72,84 @@
                 @endauth
         </main>
 
-        <!-- Suggested Items / Item carousel -->
-        <section id="suggestedChoices">
+        <section id="reviewsSection">
+        <h3>Customer Reviews</h3>
+        <div id="reviewsList">
+            @foreach($product->reviews as $review)
+            <div class="review">
+                <strong>{{ $review->user->username }}</strong>
+                <div class="rating">
+                    @for($i = 1; $i <= 5; $i++)
+                        @if($i <=$review->rating)
+                        <span class="star filled">&#9733;</span>
+                        @else
+                        <span class="star">&#9733;</span>
+                        @endif
+                        @endfor
+                </div>
+                <p>{{ $review->review }}</p>
+                <small>Posted on {{ $review->created_at->format('F j, Y') }}</small>
+                <section id="suggestedChoices">
             <div style="padding-left: 5%; font-size: 250%;">
                 You might also like...
+            </div>    
             </div>
+            @endforeach
+        </div>
+
+        @auth
+        <form id="reviewForm" action="{{ route('reviews.store') }}" method="POST">
+    @csrf
+    <input type="hidden" name="product_id" value="{{ $product->id }}">
+    <div class="form-group">
+        <label for="rating">Rating</label>
+        <select name="rating" id="rating" required>
+            <option value="1">1 Star</option>
+            <option value="2">2 Stars</option>
+            <option value="3">3 Stars</option>
+            <option value="4">4 Stars</option>
+            <option value="5">5 Stars</option>
+        </select>
+    </div>
+    <div class="form-group">
+        <label for="review">Review</label>
+        <textarea name="review" id="review" placeholder="Write your review..." required></textarea>
+    </div>
+    <button type="submit">Submit Review</button>
+</form>
+        @else
+        <p><a href="{{ route('login') }}">Login</a> to post a review.</p>
+        @endauth
+    </section>
+
+
+
+
+    <!-- Suggested Items / Item carousel -->
+    <section id="suggestedChoices">
+        <div style="padding-left: 5%; font-size: 250%;">
+            You might also like...
+        </div>
+
+        <div style="height: 1px; background-color: black; margin-left: 5%; margin-right: 50%;"></div>
+        <div id="carouselContainer" style="max-width: 90%;">
+            <button class="carousel-button prev" onclick="moveCarousel(-1)">&#10094;</button>
+            <div id="carousel">
+                @foreach ($products as $product)
+                @foreach ($product->product_images as $image)
+                <div class="carousel-item">
+                    @if ($image->is_primary)
+                    <img src={{asset($image->image_url)}} alt="suggested-product">
+                    @endif
+                    @endforeach
+                @endforeach
+            </div>
+
+            <button class="carousel-button next" onclick="moveCarousel(1)">&#10095;</button>
+        </div>
+    </section>
+        <!-- Suggested Items / Item carousel -->
+        
 
             <div style="height: 1px; background-color: black; margin-left: 5%; margin-right: 50%;"></div>
             <div id="carouselContainer" style="max-width: 90%;">

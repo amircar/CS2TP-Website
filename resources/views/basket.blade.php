@@ -13,11 +13,7 @@
 <body>
     @include('header')
 
-    @if(session('message'))
-        <div class="alert alert-danger">
-            {{ session('message') }}
-        </div>
-    @endif
+    
 
     <main id="basket-main">
         <div class="basket-container">
@@ -141,4 +137,16 @@
 
     @include('footer')
 </body>
+
+@if(session('message'))
+        <div class="alert alert-danger">
+            <script>
+                window.onload = function () {
+                alert('{{ session('message') }}')
+                    
+                }
+            </script>
+        </div>
+
+    @endif
 </html>

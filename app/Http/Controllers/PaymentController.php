@@ -24,7 +24,7 @@ class PaymentController extends Controller
 
         foreach($basket->stocks as $stock){
             if($stock->pivot->quantity > $stock->quantity){ //If there is not enough of the item in stock redirect back to basket page with message saying item does not have enough in stock
-                return redirect()->back()->with('message', $stock->product->name.' only has '.$stock->pivot->quantity.' in stock');
+                return redirect()->back()->with('message', $stock->product->name.' only has '.$stock->quantity.' in stock');
             }
         }
 

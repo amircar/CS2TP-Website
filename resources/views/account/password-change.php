@@ -1158,6 +1158,21 @@ footer {
     border: 2px solid rgb(0, 0, 0);
     
 }
+.password-box{
+    padding: 1.5%;
+    position: absolute;
+    top:0%;
+    left:32%;
+    width: 60%;
+    height: 60%;
+    background-color:rgb(234, 234, 234);
+    padding-top:15px;
+    border: 1.5px solid rgb(130, 0, 0);
+    align-items: center;
+}
+.textbox-password{
+    
+}
 
 </style>
 <header>
@@ -1258,7 +1273,9 @@ footer {
             <button href="{{ route('payment-info') }}">Settings</button>
         </div>
         <div class="sidebar-triangle" style="top:13.4%;"></div>
-        <div class="account-info-box" style="top:0; left:45%; height: 20%; width: 35%;">
+
+        <div class="password-box"></div>
+        <!-- <div class="account-info-box" style="top:0; left:45%; height: 20%; width: 35%;">
             <div class="info-box-title"><h2 style="font-size: 17px;">Current Password</h2></div>
             <div class="info-box-input"></div></div>
 
@@ -1268,9 +1285,9 @@ footer {
 
             <div class="account-info-box" style="top:60%; left:45%; height: 20%; width: 35%;">
             <div class="info-box-title"><h2 style="font-size: 17px;">Confirm Password</h2></div>
-            <div class="info-box-input"></div></div>
+            <div class="info-box-input"></div></div>-->
 
-        <button class="save-btn" style="top:85%; left:23%;">SAVE</button>
+        <button class="save-btn" style="top:73%; left:73%;">SAVE</button>
 
 
     </div>

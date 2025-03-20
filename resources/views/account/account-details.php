@@ -1274,7 +1274,7 @@ footer {
             <div class="info-box-title"><h2 style="font-size: 17px;">Email Address</h2></div>
             <div class="info-box-input"></div></div>
         
-        <button class="save-btn" style="top:28%; left:73%;">SAVE</button>
+        <button class="save-btn" style="top:68%; left:73%;">SAVE</button>
 
     </div>
 

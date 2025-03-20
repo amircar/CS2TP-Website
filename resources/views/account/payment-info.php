@@ -1133,12 +1133,15 @@ footer {
     
 }
 .info-box-input{
-    width: 100%;
+    width: 95%;
     height: 40%;
+    position:absolute;
     background-color: rgb(234, 234, 234);
     border: 2px solid rgb(130, 0, 0);
     border-radius: 15px;
     color: black;
+    text-align: center;
+    align-items: center;
 }
 .save-btn{
     width: 20%;
@@ -1160,12 +1163,47 @@ footer {
 }
 .paymentcard{
     padding: 1.5%;
-    width: 5%;
-    height: 5%;
+    width: 9%;
+    height: 9%;
     background-color:rgb(185, 185, 185);
     position:absolute;
     padding-top:15px;
     border: 1.5px solid rgb(130, 0, 0);
+}
+
+.paymentinfo-box{
+    padding: 1.5%;
+    position: absolute;
+    width: 50%;
+    height: 40%;
+    background-color:rgb(234, 234, 234);
+    padding-top:15px;
+    border: 1.5px solid rgb(130, 0, 0);
+    align-items: center;
+}
+
+.paymentinfo-box2{
+    padding: 1.5%;
+    width: 90%;
+    height: 70%;
+    background-color:rgb(234, 234, 234);
+    position:absolute;
+    padding-top:15px;
+}
+
+.paymentinfo-title{
+    width: 18%;
+    height: 9%;
+    background-color:rgb(234, 234, 234);
+    color: rgb(130, 0, 0);
+    position:absolute;
+}
+.paymentinfo-title2{
+    width: 50%;
+    height: 20%;
+    font-size: 35px;
+    color: rgb(130, 0, 0);
+    position:absolute;
 }
 
 
@@ -1268,10 +1306,25 @@ footer {
             <button href="{{ route('payment-info') }}">Settings</button>
         </div>
         <div class="sidebar-triangle" style="top:53%;"></div>
-        <div class="paymentcard" style="top:0; left:31%;"></div>
+        <div class="paymentcard" style="top:0; left:35%;"></div>
+        <div class="paymentcard" style="top:0; left:50%;"></div>
+        <div class="paymentinfo-box" style="top:20%; left:35%;">
+            <div class="paymentinfo-title2" style="top:2%; left:30%;">Card Details</div>
+            <div class="paymentinfo-box2" style="top:20%; left:4%;">
+                <div class="info-box-input" style="top: 5%; left: 2%;"></div>
+                <div class="paymentinfo-title" style="top:3%; left:10%; width:20%;">Card Number</div>
 
+                <div class="info-box-input" style="top: 54%; left: 2%; width:20%;"></div>
+                <div class="paymentinfo-title" style="top:50%; left:8%; width: 6%;">MM</div>
 
-        <button class="save-btn" style="top:76%; left:73%;">SAVE</button>
+                <div class="info-box-input" style="width:20%; top:54%; left:30%;"></div>
+                <div class="paymentinfo-title" style="top:50%; left:36%; width: 4%;">YY</div>
+
+                <div class="info-box-input" style="width:40%; top:54%; left:57%;"></div>
+                <div class="paymentinfo-title" style="top:50%; left:64%; width: 7%;">CVV</div>
+            </div>
+        </div>
+        <button class="save-btn" style="top:70%; left:73%;">SAVE</button>
 
 
     </div>

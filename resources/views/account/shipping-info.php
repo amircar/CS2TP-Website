@@ -4,7 +4,7 @@
         <meta charset="utf-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         <link rel="stylesheet" href="css/style.css">
-        <link rel="stylesheet" href="css/accounts-styles.css">
+        <link rel="stylesheet" href="css/accounts-styles.css"><!-- accounts page styling -->
         <link rel="icon" href="{{ asset('favicon.ico') }}">
         <title>Account</title>
     </head>
@@ -23,7 +23,7 @@
         </button>
     </div>
     <div class="seperating-box">
-        <div class="sidebar">
+        <div class="sidebar"><!-- sidebar -->
             <button href="{{ route('account-details') }}">Personal Details</button>
             <button href="{{ route('password-change') }}">Password Change</button>
             <button href="{{ route('order-history') }}">Order History</button>
@@ -32,6 +32,8 @@
             <button href="{{ route('payment-info') }}">Settings</button>
         </div>
         <div class="sidebar-triangle" style="top:39.8%;"></div>
+
+        <!-- Address Line 1 -->
         <div class="account-info-box" style="top:0; left:31%;">
             <div class="info-box-title"><h2 style="font-size: 17px;">Address Line 1</h2></div>
             <form>
@@ -39,6 +41,7 @@
             </form>
         </div>
 
+        <!-- address line 2 -->
         <div class="account-info-box" style="top:28%; left:31%;">
             <div class="info-box-title"><h2 style="font-size: 17px;">Address Line 2</h2></div>
             <form>
@@ -46,6 +49,7 @@
             </form>
         </div>
 
+        <!-- town/city -->
         <div class="account-info-box" style="top:56%; left:31%;">
             <div class="info-box-title"><h2 style="font-size: 17px;">Town/City</h2></div>
             <form>
@@ -53,6 +57,7 @@
             </form>
         </div>
 
+        <!-- postcode -->
         <div class="account-info-box" style="top:0; left:68%;">
             <div class="info-box-title"><h2 style="font-size: 17px;">Postcode</h2></div>
             <form>
@@ -60,6 +65,7 @@
             </form>
         </div>
 
+        <!-- country -->
         <div class="account-info-box" style="top:28%; left:68%;">
             <div class="info-box-title"><h2 style="font-size: 17px;">Country</h2></div>
             <form>
@@ -67,6 +73,7 @@
             </form>
         </div>
 
+        <!-- save button -->
             <button class="save-btn" style="top:75%; left:73%;">SAVE</button>
 
 

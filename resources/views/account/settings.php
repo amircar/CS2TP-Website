@@ -4,7 +4,7 @@
         <meta charset="utf-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         <link rel="stylesheet" href="css/style.css">
-        <link rel="stylesheet" href="css/accounts-styles.css">
+        <link rel="stylesheet" href="css/accounts-styles.css"><!-- Accounts page styling -->
         <link rel="icon" href="{{ asset('favicon.ico') }}">
         <title>Account</title>
     </head>
@@ -23,7 +23,7 @@
         </button>
     </div>
     <div class="seperating-box">
-        <div class="sidebar">
+        <div class="sidebar"> <!-- sidebar -->
             <button href="{{ route('account-details') }}">Personal Details</button>
             <button href="{{ route('password-change') }}">Password Change</button>
             <button href="{{ route('order-history') }}">Order History</button>
@@ -32,14 +32,18 @@
             <button class="active">Settings</button>
         </div>
         <div class="sidebar-triangle" style="top:66.05%;"></div>
+
+        <!-- Visual Accessibility -->
         <div class="account-info-box" style="top:0; left:31%;">
             <div class="info-box-title"><h2 style="font-size: 17px; margin-bottom:80px;">Visual Accessibility</h2></div>
             <div class="info-box-input" style="text-align: center; padding: 10px; width:90%; height:20%;">Text Enlargement <input type="checkbox"></div></div>
 
+            <!-- Delete Account -->
         <div class="account-info-box" style="top:28%; left:31%;">
             <div class="info-box-title"><h2 style="font-size: 17px;">Delete Account</h2></div>
             <button class="info-box-input2">Delete</button></div>
 
+            <!-- save button -->
         <button class="save-btn" style="top:75%; left:73%;">SAVE</button>
 
     </div>

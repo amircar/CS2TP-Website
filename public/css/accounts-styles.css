@@ -3,6 +3,8 @@
 *****************************/
 /* Accounts Page Styles */
 
+
+/* This is the actual white box that fits all the content*/
 .accountbox{
     background-color: white;
     height: 700px;
@@ -11,6 +13,8 @@
     position: relative;
     box-shadow: 0 0 9px rgba(0, 0, 0, 0.3);
 }
+
+/*The 'Account Details' Title */
 .accounttitle{
     background-color: rgb(255, 255, 255);
     height: 12%;
@@ -19,6 +23,10 @@
     position: absolute;
     border-bottom: 4px solid black;
 }
+
+/***************************** 
+    LOGOUT BUTTON
+*****************************/
 .logout-btn{
     height: 60%;
     width: 20%;
@@ -63,6 +71,7 @@
     color: white;
  }
 
+ /*Box to seperate the title from the other content*/
 .seperating-box{
     width: 100%;
     height: 80%;
@@ -71,7 +80,9 @@
     position: absolute;
     
  }
-
+/***************************** 
+    SIDE BAR
+*****************************/
  .sidebar {
             width: 25%;
             height: 100%;
@@ -119,6 +130,11 @@
     border-bottom:37px solid transparent;
     border-left: 40px solid rgb(130, 0, 0); 
 }
+
+/***************************** 
+    INFORMATION BOXES
+*****************************/
+/*This is dark grey main boxes that all the information goes in.*/
 .account-info-box{
     padding: 1.5%;
     width: 27%;
@@ -135,6 +151,7 @@
     padding-top:10px;
     
 }
+/*This is the input box where either the user can enter info or its already sved in this box.*/
 .info-box-input{
     width: 95%;
     height: 40%;
@@ -146,6 +163,7 @@
     text-align: center;
     align-items: center;
 }
+/*Save Button*/
 .save-btn{
     width: 20%;
     height: 10%;
@@ -164,6 +182,10 @@
     border: 2px solid rgb(0, 0, 0);
     
 }
+/***************************** 
+    Payment Info
+*****************************/
+/*The small mini boxes with image off paypal*/
 .paymentcard1{
     width: 12.5%;
     height: 12.5%;
@@ -174,6 +196,7 @@
     background-size: cover;
     cursor: pointer;
 }
+/* The add card box*/
 .paymentcard2{
     width: 12.5%;
     height: 12.5%;
@@ -187,7 +210,7 @@
     background-color: rgb(130, 0, 0); 
     background-blend-mode: multiply;
 }
-
+/*Big main payment box */
 .paymentinfo-box{
     padding: 1.5%;
     position: absolute;
@@ -199,7 +222,7 @@
     align-items: center;
     box-shadow: 0px 4px 6px rgba(0.2, 0.2, 0.2, 0.2);
 }
-
+/*box that goes inside of payment info box and holds crd number, MM, YY, CVV */
 .paymentinfo-box2{
     padding: 1.5%;
     width: 90%;
@@ -208,7 +231,7 @@
     position:absolute;
     padding-top:15px;
 }
-
+/*Just the titles for the card number, MM, YY, CVV */
 .paymentinfo-title{
     width: 18%;
     height: 9%;
@@ -216,6 +239,7 @@
     color: rgb(130, 0, 0);
     position:absolute;
 }
+/*Tite that says Card Details */
 .paymentinfo-title2{
     width: 50%;
     height: 20%;
@@ -223,6 +247,10 @@
     color: rgb(0, 0, 0);
     position:absolute;
 }
+/***************************** 
+    Password Change
+*****************************/
+/*he big box or the password change. everything goes inside*/
 .password-box{
     padding: 1.5%;
     position: absolute;
@@ -241,11 +269,16 @@
     color: rgb(130, 0, 0);
     position:absolute;
 }
+/*the red text in the password box*/
 .red-text {
             color: rgb(130, 0, 0);
             font-weight:bold;
         }
 
+/***************************** 
+    SETTINGS
+*****************************/
+/*The delete button for delete account*/
 .info-box-input2{
     width: 100%;
     height: 40%;
@@ -261,6 +294,10 @@
         color:white; 
     }
 
+/***************************** 
+    INPUT BOXES
+*****************************/
+/*All the boxes users can input information.*/
 input[type="text2"] {
     padding: 10px;
     font-size: 16px;

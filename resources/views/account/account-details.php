@@ -4,7 +4,7 @@
         <meta charset="utf-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         <link rel="stylesheet" href="css/style.css">
-        <link rel="stylesheet" href="css/accounts-styles.css">
+        <link rel="stylesheet" href="css/accounts-styles.css"> <!-- Accounts page styling -->
         <link rel="icon" href="{{ asset('favicon.ico') }}">
         <title>Account</title>
     </head>
@@ -22,9 +22,9 @@
             LOGOUT
         </button>
     </div>
-    <div class="seperating-box">
+    <div class="seperating-box"> <!-- Sidebar -->
         <div class="sidebar">
-            <button class="active" href="{{ route('account-details') }}">Personal Details</button>
+            <button class="active" href="{{ route('account-details') }}">Personal Details</button> <!-- Personal details page -->
             <button href="{{ route('password-change') }}">Password Change</button>
             <button href="{{ route('order-history') }}">Order History</button>
             <button href="{{ route('shipping-info') }}">Shipping Information</button>
@@ -32,6 +32,8 @@
             <button href="{{ route('payment-info') }}">Settings</button>
         </div>
         <div class="sidebar-triangle"></div>
+
+        <!-- Username -->
         <div class="account-info-box" style="top:0; left:31%;">
             <div class="info-box-title"><h2 style="font-size: 17px;">Username</h2></div>
             <form>
@@ -39,6 +41,7 @@
             </form>
         </div>
 
+        <!-- First Name -->
         <div class="account-info-box" style="top:28%; left:31%;">
             <div class="info-box-title"><h2 style="font-size: 17px;">First Name</h2></div>
             <form>
@@ -46,6 +49,7 @@
             </form>
         </div>
 
+        <!-- Last Name -->
         <div class="account-info-box" style="top:56%; left:31%;">
             <div class="info-box-title"><h2 style="font-size: 17px;">Last Name</h2></div>
             <form>
@@ -53,6 +57,7 @@
             </form>
         </div>
 
+        <!-- Email Address -->
         <div class="account-info-box" style="top:0; left:68%;">
             <div class="info-box-title"><h2 style="font-size: 17px;">Email Address</h2></div>
             <form>
@@ -60,6 +65,7 @@
             </form>
         </div>
         
+        <!-- Save Button -->
             <button class="save-btn" style="top:75%; left:73%;">SAVE</button>
 
     </div>

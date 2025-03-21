@@ -1169,6 +1169,7 @@ footer {
     padding-top:15px;
     border: 1.5px solid rgb(130, 0, 0);
     align-items: center;
+    box-shadow: 0px 4px 6px rgba(0.2, 0.2, 0.2, 0.2);
 }
 .textbox-password{
     font-size:10px;

@@ -1146,7 +1146,7 @@ footer {
     background-color: rgb(0, 0, 0);
     border: 3px solid rgb(130, 0, 0);
     border-radius: 15px;
-    color: rgb(255, 255, 255);
+    color: rgb(185, 185, 185);
     position:absolute;
     font-size: 20px; 
     text-align: center;
@@ -1158,7 +1158,20 @@ footer {
     border: 2px solid rgb(0, 0, 0);
     
 }
-
+.info-box-input2{
+    width: 100%;
+    height: 40%;
+    background-color: rgb(234, 234, 234);
+    border: 2px solid rgb(130, 0, 0);
+    border-radius: 15px;
+    color: black;
+    cursor:pointer;
+    font-size: 17px;
+}
+.info-box-input2:hover{
+    background-color:rgb(130, 0, 0);
+    color:white; 
+}
 
 </style>
 <header>
@@ -1260,12 +1273,12 @@ footer {
         </div>
         <div class="sidebar-triangle" style="top:66.05%;"></div>
         <div class="account-info-box" style="top:0; left:31%;">
-            <div class="info-box-title"><h2 style="font-size: 17px;">Text Enlargement</h2></div>
-            <div class="info-box-input"></div></div>
+            <div class="info-box-title"><h2 style="font-size: 17px; margin-bottom:80px;">Visual Accessibility</h2></div>
+            <div class="info-box-input" style="text-align: center; padding: 10px; width:90%; height:20%;">Text Enlargement <input type="checkbox"></div></div>
 
         <div class="account-info-box" style="top:28%; left:31%;">
             <div class="info-box-title"><h2 style="font-size: 17px;">Delete Account</h2></div>
-            <div class="info-box-input"></div></div>
+            <button class="info-box-input2">Delete</button></div>
 
         <button class="save-btn" style="top:75%; left:73%;">SAVE</button>
 

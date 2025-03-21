@@ -1146,7 +1146,7 @@ footer {
     background-color: rgb(0, 0, 0);
     border: 3px solid rgb(130, 0, 0);
     border-radius: 15px;
-    color: rgb(255, 255, 255);
+    color: rgb(185, 185, 185);
     position:absolute;
     font-size: 20px; 
     text-align: center;

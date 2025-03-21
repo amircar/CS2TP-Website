@@ -1133,15 +1133,12 @@ footer {
     
 }
 .info-box-input{
-    width: 95%;
+    width: 100%;
     height: 40%;
-    position:absolute;
     background-color: rgb(234, 234, 234);
     border: 2px solid rgb(130, 0, 0);
     border-radius: 15px;
     color: black;
-    text-align: center;
-    align-items: center;
 }
 .save-btn{
     width: 20%;
@@ -1149,7 +1146,7 @@ footer {
     background-color: rgb(0, 0, 0);
     border: 3px solid rgb(130, 0, 0);
     border-radius: 15px;
-    color: rgb(255, 255, 255);
+    color: rgb(185, 185, 185);
     position:absolute;
     font-size: 20px; 
     text-align: center;
@@ -1329,16 +1326,16 @@ footer {
         <div class="paymentinfo-box" style="top:20%; left:35%;">
             <div class="paymentinfo-title2" style="top:2%; left:30%;">Card Details</div>
             <div class="paymentinfo-box2" style="top:20%; left:4%;">
-                <div class="info-box-input" style="top: 5%; left: 2%;"></div>
+                <div class="info-box-input" style="top: 5%; left: -0.5%; position:absolute;"></div>
                 <div class="paymentinfo-title" style="top:3%; left:10%; width:20%;">Card Number</div>
 
-                <div class="info-box-input" style="top: 54%; left: 2%; width:20%;"></div>
+                <div class="info-box-input" style="top: 54%; left: 2%; width:20%; position:absolute;"></div>
                 <div class="paymentinfo-title" style="top:50%; left:8%; width: 6%;">MM</div>
 
-                <div class="info-box-input" style="width:20%; top:54%; left:30%;"></div>
+                <div class="info-box-input" style="width:20%; top:54%; left:30%; position:absolute;"></div>
                 <div class="paymentinfo-title" style="top:50%; left:36%; width: 4%;">YY</div>
 
-                <div class="info-box-input" style="width:40%; top:54%; left:57%;"></div>
+                <div class="info-box-input" style="width:40%; top:54%; left:57%; position:absolute;"></div>
                 <div class="paymentinfo-title" style="top:50%; left:64%; width: 7%;">CVV</div>
             </div>
         </div>

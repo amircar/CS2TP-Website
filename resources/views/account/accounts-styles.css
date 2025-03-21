@@ -221,3 +221,25 @@
     color: rgb(0, 0, 0);
     position:absolute;
 }
+.password-box{
+    padding: 1.5%;
+    position: absolute;
+    top:0%;
+    left:32%;
+    width: 60%;
+    height: 65%;
+    background-color:rgb(185, 185, 185);
+    padding-top:15px;
+    border: 1.5px solid rgb(130, 0, 0);
+    align-items: center;
+}
+.textbox-password{
+    font-size:10px;
+    color: rgb(130, 0, 0);
+    position:absolute;
+}
+.red-text {
+            color: rgb(130, 0, 0);
+            font-weight:bold;
+        }
+

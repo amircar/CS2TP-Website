@@ -1114,7 +1114,7 @@ footer {
     left:24.9%;
     border-top: 37.5px solid transparent;
     border-bottom:37px solid transparent;
-    border-left: 40px solid rgb(130, 0, 0); /* Adjust the color and size as needed */
+    border-left: 40px solid rgb(130, 0, 0); 
 }
 .account-info-box{
     padding: 1.5%;
@@ -1164,15 +1164,21 @@ footer {
     top:0%;
     left:32%;
     width: 60%;
-    height: 60%;
-    background-color:rgb(234, 234, 234);
+    height: 65%;
+    background-color:rgb(185, 185, 185);
     padding-top:15px;
     border: 1.5px solid rgb(130, 0, 0);
     align-items: center;
 }
 .textbox-password{
-    
+    font-size:10px;
+    color: rgb(130, 0, 0);
+    position:absolute;
 }
+.red-text {
+            color: rgb(130, 0, 0);
+            font-weight:bold;
+        }
 
 </style>
 <header>
@@ -1274,20 +1280,18 @@ footer {
         </div>
         <div class="sidebar-triangle" style="top:13.4%;"></div>
 
-        <div class="password-box"></div>
-        <!-- <div class="account-info-box" style="top:0; left:45%; height: 20%; width: 35%;">
-            <div class="info-box-title"><h2 style="font-size: 17px;">Current Password</h2></div>
-            <div class="info-box-input"></div></div>
+        <div class="password-box">
+            <h3 style="font-size: 25px;">Password Change</h3>
+            <h3 style="font-size: 14px; color: rgb(130, 0, 0)">Change Your Password</h3>
+            <h3 style="font-size: 12px; text-align:left;">Current Password<span class="red-text">*</span></h3>
+            <div class="info-box-input" style="height: 10%; margin-bottom:30px;"></div>
+            <h3 style="font-size: 12px; text-align:left;">New Password<span class="red-text">* (Must Have at Least 8 Characters)</span></h3>
+            <div class="info-box-input" style="height: 10%; margin-bottom:30px"></div>
+            <h3 style="font-size: 12px; text-align:left;">Confirm Password<span class="red-text">* (Should Match New Password)</span></h3>
+            <div class="info-box-input" style="height: 10%;"></div>
+        </div>
 
-        <div class="account-info-box" style="top:30%; left:45%; height: 20%; width: 35%;">
-            <div class="info-box-title"><h2 style="font-size: 17px;">New Password</h2></div>
-            <div class="info-box-input"></div></div>
-
-            <div class="account-info-box" style="top:60%; left:45%; height: 20%; width: 35%;">
-            <div class="info-box-title"><h2 style="font-size: 17px;">Confirm Password</h2></div>
-            <div class="info-box-input"></div></div>-->
-
-        <button class="save-btn" style="top:73%; left:73%;">SAVE</button>
+        <button class="save-btn" style="top:75%; left:73%;">SAVE</button>
 
 
     </div>

@@ -1259,17 +1259,16 @@ footer {
             <button href="{{ route('payment-info') }}">Settings</button>
         </div>
         <div class="sidebar-triangle" style="top:26.4%;"></div>
-        <div class="account-info-box" style="top:0; left:45%; height: 20%; width: 35%;">
-            <div class="info-box-title"><h2 style="font-size: 17px;">Current Password</h2></div>
-            <div class="info-box-input"></div></div>
+        <div class="account-info-box" style="top:0; left:30%; height: 85%; width: 65%; overflow-y: auto; overflow-x: hidden;">
+            <h3 style="font-size: 25px;">Previous Orders</h3>
+            <h3 style="font-size: 14px; color: rgb(130, 0, 0)">View Your Past Orders Here</h3>
+            <div class="info-box-input" style="margin-bottom: 15px; height: 23%; width: 98%; padding-top:30px; padding-left:15px;"><p>Order 1</p></div>
+            <div class="info-box-input" style="margin-bottom: 10px; height: 23%; width: 98%; padding-top:30px; padding-left:15px;"><p>Order 2</p></div>
+            <div class="info-box-input" style="margin-bottom: 10px; height: 23%; width: 98%; padding-top:30px; padding-left:15px;"><p>Order 3</p></div>
+            <div class="info-box-input" style="margin-bottom: 10px; height: 23%; width: 98%; padding-top:30px; padding-left:15px;"><p>Order 4</p></div>
+            <div class="info-box-input" style="margin-bottom: 10px; height: 23%; width: 98%; padding-top:30px; padding-left:15px;"><p>Order 5</p></div>
+        </div>
 
-        <div class="account-info-box" style="top:30%; left:45%; height: 20%; width: 35%;">
-            <div class="info-box-title"><h2 style="font-size: 17px;">New Password</h2></div>
-            <div class="info-box-input"></div></div>
-
-            <div class="account-info-box" style="top:60%; left:45%; height: 20%; width: 35%;">
-            <div class="info-box-title"><h2 style="font-size: 17px;">Confirm Password</h2></div>
-            <div class="info-box-input"></div></div>
 
 
     </div>

@@ -1169,6 +1169,7 @@ footer {
     border: 1.5px solid rgb(130, 0, 0);
     background-image: url("paypal.png");
     background-size: cover;
+    cursor: pointer;
 }
 .paymentcard2{
     width: 12.5%;
@@ -1176,6 +1177,7 @@ footer {
     background-color:rgb(255, 255, 255);
     position:absolute;
     border: 1.5px solid rgb(130, 0, 0);
+    cursor: pointer;
 }
 
 .paymentcard1:hover, .paymentcard2:hover{

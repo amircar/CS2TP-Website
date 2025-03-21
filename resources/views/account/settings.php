@@ -1267,7 +1267,7 @@ footer {
             <div class="info-box-title"><h2 style="font-size: 17px;">Delete Account</h2></div>
             <div class="info-box-input"></div></div>
 
-        <button class="save-btn" style="top:56%; left:73%;">SAVE</button>
+        <button class="save-btn" style="top:75%; left:73%;">SAVE</button>
 
     </div>
 

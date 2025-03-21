@@ -260,7 +260,7 @@
         background-color:rgb(130, 0, 0);
         color:white; 
     }
-    
+
 input[type="text2"] {
     padding: 10px;
     font-size: 16px;
@@ -271,5 +271,4 @@ input[type="text2"] {
     border: 2px solid rgb(130, 0, 0);
     border-radius: 15px;
     color: black;
-    text-align: center;
     }

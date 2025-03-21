@@ -1158,6 +1158,17 @@ footer {
     border: 2px solid rgb(0, 0, 0);
     
 }
+input[type="text2"] {
+    padding: 10px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+    width: 90%;
+    height: 40%;
+    background-color: rgb(234, 234, 234);
+    border: 2px solid rgb(130, 0, 0);
+    border-radius: 15px;
+    color: black;
+    }
 
 </style>
 <header>
@@ -1260,23 +1271,38 @@ footer {
         <div class="sidebar-triangle" style="top:39.8%;"></div>
         <div class="account-info-box" style="top:0; left:31%;">
             <div class="info-box-title"><h2 style="font-size: 17px;">Address Line 1</h2></div>
-            <div class="info-box-input"></div></div>
+            <form>
+                <input type="text2" id="account_address1" name="account_address1" placeholder="Address Line 1">
+            </form>
+        </div>
 
         <div class="account-info-box" style="top:28%; left:31%;">
             <div class="info-box-title"><h2 style="font-size: 17px;">Address Line 2</h2></div>
-            <div class="info-box-input"></div></div>
+            <form>
+                <input type="text2" id="account_address2" name="account_address2" placeholder="Address Line 2">
+            </form>
+        </div>
 
         <div class="account-info-box" style="top:56%; left:31%;">
             <div class="info-box-title"><h2 style="font-size: 17px;">Town/City</h2></div>
-            <div class="info-box-input"></div></div>
+            <form>
+                <input type="text2" id="account_town/city" name="account_town/city" placeholder="Town/City">
+            </form>
+        </div>
 
         <div class="account-info-box" style="top:0; left:68%;">
             <div class="info-box-title"><h2 style="font-size: 17px;">Postcode</h2></div>
-            <div class="info-box-input"></div></div>
+            <form>
+                <input type="text2" id="account_postcode" name="account_postcode" placeholder="Postcode">
+            </form>
+        </div>
 
         <div class="account-info-box" style="top:28%; left:68%;">
             <div class="info-box-title"><h2 style="font-size: 17px;">Country</h2></div>
-            <div class="info-box-input"></div></div>
+            <form>
+                <input type="text2" id="account_country" name="account_country" placeholder="Country">
+            </form>
+        </div>
 
             <button class="save-btn" style="top:75%; left:73%;">SAVE</button>
 

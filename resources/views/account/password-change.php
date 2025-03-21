@@ -1181,6 +1181,18 @@ footer {
             font-weight:bold;
         }
 
+input[type="text2"] {
+    padding: 10px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+    width: 90%;
+    height: 40%;
+    background-color: rgb(234, 234, 234);
+    border: 2px solid rgb(130, 0, 0);
+    border-radius: 15px;
+    color: black;
+}
+
 </style>
 <header>
     <div id="header-wrapper">
@@ -1285,11 +1297,19 @@ footer {
             <h3 style="font-size: 25px;">Password Change</h3>
             <h3 style="font-size: 14px; color: rgb(130, 0, 0)">Change Your Password</h3>
             <h3 style="font-size: 12px; text-align:left;">Current Password<span class="red-text">*</span></h3>
-            <div class="info-box-input" style="height: 10%; margin-bottom:30px;"></div>
+            <form>
+                <input type="text2" style="width:97%; margin-bottom: 30px;" id="account_current_password" name="account_current_password" placeholder="Type Here...">
+            </form>
+
             <h3 style="font-size: 12px; text-align:left;">New Password<span class="red-text">* (Must Have at Least 8 Characters)</span></h3>
-            <div class="info-box-input" style="height: 10%; margin-bottom:30px"></div>
+            <form>
+                <input type="text2" style="width:97%; margin-bottom: 30px;" id="account_new_password" name="account_new_password" placeholder="Type Here...">
+            </form>
+
             <h3 style="font-size: 12px; text-align:left;">Confirm Password<span class="red-text">* (Should Match New Password)</span></h3>
-            <div class="info-box-input" style="height: 10%;"></div>
+            <form>
+                <input type="text2" style="width:97%; margin-bottom: 30px;" id="account_retype_password" name="account_retype_password" placeholder="Type Here...">
+            </form>
         </div>
 
         <button class="save-btn" style="top:75%; left:73%;">SAVE</button>

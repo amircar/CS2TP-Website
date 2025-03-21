@@ -1170,7 +1170,6 @@ input[type="text2"] {
     border: 2px solid rgb(130, 0, 0);
     border-radius: 15px;
     color: black;
-    text-align: center;
     }
 
 </style>
@@ -1274,30 +1273,30 @@ input[type="text2"] {
         <div class="sidebar-triangle"></div>
         <div class="account-info-box" style="top:0; left:31%;">
             <div class="info-box-title"><h2 style="font-size: 17px;">Username</h2></div>
-                <form>
-                    <input type="text2" id="account_username" name="account_username" placeholder="Username">
-                </form>
+            <form>
+                <input type="text2" id="account_username" name="account_username" placeholder="Username">
+            </form>
         </div>
 
         <div class="account-info-box" style="top:28%; left:31%;">
             <div class="info-box-title"><h2 style="font-size: 17px;">First Name</h2></div>
             <form>
-                    <input type="text2" id="account_firstname" name="account_firstname" placeholder="First Name">
-                </form>
+                <input type="text2" id="account_firstname" name="account_firstname" placeholder="First Name">
+            </form>
         </div>
 
         <div class="account-info-box" style="top:56%; left:31%;">
             <div class="info-box-title"><h2 style="font-size: 17px;">Last Name</h2></div>
             <form>
-                    <input type="text2" id="account_lastname" name="account_lastname" placeholder="Last Name">
-                </form>
+                <input type="text2" id="account_lastname" name="account_lastname" placeholder="Last Name">
+            </form>
         </div>
 
         <div class="account-info-box" style="top:0; left:68%;">
             <div class="info-box-title"><h2 style="font-size: 17px;">Email Address</h2></div>
             <form>
-                    <input type="text2" id="account_email" name="account_email" placeholder="Email Address">
-                </form>
+                <input type="text2" id="account_email" name="account_email" placeholder="Email Address">
+            </form>
         </div>
         
             <button class="save-btn" style="top:75%; left:73%;">SAVE</button>

@@ -514,11 +514,12 @@ header {
             width: 100%;
         }
         .product-title {
-            max-height: 81px; /* 3 lines */
+            max-height: 30px; /* 1 line */
             font-size: 25px;
             line-height: 27px;
             overflow: hidden;
             text-overflow: ellipsis;
+            white-space: nowrap;
         }
     }
     .single-product:hover {

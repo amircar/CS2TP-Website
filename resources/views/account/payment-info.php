@@ -1217,6 +1217,17 @@ footer {
     color: rgb(0, 0, 0);
     position:absolute;
 }
+input[type="text2"] {
+    padding: 10px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+    width: 90%;
+    height: 40%;
+    background-color: rgb(234, 234, 234);
+    border: 2px solid rgb(130, 0, 0);
+    border-radius: 15px;
+    color: black;
+    }
 
 
 </style>
@@ -1326,17 +1337,27 @@ footer {
         <div class="paymentinfo-box" style="top:20%; left:35%;">
             <div class="paymentinfo-title2" style="top:2%; left:30%;">Card Details</div>
             <div class="paymentinfo-box2" style="top:20%; left:4%;">
-                <div class="info-box-input" style="top: 5%; left: -0.5%; position:absolute;"></div>
+                <form>
+                    <input type="text2" style="font-size:20px; width: 95%; padding-top: 20px; padding-bottom: 20px;" id="account_cardnumber" name="account_cardnumber" placeholder="**** **** **** 1234">
+                </form>
                 <div class="paymentinfo-title" style="top:3%; left:10%; width:20%;">Card Number</div>
 
-                <div class="info-box-input" style="top: 54%; left: 2%; width:20%; position:absolute;"></div>
-                <div class="paymentinfo-title" style="top:50%; left:8%; width: 6%;">MM</div>
+                <div class="paymentinfo-box2" style="top:45%; left:0%; width: 100%; height:40%; display: flex; gap: 0px;">
+                    <form>
+                        <input type="text2" style="font-size:20px; width: 60%; padding-top: 20px; padding-bottom: 20px;" id="account_cardmonth" name="account_cardmonth" placeholder="05">
+                    </form>
+                    <div class="paymentinfo-title" style="top:8%; left:5%; width: 6%;">MM</div>
 
-                <div class="info-box-input" style="width:20%; top:54%; left:30%; position:absolute;"></div>
-                <div class="paymentinfo-title" style="top:50%; left:36%; width: 4%;">YY</div>
+                    <form>
+                        <input type="text2" style="font-size:20px; width: 60%; padding-top: 20px; padding-bottom: 20px;" id="account_cardyear" name="account_cardyear" placeholder="28">
+                    </form>
+                    <div class="paymentinfo-title" style="top:8%; left:38%; width: 4%;">YY</div>
 
-                <div class="info-box-input" style="width:40%; top:54%; left:57%; position:absolute;"></div>
-                <div class="paymentinfo-title" style="top:50%; left:64%; width: 7%;">CVV</div>
+                    <form>
+                        <input type="text2" style="font-size:20px; width: 78%; padding-top: 20px; padding-bottom: 20px;" id="account_cardCVV" name="account_cardCVV" placeholder="709">
+                    </form>
+                    <div class="paymentinfo-title" style="top:8%; left:70%; width: 7%;">CVV</div>
+                </div>
             </div>
         </div>
         <button class="save-btn" style="top:75%; left:73%;">SAVE</button>

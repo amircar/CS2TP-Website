@@ -1,15 +1,14 @@
 <header>
+    <link rel="stylesheet" type="text/css" href="css/style.css"/>
     <div id="header-wrapper">
         <a id="main-logo" href="{{ route('home') }}" title="Home"><img src={{ asset("images/logo.png") }} alt="team47-logo"></a>
 
         <ul id="header-items">
             <!-- SEARCH BAR -->
             <li>
-                <form action="{{ route('search') }}">
-                    <a class="search-bar">
+                <form action="{{ route('search') }}" class = 'search-form'>
                         <input class="search" name="search" type="text" placeholder="Search...">
                         <button class="search-button">Search</button>
-                    </a>
                 </form>
             </li>
 

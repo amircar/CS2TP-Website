@@ -936,3 +936,36 @@ header {
     padding: 15px;
     border-bottom: 1px solid #e0e0e0;
 }
+
+form input[type="text"].search{
+    width: 75%;
+    height: 30px;
+    padding: 8px;
+    margin-bottom: 5px;
+    border: 1.5px solid black;
+    border-radius: 12px;
+    box-sizing: border-box; 
+    background-color: rgb(225, 225, 225); /* colour for the form boxes */
+    font-size: 14px;
+}
+
+form .search-button{
+    width: 30%;
+    height: 25px;
+    border-radius: 12px;
+    box-sizing: border-box; 
+    background-color: rgb(150, 0, 0); /* colour for the form boxes */
+    font-size: 14px;
+    color: white;
+}
+
+form .search-button:hover{
+    background-color: white; /* colour for the form boxes */
+    color: rgb(150, 0, 0);
+}
+
+.search-form{
+    display:flex;
+    gap: 5px;
+    align-items: center;
+}

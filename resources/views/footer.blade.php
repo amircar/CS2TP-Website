@@ -3,18 +3,19 @@
 <footer>
     <div id="footer-style">
 
-        <!-- Sign Up / Login Section -->    
+        <!-- sign up/login Section -->    
         @guest
             <div class="footer-section">  
                 <h3>TEAM 47</h3>
                 <p>Sign up or log in so that you can make purchases and keep up to date with the latest offers.</p>
-                <a href="{{ route('login') }}"><button class="footer-button">Log in</button></a>
-                <a href="{{ route('register') }}"><button class="footer-button">Sign Up</button></a>
+                <a href="{{ route('login') }}"><button class="footer-button">LOG IN</button></a>
+                <a href="{{ route('register') }}"><button class="footer-button">SIGN UP</button></a>
             </div>
             <div id="footer-space"></div>
         @endguest
 
 
+        <!-- TODO footer links -->
         <div class="footer-section">
             <h3>CUSTOMER SERVICE</h3>
             <ul>

@@ -13,7 +13,7 @@
         @include('header')
 
         <section id="featured-products-list">
-            <h2>Stocks</h2>
+            <h2>Stock</h2>
             <ul class="stock-list">
                 @foreach ($stocks as $stock)
                     

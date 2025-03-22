@@ -6,7 +6,7 @@
         <link rel="stylesheet" href="{{ asset('css/style.css') }}">
         <script defer type="text/javascript" src="{{ asset('js/main.js') }}"></script>
         <link rel="icon" href="{{ asset('favicon.ico') }}">
-        <title>Team 47</title>
+        <title>Team 47 | Shop for Clothing & Accessories </title>
     </head>
 
     <body data-text-size="normal">
@@ -25,14 +25,43 @@
             </a>
         </main>
 
+        <!-- TODO renovate featured products list view -->
+        <!-- TODO add sliding view -->
         <section id="featured-products-list">
             <h2>FEATURED PRODUCTS</h2>
             <ul class="products-list">
                 @foreach ($products as $product)
-                    @include('single-product' , ['product' => $product])
+                    @include('product-card' , ['product' => $product])
                 @endforeach
             </ul>
         </section>
+
+
+        
+        
+
+
+        <!-- TODO EXPERIMENT -->
+        <div class="content-separate"><div class="content-separate-box"></div></div>
+
+        <section class="featured-collection-list">
+            <h2>FEATURED COLLECTION 1</h2>
+            <!-- FIXME temp name -->
+            <div class="cont">
+                <div class="collection-image-container">
+                    <div class="image-cover">
+                        <p>Click to view collection</p>
+                    </div>
+                    <img src="images/wanwan.jpg" alt="collection-1-image">
+                </div>
+                <p>Description paragraph... TEXT textTEXT textTEXT textTEXT textTEXT textTEXT textTEXT textTEXT textTEXT textTEXT textTEXT textTEXT textTEXT textTEXT textTEXT textTEXT textTEXT textTEXT textTEXT textTEXT textTEXT textTEXT textTEXT textTEXT textTEXT textTEXT textTEXT textTEXT textTEXT textTEXT textTEXT textTEXT textTEXT textTEXT textTEXT textTEXT textTEXT textTEXT textTEXT textTEXT textTEXT textTEXT textTEXT textTEXT textTEXT textTEXT textTEXT textTEXT textTEXT textTEXT textTEXT text</p>
+            </div>
+        </section>
+
+
+
+
+
 
         <div class="content-separate"><div class="content-separate-box"></div></div>
 

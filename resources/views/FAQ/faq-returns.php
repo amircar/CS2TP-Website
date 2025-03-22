@@ -1178,8 +1178,8 @@ header {
                         <h2 style="text-align: center;">FAQs</h2>
                         <p style="text-align: center; font-size: 20px;">Not what you're looking for? Check out some of our other FAQ's</p><br><br>
                         <ul>
-                            <li><a href="" style="text-align: center;">Orders & Shipping</a></li> <!-- on this page so its diff colour -->
-                            <li><a class="active" href="" style="text-align: center;">Returns & Exchanges</a></li>
+                            <li><a href="" style="text-align: center;">Orders & Shipping</a></li> 
+                            <li><a class="active" href="" style="text-align: center;">Returns & Exchanges</a></li><!-- on this page so its diff colour -->
                             <li><a href="" style="text-align: center;">Products & Sizing</a></li>
                             <li><a href="" style="text-align: center;">Promotions</a></li>
                             <li><a href="" style="text-align: center;">Other</a></li>

@@ -1107,55 +1107,58 @@ header {
 
             <!-- The main FAQ box -->
             <div class="faq-box">
-                <h3 style="font-size: 50px; text-decoration: underline;">Orders and Shipping</h3><!-- Title -->
-                <h3>Need Help? Here are some Frequently Asked Questions about Orders and Shipping</h3>
+                <h3 style="font-size: 50px; text-decoration: underline;">Products and Sizing</h3><!-- Title -->
+                <h3>Need Help? Here are some Frequently Asked Questions about Products and Sizing</h3>
 
                 <!-- 1st question on collapsible -->
-                    <button class="drop-down" style="margin-top:50px;">How can I check past orders?</button>
+                    <button class="drop-down" style="margin-top:50px;">How can I change the size of my product?</button>
                     <div class="drop-down-box">
                         <br></br>
-                        <p>To view past orders, first click on your account which is located in the top navigation bar. This can only be accessed after successful login. 
-                            You will be taken to the accounts page and then you can click on past orders in the left sidebar to view past orders.</p>
+                        <p>When you click on an item, it will show you the item and there will be options to click a size before adding it to the basket. 
+                            You can choose from x-small(XS), small (S), medium (M), large (L), x-large (XL)</p>
                         <br></br>
                     </div>
 
                     <!-- 2nd question on collapsible -->
-                    <button class="drop-down">How long does shipping and order processing take?</button>
+                    <button class="drop-down">How can I check how many items are left in stock?</button>
                     <div class="drop-down-box">
                         <br></br>
-                        <p>Orders can be delivered from 6-8 working days, however the country and number of items that are orderd can affect shipping and delivery dates.</p>
+                        <p>We don't have a feature that allows you to see how many there is in stock, however we do notify if there are a few left or if an item is out of stock. 
+                            This can either help checkout faster or shop a similar product to create a great shopping experience.</p>
                         <br></br>
                     </div>
 
                     <!-- 3rd question on collapsible -->
-                    <button class="drop-down">Can I change the shipping address once I have placed an order?</button>
+                    <button class="drop-down">How can I be notified when this product is back in stock?</button>
                     <div class="drop-down-box">
                         <br></br>
-                        <p>Once you place an order you have a one hour time frame where you can change or edit shipping information. After that one hour, you would have to return the package and re-order to recieve the package at the location you want.</p>
+                        <p>Once you have created an account with us, we will notify you of any re-stocking of items you have saved. This will apply to items saved both in the wishlist and the items left in the basket.</p>
                         <br></br>
                     </div>
 
                     <!-- 4th question on collapsible -->
-                    <button class="drop-down">Can I combine multiple orders into one shipment?</button>
+                    <button class="drop-down">What is the price of this product?</button>
                     <div class="drop-down-box">
                         <br></br>
-                        <p>When you place an order, all items will be packed and sent into one shipment. However, if you make more than one order, it is not guaranteed that the packages will be placed in the same shipment.</p>
+                        <p>The price will be located near the title of the item. You can view the price of every item and will also appear in the basket as well, so you know how much you are spending.</p>
                         <br></br>
                     </div>
 
                     <!-- 5th question on collapsible -->
-                    <button class="drop-down">Do I have to pay for shipping?</button>
+                    <button class="drop-down">Do you price match with other retailers?</button>
                     <div class="drop-down-box">
                         <br></br>
-                        <p>We do require a shipping fee if the order total is under a certain amount. However, we do offer free shipping discounts throughout the year, so that you get an opportunity to shop without any additional fees.</p>
+                        <p>Our items are of high-quality, and therefore each price is given to each item with careful consideration. 
+                            We do not price match to other retailers as we may offer items of better-quality than some retailers. </p>
                         <br></br>
                     </div>
 
                     <!-- 6th question on collapsible -->
-                    <button class="drop-down">What happens if my package gets lost or damaged during shipping?</button>
+                    <button class="drop-down">Are there any quantity limits for purchasing this product?</button>
                     <div class="drop-down-box">
                         <br></br>
-                        <p>If your package gets lost or stolen, get in touch with us and provide us with the order number. If we find that the package did not make its way to you, we will either issue a refund or send out another package.</p>
+                        <p>As we are a start-up business, we do have a limit of 5 pieces of the same item. 
+                            This may change later on but for now we are limiting stock, so everyone has an opportunity to buy, without it being out of stock.</p>
                         <br></br>
                     </div>
             </div>
@@ -1167,9 +1170,9 @@ header {
                         <h2 style="text-align: center;">FAQs</h2>
                         <p style="text-align: center; font-size: 20px;">Not what you're looking for? Check out some of our other FAQ's</p><br><br>
                         <ul>
-                            <li><a class="active" href="" style="text-align: center;">Orders & Shipping</a></li> <!-- on this page so its diff colour -->
+                            <li><a href="" style="text-align: center;">Orders & Shipping</a></li> 
                             <li><a href="" style="text-align: center;">Returns & Exchanges</a></li>
-                            <li><a href="" style="text-align: center;">Products & Sizing</a></li>
+                            <li><a class="active" href="" style="text-align: center;">Products & Sizing</a></li> <!-- on this page so its diff colour -->
                             <li><a href="" style="text-align: center;">Promotions</a></li>
                             <li><a href="" style="text-align: center;">Other</a></li>
                         </ul>

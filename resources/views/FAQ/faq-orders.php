@@ -919,9 +919,94 @@ header {
 
 
 
+.faq-box{
+    width: 80%;
+    height: 80%;
+    border: 2px solid black;
+    margin: 60px;
+    margin-left: 10%;
+    padding-top: 2%;
+    box-shadow: 0 -5px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);  
+    background-color: white;
+}
 
+.drop-down {
+  background-color: white;
+  width: 100%;
+  color: #444;
+  font-size: 20px;
+  padding: 18px;
+  border-top: 2px solid rgb(185, 185, 185);
+  text-align: left;
+  cursor: pointer;
+  transition: 0.2s; 
+}
+.drop-down:after {
+  content: "\25BC";
+  color: #777;
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+}
 
+.open, .drop-down:hover {
+  background-color: rgb(128, 0, 0);
+  color: white;
+}
 
+.open:after {
+    content: "\25B2";
+}
+
+.drop-down-box {
+  padding: 0 18px;
+  background-color: rgb(185, 185, 185);
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+.link-container {
+    display: flex;
+    gap: 70px;
+    justify-content: center; 
+}
+
+.faq-links-box {
+    height: 275px;
+    width: 375px;
+    background-color: white;
+    box-shadow: 0 -5px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2); 
+    padding: 1.5%;
+    border: 2px solid rgb(128, 0, 0);
+}
+.faq-links-box ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+}
+
+.faq-links-box ul li {
+    margin-bottom: 5px;
+}
+
+.faq-links-box ul li a {
+    color: rgb(86, 86, 86);
+    text-decoration: none;
+    font-size: 20px;
+    text-decoration: underline;
+}
+
+.faq-links-box ul li a:hover {
+    color: rgb(128, 0, 0);
+    text-decoration: underline;
+}
+.faq-links-box .active{
+    color: rgb(205, 205, 205);
+    text-decoration: underline;
+    pointer-events:none;
+}
 
 
 
@@ -1011,12 +1096,103 @@ header {
 
 
 <main id="aboutus-box">
-<div id="section" style="justify-content: center; height:300px; width: 300px; background-color: white; box-shadow: 0 0 9px rgba(0, 0, 0, 0.3); margin-top: -20px;"> 
-</div>
-<div class="content-separate"><div class="content-separate-box"></div></div>
+<div id="section" style="justify-content: center; height:300px; background-color: white; box-shadow: 0 0 9px rgba(0, 0, 0, 0.3); margin-top: -20px;"> 
+                <h3 style="text-align: center; margin-top: 100px; position: absolute; color: white; font-size:30px;">About Us</h3>
+                <img src="{{asset('images/about-us/about-us-banner.jpg')}}" alt="Clothes on a Hanger" class="image" width="100%" height="100%">
+            </div>
+            <div class="faq-box">
+                <h3 style="font-size: 50px; text-decoration: underline;">Orders and Shipping</h3>
+                <h3>Need Help? Here are some Frequently Asked Questions about Orders and Shipping</h3>
+                    <button class="drop-down" style="margin-top:50px;">How can I check past orders?</button>
+                    <div class="drop-down-box">
+                        <br></br>
+                        <p>To view past orders, first click on your account which is located in the top navigation bar. This can only be accessed after successful login. 
+                            You will be taken to the accounts page and then you can click on past orders in the left sidebar to view past orders.</p>
+                        <br></br>
+
+                    </div>
+
+                    <button class="drop-down">How long does shipping and order processing take?</button>
+                    <div class="drop-down-box">
+                        <br></br>
+                        <p>Orders can be delivered from 6-8 working days, however the country and number of items that are orderd can affect shipping and delivery dates.</p>
+                        <br></br>
+                    </div>
+
+                    <button class="drop-down">Can I change the shipping address once I have placed an order?</button>
+                    <div class="drop-down-box">
+                        <br></br>
+                        <p>Once you place an order you have a one hour time frame where you can change or edit shipping information. After that one hour, you would have to return the package and re-order to recieve the package at the location you want.</p>
+                        <br></br>
+                    </div>
+
+                    <button class="drop-down">Can I combine multiple orders into one shipment?</button>
+                    <div class="drop-down-box">
+                        <br></br>
+                        <p>When you place an order, all items will be packed and sent into one shipment. However, if you make more than one order, it is not guaranteed that the packages will be placed in the same shipment.</p>
+                        <br></br>
+                    </div>
+
+                    <button class="drop-down">Do I have to pay for shipping?</button>
+                    <div class="drop-down-box">
+                        <br></br>
+                        <p>We do require a shipping fee if the order total is under a certain amount. However, we do offer free shipping discounts throughout the year, so that you get an opportunity to shop without any additional fees.</p>
+                        <br></br>
+                    </div>
+
+                    <button class="drop-down">What happens if my package gets lost or damaged during shipping?</button>
+                    <div class="drop-down-box">
+                        <br></br>
+                        <p>If your package gets lost or stolen, get in touch with us and provide us with the order number. If we find that the package did not make its way to you, we will either issue a refund or send out another package.</p>
+                        <br></br>
+                    </div>
+                
+            </div>
+            <div class="link-container">
+                <div class="faq-links-box">
+                    <span>
+                        <h2 style="text-align: center;">FAQs</h2>
+                        <p style="text-align: center; font-size: 20px;">Not what you're looking for? Check out some of our other FAQ's</p><br><br>
+                        <ul>
+                            <li><a class="active" href="" style="text-align: center;">Orders & Shipping</a></li>
+                            <li><a href="" style="text-align: center;">Returns & Exchanges</a></li>
+                            <li><a href="" style="text-align: center;">Products & Sizing</a></li>
+                            <li><a href="" style="text-align: center;">Promotions</a></li>
+                            <li><a href="" style="text-align: center;">Other</a></li>
+                        </ul>
+                    </span>
+                </div>
+                <div class="faq-links-box">
+                    <h2 style="text-align: center;">Contact Us</h2>
+                    <p style="text-align: center; font-size: 20px;">Still need help? Get in touch with us and one of our team members will help.</p>
+                    <br><br>
+                    <p style="text-align: center; font-size: 20px;">Click on the link to fill out our contact form</p>
+                    <br><br>
+                    <ul>
+                        <li><a href="" style="text-align: center;">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+
 </main>
 
-
+<script>
+    var box = document.getElementsByClassName("drop-down");
+    var index;
+    
+    for (index = 0; index < box.length; index++) {
+      box[index].addEventListener("click", function() {
+        var text = this.nextElementSibling;
+        this.classList.toggle("open");
+        
+        if (text.style.maxHeight){
+          text.style.maxHeight = null;
+        } else {
+          text.style.maxHeight = text.scrollHeight + "px";
+        } 
+      });
+    }
+    </script>
 
 </body>
 </html>

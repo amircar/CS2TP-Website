@@ -1107,58 +1107,42 @@ header {
 
             <!-- The main FAQ box -->
             <div class="faq-box">
-                <h3 style="font-size: 50px; text-decoration: underline;">Orders and Shipping</h3><!-- Title -->
-                <h3>Need Help? Here are some Frequently Asked Questions about Orders and Shipping</h3>
+                <h3 style="font-size: 50px; text-decoration: underline;">Promotions</h3><!-- Title -->
+                <h3>Need Help? Here are some Frequently Asked Questions about Promotions</h3>
 
                 <!-- 1st question on collapsible -->
-                    <button class="drop-down" style="margin-top:50px;">How can I check past orders?</button>
+                    <button class="drop-down" style="margin-top:50px;">Do you offer any discounts or promotions?</button>
                     <div class="drop-down-box">
                         <br></br>
-                        <p>To view past orders, first click on your account which is located in the top navigation bar. This can only be accessed after successful login. 
-                            You will be taken to the accounts page and then you can click on past orders in the left sidebar to view past orders.</p>
+                        <p>When you have an account with us, we will offer you a variety of discounts. We also offer seasonal promotions throughout the year, so you can enjoy and shop.</p>
                         <br></br>
                     </div>
 
                     <!-- 2nd question on collapsible -->
-                    <button class="drop-down">How long does shipping and order processing take?</button>
+                    <button class="drop-down">How can I use my discounts?</button>
                     <div class="drop-down-box">
                         <br></br>
-                        <p>Orders can be delivered from 6-8 working days, however the country and number of items that are orderd can affect shipping and delivery dates.</p>
+                        <p>You can use your discounts when you are about to check-out. There is an option for discounts to be added to the total basket before payment.</p>
                         <br></br>
                     </div>
 
                     <!-- 3rd question on collapsible -->
-                    <button class="drop-down">Can I change the shipping address once I have placed an order?</button>
+                    <button class="drop-down">What promotions do you offer?</button>
                     <div class="drop-down-box">
                         <br></br>
-                        <p>Once you place an order you have a one hour time frame where you can change or edit shipping information. After that one hour, you would have to return the package and re-order to recieve the package at the location you want.</p>
+                        <p>We offer a variey of promotions throughout the year like Black Friday promotions, Christmas promotions, Easter promotions and more. 
+                            These promotions will have a certain time for when they will run, so make sure you buy before it ends!</p>
                         <br></br>
                     </div>
 
                     <!-- 4th question on collapsible -->
-                    <button class="drop-down">Can I combine multiple orders into one shipment?</button>
+                    <button class="drop-down">Do discounts expire?</button>
                     <div class="drop-down-box">
                         <br></br>
-                        <p>When you place an order, all items will be packed and sent into one shipment. However, if you make more than one order, it is not guaranteed that the packages will be placed in the same shipment.</p>
+                        <p>Yes, discounts do expire. You can check the expiry date when you click on the discounts. You will get notified of discounts soon to expire, so you can use them before they go.</p>
                         <br></br>
                     </div>
-
-                    <!-- 5th question on collapsible -->
-                    <button class="drop-down">Do I have to pay for shipping?</button>
-                    <div class="drop-down-box">
-                        <br></br>
-                        <p>We do require a shipping fee if the order total is under a certain amount. However, we do offer free shipping discounts throughout the year, so that you get an opportunity to shop without any additional fees.</p>
-                        <br></br>
-                    </div>
-
-                    <!-- 6th question on collapsible -->
-                    <button class="drop-down">What happens if my package gets lost or damaged during shipping?</button>
-                    <div class="drop-down-box">
-                        <br></br>
-                        <p>If your package gets lost or stolen, get in touch with us and provide us with the order number. If we find that the package did not make its way to you, we will either issue a refund or send out another package.</p>
-                        <br></br>
-                    </div>
-            </div>
+                </div>
 
             <!-- container for the two boxes -->
             <div class="link-container">
@@ -1167,10 +1151,10 @@ header {
                         <h2 style="text-align: center;">FAQs</h2>
                         <p style="text-align: center; font-size: 20px;">Not what you're looking for? Check out some of our other FAQ's</p><br><br>
                         <ul>
-                            <li><a class="active" href="" style="text-align: center;">Orders & Shipping</a></li> <!-- on this page so its diff colour -->
+                            <li><a href="" style="text-align: center;">Orders & Shipping</a></li>
                             <li><a href="" style="text-align: center;">Returns & Exchanges</a></li>
                             <li><a href="" style="text-align: center;">Products & Sizing</a></li>
-                            <li><a href="" style="text-align: center;">Promotions</a></li>
+                            <li><a class="active" href="" style="text-align: center;">Promotions</a></li>  <!-- on this page so its diff colour -->
                             <li><a href="" style="text-align: center;">Other</a></li>
                         </ul>
                     </span>

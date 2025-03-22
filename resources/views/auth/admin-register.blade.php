@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<!-- blade file for admin registration -->
 <html lang="en-GB">
     <head>
         <meta charset="utf-8" />
@@ -7,7 +6,7 @@
         <link rel="stylesheet" href="{{ asset('css/style.css') }}">
         <script type="text/javascript" src="{{ asset('js/main.js') }}"></script>
         <link rel="icon" href="{{ asset('favicon.ico') }}">
-        <title>Team 47 Registration</title>
+        <title>Create an Admin Account | Team 47</title>
     </head>
 
     <body>
@@ -15,10 +14,8 @@
 
         <div id="registration-wrapper">
             <main id="registration-form">
-                {{-- {{ __('Register') }} --}}
                 <h2>CREATE AN ADMIN ACCOUNT</h2>
-                <p>(All fields marked with a star<span style="color: rgb(128, 0, 0)">*</span> are required.)</p>
-                
+                <p>(All fields marked with an asterisk (<span style="color: rgb(128, 0, 0)">*</span>) are required.)</p>                
                 <form method="POST" action="{{ route('register') }}">
                     @csrf
 

@@ -6,7 +6,7 @@
         <link rel="stylesheet" href="{{ asset('css/style.css') }}">
         <script defer type="text/javascript" src="{{ asset('js/main.js') }}"></script>
         <link rel="icon" href="{{ asset('favicon.ico') }}">
-        <title>Shop for Accessories | Team 47</title>
+        <title>Accessories | Team 47</title>
     </head>
 
     <body>
@@ -24,7 +24,7 @@
             <h2>FEATURED IN ACCESSORIES</h2>
             <ul class="products-list">
                 @foreach ($products4 as $product)
-                    @include('single-product' , ['product' => $product])
+                    @include('product-card' , ['product' => $product])
                 @endforeach
             </ul>
         </section>

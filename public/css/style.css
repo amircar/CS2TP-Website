@@ -1014,12 +1014,19 @@ header {
 /***************************** 
     CATEGORY PAGES
 *****************************/
+
 #men-main, #women-main, #kids-main, #accessories-main {
     margin: 0 3%;
 
     p {
         font-size: 22px;
     }
+}
+
+
+#new-stock-main {
+    text-align: center;
+    margin-top: 3%;
 }
 
 
@@ -1569,4 +1576,103 @@ header {
     align-items: center;
     padding: 15px;
     border-bottom: 1px solid #e0e0e0;
+}
+
+form input[type="text"].search{
+    width: 75%;
+    height: 30px;
+    padding: 8px;
+    margin-bottom: 5px;
+    border: 1.5px solid black;
+    border-radius: 12px;
+    box-sizing: border-box; 
+    background-color: rgb(225, 225, 225); /* colour for the form boxes */
+    font-size: 14px;
+}
+
+form .search-button{
+    width: 30%;
+    height: 25px;
+    border-radius: 12px;
+    box-sizing: border-box; 
+    background-color: rgb(150, 0, 0); /* colour for the form boxes */
+    font-size: 14px;
+    color: white;
+}
+
+form .search-button:hover{
+    background-color: white; /* colour for the form boxes */
+    color: rgb(150, 0, 0);
+}
+
+.search-form{
+    display:flex;
+    gap: 5px;
+    align-items: center;
+}
+
+#new-Product-Form{
+    padding-left: 1%;
+    padding-bottom: 1%;
+}
+
+#new-Product-Form label {
+    display:inline-block;
+    margin-bottom: 5px;
+}
+
+
+#new-Product-Form input[type="text"], #new-Product-Form input[type="number"], #new-Product-Form select, #new-Product-Form textarea{
+    width: 90%;
+    height: 40px;
+    padding: 8px;
+    margin-bottom: 5px;
+    border: 1.5px solid black;
+    border-radius: 12px;
+    box-sizing: border-box; 
+    background-color: rgb(225, 225, 225); /* colour for the form boxes */
+    
+}
+
+#new-Product-Form select.size-type, #new-Product-Form input[type="number"]{
+    width: 8%
+}
+
+#new-Product-Form input[type="number"]{
+    text-align: right;
+}
+
+/* submit button */
+#new-Product-Form input[type="submit"] {
+    display: block;
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-left: auto;
+    margin-right: 10%;
+}
+
+#new-Product-Form input[type="submit"]:hover {
+    color: white;
+    background-color: rgb(128, 0, 0);
+}
+
+#sizes{
+    display:flex;
+    flex-wrap: wrap;
+    gap: 1%;
+}
+
+#sizes .size-form{
+    display: inline-block;
+}
+
+#image-preview{
+    width: 100px;
+    height: 100px;
+    display: none;
+    object-fit: cover;
 }

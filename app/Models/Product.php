@@ -6,6 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Product extends Model
 {
+    public $timestamps = false;
     protected $table = 'products'; //Directs to correct table
 
     public function product_images()//Declares all products have many images

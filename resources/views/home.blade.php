@@ -25,10 +25,11 @@
             </a>
         </main>
 
-        <!-- TODO renovate featured products list view -->
         <!-- TODO add sliding view -->
         <section id="featured-products-list">
             <h2>FEATURED PRODUCTS</h2>
+
+            <!-- TODO fix image positioning in css -->
             <ul class="products-list">
                 @foreach ($products as $product)
                     @include('product-card' , ['product' => $product])

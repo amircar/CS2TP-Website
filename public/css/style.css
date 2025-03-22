@@ -651,11 +651,19 @@ header {
     }
 }
 
+
 /***************************** 
-    FEATURED PRODUCTS LIST
+    PRODUCTS LIST
 *****************************/
-
-
+.products-list, .stock-list {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    width: 100%;
+    height: 400px;
+    justify-content: center;
+    overflow: hidden;
+}
 
 /* EXPERIMENT - Featured product collection rework */
 .featured-collection-list {
@@ -749,56 +757,10 @@ header {
 
 #featured-products-list {
     margin: 0 3%;
-}
 
-
-/***************************** 
-    PRODUCTS LIST
-*****************************/
-.products-list, .stock-list {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    width: 100%;
-    height: 420px;
-    left: 10%;
-    justify-content: center;
-    overflow: hidden;
-
-    .product-card {
-        width: 300px;
-        height: 380px;
-        margin: 10px;
-        padding: 10px;
-        background-color: white;
-        font-size: 20px;
-        transition: 0.2s;
-
-        img {
-            min-width: 100%;
-            min-height: 60%;
-            width: 100%;
-            height: 60%;
-            background-color: var(--main-bg-color);
-        }
-
-        .product-title {
-            /* FIXME text replaced by ellipsis when overflowing */
-            /* FIXME position price and size at bottom*/
-            max-height: 81px; /* 3 lines */
-            font-size: 25px;
-            line-height: 27px;
-            overflow: hidden;
-            text-overflow: ellipsis;
-            white-space: nowrap;
-        }
-    }
-    
     .product-card:hover {
-        box-shadow: 0 0 6px var(--main-grey-color);
-        /* expands height and width by 10px */
-        scale: calc(310/300) calc(390/380);
-        transition: 0.2s;
+        /* expands height and width by 10px (expanded length/original length) */
+        scale: calc(260/250) calc(360/350);
     }
 }
 
@@ -912,7 +874,8 @@ header {
 }
 
 #product-search-filters {
-    width: 20%;
+    min-width: 17%;
+    width: 17%;
     margin-right: 20px;
     padding-left: 1%;
 
@@ -961,88 +924,91 @@ header {
     width: 100%;
     /* TODO remove */
     /* background-color: aquamarine; */
+}
 
-    .product-card {
-        width: 250px;
-        height: 350px;
-        margin: 10px;
-        padding: 10px;
-        background-color: white;
+.product-card {
+    width: 250px;
+    height: 350px;
+    margin: 10px;
+    padding: 10px;
+    background-color: white;
+    font-size: 20px;
+    transition: 0.2s;
+
+    img {
+        background-color: var(--main-bg-color);
+        min-width: 100%;
+        min-height: 65%;
+        width: 100%;
+        height: 65%;
+    }
+
+    .product-title {
+        margin-top: 5px;
+        margin-bottom: 5px;
+        /* webkit used to replace title with ellipsis when overflowing */
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        height: 45px;
+        font-size: 23px;
+        line-height: 23px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .product-price {
+        margin-bottom: 4px;
         font-size: 20px;
+    }
+
+    .product-size, .product-colour {
+        font-size: 18px;
+        line-height: 20px;
+    }
+
+    .add-to-wishlist-shortcut {
+        position: relative;
+        left: 205px;
+        bottom: 169px;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background-color: white;
+        cursor: pointer;
         transition: 0.2s;
 
-        img {
-            background-color: var(--main-bg-color);
-            min-width: 100%;
-            min-height: 65%;
-            width: 100%;
-            height: 65%;
-        }
-
-        .product-title {
-            margin-top: 5px;
-            margin-bottom: 5px;
-
-            /* FIXME text replaced by ellipsis when overflowing */
-            height: 45px;
-            font-size: 23px;
-            line-height: 23px;
-            overflow: hidden;
-            text-overflow: ellipsis;
-        }
-
-        .product-price {
-            margin-bottom: 4px;
-            font-size: 20px;
-        }
-
-        .product-size, .product-colour {
-            font-size: 18px;
-            line-height: 20px;
-        }
-
-        .add-to-wishlist-shortcut {
-            position: relative;
-            left: 205px;
-            bottom: 169px;
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            background-color: white;
-            cursor: pointer;
-            transition: 0.2s;
-
-            /* TODO center & resize heart in button */
-            /* heart inside wishlist button */
-            svg {
-                path {
-                    /* width: 100%;
-                    height: 100%; */
-                    stroke: none;
-                    /* FIXME VAR */
-                    fill: rgb(196, 196, 196);
-                    transition: 0.2s;
-                }
-            }
-        }
-
-        .add-to-wishlist-shortcut:hover {
-            box-shadow: 0 0 6px var(--main-grey-color);
-            transition: 0.2s;
-
+        /* TODO center & resize heart in button */
+        /* heart inside wishlist button */
+        svg {
             path {
-                /* TODO for adding to wishlist */
-                /* fill: var(--theme-color);
-                transition: 0.2s; */
+                /* width: 100%;
+                height: 100%; */
+                stroke: none;
+                /* FIXME VAR */
+                fill: rgb(196, 196, 196);
+                transition: 0.2s;
             }
         }
     }
 
-    .product-card:hover {
+    .add-to-wishlist-shortcut:hover {
         box-shadow: 0 0 6px var(--main-grey-color);
         transition: 0.2s;
+
+        path {
+            /* TODO for adding to wishlist */
+            /* fill: var(--theme-color);
+            transition: 0.2s; */
+        }
     }
 }
+
+.product-card:hover {
+    box-shadow: 0 0 6px var(--main-grey-color);
+    transition: 0.2s;
+}
+
 
 
 /***************************** 

@@ -1,6 +1,6 @@
 <header>
     <div id="header-wrapper">
-        <<a id="main-logo" class="unselectable" href="{{ route('home') }}" title="Home"><img src={{ asset("images/logo.png") }} alt="team47-logo"></a>
+        <a id="main-logo" class="unselectable" href="{{ route('home') }}" title="Home"><img src={{ asset("images/logo.png") }} alt="team47-logo"></a>
 
         <form id="search-bar-container" action="{{ route('search') }}">
             <button id="search-button"></button>

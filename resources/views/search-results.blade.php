@@ -153,31 +153,51 @@
                 </div>
             </aside>
 
-            {{-- (container) collection of products --}}
-            <section>
-
-                <!-- TODO sorting/display of products in search results -->
-                <div>
+            <section id="product-collection-container">
+                <div id="product-collection-sort">
                     {{-- for sorting (e.g. by price) --}}
                     <button> {{-- for changing ascending/descending order --}} </button>
                 </div>
-                <div>
+                <div id="product-collection-view">
                     {{-- for displaying option for how many products per page (e.g. 25 or 50) --}}
                 </div>
 
-                <!-- TODO search results section below -->
-
                 {{-- for statement to display each product as a card --}}
                 {{-- if empty, return message e.g. "No items found" --}}
+
+
+                <!--FIXME bug with image causing positional problems-->
                 <div id="product-collection">
                     <ul id="product-collection-list">
+                        @foreach ($products as $product)
                         <li class="product-card">
-                            <a href="">
-                                <img src="" alt="product-image">
+                            <a href="product/{{$product->id}}">
+                                {{$found = false}}
+                                @foreach($product->product_images as $image)
+                                    @if($image->is_primary) 
+                                        <img src="{{asset($image->image_url)}}" alt="{{ $image->alt_text }}">
+                                        @php
+                                            $found = true;
+                                        @endphp
+                                        @break <!-- ends loop early to reduce time complexity -->
+                                    @endif
+                                @endforeach
 
-                                <p class="product-title">TITLE title TITLE title TITLE title TITLE title TITLE title TITLE title TITLE title TITLE title TITLE titleTITLE title</p>
-                                <p class="product-price">£50.55</p>
-                                <p class="product-size">Sizes: </p>
+                                <!-- if primary image is not found, add empty image to reserve space -->
+                                @if($found == false)
+                                    <img src="" alt="product-image">
+                                @endif
+
+                                {{$productSizes = ""}}
+                                @foreach($product->sizes as $size)
+                                    @php
+                                        $productSizes .= $size->size . " ";
+                                    @endphp
+                                @endforeach 
+                                <p class="product-title">{{$product->name}}</p>
+                                <p class="product-price">£ {{$product->price}}</p>
+                                <p class="product-size">Sizes: {{$productSizes}}</p>
+                                <!-- TODO add colours to product card -->
                                 <p class="product-colour">Colours: </p>
                             </a>
 
@@ -188,62 +208,8 @@
                                 </svg>
                             </button>
                         </li>
-
-
-
-
-
-                        <!-- TODO remove below when connected to database -->
-
-
-                        <li class="product-card">
-                            <a href="">
-                                <img src="" alt="product-image">
-
-                                <p class="product-title">title TITLE title TITLE</p>
-                                <p class="product-price">£50.55</p>
-                                <p class="product-size">Sizes: </p>
-                                <!-- TODO add colours to product card -->
-                                <p class="product-colour">Colours: </p>
-                            </a>
-
-                            <button class="add-to-wishlist-shortcut"></button>
-                        </li>
-                        <li class="product-card">
-                            <a href="">
-                                <img src="" alt="product-image">
-
-                                <p class="product-title">title TITLE title TITtle TITLE title TITtle TITLE title TITLE</p>
-                                <p class="product-price">£</p>
-                                <p class="product-size">Sizes: </p>
-                                <!-- TODO add colours to product card -->
-                                <p class="product-colour">Colours: </p>
-                            </a>
-                        </li>
-                        <li class="product-card">
-                            <a href="">
-                                <img src="" alt="product-image">
-
-                                <p class="product-title"></p>
-                                <p class="product-price">£</p>
-                                <p class="product-size">Sizes: </p>
-                                <!-- TODO add colours to product card -->
-                                <p class="product-colour">Colours: </p>
-
-                                <button class="add-to-wishlist-shortcut"></button>
-                            </a>
-                        </li>
-                        <li class="product-card">
-                            <a href="">
-                                <img src="" alt="product-image">
-
-                                <p class="product-title"></p>
-                                <p class="product-price">£</p>
-                                <p class="product-size">Sizes: </p>
-                                <!-- TODO add colours to product card -->
-                                <p class="product-colour">Colours: </p>
-                            </a>
-                        </li>
+                        @endforeach
+                        
                     </ul>
                 </div>
             </section>

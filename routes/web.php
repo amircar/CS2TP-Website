@@ -91,7 +91,15 @@ Route::get('/stocks', [StockController::class, 'update'])->name('stocks');
 
 Route::post('/quantity', [StockController::class, 'quantity'])->name('quantity');
 
+Route::get('/quantity', function(){
+    return redirect('/');
+});
+
 //route for reviews
 Route::post('/reviews', [ReviewController::class, 'store'])->name('reviews.store');
+
+Route::get('new',[StockController::class, 'new'])->name('new');
+
+Route::post('new',[StockController::class, 'create'])->name('create');
 
 ?>

@@ -1107,58 +1107,69 @@ header {
 
             <!-- The main FAQ box -->
             <div class="faq-box">
-                <h3 style="font-size: 50px; text-decoration: underline;">Orders and Shipping</h3><!-- Title -->
-                <h3>Need Help? Here are some Frequently Asked Questions about Orders and Shipping</h3>
+                <h3 style="font-size: 50px; text-decoration: underline;">Returns and Exchanges</h3><!-- Title -->
+                <h3>Need Help? Here are some Frequently Asked Questions about Returns and Exchanges</h3>
 
                 <!-- 1st question on collapsible -->
-                    <button class="drop-down" style="margin-top:50px;">How can I check past orders?</button>
+                    <button class="drop-down" style="margin-top:50px;">What is your return and exchange policy?</button>
                     <div class="drop-down-box">
                         <br></br>
-                        <p>To view past orders, first click on your account which is located in the top navigation bar. This can only be accessed after successful login. 
-                            You will be taken to the accounts page and then you can click on past orders in the left sidebar to view past orders.</p>
+                        <p>You have 30 days to return or exchange an item if its not on sale. If the product is on sale you will have 14 days. 
+                            Just use the printed return label given with the parcel and once we revieve the parcel, you will recieve the money within 3-5 working days</p>
                         <br></br>
                     </div>
 
                     <!-- 2nd question on collapsible -->
-                    <button class="drop-down">How long does shipping and order processing take?</button>
+                    <button class="drop-down">How does exchanging an item work?</button>
                     <div class="drop-down-box">
                         <br></br>
-                        <p>Orders can be delivered from 6-8 working days, however the country and number of items that are orderd can affect shipping and delivery dates.</p>
+                        <p>If you want to exchange an item, once we have recived the original item, you will immediately get an online giftcard immediately. 
+                            You can then use that giftcard whenever you want on the TEAM 47 website. This will save you having to wait a few more days for a refund. </p>
                         <br></br>
                     </div>
 
                     <!-- 3rd question on collapsible -->
-                    <button class="drop-down">Can I change the shipping address once I have placed an order?</button>
+                    <button class="drop-down">Can I return an item before it arrives?</button>
                     <div class="drop-down-box">
                         <br></br>
-                        <p>Once you place an order you have a one hour time frame where you can change or edit shipping information. After that one hour, you would have to return the package and re-order to recieve the package at the location you want.</p>
+                        <p>You can return an item if it's still processing. Once its fully processed and left its first location, you will have to wait until the parcel delivers for you to return it.</p>
                         <br></br>
                     </div>
 
                     <!-- 4th question on collapsible -->
-                    <button class="drop-down">Can I combine multiple orders into one shipment?</button>
+                    <button class="drop-down">Is it possible to return/exchange an item if it has been opened?</button>
                     <div class="drop-down-box">
                         <br></br>
-                        <p>When you place an order, all items will be packed and sent into one shipment. However, if you make more than one order, it is not guaranteed that the packages will be placed in the same shipment.</p>
+                        <p>As long as all the tags are still on it and its in great condition, then it can be returned/exchanged.</p>
                         <br></br>
                     </div>
 
                     <!-- 5th question on collapsible -->
-                    <button class="drop-down">Do I have to pay for shipping?</button>
+                    <button class="drop-down">How long does it take to process a refund or exchange?</button>
                     <div class="drop-down-box">
                         <br></br>
-                        <p>We do require a shipping fee if the order total is under a certain amount. However, we do offer free shipping discounts throughout the year, so that you get an opportunity to shop without any additional fees.</p>
+                        <p>A refund/exchnage proccess takes 2-3 working days and once the item has successfully been returned to our warehouse, 
+                            the giftcard for an exchange will immediately come through, whereas a refund will take an additional 3-5 working days.</p>
                         <br></br>
                     </div>
 
                     <!-- 6th question on collapsible -->
-                    <button class="drop-down">What happens if my package gets lost or damaged during shipping?</button>
+                    <button class="drop-down">Do I need to pay for shipping when sending back a return or exchange?</button>
                     <div class="drop-down-box">
                         <br></br>
-                        <p>If your package gets lost or stolen, get in touch with us and provide us with the order number. If we find that the package did not make its way to you, we will either issue a refund or send out another package.</p>
+                        <p>You would not have to pay an additional charge to ship back to us, however the original charge for shipping when making an order, will not be returned. </p>
                         <br></br>
                     </div>
-            </div>
+
+                     <!-- 7th question on collapsible -->
+                     <button class="drop-down">Will I receive a full refund for the returned item?</button>
+                    <div class="drop-down-box">
+                        <br></br>
+                        <p>If the item is in the condition you have recieved it, you will get the full refund excluding shipping costs. 
+                            However if the package seems to be damaged, we would need to assess it and either send the package back or offer a partial refund.</p>
+                        <br></br>
+                    </div>
+                </div>
 
             <!-- container for the two boxes -->
             <div class="link-container">
@@ -1167,8 +1178,8 @@ header {
                         <h2 style="text-align: center;">FAQs</h2>
                         <p style="text-align: center; font-size: 20px;">Not what you're looking for? Check out some of our other FAQ's</p><br><br>
                         <ul>
-                            <li><a class="active" href="" style="text-align: center;">Orders & Shipping</a></li> <!-- on this page so its diff colour -->
-                            <li><a href="" style="text-align: center;">Returns & Exchanges</a></li>
+                            <li><a href="" style="text-align: center;">Orders & Shipping</a></li> <!-- on this page so its diff colour -->
+                            <li><a class="active" href="" style="text-align: center;">Returns & Exchanges</a></li>
                             <li><a href="" style="text-align: center;">Products & Sizing</a></li>
                             <li><a href="" style="text-align: center;">Promotions</a></li>
                             <li><a href="" style="text-align: center;">Other</a></li>

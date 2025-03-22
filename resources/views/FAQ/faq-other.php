@@ -1107,55 +1107,56 @@ header {
 
             <!-- The main FAQ box -->
             <div class="faq-box">
-                <h3 style="font-size: 50px; text-decoration: underline;">Orders and Shipping</h3><!-- Title -->
-                <h3>Need Help? Here are some Frequently Asked Questions about Orders and Shipping</h3>
+                <h3 style="font-size: 50px; text-decoration: underline;">Other</h3><!-- Title -->
+                <h3>Need Help? Here are some Frequently Asked Questions</h3>
 
                 <!-- 1st question on collapsible -->
-                    <button class="drop-down" style="margin-top:50px;">How can I check past orders?</button>
+                    <button class="drop-down" style="margin-top:50px;">How do I sign up for an account?</button>
                     <div class="drop-down-box">
                         <br></br>
-                        <p>To view past orders, first click on your account which is located in the top navigation bar. This can only be accessed after successful login. 
-                            You will be taken to the accounts page and then you can click on past orders in the left sidebar to view past orders.</p>
+                        <p>To sign up for an account, you click on the sign up button at the top and you provide information like name, email and password. Once signed-in, you can access account information and can log in at any time.</p>
                         <br></br>
                     </div>
 
                     <!-- 2nd question on collapsible -->
-                    <button class="drop-down">How long does shipping and order processing take?</button>
+                    <button class="drop-down">Can I delete my account?</button>
                     <div class="drop-down-box">
                         <br></br>
-                        <p>Orders can be delivered from 6-8 working days, however the country and number of items that are orderd can affect shipping and delivery dates.</p>
+                        <p>Although it is sad to see you go, you can delete your account by clicking the accounts page, click on settings and then there is an option for you to delete your account.</p>
                         <br></br>
                     </div>
 
                     <!-- 3rd question on collapsible -->
-                    <button class="drop-down">Can I change the shipping address once I have placed an order?</button>
+                    <button class="drop-down">Are there any accessibility options?</button>
                     <div class="drop-down-box">
                         <br></br>
-                        <p>Once you place an order you have a one hour time frame where you can change or edit shipping information. After that one hour, you would have to return the package and re-order to recieve the package at the location you want.</p>
+                        <p>We have text enlargement so that text can be bigger for people who struggle to see. As we are a start-up business, we don't have many accessibility options. However, we are in the works of adding more accessibility options, so everyone can shop with no worries.</p>
                         <br></br>
                     </div>
 
                     <!-- 4th question on collapsible -->
-                    <button class="drop-down">Can I combine multiple orders into one shipment?</button>
+                    <button class="drop-down">I want to change my password, how can I do that?</button>
                     <div class="drop-down-box">
                         <br></br>
-                        <p>When you place an order, all items will be packed and sent into one shipment. However, if you make more than one order, it is not guaranteed that the packages will be placed in the same shipment.</p>
+                        <p>If you click on your accounts profile - after sucessful login - there is an option for password change. 
+                            To change your password, your old password needs to be entered, along with the new password and confirm the password. A confirmation email will be sent to you as well, stating that the password has been changed.</p>
                         <br></br>
                     </div>
 
                     <!-- 5th question on collapsible -->
-                    <button class="drop-down">Do I have to pay for shipping?</button>
+                    <button class="drop-down">Can I have save my payment methods?</button>
                     <div class="drop-down-box">
                         <br></br>
-                        <p>We do require a shipping fee if the order total is under a certain amount. However, we do offer free shipping discounts throughout the year, so that you get an opportunity to shop without any additional fees.</p>
+                        <p>On the accounts details, there is a payment information page. This page allows you to save and store payment cards, so when you place an order, 
+                            the cards are already saved and provides faster checkout. You can add multiple payment cards and edit information if needed.</p>
                         <br></br>
                     </div>
 
                     <!-- 6th question on collapsible -->
-                    <button class="drop-down">What happens if my package gets lost or damaged during shipping?</button>
+                    <button class="drop-down">How do I change my personal details?</button>
                     <div class="drop-down-box">
                         <br></br>
-                        <p>If your package gets lost or stolen, get in touch with us and provide us with the order number. If we find that the package did not make its way to you, we will either issue a refund or send out another package.</p>
+                        <p>All personal details can be edited and saved through the accounts page. It has multiple options to view and edit, like personal details, shipping details, payment details and more.</p>
                         <br></br>
                     </div>
             </div>
@@ -1167,11 +1168,11 @@ header {
                         <h2 style="text-align: center;">FAQs</h2>
                         <p style="text-align: center; font-size: 20px;">Not what you're looking for? Check out some of our other FAQ's</p><br><br>
                         <ul>
-                            <li><a class="active" href="" style="text-align: center;">Orders & Shipping</a></li> <!-- on this page so its diff colour -->
+                            <li><a href="" style="text-align: center;">Orders & Shipping</a></li> 
                             <li><a href="" style="text-align: center;">Returns & Exchanges</a></li>
                             <li><a href="" style="text-align: center;">Products & Sizing</a></li>
                             <li><a href="" style="text-align: center;">Promotions</a></li>
-                            <li><a href="" style="text-align: center;">Other</a></li>
+                            <li><a class="active" href="" style="text-align: center;">Other</a></li><!-- on this page so its diff colour -->
                         </ul>
                     </span>
                 </div>

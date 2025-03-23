@@ -16,8 +16,6 @@
                 <p>A</p>
             </li>
 
-                        
-            <!-- TODO remove when logout implemented in account page -->
             @auth
                 <a class="header-item">
                     <li>
@@ -28,8 +26,6 @@
                     </li>
                 </a>
                 
-
-                <!-- TODO drop-down for options in account -->
                 <!-- TODO account page link in header -->
                 <a class="header-item" href="{{ route('account-details') }}">
                     <li><img src="{{asset("images/account_icon.png")}}" alt="profile" title="Profile"></li>
@@ -52,7 +48,6 @@
         </ul>
     </div>
 
-    <!-- TODO add drop-down menu -->
     <nav>
         <ul id="nav-items">
             <a class="nav-item" href="{{ route('men') }}">

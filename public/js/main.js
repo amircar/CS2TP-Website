@@ -1,14 +1,17 @@
 // window.onload = function(){
 // }
 
+
 // scrolls to top of page
 const back_to_top = document.querySelector("#back-to-top");
+
 back_to_top.addEventListener("click", function () {
     //Safari
     document.body.scrollTop = 0;
     //Chrome, Firefox, IE, Opera
     document.documentElement.scrollTop = 0;
 });
+
 
 document.addEventListener("DOMContentLoaded", function () {
     const headerToggle = document.querySelector("#textToggle");

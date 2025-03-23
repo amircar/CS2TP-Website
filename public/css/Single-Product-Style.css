@@ -186,15 +186,16 @@
     color: white;
     font-weight: bold;
     padding: 10px 10px 10px;
-    background-color: rgb(128, 0, 0);
+    background-color: var(--theme-color);
     width: 250px;
     margin-bottom: 25px;
     border: 2px solid black;
     text-align: center;
+    cursor: pointer;
 }
 
 .Btn1:hover {
-    background-color: rgb(113, 0, 0);
+    background-color: var(--theme-color-dark);
 }
 
 .Btn2 {
@@ -202,7 +203,7 @@
     color: white;
     font-weight: bold;
     padding: 10px 10px 10px;
-    background-color: rgb(42, 218, 200);
+    background-color: var(--main-black-color);
     width: 250px;
     margin-bottom: 25px;
     border: 2px solid black;
@@ -210,7 +211,7 @@
 }
 
 .Btn2:hover {
-    background-color: rgb(35, 192, 176);
+    background-color: var(--main-black-color-bright);
 }
 
 .description-box {
@@ -314,7 +315,7 @@
 
 #reviewForm button {
     padding: 10px 20px;
-    background-color: #007bff;
+    background-color: var(--theme-color);
     color: white;
     border: none;
     border-radius: 5px;
@@ -323,5 +324,5 @@
 }
 
 #reviewForm button:hover {
-    background-color: #0056b3;
+    background-color: var(--theme-color-dark);
 }

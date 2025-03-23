@@ -660,9 +660,12 @@ header {
     flex-wrap: wrap;
     flex-direction: row;
     width: 100%;
-    height: 400px;
     justify-content: center;
+}
+
+.products-list{
     overflow: hidden;
+    height: 400px;
 }
 
 /* EXPERIMENT - Featured product collection rework */
@@ -946,15 +949,12 @@ header {
     .product-title {
         margin-top: 5px;
         margin-bottom: 5px;
-        /* webkit used to replace title with ellipsis when overflowing */
-        display: -webkit-box;
-        -webkit-line-clamp: 2;
-        -webkit-box-orient: vertical;
-        height: 45px;
+        height: 25px;
         font-size: 23px;
         line-height: 23px;
         overflow: hidden;
         text-overflow: ellipsis;
+        white-space: nowrap;
     }
 
     .product-price {

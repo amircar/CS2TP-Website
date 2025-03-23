@@ -1,4 +1,4 @@
-<li class="single-product">
+<li class="product-card">
 
         @php
             $found = false;

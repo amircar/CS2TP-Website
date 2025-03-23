@@ -55,16 +55,26 @@
                             @endforeach
                         </div>
 
+                        <h4 class="title">Average Rating</h4>
+                        <div class="rating">
+                            @for($i = 1; $i <= 5; $i++)
+                                @if($i <= round($product->average_rating))
+                                    <span class="star filled">&#9733;</span>
+                                @else
+                                    <span class="star">&#9733;</span>
+                                @endif
+                            @endfor
+                        </div><br>
+
                         @auth
                                 @csrf
                                 <input type="hidden" name="product_id" value="{{$product->id}}">
                                 <button type="submit" class="Btn1">ADD TO BASKET</button>
                             </form>
-                            <a href="" class="Btn2">ADD TO WISHLIST</a>
                         @else
                             <a href="{{route('login')}}" class="Btn1">ADD TO BASKET</a>
-                            <a href="{{route('login')}}" class="Btn2">ADD TO WISHLIST</a>
                         @endauth
+                    </div>
         </main>
 
         <section id="reviewsSection">

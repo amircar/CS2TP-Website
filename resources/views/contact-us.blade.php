@@ -81,12 +81,6 @@
             </div>
         </main>
 
-
-
-
-
-
-        <!-- TODO ???move to js file -->
         
         <script>
             document.getElementById("contact-form").addEventListener("submit", function(event) {
@@ -107,8 +101,6 @@
                 "\nPhone Number: " + phone +
                 "\nProject Description: " + description;
 
-
-                //    TODO submitted form goes to database
                     window.location.href = "mailto:230087860@aston.ac.uk?subject=Contact Form Submission&body=" + encodeURIComponent(body);
                 }
         </script>

@@ -38,49 +38,54 @@
                 </div>
                 <div class="sidebar-triangle"></div>
 
-                <!-- Username -->
-                <div class="account-info-box" style="top:0; left:31%;">
-                    <div class="info-box-title">
-                        <h2 style="font-size: 17px;">Username</h2>
+                <form action={{ route("update-details")}} method="POST">
+
+                @csrf
+                @method('PUT')
+                    <!-- Username -->
+                    <div class="account-info-box" style="top:0; left:31%;">
+                        <div class="info-box-title">
+                            <h2 style="font-size: 17px;">Username</h2>
+                        </div>
+
+                        <input type="text" id="account_username" name="username" placeholder="Username" value="{{ $user->username }}" required>
+
                     </div>
-                    <form>
-                        <input type="text2" id="account_username" name="account_username" placeholder="Username">
-                    </form>
-                </div>
 
-                <!-- First Name -->
-                <div class="account-info-box" style="top:28%; left:31%;">
-                    <div class="info-box-title">
-                        <h2 style="font-size: 17px;">First Name</h2>
+                    <!-- First Name -->
+                    <div class="account-info-box" style="top:28%; left:31%;">
+                        <div class="info-box-title">
+                            <h2 style="font-size: 17px;">First Name</h2>
+                        </div>
+
+                        <input type="text" id="account_firstname" name="first_name" placeholder="First Name" value="{{ $user->first_name }}" required>
+
                     </div>
-                    <form>
-                        <input type="text2" id="account_firstname" name="account_firstname" placeholder="First Name">
-                    </form>
-                </div>
 
-                <!-- Last Name -->
-                <div class="account-info-box" style="top:56%; left:31%;">
-                    <div class="info-box-title">
-                        <h2 style="font-size: 17px;">Last Name</h2>
+                    <!-- Last Name -->
+                    <div class="account-info-box" style="top:56%; left:31%;">
+                        <div class="info-box-title">
+                            <h2 style="font-size: 17px;">Last Name</h2>
+                        </div>
+
+                        <input type="text" id="account_lastname" name="last_name" placeholder="Last Name" value="{{ $user->last_name }}" required>
+
                     </div>
-                    <form>
-                        <input type="text2" id="account_lastname" name="account_lastname" placeholder="Last Name">
-                    </form>
-                </div>
 
-                <!-- Email Address -->
-                <div class="account-info-box" style="top:0; left:68%;">
-                    <div class="info-box-title">
-                        <h2 style="font-size: 17px;">Email Address</h2>
+                    <!-- Email Address -->
+                    <div class="account-info-box" style="top:0; left:68%;">
+                        <div class="info-box-title">
+                            <h2 style="font-size: 17px;">Email Address</h2>
+                        </div>
+
+                        <input type="email" id="account_email" name="email" placeholder="Email Address" value="{{ $user->email }}" required>
+
                     </div>
-                    <form>
-                        <input type="text2" id="account_email" name="account_email" placeholder="Email Address">
-                    </form>
-                </div>
 
-                <!-- Save Button -->
-                <button class="save-btn" style="top:75%; left:73%;">SAVE</button>
+                    <!-- Save Button -->
+                    <button class="save-btn" style="top:75%; left:73%;" type="submit">SAVE</button>
 
+                </form>
             </div>
 
         </div>

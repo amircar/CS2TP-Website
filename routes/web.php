@@ -125,4 +125,6 @@ Route::get('/payment-info',[AccountController::class, 'paymentInfo'])->name('pay
 Route::get('/settings',[AccountController::class, 'settings'])->name('settings');
 
 Route::get('/shipping',[AccountController::class, 'shipping'])->name('shipping');
+
+Route::put('/update-details', [AccountController::class, 'update'])->name('update-details');
 ?>

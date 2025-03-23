@@ -298,7 +298,7 @@
     INPUT BOXES
 *****************************/
 /*All the boxes users can input information.*/
-input[type="text2"] {
+input[type="text"], input[type="email"] {
     padding: 10px;
     font-size: 16px;
     transition: border-color 0.3s ease;

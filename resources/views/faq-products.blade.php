@@ -10,66 +10,67 @@
 <body>
 
 @include('header')
-
 <main id="aboutus-box">
     <!-- The top banner with image and title of page -->
 <div id="section" style="justify-content: center; height:300px; background-color: white; box-shadow: 0 0 9px rgba(0, 0, 0, 0.3); margin-top: -20px; opacity: 100%;"> 
                 <h3 style="margin-left:550px; margin-top: 100px; position: absolute; font-size:90px;">FAQ</h3>
-                <img src="faq-img.jpg" alt="Clothes on a Hanger" class="image" width="100%" height="100%">
+                <img src="images/faq/faq-img.jpg" alt="Clothes on a Hanger" class="image" width="100%" height="100%">
             </div>
 
             <!-- The main FAQ box -->
             <div class="faq-box">
-                <h3 style="font-size: 50px; text-decoration: underline;">Other</h3><!-- Title -->
-                <h3>Need Help? Here are some Frequently Asked Questions</h3>
+                <h3 style="font-size: 50px; text-decoration: underline;">Products and Sizing</h3><!-- Title -->
+                <h3>Need Help? Here are some Frequently Asked Questions about Products and Sizing</h3>
 
                 <!-- 1st question on collapsible -->
-                    <button class="drop-down" style="margin-top:50px;">How do I sign up for an account?</button>
+                    <button class="drop-down" style="margin-top:50px;">How can I change the size of my product?</button>
                     <div class="drop-down-box">
                         <br></br>
-                        <p>To sign up for an account, you click on the sign up button at the top and you provide information like name, email and password. Once signed-in, you can access account information and can log in at any time.</p>
+                        <p>When you click on an item, it will show you the item and there will be options to click a size before adding it to the basket. 
+                            You can choose from x-small(XS), small (S), medium (M), large (L), x-large (XL)</p>
                         <br></br>
                     </div>
 
                     <!-- 2nd question on collapsible -->
-                    <button class="drop-down">Can I delete my account?</button>
+                    <button class="drop-down">How can I check how many items are left in stock?</button>
                     <div class="drop-down-box">
                         <br></br>
-                        <p>Although it is sad to see you go, you can delete your account by clicking the accounts page, click on settings and then there is an option for you to delete your account.</p>
+                        <p>We don't have a feature that allows you to see how many there is in stock, however we do notify if there are a few left or if an item is out of stock. 
+                            This can either help checkout faster or shop a similar product to create a great shopping experience.</p>
                         <br></br>
                     </div>
 
                     <!-- 3rd question on collapsible -->
-                    <button class="drop-down">Are there any accessibility options?</button>
+                    <button class="drop-down">How can I be notified when this product is back in stock?</button>
                     <div class="drop-down-box">
                         <br></br>
-                        <p>We have text enlargement so that text can be bigger for people who struggle to see. As we are a start-up business, we don't have many accessibility options. However, we are in the works of adding more accessibility options, so everyone can shop with no worries.</p>
+                        <p>Once you have created an account with us, we will notify you of any re-stocking of items you have saved. This will apply to items saved both in the wishlist and the items left in the basket.</p>
                         <br></br>
                     </div>
 
                     <!-- 4th question on collapsible -->
-                    <button class="drop-down">I want to change my password, how can I do that?</button>
+                    <button class="drop-down">What is the price of this product?</button>
                     <div class="drop-down-box">
                         <br></br>
-                        <p>If you click on your accounts profile - after sucessful login - there is an option for password change. 
-                            To change your password, your old password needs to be entered, along with the new password and confirm the password. A confirmation email will be sent to you as well, stating that the password has been changed.</p>
+                        <p>The price will be located near the title of the item. You can view the price of every item and will also appear in the basket as well, so you know how much you are spending.</p>
                         <br></br>
                     </div>
 
                     <!-- 5th question on collapsible -->
-                    <button class="drop-down">Can I have save my payment methods?</button>
+                    <button class="drop-down">Do you price match with other retailers?</button>
                     <div class="drop-down-box">
                         <br></br>
-                        <p>On the accounts details, there is a payment information page. This page allows you to save and store payment cards, so when you place an order, 
-                            the cards are already saved and provides faster checkout. You can add multiple payment cards and edit information if needed.</p>
+                        <p>Our items are of high-quality, and therefore each price is given to each item with careful consideration. 
+                            We do not price match to other retailers as we may offer items of better-quality than some retailers. </p>
                         <br></br>
                     </div>
 
                     <!-- 6th question on collapsible -->
-                    <button class="drop-down">How do I change my personal details?</button>
+                    <button class="drop-down">Are there any quantity limits for purchasing this product?</button>
                     <div class="drop-down-box">
                         <br></br>
-                        <p>All personal details can be edited and saved through the accounts page. It has multiple options to view and edit, like personal details, shipping details, payment details and more.</p>
+                        <p>As we are a start-up business, we do have a limit of 5 pieces of the same item. 
+                            This may change later on but for now we are limiting stock, so everyone has an opportunity to buy, without it being out of stock.</p>
                         <br></br>
                     </div>
             </div>
@@ -81,11 +82,11 @@
                         <h2 style="text-align: center;">FAQs</h2>
                         <p style="text-align: center; font-size: 20px;">Not what you're looking for? Check out some of our other FAQ's</p><br><br>
                         <ul>
-                            <li><a href="" style="text-align: center;">Orders & Shipping</a></li> 
-                            <li><a href="" style="text-align: center;">Returns & Exchanges</a></li>
-                            <li><a href="" style="text-align: center;">Products & Sizing</a></li>
-                            <li><a href="" style="text-align: center;">Promotions</a></li>
-                            <li><a class="active" href="" style="text-align: center;">Other</a></li><!-- on this page so its diff colour -->
+                            <li><a href="{{ route("faq-orders") }}" style="text-align: center;">Orders & Shipping</a></li> 
+                            <li><a href="{{ route("faq-returns") }}" style="text-align: center;">Returns & Exchanges</a></li>
+                            <li><a class="active" href="" style="text-align: center;">Products & Sizing</a></li> <!-- on this page so its diff colour -->
+                            <li><a href="{{ route("faq-promotions") }}" style="text-align: center;">Promotions</a></li>
+                            <li><a href="{{ route("faq-other") }}" style="text-align: center;">Other</a></li>
                         </ul>
                     </span>
                 </div>
@@ -96,7 +97,7 @@
                     <p style="text-align: center; font-size: 20px;">Click on the link to fill out our contact form</p>
                     <br><br>
                     <ul>
-                        <li><a href="" style="text-align: center;">Contact Us</a></li> <!-- link to contact us page -->
+                        <li><a href="{{ route("contact-us") }}" style="text-align: center;">Contact Us</a></li> <!-- link to contact us page -->
                     </ul>
                 </div>
             </div>

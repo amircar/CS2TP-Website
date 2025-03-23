@@ -69,11 +69,11 @@
                             <p>Need some help? Check out some of our FAQ's</p>
                             <ul>
                                 <!-- TODO FAQ links on contact us -->
-                                <li><a href="">Orders & Shipping</a></li>
-                                <li><a href="">Returns & Exchanges</a></li>
-                                <li><a href="">Products & Sizing</a></li>
-                                <li><a href="">Promotions</a></li>
-                                <li><a href="">Other</a></li>
+                                <li><a href="{{ route("faq-orders") }}">Orders & Shipping</a></li>
+                                <li><a href="{{ route("faq-returns") }}">Returns & Exchanges</a></li>
+                                <li><a href="{{ route("faq-products") }}">Products & Sizing</a></li>
+                                <li><a href="{{ route("faq-promotions") }}">Promotions</a></li>
+                                <li><a href="{{ route("faq-other") }}">Other</a></li>
                             </ul>
                         </span>
                     </div>

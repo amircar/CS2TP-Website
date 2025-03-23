@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         <link rel="stylesheet" href="css/style.css">
         <link rel="icon" href="{{ asset('favicon.ico') }}">
-        <title>Account</title>
+        <title>FAQ | Team 47</title>
     </head>
 <body>
 
@@ -14,7 +14,7 @@
     <!-- The top banner with image and title of page -->
 <div id="section" style="justify-content: center; height:300px; background-color: white; box-shadow: 0 0 9px rgba(0, 0, 0, 0.3); margin-top: -20px; opacity: 100%;"> 
                 <h3 style="margin-left:550px; margin-top: 100px; position: absolute; font-size:90px;">FAQ</h3>
-                <img src="faq-img.jpg" alt="Clothes on a Hanger" class="image" width="100%" height="100%">
+                <img src="images/faq/faq-img.jpg" alt="Clothes on a Hanger" class="image" width="100%" height="100%">
             </div>
 
             <!-- The main FAQ box -->
@@ -80,10 +80,10 @@
                         <p style="text-align: center; font-size: 20px;">Not what you're looking for? Check out some of our other FAQ's</p><br><br>
                         <ul>
                             <li><a class="active" href="" style="text-align: center;">Orders & Shipping</a></li> <!-- on this page so its diff colour -->
-                            <li><a href="" style="text-align: center;">Returns & Exchanges</a></li>
-                            <li><a href="" style="text-align: center;">Products & Sizing</a></li>
-                            <li><a href="" style="text-align: center;">Promotions</a></li>
-                            <li><a href="" style="text-align: center;">Other</a></li>
+                            <li><a href="{{ route("faq-returns") }}" style="text-align: center;">Returns & Exchanges</a></li>
+                            <li><a href="{{ route("faq-products") }}" style="text-align: center;">Products & Sizing</a></li>
+                            <li><a href="{{ route("faq-promotions") }}" style="text-align: center;">Promotions</a></li>
+                            <li><a href="{{ route("faq-other") }}" style="text-align: center;">Other</a></li>
                         </ul>
                     </span>
                 </div>
@@ -94,7 +94,7 @@
                     <p style="text-align: center; font-size: 20px;">Click on the link to fill out our contact form</p>
                     <br><br>
                     <ul>
-                        <li><a href="" style="text-align: center;">Contact Us</a></li> <!-- link to contact us page -->
+                        <li><a href="{{ route("contact-us") }}" style="text-align: center;">Contact Us</a></li> <!-- link to contact us page -->
                     </ul>
                 </div>
             </div>

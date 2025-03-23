@@ -127,4 +127,7 @@ Route::get('/settings',[AccountController::class, 'settings'])->name('settings')
 Route::get('/shipping',[AccountController::class, 'shipping'])->name('shipping');
 
 Route::put('/update-details', [AccountController::class, 'update'])->name('update-details');
+
+Route::put('/update-password', [AccountController::class, 'updatePassword'])->name('update-password');
+
 ?>

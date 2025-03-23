@@ -4,8 +4,8 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/accounts-styles.css"><!-- Accounts page styling -->
+    <link rel="stylesheet" href="css/style.css">
     <link rel="icon" href="{{ asset('favicon.ico') }}">
     <title>Account</title>
 </head>
@@ -39,38 +39,43 @@
                 </div>
                 <div class="sidebar-triangle" style="top:13.4%;"></div>
 
-                <!-- main box -->
-                <div class="password-box">
-                    <h3 style="font-size: 25px;">Password Change</h3>
-                    <h3 style="font-size: 14px; color: rgb(130, 0, 0)">Change Your Password</h3>
+                <form action="{{ route('update-password') }}" method="POST">
 
-                    <!-- Current Password -->
-                    <h3 style="font-size: 12px; text-align:left;">Current Password<span class="red-text">*</span></h3>
-                    <form>
-                        <input type="text2" style="width:97%; margin-bottom: 30px;" id="account_current_password"
-                            name="account_current_password" placeholder="Type Here...">
-                    </form>
+                    @csrf
+                    @method('PUT')
+                    <!-- main box -->
+                    <div class="password-box">
+                        <h3 style="font-size: 25px;">Password Change</h3>
+                        <h3 style="font-size: 14px; color: rgb(130, 0, 0)">Change Your Password</h3>
 
-                    <!-- New Password -->
-                    <h3 style="font-size: 12px; text-align:left;">New Password<span class="red-text">* (Must Have at
-                            Least 8 Characters)</span></h3>
-                    <form>
-                        <input type="text2" style="width:97%; margin-bottom: 30px;" id="account_new_password"
-                            name="account_new_password" placeholder="Type Here...">
-                    </form>
+                        <!-- Current Password -->
+                        <h3 style="font-size: 12px; text-align:left;">Current Password<span class="red-text">*</span>
+                        </h3>
 
-                    <!-- Confirm Password -->
-                    <h3 style="font-size: 12px; text-align:left;">Confirm Password<span class="red-text">* (Should Match
-                            New Password)</span></h3>
-                    <form>
-                        <input type="text2" style="width:97%; margin-bottom: 30px;" id="account_retype_password"
-                            name="account_retype_password" placeholder="Type Here...">
-                    </form>
-                </div>
+                        <input type="password" style="width:97%; margin-bottom: 30px;" id="account_current_password"
+                            name="current_password" placeholder="Type Here..." required>
 
-                <!-- Save button -->
-                <button class="save-btn" style="top:75%; left:73%;">SAVE</button>
 
+                        <!-- New Password -->
+                        <h3 style="font-size: 12px; text-align:left;">New Password<span class="red-text">* (Must Have at
+                                Least 8 Characters)</span></h3>
+
+                        <input type="password" style="width:97%; margin-bottom: 30px;" id="account_new_password"
+                            name="new_password" placeholder="Type Here..." required minlength="8">
+
+
+                        <!-- Confirm Password -->
+                        <h3 style="font-size: 12px; text-align:left;">Confirm Password<span class="red-text">* (Should
+                                Match
+                                New Password)</span></h3>
+
+                        <input type="password" style="width:97%; margin-bottom: 30px;" id="account_retype_password"
+                            name="retype_password" placeholder="Type Here..." required>
+
+                    </div>
+                    <!-- Save button -->
+                    <button class="save-btn" style="top:75%; left:73%;" type="submit">SAVE</button>
+                </form>
 
             </div>
         </div>
@@ -80,5 +85,16 @@
     @include('footer')
 
 </body>
+
+    @if(session('message'))
+        <div class="alert alert-danger">
+            <script>
+                window.onload = function () {
+                alert('{{ session('message') }}')
+                    
+                }
+            </script>
+        </div>
+    @endif
 
 </html>

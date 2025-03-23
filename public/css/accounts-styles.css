@@ -5,7 +5,7 @@
 
 
 /* This is the actual white box that fits all the content*/
-.accountbox{
+.accountbox {
     background-color: white;
     height: 700px;
     width: 82%;
@@ -15,7 +15,7 @@
 }
 
 /*The 'Account Details' Title */
-.accounttitle{
+.accounttitle {
     background-color: rgb(255, 255, 255);
     height: 12%;
     width: 90%;
@@ -27,7 +27,7 @@
 /***************************** 
     LOGOUT BUTTON
 *****************************/
-.logout-btn{
+.logout-btn {
     height: 60%;
     width: 20%;
     position: absolute;
@@ -36,7 +36,7 @@
     border: 2px solid black;
     display: flex;
     align-items: center;
-    background: linear-gradient(135deg, #8B0000, #a10000); 
+    background: linear-gradient(135deg, #8B0000, #a10000);
     border: none;
     color: white;
     font-size: 18px;
@@ -46,116 +46,121 @@
     box-shadow: 0px 4px 6px rgba(0.2, 0.2, 0.2, 0.2);
     transition: 0.3s;
 }
-.logout-btn:hover {
-            background: linear-gradient(135deg,rgb(225, 60, 60),rgb(219, 1, 1));
-            color:rgb(148, 0, 0) ;
-        }
 
-        .logout-btn:hover .icon-container {
-            background:rgb(183, 1, 1) ; 
-        }
+.logout-btn:hover {
+    background: linear-gradient(135deg, rgb(225, 60, 60), rgb(219, 1, 1));
+    color: rgb(148, 0, 0);
+}
+
+.logout-btn:hover .icon-container {
+    background: rgb(183, 1, 1);
+}
 
 .icon-container {
     width: 25%;
     height: 90%;
-    background-color: #600000; 
+    background-color: #600000;
     display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 50%;
     margin-right: 12px;
-        }
+}
 
 .icon {
     font-size: 20px;
     color: white;
- }
+}
 
- /*Box to seperate the title from the other content*/
-.seperating-box{
+/*Box to seperate the title from the other content*/
+.seperating-box {
     width: 100%;
     height: 80%;
-    background-color:rgb(255, 255, 255);
+    background-color: rgb(255, 255, 255);
     margin-top: 20%;
     position: absolute;
-    
- }
+
+}
+
 /***************************** 
     SIDE BAR
 *****************************/
- .sidebar {
-            width: 25%;
-            height: 100%;
-        }
+.sidebar {
+    width: 25%;
+    height: 100%;
+}
 
-        .sidebar button {
-            width: 100%;
-            padding: 25px;
-            text-align: left;
-            background-color: #ccc;
-            border: 1px solid white;
-            font-size: 20px;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            font-weight: bold;
-        }
-        .sidebar button:hover {
-            background-color: rgb(147, 147, 147);
-            color:rgb(148, 0, 0) ;
-            font-weight: bold;
-        }
-        
-         .sidebar .active {
-            background-color: rgb(130, 0, 0);
-            color: white;
-            font-weight: bold;
-            position: relative;
-            pointer-events: none;
-        }
+.sidebar button {
+    width: 100%;
+    padding: 25px;
+    text-align: left;
+    background-color: #ccc;
+    border: 1px solid white;
+    font-size: 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+}
 
-        .sidebar .active::after {
-            content: "";
-            position: absolute;
-            right: 0;
-            top: 50%;
-        }
+.sidebar button:hover {
+    background-color: rgb(147, 147, 147);
+    color: rgb(148, 0, 0);
+    font-weight: bold;
+}
+
+.sidebar .active {
+    background-color: rgb(130, 0, 0);
+    color: white;
+    font-weight: bold;
+    position: relative;
+    pointer-events: none;
+}
+
+.sidebar .active::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 50%;
+}
 
 
-.sidebar-triangle{
-    position:absolute;
-    top:0; 
-    left:24.9%;
+.sidebar-triangle {
+    position: absolute;
+    top: 0;
+    left: 24.9%;
     border-top: 37.5px solid transparent;
-    border-bottom:37px solid transparent;
-    border-left: 40px solid rgb(130, 0, 0); 
+    border-bottom: 37px solid transparent;
+    border-left: 40px solid rgb(130, 0, 0);
 }
 
 /***************************** 
     INFORMATION BOXES
 *****************************/
 /*This is dark grey main boxes that all the information goes in.*/
-.account-info-box{
+.account-info-box {
     padding: 1.5%;
     width: 27%;
     height: 17%;
-    background-color:rgb(185, 185, 185);
-    position:absolute;
-    padding-top:15px;
+    background-color: rgb(185, 185, 185);
+    position: absolute;
+    padding-top: 15px;
     border: 1.5px solid rgb(130, 0, 0);
 }
-.info-box-title{
+
+.info-box-title {
     width: 100%;
     height: 40%;
     background-color: rgb(185, 185, 185);
-    padding-top:10px;
-    
+    padding-top: 10px;
+
 }
+
 /*This is the input box where either the user can enter info or its already sved in this box.*/
-.info-box-input{
+.info-box-input {
     width: 95%;
     height: 40%;
-    position:absolute;
+    position: absolute;
     background-color: rgb(234, 234, 234);
     border: 2px solid rgb(130, 0, 0);
     border-radius: 15px;
@@ -163,149 +168,175 @@
     text-align: center;
     align-items: center;
 }
+
 /*Save Button*/
-.save-btn{
+.save-btn {
     width: 20%;
     height: 10%;
     background-color: rgb(0, 0, 0);
     border: 3px solid rgb(130, 0, 0);
     border-radius: 15px;
     color: rgb(185, 185, 185);
-    position:absolute;
-    font-size: 20px; 
+    position: absolute;
+    font-size: 20px;
     text-align: center;
     font-weight: bold;
 }
-.save-btn:hover{
+
+.save-btn:hover {
     background-color: rgb(130, 0, 0);
     color: rgb(255, 255, 255);
     border: 2px solid rgb(0, 0, 0);
-    
+
 }
+
 /***************************** 
     Payment Info
 *****************************/
 /*The small mini boxes with image off paypal*/
-.paymentcard1{
+.paymentcard1 {
     width: 12.5%;
     height: 12.5%;
-    background-color:rgb(185, 185, 185);
-    position:absolute;
+    background-color: rgb(185, 185, 185);
+    position: absolute;
     border: 1.5px solid rgb(130, 0, 0);
     background-image: url("paypal.png");
     background-size: cover;
     cursor: pointer;
 }
+
 /* The add card box*/
-.paymentcard2{
+.paymentcard2 {
     width: 12.5%;
     height: 12.5%;
-    background-color:rgb(255, 255, 255);
-    position:absolute;
+    background-color: rgb(255, 255, 255);
+    position: absolute;
     border: 1.5px solid rgb(130, 0, 0);
     cursor: pointer;
 }
 
-.paymentcard1:hover, .paymentcard2:hover{
-    background-color: rgb(130, 0, 0); 
+.paymentcard1:hover,
+.paymentcard2:hover {
+    background-color: rgb(130, 0, 0);
     background-blend-mode: multiply;
 }
+
 /*Big main payment box */
-.paymentinfo-box{
+.paymentinfo-box {
     padding: 1.5%;
     position: absolute;
     width: 50%;
     height: 40%;
-    background-color:rgb(234, 234, 234);
-    padding-top:15px;
+    background-color: rgb(234, 234, 234);
+    padding-top: 15px;
     border: 1.5px solid rgb(130, 0, 0);
     align-items: center;
     box-shadow: 0px 4px 6px rgba(0.2, 0.2, 0.2, 0.2);
 }
+
 /*box that goes inside of payment info box and holds crd number, MM, YY, CVV */
-.paymentinfo-box2{
+.paymentinfo-box2 {
     padding: 1.5%;
     width: 90%;
     height: 70%;
-    background-color:rgb(234, 234, 234);
-    position:absolute;
-    padding-top:15px;
+    background-color: rgb(234, 234, 234);
+    position: absolute;
+    padding-top: 15px;
 }
+
 /*Just the titles for the card number, MM, YY, CVV */
-.paymentinfo-title{
+.paymentinfo-title {
     width: 18%;
     height: 9%;
-    background-color:rgb(234, 234, 234);
+    background-color: rgb(234, 234, 234);
     color: rgb(130, 0, 0);
-    position:absolute;
+    position: absolute;
 }
+
 /*Tite that says Card Details */
-.paymentinfo-title2{
+.paymentinfo-title2 {
     width: 50%;
     height: 20%;
     font-size: 35px;
     color: rgb(0, 0, 0);
-    position:absolute;
+    position: absolute;
 }
+
 /***************************** 
     Password Change
 *****************************/
 /*he big box or the password change. everything goes inside*/
-.password-box{
+.password-box {
     padding: 1.5%;
     position: absolute;
-    top:0%;
-    left:32%;
+    top: 0%;
+    left: 32%;
     width: 60%;
     height: 65%;
-    background-color:rgb(185, 185, 185);
-    padding-top:15px;
+    background-color: rgb(185, 185, 185);
+    padding-top: 15px;
     border: 1.5px solid rgb(130, 0, 0);
     align-items: center;
     box-shadow: 0px 4px 6px rgba(0.2, 0.2, 0.2, 0.2);
 }
-.textbox-password{
-    font-size:10px;
+
+.textbox-password {
+    font-size: 10px;
     color: rgb(130, 0, 0);
-    position:absolute;
+    position: absolute;
 }
+
 /*the red text in the password box*/
 .red-text {
-            color: rgb(130, 0, 0);
-            font-weight:bold;
-        }
+    color: rgb(130, 0, 0);
+    font-weight: bold;
+}
 
 /***************************** 
     SETTINGS
 *****************************/
 /*The delete button for delete account*/
-.info-box-input2{
+.info-box-input2 {
     width: 100%;
     height: 40%;
     background-color: rgb(234, 234, 234);
     border: 2px solid rgb(130, 0, 0);
     border-radius: 15px;
     color: black;
-    cursor:pointer;
+    cursor: pointer;
     font-size: 17px;
 }
-    .info-box-input2:hover{
-        background-color:rgb(130, 0, 0);
-        color:white; 
-    }
+
+.info-box-input2:hover {
+    background-color: rgb(130, 0, 0);
+    color: white;
+}
 
 /***************************** 
     INPUT BOXES
 *****************************/
 /*All the boxes users can input information.*/
-input[type="text"], input[type="email"] {
+input[type="text"],
+input[type="email"] {
     padding: 10px;
     font-size: 16px;
     transition: border-color 0.3s ease;
     width: 90%;
-    height: 40%;
+    height: 20%;
     background-color: rgb(234, 234, 234);
     border: 2px solid rgb(130, 0, 0);
     border-radius: 15px;
     color: black;
-    }
+}
+
+input[type="password"] {
+    padding: 10px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+    width: 90%;
+    height: 5%;
+    background-color: rgb(234, 234, 234);
+    border: 2px solid rgb(130, 0, 0);
+    border-radius: 15px;
+    color: black;
+}

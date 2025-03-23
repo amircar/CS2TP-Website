@@ -34,7 +34,6 @@
                     <a href="{{ route('password-change') }}"><button>Password Change</button></a>
                     <a href="{{ route('order-history') }}"><button>Order History</button></a>
                     <button class="active">Shipping Information</button>
-                    <a href="{{ route('payment-info') }}"><button>Payment Information</button></a>
                     <a href="{{ route('settings') }}"><button>Settings</button></a>
                 </div>
                 <div class="sidebar-triangle" style="top:39.8%;"></div>

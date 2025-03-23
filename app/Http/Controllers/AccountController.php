@@ -119,4 +119,20 @@ class AccountController extends Controller
 
         return back()->with('message', 'Shipping information updated successfully!');
     }
+
+    
+    public function deleteAccount()
+    {
+        $user = Auth::user(); 
+
+        if (!$user) {
+            return redirect()->route('home')->with('error', 'User not found.');
+        }
+
+        Auth::logout();
+
+        $user->delete();
+
+        return redirect()->route('home')->with('message', 'Account deleted successfully.');
+    }
 }

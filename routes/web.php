@@ -132,4 +132,5 @@ Route::put('/update-password', [AccountController::class, 'updatePassword'])->na
 
 Route::post('/update-shipping', [AccountController::class, 'updateShipping'])->name('update-shipping');
 
+Route::delete('/deleteAccount', [AccountController::class, 'deleteAccount'])->name('deleteAccount');
 ?>

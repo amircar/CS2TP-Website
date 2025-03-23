@@ -53,11 +53,15 @@
                     <div class="info-box-title">
                         <h2 style="font-size: 17px;">Delete Account</h2>
                     </div>
-                    <button class="info-box-input2">Delete</button>
+                    <form id="deleteAccountForm" action="{{ route('deleteAccount') }}" method="POST">
+                        @csrf
+                        @method('DELETE')
+                        <button type="submit" class="info-box-input2"
+                            onclick="return confirm('Are you sure you want to delete your account? This action cannot be undone.')">
+                            Delete
+                        </button>
+                    </form>
                 </div>
-
-                <!-- save button -->
-                <button class="save-btn" style="top:75%; left:73%;">SAVE</button>
 
             </div>
 

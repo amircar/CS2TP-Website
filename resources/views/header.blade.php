@@ -31,7 +31,7 @@
 
                 <!-- TODO drop-down for options in account -->
                 <!-- TODO account page link in header -->
-                <a class="header-item" href="">
+                <a class="header-item" href="{{ route('account-details') }}">
                     <li><img src="{{asset("images/account_icon.png")}}" alt="profile" title="Profile"></li>
                 </a>
                 <a class="header-item" href="{{ route('basket') }}">

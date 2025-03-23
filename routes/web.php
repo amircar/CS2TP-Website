@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AccountController;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\FAQController;
@@ -113,4 +114,15 @@ Route::get('/faq-promotions',[FAQController::class, 'promotions'])->name('faq-pr
 
 Route::get('/faq-returns',[FAQController::class, 'returns'])->name('faq-returns');
 
+Route::get('/account-details',[AccountController::class, 'details'])->name('account-details');
+
+Route::get('/password-change',[AccountController::class, 'passwordChange'])->name('password-change');
+
+Route::get('/order-history',[AccountController::class, 'orderHistory'])->name('order-history');
+
+Route::get('/payment-info',[AccountController::class, 'paymentInfo'])->name('payment-info');
+
+Route::get('/settings',[AccountController::class, 'settings'])->name('settings');
+
+Route::get('/shipping',[AccountController::class, 'shipping'])->name('shipping');
 ?>

@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use Auth;
 use App\Models\Order;
+use App\Models\Address;
 
 
 class AccountController extends Controller
@@ -36,7 +37,7 @@ class AccountController extends Controller
         }
         $id = Auth::id();
         $previous = Order::with('items.stock.product.product_images', 'items.stock.size')->where('user_id', $id)->get();
-        return view('account/order-history', compact( 'previous'));
+        return view('account/order-history', compact('previous'));
     }
 
     public function paymentInfo()
@@ -60,12 +61,16 @@ class AccountController extends Controller
         if (!Auth::check()) { //Check User is logged in
             return redirect()->route('login'); //Redirect to login if not
         }
-        return view('account/shipping-info');
+
+        $user = Auth::user();
+        $address = $user->address;
+
+        return view('account/shipping-info', compact("address"));
 
 
     }
 
-    public function update(Request $request)
+    public function updateDetails(Request $request)
     {
 
         $user = Auth::user();
@@ -95,5 +100,23 @@ class AccountController extends Controller
         $user->update(['password' => Hash::make($request->new_password)]);
 
         return back()->with('message', 'Successfully changed password');
+    }
+
+    public function updateShipping(Request $request)
+    {
+        $user = Auth::user();
+
+        $address = Address::updateOrCreate(
+            ['user_id' => $user->id],
+            [
+                'address_line1' => $request->address1,
+                'address_line2' => $request->address2,
+                'city' => $request->city,
+                'postcode' => $request->postcode,
+                'country' => $request->country,
+            ]
+        );
+
+        return back()->with('message', 'Shipping information updated successfully!');
     }
 }

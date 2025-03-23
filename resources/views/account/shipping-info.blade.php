@@ -39,58 +39,52 @@
                 </div>
                 <div class="sidebar-triangle" style="top:39.8%;"></div>
 
-                <!-- Address Line 1 -->
-                <div class="account-info-box" style="top:0; left:31%;">
-                    <div class="info-box-title">
-                        <h2 style="font-size: 17px;">Address Line 1</h2>
+                <form action="{{ route('update-shipping') }}" method="POST">
+                    @csrf
+                    <!-- Address Line 1 -->
+                    <div class="account-info-box" style="top:0; left:31%;">
+                        <div class="info-box-title">
+                            <h2 style="font-size: 17px;">Address Line 1</h2>
+                        </div>
+                        <input type="text" id="account_address1" name="address1" placeholder="Address Line 1" required value="{{ $address-> address_line1 ?? ''}}">
                     </div>
-                    <form>
-                        <input type="text2" id="account_address1" name="account_address1" placeholder="Address Line 1">
-                    </form>
-                </div>
 
-                <!-- address line 2 -->
-                <div class="account-info-box" style="top:28%; left:31%;">
-                    <div class="info-box-title">
-                        <h2 style="font-size: 17px;">Address Line 2</h2>
+                    <!-- address line 2 -->
+                    <div class="account-info-box" style="top:28%; left:31%;">
+                        <div class="info-box-title">
+                            <h2 style="font-size: 17px;">Address Line 2</h2>
+                        </div>
+                        <input type="text" id="account_address2" name="address2" placeholder="Address Line 2" value="{{ $address-> address_line2 ?? ''}}">
                     </div>
-                    <form>
-                        <input type="text2" id="account_address2" name="account_address2" placeholder="Address Line 2">
-                    </form>
-                </div>
 
-                <!-- town/city -->
-                <div class="account-info-box" style="top:56%; left:31%;">
-                    <div class="info-box-title">
-                        <h2 style="font-size: 17px;">Town/City</h2>
+                    <!-- town/city -->
+                    <div class="account-info-box" style="top:56%; left:31%;">
+                        <div class="info-box-title">
+                            <h2 style="font-size: 17px;">Town/City</h2>
+                        </div>
+                        <input type="text" id="account_town/city" name="city" placeholder="Town/City" required value="{{ $address-> city ?? ''}}">
                     </div>
-                    <form>
-                        <input type="text2" id="account_town/city" name="account_town/city" placeholder="Town/City">
-                    </form>
-                </div>
 
-                <!-- postcode -->
-                <div class="account-info-box" style="top:0; left:68%;">
-                    <div class="info-box-title">
-                        <h2 style="font-size: 17px;">Postcode</h2>
+                    <!-- postcode -->
+                    <div class="account-info-box" style="top:0; left:68%;">
+                        <div class="info-box-title">
+                            <h2 style="font-size: 17px;">Postcode</h2>
+                        </div>
+                        <input type="text" id="account_postcode" name="postcode" placeholder="Postcode" required value="{{ $address-> postcode ?? ''}}">
                     </div>
-                    <form>
-                        <input type="text2" id="account_postcode" name="account_postcode" placeholder="Postcode">
-                    </form>
-                </div>
 
-                <!-- country -->
-                <div class="account-info-box" style="top:28%; left:68%;">
-                    <div class="info-box-title">
-                        <h2 style="font-size: 17px;">Country</h2>
+                    <!-- country -->
+                    <div class="account-info-box" style="top:28%; left:68%;">
+                        <div class="info-box-title">
+                            <h2 style="font-size: 17px;">Country</h2>
+                        </div>
+                        <input type="text" id="account_country" name="country" placeholder="Country" required value="{{ $address-> country ?? ''}}">
                     </div>
-                    <form>
-                        <input type="text2" id="account_country" name="account_country" placeholder="Country">
-                    </form>
-                </div>
 
-                <!-- save button -->
-                <button class="save-btn" style="top:75%; left:73%;">SAVE</button>
+                    <!-- save button -->
+                    <button class="save-btn" style="top:75%; left:73%;" type="submit">SAVE</button>
+
+                </form>
 
 
             </div>
@@ -102,5 +96,15 @@
     @include('footer')
 
 </body>
+@if(session('message'))
+    <div class="alert alert-danger">
+        <script>
+            window.onload = function () {
+                alert('{{ session('message') }}')
+
+            }
+        </script>
+    </div>
+@endif
 
 </html>

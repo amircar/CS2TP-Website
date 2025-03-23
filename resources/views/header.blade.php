@@ -12,7 +12,7 @@
             <!-- button to toggle between normal/large text size on page -->
             <li id="toggle-text-size" class="unselectable">
                 <p>A</p>
-                <label class="toggle-switch"><input type="checkbox"></label>
+                <label class="toggle-switch"><input type="checkbox" id = "textToggle"></label>
                 <p>A</p>
             </li>
 

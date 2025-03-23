@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/accounts-styles.css"><!-- Accounts page styling -->
+    <script defer type="text/javascript" src="{{ asset('js/main.js') }}"></script>
     <link rel="icon" href="{{ asset('favicon.ico') }}">
     <title>Account</title>
 </head>
@@ -44,7 +45,7 @@
                         <h2 style="font-size: 17px; margin-bottom:80px;">Visual Accessibility</h2>
                     </div>
                     <div class="info-box-input" style="text-align: center; padding: 10px; width:90%; height:20%;">Text
-                        Enlargement <input type="checkbox"></div>
+                        Enlargement <input type="checkbox" id="settingsTextToggle"></div>
                 </div>
 
                 <!-- Delete Account -->

@@ -6,6 +6,8 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use Auth;
+use App\Models\Order;
+
 
 class AccountController extends Controller
 {
@@ -32,7 +34,9 @@ class AccountController extends Controller
         if (!Auth::check()) { //Check User is logged in
             return redirect()->route('login'); //Redirect to login if not
         }
-        return view('account/order-history');
+        $id = Auth::id();
+        $previous = Order::with('items.stock.product.product_images', 'items.stock.size')->where('user_id', $id)->get();
+        return view('account/order-history', compact( 'previous'));
     }
 
     public function paymentInfo()
@@ -77,19 +81,19 @@ class AccountController extends Controller
     }
 
     public function updatePassword(Request $request)
-{
-    $user = Auth::user();
+    {
+        $user = Auth::user();
 
-    if (!Hash::check($request->current_password, $user->password)) {
-        return back()->with('message','Current password is incorrect');
+        if (!Hash::check($request->current_password, $user->password)) {
+            return back()->with('message', 'Current password is incorrect');
+        }
+
+        if ($request->new_password !== $request->retype_password) {
+            return back()->with('message', 'New passwords do not match');
+        }
+
+        $user->update(['password' => Hash::make($request->new_password)]);
+
+        return back()->with('message', 'Successfully changed password');
     }
-
-    if ($request->new_password !== $request->retype_password) {
-        return back()->with('message', 'New passwords do not match');
-    }
-
-    $user->update(['password' => Hash::make($request->new_password)]);
-
-    return back()->with('message','Successfully changed password');
-}
 }

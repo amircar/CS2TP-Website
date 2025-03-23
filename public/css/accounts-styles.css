@@ -169,6 +169,16 @@
     align-items: center;
 }
 
+.past-order-container {
+    max-width: 95%;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border: 2px solid rgb(130, 0, 0);
+    border-radius: 8px;
+    
+}
+
 /*Save Button*/
 .save-btn {
     width: 20%;

@@ -20,8 +20,7 @@ class BasketController extends Controller
         else{
             $id = Auth::id(); //Retrieve user's id
             $basket = Basket::with('stocks.product.product_images', 'stocks.size')->where('user_id', $id)->first(); //Create variable with linked tables basket, product and size
-            $previous = Order::with('items.stock.product.product_images', 'items.stock.size')->where('user_id', $id)->get();
-            return view('basket',compact('basket','previous'));
+            return view('basket',compact('basket'));
         }
     }
 

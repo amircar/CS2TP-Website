@@ -4,12 +4,9 @@
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" href="{{ asset('css/style.css') }}">
-
-        <!-- FIXME js not working on register page -->
         <script type="text/javascript" src="{{ asset('js/main.js') }}"></script>
-        
         <link rel="icon" href="{{ asset('favicon.ico') }}">
-        <title>Create an Account | Team 47</title>
+        <title>Create an Admin Account | Team 47</title>
     </head>
 
     <body>
@@ -17,9 +14,8 @@
 
         <div id="registration-wrapper">
             <main id="registration-form">
-                <h2>CREATE AN ACCOUNT</h2>
+                <h2>CREATE AN ADMIN ACCOUNT</h2>
                 <p>(All fields marked with an asterisk (<span style="color: rgb(128, 0, 0)">*</span>) are required.)</p>                
-                
                 <form method="POST" action="{{ route('register') }}">
                     @csrf
 
@@ -83,7 +79,7 @@
                         <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
                     </div>
 
-                    <input type="hidden" id="admin" name="admin" value="0">
+                    <input type="hidden" id="admin" name="admin" value="1">
 
                     <div class="form-group">
                         <button type="submit" class="btn btn-primary">
@@ -91,22 +87,7 @@
                         </button>
                     </div>
                 </form>
-
-                <a class="forgot-password-link" href = "{{route ('admin-register-access')}}">{{ __('Are You an Admin?') }}</a>
             </main>
-
-            <section id="login-prompt">
-                <h3>ALREADY HAVE AN ACCOUNT?</h3>
-                <ul>
-                    <li>Sign in and take your basket on any device.</li>
-                    <li>Enjoy your own, exclusive offers and discounts only available to <b>TEAM</b> members.</li>
-                    <li>Take advantage of our free shipping on all products.</li>
-                    <li>Browse our signature collections and checkout with our products.</li>
-                </ul>
-                <a href="{{ route('login') }}">
-                    <button type="button" class="btn btn-primary">{{ __('Go to login') }}</button>
-                </a>
-            </section>
         </div>
 
         @include('footer')

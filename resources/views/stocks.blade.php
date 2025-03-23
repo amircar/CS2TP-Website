@@ -6,25 +6,19 @@
         <link rel="stylesheet" href="{{ asset('css/style.css') }}">
         <script defer type="text/javascript" src="{{ asset('js/main.js') }}"></script>
         <link rel="icon" href="{{ asset('favicon.ico') }}">
-        <title>Men's Clothing | Team 47</title>
+        <title>Stock | Team 47</title>
     </head>
 
     <body>
         @include('header')
 
-        <!-- TODO men's paragraph -->
-        <main id="men-main">
-            <h2>MEN'S FASHION</h2>
-            <p>introductory paragraph on mens fashion</p>
-        </main>
-
-        <div class="content-separate"><div class="content-separate-box"></div></div>
-
         <section id="featured-products-list">
-            <h2>FEATURED IN MEN'S</h2>
-            <ul class="products-list">
-                @foreach ($products4 as $product)
-                    @include('product-card' , ['product' => $product])
+            <h2>Stock</h2>
+            <ul class="stock-list">
+                @foreach ($stocks as $stock)
+                    
+                        @include('single-stock' , ['stock' => $stock])
+                    
                 @endforeach
             </ul>
         </section>

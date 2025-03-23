@@ -21,7 +21,7 @@ class Review extends Model
     /**
      * Get the product that the review belongs to.
      */
-    public function product()
+    public function product()//Declares relationship with product
     {
         return $this->belongsTo(Product::class);
     }
@@ -29,7 +29,7 @@ class Review extends Model
     /**
      * Get the user who wrote the review.
      */
-    public function user()
+    public function user()//Declares relationship with user
     {
         return $this->belongsTo(User::class, 'user_id', 'id');
     }

@@ -74,40 +74,40 @@ class AccountController extends Controller
     public function updateDetails(Request $request)
     {
 
-        $user = Auth::user();
+        $user = Auth::user(); //Obtain User
 
-        $user->update([
+        $user->update([ //Update users details
             'username' => $request->username,
             'first_name' => $request->first_name,
             'last_name' => $request->last_name,
             'email' => $request->email,
         ]);
 
-        return view('account/account-details', compact('user'))->with('Message',"Successfully changed details");
+        return view('account/account-details', compact('user'))->with('Message',"Successfully changed details"); //return with success message
     }
 
     public function updatePassword(Request $request)
     {
         $user = Auth::user();
 
-        if (!Hash::check($request->current_password, $user->password)) {
+        if (!Hash::check($request->current_password, $user->password)) { //Check password is old password
             return back()->with('message', 'Current password is incorrect');
         }
 
-        if ($request->new_password !== $request->retype_password) {
+        if ($request->new_password !== $request->retype_password) { //Check passwords are equal
             return back()->with('message', 'New passwords do not match');
         }
 
-        $user->update(['password' => Hash::make($request->new_password)]);
+        $user->update(['password' => Hash::make($request->new_password)]); //Change password
 
         return back()->with('message', 'Successfully changed password');
     }
 
     public function updateShipping(Request $request)
     {
-        $user = Auth::user();
+        $user = Auth::user(); //Obtain User
 
-        $address = Address::updateOrCreate(
+        $address = Address::updateOrCreate( //Create or update users address
             ['user_id' => $user->id],
             [
                 'address_line1' => $request->address1,
@@ -124,15 +124,15 @@ class AccountController extends Controller
     
     public function deleteAccount()
     {
-        $user = Auth::user(); 
+        $user = Auth::user(); //Obtain User
 
         if (!$user) {
-            return redirect()->route('home')->with('error', 'User not found.');
+            return redirect()->route('home')->with('message', 'User not found.');
         }
 
-        Auth::logout();
+        Auth::logout(); //Logout
 
-        $user->delete();
+        $user->delete(); //Delete User
 
         return redirect()->route('home')->with('message', 'Account deleted successfully.');
     }

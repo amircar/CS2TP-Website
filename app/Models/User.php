@@ -52,7 +52,7 @@ class User extends Authenticatable
         ];
     }
 
-    public function address()
+    public function address()//Declares relationship with address
     {
         return $this->hasOne(Address::class);
     }

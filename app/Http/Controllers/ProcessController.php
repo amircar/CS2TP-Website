@@ -38,7 +38,7 @@ class ProcessController extends Controller
 
         $order = Order::where('id', $request->id)->first(); //Create variable with linked tables basket, product and size
 
-        $order->status = $request->status;
+        $order->status = $request->status; //Update order status
 
         $order->save();
 

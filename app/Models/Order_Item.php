@@ -12,12 +12,12 @@ class Order_Item extends Model
     'quantity'
 ];
 
-    public function order()
+    public function order()//Declares relationship with order
         {   
             return $this->belongsTo(Order::class);
         }
 
-    public function stock()
+    public function stock()//Declares relationship with stock
     {
         return $this->belongsTo(Stock::class);
     }

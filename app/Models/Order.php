@@ -13,12 +13,12 @@ class Order extends Model
     'status'
 ];
 
-    public function items()
+    public function items()//Declares relationship with Order_Item
     {   
         return $this->hasMany(Order_Item::class, 'order_id');
     }
 
-    public function user(){
+    public function user(){//Declares relationship with user
         return $this->belongsTo(User::class, 'user_id');
     }
 

@@ -49,7 +49,7 @@ class ProductController extends Controller
     {
         $query = Product::query();
 
-        if ($request->has('sizes')) {
+        if ($request->has('sizes')) { //Obtain selected sizes
             $query->whereHas('stocks', function ($stockQuery) use ($request) {
                 $stockQuery->whereHas('size', function ($sizeQuery) use ($request) {
                     $sizeQuery->whereIn('size', $request->sizes);
@@ -57,11 +57,11 @@ class ProductController extends Controller
             });
         }
 
-        if ($request->has('price')) {
+        if ($request->has('price')) { //Obtain within selected price range
             $query->where('price', '<=', max($request->price));
         }
 
-        if ($request->has('rating')) {
+        if ($request->has('rating')) { //Obtain within selected reviews range
             $query->where('average_rating', '>=', min($request->rating));
         }
 

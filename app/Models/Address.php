@@ -18,7 +18,7 @@ class Address extends Model
         'country',
     ];
 
-    public function user()
+    public function user()//Declares relation ship with user
     {
         return $this->belongsTo(User::class);
     }

@@ -29,15 +29,15 @@ class Product extends Model
         return $this->hasMany(Stock::class);
     }
 
-    public function user()
+    public function user()//Declares relationship with user
     {
         return $this->belongsTo(User::class);
     }
-    public function reviews()
+    public function reviews()//Declares relationship with reviews
     {
         return $this->hasMany(Review::class);
     }
-    public function updateRating()
+    public function updateRating()//Update the average ratings for when a review is made
     {
         $this->average_rating = $this->reviews()->avg('rating') ?? 5;
         $this->save();

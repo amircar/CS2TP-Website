@@ -23,7 +23,7 @@ class Stock extends Model
         return $this->belongsTo(Size::class);
     }
 
-    public function order_Items()
+    public function order_Items()//Declares relationship with order item
     {
         return $this->hasMany(Order_Item::class, 'stock_id');
     }

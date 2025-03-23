@@ -13,7 +13,7 @@ use Auth;
 
 class StockController extends Controller
 {
-    public function isAdmin()
+    public function isAdmin()//Check user is an admin and removes rewriting code
     {
         if (!Auth::check()) { //Check User is logged in
             return redirect()->route('login'); //Redirect to login if not
@@ -28,7 +28,7 @@ class StockController extends Controller
         return null;
     }
 
-    public function update()
+    public function update()//Display all stocks to update
     {
         $admin = $this->isAdmin();
 
@@ -40,7 +40,7 @@ class StockController extends Controller
         return view('stocks', compact('stocks'));
     }
 
-    public function quantity(Request $request)
+    public function quantity(Request $request)//Update quantity of selected stock
     {
         $admin = $this->isAdmin();
 
@@ -50,14 +50,14 @@ class StockController extends Controller
 
         $stock = Stock::where('id', $request->stock_id)->first();
 
-        $stock->quantity = $request->quantity;
+        $stock->quantity = $request->quantity;//change quantity
 
         $stock->save();
 
-        return redirect()->back();
+        return redirect()->back()->with('message', 'Quantity Changed');
     }
 
-    public function new()
+    public function new()//Create new stock page
     {
         $admin = $this->isAdmin();
 
@@ -68,7 +68,7 @@ class StockController extends Controller
         return view('new-product');
     }
 
-    public function create(Request $request)
+    public function create(Request $request)//Actually create new stock
     {
         $admin = $this->isAdmin();
 
@@ -76,25 +76,25 @@ class StockController extends Controller
             return $admin;
         }
 
-        $product = new Product();
+        $product = new Product(); //Create New Product
         $product->name = $request->name;
         $product->description = $request->description;
         $product->price = $request->price;
         $product->average_rating = 5.00;
         $product->save();
         
-        $image=$request->file('image');
+        $image=$request->file('image'); //Obtain and store image in public
         $imageUrl = strtolower(str_replace(' ','-',$request->name)).'.'.$image->getClientOriginalExtension();
         $image->move(public_path('images'), $imageUrl);
 
-        $productImage = new Product_Image();
+        $productImage = new Product_Image(); //Store image in database
         $productImage->product_id = $product->id;
         $productImage->image_url = "images/".$imageUrl;
         $productImage->alt_text = $request->name;
         $productImage->is_primary = true;
         $productImage->save();
 
-        foreach ($request->sizes as $size) {
+        foreach ($request->sizes as $size) { //Creates stock for all sizes selected
             $sizeId = Size::where('size', $size)->first();
     
             if ($sizeId) {

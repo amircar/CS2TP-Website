@@ -13,6 +13,13 @@
 
 <body>
     @include('header')
+    @if(auth()->user()->isAdmin)
+        <div class="admin-controls">
+            <a href="{{ route('process') }}" class="admin-btn">Process Orders</a>
+            <a href="{{ route('stocks') }}" class="admin-btn">Stock Levels</a>
+            <a href="{{ route('new') }}" class="admin-btn">Add New Stock</a>
+        </div>
+    @endif
     <main id="aboutus-box">
         <div class="accountbox">
             <div class="accounttitle">
@@ -40,15 +47,16 @@
 
                 <form action={{ route("update-details")}} method="POST">
 
-                @csrf
-                @method('PUT')
+                    @csrf
+                    @method('PUT')
                     <!-- Username -->
                     <div class="account-info-box" style="top:0; left:31%;">
                         <div class="info-box-title">
                             <h2 style="font-size: 17px;">Username</h2>
                         </div>
 
-                        <input type="text" id="account_username" name="username" placeholder="Username" value="{{ $user->username }}" required>
+                        <input type="text" id="account_username" name="username" placeholder="Username"
+                            value="{{ $user->username }}" required>
 
                     </div>
 
@@ -58,7 +66,8 @@
                             <h2 style="font-size: 17px;">First Name</h2>
                         </div>
 
-                        <input type="text" id="account_firstname" name="first_name" placeholder="First Name" value="{{ $user->first_name }}" required>
+                        <input type="text" id="account_firstname" name="first_name" placeholder="First Name"
+                            value="{{ $user->first_name }}" required>
 
                     </div>
 
@@ -68,7 +77,8 @@
                             <h2 style="font-size: 17px;">Last Name</h2>
                         </div>
 
-                        <input type="text" id="account_lastname" name="last_name" placeholder="Last Name" value="{{ $user->last_name }}" required>
+                        <input type="text" id="account_lastname" name="last_name" placeholder="Last Name"
+                            value="{{ $user->last_name }}" required>
 
                     </div>
 
@@ -78,7 +88,8 @@
                             <h2 style="font-size: 17px;">Email Address</h2>
                         </div>
 
-                        <input type="email" id="account_email" name="email" placeholder="Email Address" value="{{ $user->email }}" required>
+                        <input type="email" id="account_email" name="email" placeholder="Email Address"
+                            value="{{ $user->email }}" required>
 
                     </div>
 
@@ -93,5 +104,16 @@
 
     @include('footer')
 </body>
+
+@if(session('message'))
+    <div class="alert alert-danger">
+        <script>
+            window.onload = function () {
+                alert('{{ session('message') }}')
+
+            }
+        </script>
+    </div>
+@endif
 
 </html>

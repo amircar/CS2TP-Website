@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
+use GuzzleHttp\Psr7\Message;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use Auth;
@@ -82,7 +83,7 @@ class AccountController extends Controller
             'email' => $request->email,
         ]);
 
-        return view('account/account-details', compact('user'));
+        return view('account/account-details', compact('user'))->with('Message',"Successfully changed details");
     }
 
     public function updatePassword(Request $request)

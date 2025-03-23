@@ -25,8 +25,8 @@ class Product extends Model
     }
 
     public function stocks() //Declares all products relate to many stocks
-    { 
-        return $this->hasMany(Stock::class); 
+    {
+        return $this->hasMany(Stock::class);
     }
 
     public function user()
@@ -36,5 +36,10 @@ class Product extends Model
     public function reviews()
     {
         return $this->hasMany(Review::class);
+    }
+    public function updateRating()
+    {
+        $this->average_rating = $this->reviews()->avg('rating') ?? 5;
+        $this->save();
     }
 }

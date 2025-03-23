@@ -27,6 +27,8 @@ class ReviewController extends Controller
         $review->updated_at = now();
         $review->save(); 
 
+        $review->product->updateRating();
+
         return redirect()->back()->with('success', 'Review submitted successfully!');
     }
 }

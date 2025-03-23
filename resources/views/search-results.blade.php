@@ -28,24 +28,6 @@
                 <h3>FILTERS</h3>
 
                 <div class="product-search-filter">
-                    <p>COLOURS:</p>
-
-                    <!-- TODO connect to database table and display list of colours -->
-                    <!-- TODO checkboxes & display: (# of products in category) -->
-                    <ul class="product-search-filter-list">
-                        <li>
-                            <label><input type="checkbox">Red (5)</label>
-                        </li>
-                        <li>
-                            <label><input type="checkbox">Blue (5)</label>
-                        </li>
-                        <li>
-                            <label><input type="checkbox">Green (5)</label>
-                        </li>
-                    </ul>
-                </div>
-
-                <div class="product-search-filter">
                     <p>SIZES:</p>
 
                     <!-- TODO connect to database table and display list of sizes -->

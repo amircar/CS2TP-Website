@@ -43,14 +43,6 @@
             <div id="productInfo">
                 <h2 class=productName>{{$product->name}}</h1>
                     <h4 class="price">£{{$product->price}}</h4>
-                    <h4 class="colourTitle">COLOUR</h4>
-                    <div class="colours">
-                        <span class="colour red" title="Red"></span>
-                        <span class="colour yellow" title="Yellow"></span>
-                        <span class="colour blue" title="Blue"></span>
-                        <span class="colour white" title="White"></span>
-                        <span class="colour black" title="Black"></span>
-                    </div>
                     <h3 style="text-align: left; margin: 0; padding: 10px;">Description</h3>
                     <div class="description-box">
                         <h3>{{$product->description}}</h3>
@@ -139,7 +131,9 @@
                         @foreach ($product->product_images as $image)
                             <div class="carousel-item">
                                 @if ($image->is_primary)
-                                    <img src={{asset($image->image_url)}} alt="suggested-product">
+                                    <a href="{{ route('product', ['id' => $product->id]) }}">
+                                        <img src={{asset($image->image_url)}} alt="suggested-product">
+                                    </a>
                                 @endif
                             </div>
                         @endforeach

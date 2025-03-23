@@ -906,3 +906,97 @@ header {
     border-radius: 5px;
     cursor: pointer;
 }
+
+
+/* The main box for the FAQ*/
+.faq-box{
+    width: 80%;
+    height: 80%;
+    border: 2px solid black;
+    margin: 60px;
+    margin-left: 10%;
+    padding-top: 2%;
+    box-shadow: 0 -5px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);  
+    background-color: white;
+}
+
+/*The collapsable for the questions*/
+.drop-down {
+  background-color: white;
+  width: 100%;
+  color: #444;
+  font-size: 20px;
+  padding: 18px;
+  border-top: 2px solid rgb(185, 185, 185);
+  text-align: left;
+  cursor: pointer;
+  transition: 0.2s; 
+}
+.drop-down:after {
+  content: "\25BC";
+  color: #777;
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+}
+
+.open, .drop-down:hover {
+  background-color: rgb(128, 0, 0);
+  color: white;
+}
+
+.open:after {
+    content: "\25B2";
+}
+
+.drop-down-box {
+  padding: 0 18px;
+  background-color: rgb(185, 185, 185);
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+
+/*The container for the bottom two boxes*/
+.link-container {
+    display: flex;
+    gap: 70px;
+    justify-content: center; 
+}
+
+.faq-links-box {
+    height: 275px;
+    width: 375px;
+    background-color: white;
+    box-shadow: 0 -5px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2); 
+    padding: 1.5%;
+    border: 2px solid rgb(128, 0, 0);
+}
+.faq-links-box ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+}
+
+.faq-links-box ul li {
+    margin-bottom: 5px;
+}
+
+.faq-links-box ul li a {
+    color: rgb(86, 86, 86);
+    text-decoration: none;
+    font-size: 20px;
+    text-decoration: underline;
+}
+
+.faq-links-box ul li a:hover {
+    color: rgb(128, 0, 0);
+    text-decoration: underline;
+}
+.faq-links-box .active{
+    color: rgb(205, 205, 205);
+    text-decoration: underline;
+    pointer-events:none;
+}

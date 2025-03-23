@@ -1,7 +1,9 @@
 <?php
 
+use App\Http\Controllers\AccountController;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\RegisterController;
+use App\Http\Controllers\FAQController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\BasketController;
 use App\Http\Controllers\PaymentController;
@@ -98,8 +100,37 @@ Route::get('/quantity', function(){
 //route for reviews
 Route::post('/reviews', [ReviewController::class, 'store'])->name('reviews.store');
 
-Route::get('new',[StockController::class, 'new'])->name('new');
+Route::get('/new',[StockController::class, 'new'])->name('new');
 
-Route::post('new',[StockController::class, 'create'])->name('create');
+Route::post('/new',[StockController::class, 'create'])->name('create');
 
+Route::get('/faq-orders',[FAQController::class, 'orders'])->name('faq-orders');
+
+Route::get('/faq-other',[FAQController::class, 'other'])->name('faq-other');
+
+Route::get('/faq-products',[FAQController::class, 'products'])->name('faq-products');
+
+Route::get('/faq-promotions',[FAQController::class, 'promotions'])->name('faq-promotions');
+
+Route::get('/faq-returns',[FAQController::class, 'returns'])->name('faq-returns');
+
+Route::get('/account-details',[AccountController::class, 'details'])->name('account-details');
+
+Route::get('/password-change',[AccountController::class, 'passwordChange'])->name('password-change');
+
+Route::get('/order-history',[AccountController::class, 'orderHistory'])->name('order-history');
+
+Route::get('/payment-info',[AccountController::class, 'paymentInfo'])->name('payment-info');
+
+Route::get('/settings',[AccountController::class, 'settings'])->name('settings');
+
+Route::get('/shipping',[AccountController::class, 'shipping'])->name('shipping');
+
+Route::put('/update-details', [AccountController::class, 'updateDetails'])->name('update-details');
+
+Route::put('/update-password', [AccountController::class, 'updatePassword'])->name('update-password');
+
+Route::post('/update-shipping', [AccountController::class, 'updateShipping'])->name('update-shipping');
+
+Route::delete('/deleteAccount', [AccountController::class, 'deleteAccount'])->name('deleteAccount');
 ?>

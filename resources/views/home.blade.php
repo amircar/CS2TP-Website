@@ -11,12 +11,6 @@
 
     <body data-text-size="normal">
         @include('header')
-
-        @if(session('message'))
-            <div class="alert alert-danger">
-                {{ session('message') }}
-            </div>
-        @endif
         
         <main id="home-main">
             <a href="{{ route('men') }}">
@@ -60,4 +54,15 @@
 
         @include('footer')
     </body>
+
+    @if(session('message'))
+        <div class="alert alert-danger">
+            <script>
+                window.onload = function () {
+                alert('{{ session('message') }}')
+                    
+                }
+            </script>
+        </div>
+    @endif
 </html>

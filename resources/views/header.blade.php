@@ -12,7 +12,7 @@
             <!-- button to toggle between normal/large text size on page -->
             <li id="toggle-text-size" class="unselectable">
                 <p>A</p>
-                <label class="toggle-switch"><input type="checkbox"></label>
+                <label class="toggle-switch"><input type="checkbox" id = "textToggle"></label>
                 <p>A</p>
             </li>
 
@@ -27,7 +27,7 @@
                 </a>
                 
                 <!-- TODO account page link in header -->
-                <a class="header-item" href="">
+                <a class="header-item" href="{{ route('account-details') }}">
                     <li><img src="{{asset("images/account_icon.png")}}" alt="profile" title="Profile"></li>
                 </a>
                 <a class="header-item" href="{{ route('basket') }}">

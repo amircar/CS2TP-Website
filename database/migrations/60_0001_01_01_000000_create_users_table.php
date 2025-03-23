@@ -20,7 +20,6 @@ return new class extends Migration
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->string('phone')->nullable();; 
-            $table->foreignId('address_id')->constrained('addresses')->nullable();;
             $table->boolean('isAdmin')->default(0);
             $table->rememberToken();
             $table->timestamps();

@@ -12,17 +12,33 @@ back_to_top.addEventListener("click", function () {
     document.documentElement.scrollTop = 0;
 });
 
-// changes text size using toggle switch
-const toggle_text = document.querySelector("#toggle-text-size").querySelector("input");
 
-toggle_text.addEventListener("click", function () {
+document.addEventListener("DOMContentLoaded", function () {
+    const headerToggle = document.querySelector("#textToggle");
+    const settingsToggle = document.querySelector("#settingsTextToggle"); 
 
-    //dataset.textSize accesses data-text-size attribute in body (dataset.x-y accesses data-xY)
-    //if data-text-size != large, data-text-size = large ELSE data-text-size = normal
-    var text_size = document.body.dataset.textSize != "large" ? "large" : "normal";
-    
-    // assigns new value to data-text-size
-    document.body.setAttribute("data-text-size", text_size);
+    function applyTextSize(size) {
+        document.body.setAttribute("data-text-size", size);
+        localStorage.setItem("textSize", size);
+
+        if (headerToggle) headerToggle.checked = (size === "large");
+        if (settingsToggle) settingsToggle.checked = (size === "large");
+    }
+
+    const savedTextSize = localStorage.getItem("textSize") || "normal";
+    applyTextSize(savedTextSize);
+
+    if (headerToggle) {
+        headerToggle.addEventListener("change", function () {
+            applyTextSize(headerToggle.checked ? "large" : "normal");
+        });
+    }
+
+    if (settingsToggle) {
+        settingsToggle.addEventListener("change", function () {
+            applyTextSize(settingsToggle.checked ? "large" : "normal");
+        });
+    }
 });
 
 document.getElementById("size-type").addEventListener("change", function () {

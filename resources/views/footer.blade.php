@@ -19,7 +19,7 @@
             <ul>
                 <li><a href="{{ route('about-us') }}">About Us</a></li>                
                 <li><a href="{{route('contact-us')}}">Contact Us</a></li>
-                <li><a href="">FAQs</a></li>
+                <li><a href="{{route('faq-orders')}}">FAQs</a></li>
                 <li><a href="">Terms and Conditions</a></li>
             </ul>
         </div>

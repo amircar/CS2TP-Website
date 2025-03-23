@@ -85,54 +85,6 @@
             </div>
         </main>
 
-        <main id="basket-main">
-            <h2 class="basket-header">Your Previous Orders</h2>
-            @foreach ($previous as $order)
-                @php //total cost
-                    $total = 0
-                @endphp
-                <div class="basket-container">
-                    <p class="order_date">Order From: {{ date('d/m/Y', strtotime($order->order_date)) }}</p>
-                    @foreach ($order->items as $order_item)
-                        <div class="basket-item">
-                            <div class="item-details">
-                                @foreach ($order_item->stock->product->product_images as $image)
-                                    @if ($image->is_primary)
-                                        <img src="{{ asset($image->image_url) }}" alt="Team 47 T Shirt" class="item-image">
-                                    @endif
-                                @endforeach
-
-                                <div class="item-info">
-                                    <strong>{{$order_item->stock->product->name}}</strong>
-                                    <p class="mb-0">Size: {{$order_item->stock->size->size}}</p>
-                                    <p class="mb-0">Quantity: {{$order_item->quantity}}</p>
-                                </div>
-                            </div>
-
-                            <div class="item-actions">
-
-                                @php // cost of item multiplied by quantity added to total cost
-                                    $total += $order_item->stock->product->price * $order_item->quantity
-                                @endphp
-
-                                <p class="item-price">£{{$order_item->stock->product->price}}</p>
-
-                            </div>
-                        </div>
-                    @endforeach
-
-                    <div class="total-container">
-                        <strong>Total: £{{$total}}</strong><br>
-                        <strong>Order Status: 
-                            <span class="{{ $order->status === "Delivered" ? "delivered" : "non-delivered" }}">
-                                {{$order->status}}
-                            </span>
-                        </strong>
-                    </div>
-                </div>
-            @endforeach
-        </main>
-
         @include('footer')
     </body>
 

@@ -27,10 +27,10 @@
         <div class="footer-section">
             <h3>ACCOUNT</h3>
             <ul>
-                <li><a href="">My Account</a></li>
-                <li><a href="">Wishlist</a></li>
-                <li><a href="">Delivery</a></li>
-                <li><a href="">Shipping Information</a></li>
+                <li><a href="{{ route('account-details') }}">My Account</a></li>
+                <li><a href="{{ route('order-history') }}">Previous Orders</a></li>
+                <li><a href="{{ route('shipping') }}">Shipping Information</a></li>
+                <li><a href="{{ route('settings') }}">Settings</a></li>
             </ul>
         </div>
 

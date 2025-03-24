@@ -1,18 +1,16 @@
 <!DOCTYPE html>
 <html lang="en-GB">
-
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="stylesheet" href="css/style.css">
-        <link rel="stylesheet" href="css/accounts-styles.css"> <!-- Accounts page styling -->
+        <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+        <link rel="stylesheet" href="css/accounts-styles.css">
         <script defer type="text/javascript" src="{{ asset('js/main.js') }}"></script>
         <link rel="icon" href="{{ asset('favicon.ico') }}">
-        <title>Account</title>
+        <title>My Account | Team 47</title>
     </head>
 
     <body>
-
         @include('header')
         <main id="aboutus-box">
             <div class="accountbox">
@@ -28,6 +26,7 @@
                         </button>
                     </form>
                 </div>
+
                 <div class="seperating-box">
                     <div class="sidebar"> <!-- Sidebar -->
                         <a href="{{ route('account-details') }}"><button href="{{ route('account-details') }}">Personal
@@ -37,6 +36,7 @@
                         <a href="{{ route('shipping') }}"><button>Shipping Information</button></a>
                         <a href="{{ route('settings') }}"><button>Settings</button></a>
                     </div>
+
                     <div class="sidebar-triangle" style="top:26.4%;"></div>
 
                     <!-- Past Orders box -->
@@ -44,12 +44,15 @@
                         style="top:0; left:30%; height: 85%; width: 65%; overflow-y: auto; overflow-x: hidden;">
                         <h3 style="font-size: 25px;">Previous Orders</h3>
                         <h3 style="font-size: 14px; color: rgb(130, 0, 0)">View Your Past Orders Here</h3>
+                        
                         @foreach ($previous as $order)
                             @php //total cost
                                 $total = 0
                             @endphp
+
                             <div class="past-order-container">
                                 <p class="order_date">Order From: {{ date('d/m/Y', strtotime($order->order_date)) }}</p>
+                                
                                 @foreach ($order->items as $order_item)
                                     <div class="basket-item">
                                         <div class="item-details">
@@ -89,12 +92,10 @@
                             </div>
                         @endforeach
                     </div>
-
                 </div>
-
             </div>
-
         </main>
+        
         @include('footer')
     </body>
 </html>

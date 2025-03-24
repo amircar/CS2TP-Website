@@ -37,7 +37,8 @@ class StockController extends Controller
         }
 
         $stocks = Stock::with('product.product_images', 'size')->get();
-        return view('stocks', compact('stocks'));
+        $empty = Stock::with('product.product_images', 'size')->where('quantity',0)->get();
+        return view('stocks', compact('stocks','empty'));
     }
 
     public function quantity(Request $request)//Update quantity of selected stock

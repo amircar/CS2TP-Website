@@ -26,13 +26,19 @@
 
     @include('footer')
 </body>
+<!-- Check there is any empty stock -->
+@if($empty->isNotEmpty()) Check there is any empty stock
+    @php //Create the message to be displayed in the alert
+        $message = "The following stocks are empty:\n\n";
+        foreach ($empty as $stock) {
+            $message .= "{$stock->product->name} (Size: {$stock->size->size})\n";
+        }
+    @endphp
 
-@if(session('message'))
     <div class="alert alert-danger">
         <script>
             window.onload = function () {
-                alert('{{ session('message') }}')
-
+                alert(@json($message)); // Pass PHP string to JavaScript and display alert
             }
         </script>
     </div>

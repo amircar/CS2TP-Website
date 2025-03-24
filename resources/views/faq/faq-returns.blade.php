@@ -3,19 +3,18 @@
     <head>
         <meta charset="utf-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+        <script defer type="text/javascript" src="{{ asset('js/main.js') }}"></script>
         <link rel="icon" href="{{ asset('favicon.ico') }}">
-        <title>Account</title>
+        <title>FAQs | Team 47</title>
     </head>
-<body>
 
-@include('header')
-
-<main id="aboutus-box">
-    <!-- The top banner with image and title of page -->
-<div id="section" style="justify-content: center; height:300px; background-color: white; box-shadow: 0 0 9px rgba(0, 0, 0, 0.3); margin-top: -20px; opacity: 100%;"> 
-                <h3 style="margin-left:550px; margin-top: 100px; position: absolute; font-size:90px;">FAQ</h3>
-                <img src="images/faq/faq-img.jpg" alt="Clothes on a Hanger" class="image" width="100%" height="100%">
+    <body>
+        @include('header')
+        <main id="aboutus-box">
+            <div id="faq-banner"> 
+                <h2>FAQ</h2>
+                <img src="images/faq/faq-img.jpg" alt="Clothes on a Hanger" class="image">
             </div>
 
             <!-- The main FAQ box -->

@@ -31,7 +31,7 @@
     @php //Create the message to be displayed in the alert
         $message = "The following stocks are empty:\n\n";
         foreach ($empty as $stock) {
-            $message .= "{$stock->product->name} (Size: {$stock->size->size})\n";
+            $message .= "{$stock->product->name} Size: {$stock->size->size}\n";
         }
     @endphp
 

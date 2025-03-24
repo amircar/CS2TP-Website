@@ -924,7 +924,6 @@ footer {
 
     .product-title {
         margin-top: 5px;
-        margin-bottom: 5px;
         /* webkit used to replace title with ellipsis when overflowing */
         display: -webkit-box;
         -webkit-line-clamp: 2;

@@ -906,7 +906,6 @@ footer {
 
 .product-card, .stock-card {
     width: 250px;
-    height: 350px;
     margin: 10px;
     padding: 10px;
     background-color: white;
@@ -924,32 +923,35 @@ footer {
 
     .product-title {
         margin-top: 5px;
-        /* webkit used to replace title with ellipsis when overflowing */
-        display: -webkit-box;
-        -webkit-line-clamp: 2;
-        -webkit-box-orient: vertical;
-        height: 45px;
+        height: 30px;
         font-size: 23px;
         line-height: 23px;
         font-size: 23px;
         overflow: hidden;
         text-overflow: ellipsis;
+        white-space: nowrap;
     }
 
     .product-price {
-        margin-bottom: 4px;
         font-size: 20px;
     }
 
     .product-size {
         font-size: 18px;
         line-height: 20px;
-        margin-bottom: 4px;
     }
     .product-rating {
         font-size: 18px;
         line-height: 20px;
     }
+}
+
+.stock-card{
+    height: 400px;
+}
+
+.product-card{
+    height: 350px;
 }
 
 .card-rating {

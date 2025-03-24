@@ -1,4 +1,4 @@
-<li class="product-card">
+<li class="stock-card">
 
         @php
             $found = false;
@@ -26,10 +26,10 @@
         <p class="product-size">Sizes: {{$stock->size->size}}</p>
         <p class="product-quantity">Current Quantity: {{$stock->quantity}}</p>
 
-        <form action="quantity" method="POST">
+        <form action="quantity" class="quantity" method="POST">
             @csrf
             <input type="number" name ="quantity" min="0" value="{{ $stock->quantity }}" required>
             <input type="hidden" name="stock_id" value="{{$stock->id}}">
-            <button type="submit" class="btn btn-primary">Update Quantity</button>
+            <button type="submit" class="btn-stock">Update Quantity</button>
         </form>
 </li>

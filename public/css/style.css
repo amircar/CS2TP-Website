@@ -133,7 +133,7 @@ label:has(+ input:required)::after {
         letter-spacing: 2px; /* reduces space between letters */
     }
 
-    .products-list .product-card {
+    .products-list .product-card, .stock-list .stock-card {
         font-size: 25px;
 
         .product-title {
@@ -904,7 +904,7 @@ footer {
     width: 100%;
 }
 
-.product-card {
+.product-card, .stock-card {
     width: 250px;
     height: 350px;
     margin: 10px;
@@ -924,16 +924,12 @@ footer {
 
     .product-title {
         margin-top: 5px;
-        margin-bottom: 5px;
-        /* webkit used to replace title with ellipsis when overflowing */
-        display: -webkit-box;
-        -webkit-line-clamp: 2;
-        -webkit-box-orient: vertical;
-        height: 45px;
-        font-size: 23px;
+        height: 30px;
         line-height: 23px;
+        font-size: 23px;
         overflow: hidden;
         text-overflow: ellipsis;
+        white-space: nowrap;
     }
 
     .product-price {
@@ -947,11 +943,37 @@ footer {
     }
 }
 
-.product-card:hover {
+.product-card:hover, .stock-card:hover {
     box-shadow: 0 0 6px var(--main-grey-color);
     transition: 0.2s;
 }
 
+.stock-card{
+    height: 400px;
+}
+
+.quantity {
+    display: flex;
+}
+
+.quantity input[type="number"] {
+    width: 50%; /* Adjust width as needed */
+    padding: 4px;
+    font-size: 16px;
+    text-align: center;
+    margin-right: 5px; /* Adds space between input and button */
+}
+
+.btn-stock {
+    font-size: 16px;
+    padding: 4px;
+    white-space: nowrap; 
+    background-color: var(--main-black-color);
+    color: white; 
+    transition: background-color 0.3s ease;
+    border-radius: 5px;
+    cursor: pointer;
+}
 
 /***************************** 
     CATEGORY PAGES

@@ -18,7 +18,7 @@
 
         <section id="product-search-introduction">
             <!-- TODO search results description includes search input -->
-            <h2 id="search-results-description">SEARCH FOR ""</h2>
+            <h2 id="search-results-description">SEARCH FOR "{{ request()->search }}"</h2>
         </section>
 
         <div class="content-separate"><div class="content-separate-box"></div></div>
@@ -73,6 +73,7 @@
                             </ul>
                         </div>
                     </div>
+                    <input type="hidden" name="search" value="{{ request()->search }}">
                     <button type="submit" class="btn">Apply</button>
                 </form>
             </aside>

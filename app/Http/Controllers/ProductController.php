@@ -49,6 +49,10 @@ class ProductController extends Controller
     {
         $query = Product::query();
 
+        if ($request->has('search')) {//Obtain from selected search
+            $query->where('name', 'like', '%' . $request->search . '%');
+        }
+
         if ($request->has('sizes')) { //Obtain selected sizes
             $query->whereHas('stocks', function ($stockQuery) use ($request) {
                 $stockQuery->whereHas('size', function ($sizeQuery) use ($request) {
@@ -68,6 +72,6 @@ class ProductController extends Controller
         // 🔹 Execute query and fetch products
         $products = $query->get();
 
-        return view('search-results', compact('products'));
+        return view('search-results', compact('products','request'));
     }
 }
